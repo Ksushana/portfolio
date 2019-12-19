@@ -1,0 +1,29 @@
+.profile-main {
+  display: block;
+  padding-top: 50px;
+  padding-bottom: 169px;
+  background-color: $profile-color;
+}
+
+.profile-main__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 88px;
+  font-family: $fontSerif;
+  font-size: 38px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $dark-text;
+}
+
+.profile-main__flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 1095px;
+  margin: 0 auto;
+}

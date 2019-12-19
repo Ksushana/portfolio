@@ -1,0 +1,19 @@
+extends pug/layout.pug
+
+block variables
+  - let isMain = true;
+
+block head
+  noscript
+    style.
+      .preloader {
+        display: none;
+      }
+
+block content
+  .main-page.bg2x( data-2x="background-image: radial-gradient(356.73px at 49.96% 44.93%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0) 0.02%, rgba(0, 0, 0, 0) 0.03%, rgba(0, 0, 0, 0.156) 100%), url('img/main-building-shadow@2x.jpg');" style="background-image: radial-gradient(356.73px at 49.96% 44.93%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0) 0.02%, rgba(0, 0, 0, 0) 0.03%, rgba(0, 0, 0, 0.156) 100%), url('img/main-building-shadow@1x.jpg');")
+    h1.visually-hidden Дом на Малой Грузинской, 44
+    .preloader.preloader--hidden
+      +svg-logo-new
+    .main-page__menu-contacts
+      p Дом на Малой Грузинской, 44

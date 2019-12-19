@@ -1,0 +1,171 @@
+@mixin desktop-extra-wide {
+  @media (min-width: $width-desktop-wide-layout + 1px) {
+    @content;
+  }
+}
+
+@mixin desktop-wide {
+  @media (max-width: $width-desktop-wide-layout) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $width-desktop-wide) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $width-desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (max-width: $width-desktop - 1px) and (min-width: $width-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: $width-desktop) and (max-width: $width-desktop-wide - 1px ) {
+    @content;
+  }
+}
+
+@mixin touch {
+  @media (hover: none) {
+    @content;
+  }
+}
+
+@mixin non-touch {
+  @media (hover: hover) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $width-tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Градиенты
+
+@mixin gradient-top {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  background: linear-gradient(180deg, #10069F 0%, rgba(0, 47, 166, 0) 95.24%);
+}
+
+@mixin gradient-bottom {
+  @include gradient-top;
+
+  transform: rotate(-180deg);
+}
+
+// Шрифты
+
+@mixin big-header {
+  font-family: $font-austin;
+  font-size: size(55px);
+  line-height: size(58px);
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+@mixin small-header {
+  font-family: $font-austin;
+  font-size: size(30px);
+  line-height: size(33px);
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+@mixin header {
+  font-family: $font-austin;
+  font-size: size(45px);
+  line-height: size(45px);
+  letter-spacing: 0.025em;
+}
+
+@mixin description-text {
+  font-family: $font-austin;
+  font-size: size(35px);
+  line-height: size(35px);
+  letter-spacing: 0.025em;
+}
+
+@mixin menu-link {
+  font-family: $font-austin;
+  font-size: 32px;
+  line-height: 34px;
+  font-size: size(30px);
+  line-height: size(62px);
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+@mixin link-text {
+  font-family: $font-austin;
+  font-size: size(35px);
+  line-height: size(35px);
+  letter-spacing: 0.025em;
+}
+
+// грид
+
+@mixin grid {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+@mixin switch-button {
+  height: size(50px);
+  font-family: $font-ttnorms;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  border-radius: 36.6595px;
+  color: $color-white;
+  text-transform: uppercase;
+  transition: border 1s;
+  outline: none;
+
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  &:active,
+  &.switch-button-active {
+    background: $color-white;
+    color: $color-blue;
+  }
+
+  @include tablet {
+    height: size(45px);
+  }
+
+  @include mobile {
+    height: size(40px);
+  }
+}

@@ -1,0 +1,123 @@
+.tickets {
+  display: flex;
+  margin-bottom: 110px;
+  position: relative;
+
+  &--tour {
+    margin-bottom: 100px;
+
+    @include laptop {
+      margin-bottom: 65px;
+    }
+  }
+
+  @include tablet {
+    display: block;
+    margin-bottom: 68px;
+  }
+
+  @include mobile {
+    margin-bottom: 74px;
+  }
+
+  &--tour {
+    @include tablet {
+      margin-bottom: 30px;
+  }
+
+  @include mobile {
+    margin-bottom: 55px;
+  }
+}
+}
+
+.tickets__img {
+  position: absolute;
+  display: block;
+  content: "";
+  top: -11px;
+  right: 30px;
+  width: 267px;
+  height: 274px;
+
+  @include tablet {
+    right: auto;
+    top: -35px;
+    left: -1px;
+    width: 147px;
+    height: 153px;
+  }
+
+  @include mobile-wide {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.tickets__heading {
+  position: relative;
+  width: 290px;
+  margin-left: 5%;
+  padding-top: 278px;
+  font-family: $font-muller;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 57px;
+  color: $color-blue-dark;
+  order: 1;
+
+  @include tablet {
+    width: 485px;
+    margin: 0 0 53px;
+    padding-top: 0;
+    padding-left: 185px;
+  }
+
+  @include mobile-wide {
+    width: 200px;
+    margin-bottom: 26px;
+    padding-left: 0;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.tickets__block {
+  width: 67.54%;
+  padding-left: 19px;
+
+  &--tour {
+    padding-left: 0;
+    width: 66%;
+
+    @include desktop-full {
+      margin-left: 20px;
+    }
+  }
+
+  @include laptop {
+    padding-left: 0;
+  }
+
+  @include tablet {
+    width: auto;
+  }
+
+  @include mobile {
+    margin: 0 -15px 0 0;
+  }
+}
+
+.tickets__block .calendar-widget__years-list {
+  @include mobile {
+    right: 0;
+  }
+}
+
+.tickets__block--tour > div {
+  min-width: 290px!important;
+}

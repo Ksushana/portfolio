@@ -1,0 +1,426 @@
+.hotels-map {
+  padding-top: 50px;
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+
+    @media (min-width: 1700px) {
+      width: 1700px;
+      // padding-left: 125px;
+      // padding-right: 120px;
+    }
+
+    @include tablet {
+      width: 680px;
+      justify-content: initial;
+    }
+
+    @include mobile-wide {
+      width: auto;
+      padding-top: 15px;
+    }
+  }
+
+  @include tablet {
+    padding-top: 35px;
+    padding-bottom: 100px;
+  }
+
+  @include mobile-wide {
+    padding-top: 8px;
+    padding-bottom: 38px;
+  }
+}
+
+.hotels-map__title {
+  font-family: $font-muller;
+  font-size: 4vw;//48px;//64px;
+  line-height: 58px;//48px;//64px;
+  color: #1b2748;
+  position: relative;
+  font-weight: 900;
+  z-index: 5;
+  margin-bottom: 5px;
+
+
+  @include desktop-wide {
+    margin-left: 18px;
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  & span {
+    color: #e2a13c;
+  }
+
+  @include desktop {
+    width: 100%;
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+
+  @include tablet {
+    font-size: 36px;//48px;
+    line-height: 36px;//48px;
+    text-align: right;
+    margin-bottom: 14px;
+    width: 100%;
+  }
+
+  @include mobile-wide {
+    font-size: 22px;
+    line-height: 22px;
+    width: 100%;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+  }
+}
+
+.hotels-map__bar {
+  flex-grow: 1;
+  background: #4d88cc;
+  height: 5px;
+  margin: 0 20px;
+
+  @include desktop {
+    margin: 0 20px 0 0;
+  }
+}
+
+.hotels-map__btn {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #4d88cc 0%, #1b2748 100%);
+  border-radius: 200px;
+  padding: 24px 85px 26px 85px;
+  position: relative;
+  margin-right: 10px;
+  z-index: 5;
+  font-family: $font-muller;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgba($color: #ffffff, $alpha: 0.7)
+  }
+
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 18px 85px 19px 85px;
+    margin-right: 0;
+  }
+
+  @include mobile-wide {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 11px 22px 9px 23px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    right: 29px;
+    width: 20px;
+    height: 74px;
+    background: url("../img/icon-btn-arrow.svg") no-repeat center;
+
+    @include tablet {
+      top: -7px;
+      right: 39px;
+    }
+
+    @include mobile-wide {
+      top: 12px;
+      right: 10px;
+      width: 6px;
+      height: 13px;
+      background: url("../img/icon-btn-arrow--mobile.svg") no-repeat center;
+    }
+  }
+}
+
+.hotels-map__wrapper {
+  width: 100%;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 1000px;
+
+  @include tablet {
+    min-height: 900px;
+  }
+
+  @include mobile-wide {
+    min-height: 500px;
+  }
+}
+
+.hotels-map__map {
+  // background: url("../img/hotels-map--desktop@1x.png") center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1220px 1036px;//1525px 1296px;
+  min-height: 890px;//1112px;
+  position: absolute;
+  top: 25px;
+  width: 1525px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  //   background-image: url("../img/hotels-map--desktop@2x.png");
+  //   background-size: 1234px 1049px;
+  // }
+
+  @include tablet {
+    min-height: 800px;//640px;//
+    // background: url("../img/hotels-map--tablet@1x.png") center no-repeat;
+    width: 1234px;//987px;//
+    background-size: cover;
+    top: 75px;
+
+    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //   background-image: url("../img/hotels-map--tablet@2x.png");
+    //   background-size: 768px 1049px;
+    // }
+  }
+
+  @include mobile-wide {
+    min-height: 486px;//388px;//
+    // background: url("../img/hotels-map--mobile@1x.png") center no-repeat;
+    width: 618px; // 495px;//
+    background-size: cover;
+    top: 15px;
+
+    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //   background-image: url("../img/hotels-map--mobile@2x.png");
+    //   background-size: 320px 527px;
+    // }
+  }
+}
+
+.hotels-map__pin {
+  position: absolute;
+  color: #ffffff;
+  font-family: $font-muller;
+  padding-left: 50px;
+  padding-right: 35px;
+  font-size: 15px;//18px;
+  line-height: 40px;//46px;
+  width: auto;
+  background: linear-gradient(90deg, #4D88CC 50.45%, rgba(77, 136, 204, 0) 99.85%);
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: rgba($color: #ffffff, $alpha: 0.7);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 60px;
+    bottom: -20px;
+    left: -1px;
+    z-index: 1;
+    background: url("../img/icon-map-pin.svg") no-repeat left center;
+  }
+
+  @include tablet {
+    line-height: 40px;
+  }
+
+  @include mobile-wide {
+    font-size: 9px;
+    line-height: 9px;
+    background: linear-gradient(90deg, #4D88CC 50.45%, rgba(77, 136, 204, 0) 99.85%);
+    width: auto;
+    padding-top: 4px;
+    padding-left: 5px;
+    padding-right: 15px;
+    height: 19px;
+    z-index: 5;
+
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 30px;
+      bottom: -11px;
+      left: -1px;
+      z-index: 1;
+      background: url("../img/icon-map-pin--mobile.svg") no-repeat left center;
+    }
+  }
+
+  &--1 {
+    right: 778px;//807px;
+    top: 520px;// 655px;
+
+    @include tablet {
+      top: 485px;
+      right: 618px;
+    }
+
+    @include mobile-wide {
+      top: 286px;
+      right: 334px;
+    }
+
+    @include mobile {
+      top: 281px;
+      right: 346px;
+    }
+  }
+
+  &--2 {
+    right: 571px;//555px;
+    top: 415px;//522px;
+
+    @include tablet {
+      top: 395px;
+      right: 443px;
+    }
+
+    @include mobile-wide {
+      top: 229px;
+      right: 236px;
+    }
+
+    @include mobile {
+      top: 229px;
+      right: 245px;
+    }
+  }
+
+  &--3 {
+    right: 579px;//559px;
+    top: 475px;//588px;
+
+    @include tablet {
+      top: 433px;
+      right: 419px;
+    }
+
+    @include mobile-wide {
+      top: 257px;
+      right: 230px;
+    }
+
+    @include mobile {
+      top: 263px;
+      right: 2px;
+    }
+  }
+
+  &--4 {
+    right: 568px;//538px;
+    top: 573px;//710px;
+
+    @include tablet {
+      top: 531px;
+      right: 407px;
+    }
+
+    @include mobile-wide {
+      top: 307px;
+      right: 228px;
+    }
+
+    @include mobile {
+      top: 304px;
+      right: 238px;
+    }
+  }
+
+  &--5 {
+    right: 732px;//748px;
+    top: 563px;//714px;
+
+    @include tablet {
+      top: 524px;
+      right: 566px;
+    }
+
+    @include mobile-wide {
+      top: 307px;
+      right: 309px;
+    }
+
+    @include mobile {
+      top: 304px;
+      right: 319px;
+    }
+  }
+
+  &--6 {
+    right: 890px;//949px;
+    top: 604px;//757px;
+
+    @include tablet {
+      top: 529px;
+      right: 765px;
+    }
+
+    @include mobile-wide {
+      top: 329px;
+      right: 394px;
+    }
+
+    @include mobile {
+      top: 323px;
+      right: 406px;
+    }
+  }
+
+  &--7 {
+    right: 780px;//825px;//791px;
+    top: 650px;//755px;//808px;
+
+    @include tablet {
+      top: 593px;
+      right: 610px;
+    }
+
+    @include mobile-wide {
+      top: 346px;
+      right: 331px;
+    }
+
+    @include mobile {
+      top: 344px;
+      right: 338px;
+    }
+  }
+
+  &--8 {
+    right: 401px;//344px;
+    top: 178px;//223px;
+
+    @include tablet {
+      top: 129px;
+      right: 235px;
+    }
+
+    @include mobile {
+      top: 108px;
+      right: 153px;
+    }
+  }
+}

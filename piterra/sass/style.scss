@@ -1,0 +1,72 @@
+@import "./general/variables.scss";
+@import "./general/mixins.scss";
+@import "./general/fonts.scss";
+@import "./general/global.scss";
+
+//Общие элементы
+@import "./blocks/common-label.scss";
+@import "./blocks/common-field.scss";
+@import "./blocks/common-button.scss";
+@import "./blocks/common-form-link.scss";
+@import "./blocks/common-checkbox.scss";
+@import "./blocks/common-decoration-lines.scss";
+@import "./blocks/common-select.scss";
+@import "./blocks/social-button.scss";
+@import "./blocks/daterangepicker.scss";
+
+// Общие блоки
+@import "./blocks/header.scss";
+@import "./blocks/common-list.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/main-breadcrumbs.scss";
+@import "./blocks/breadcrumbs.scss";
+@import "./blocks/sidebar.scss";
+@import "./blocks/common-page.scss";
+
+// Главная home.html
+@import "./blocks/home-intro.scss";
+@import "./blocks/home-main.scss";
+@import "./blocks/home-activity.scss";
+@import "./blocks/home-links.scss";
+@import "./blocks/cards.scss";
+
+//Страница profile-access.html
+@import "./blocks/profile-main.scss";
+@import "./blocks/authorization.scss";
+@import "./blocks/new-user.scss";
+@import "./blocks/social-login.scss";
+@import "./blocks/input-help.scss";
+
+//Страница price-list.html
+@import "./blocks/price-list-content.scss";
+@import "./blocks/filters.scss";
+@import "./blocks/multi-selects.scss";
+@import "./blocks/list-prices.scss";
+@import "./blocks/make-price.scss";
+@import "./blocks/row-amount.scss";
+
+// могут встретиться дальше. Тоже со страницы price-list
+@import "./blocks/arrow-button.scss";
+@import "./blocks/add-button.scss";
+@import "./blocks/pagination.scss";
+@import "./blocks/tabs.scss";
+
+// Заказ товара (история)
+@import "./blocks/order.scss";
+@import "./blocks/history.scss";
+@import "./blocks/history-order.scss";
+@import "./blocks/history-tracking.scss";
+
+// Заказ товара (заказ)
+@import "./blocks/booking.scss";
+@import "./blocks/booking-form.scss";
+@import "./blocks/picked-items.scss";
+@import "./blocks/modal.scss";
+
+
+// Личный кабинет
+@import "./blocks/account-info.scss";
+@import "./blocks/account-content.scss";
+@import "./blocks/section-line.scss";
+@import "./blocks/user-image.scss";
+@import "./blocks/password-replacement.scss";

@@ -1,0 +1,65 @@
+.account-info {
+  width: 617px;
+  border-radius: 3px;
+  border: solid 1px $field-shadow-color;
+  background-color: $light-color;
+}
+
+.account-info__title {
+  padding: 0;
+  margin: 0;
+  padding-top: 9px;
+  padding-left: 15px;
+  margin-bottom: 39px;
+  font-family: $fontSerif;
+  line-height: 1.63;
+  font-size: 16px; 
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.account-info__form {
+  padding-right: 108px;
+  padding-bottom: 54px;
+}
+
+.account-info__label {
+  display: inline;  
+}
+
+.account-info__input {
+  width: 285px;
+  padding-left: 9px;
+  margin-left: 8px;
+}
+
+.account-info__block {
+  margin-bottom: 20px;
+
+  &--no-margin {
+    margin-bottom: 0;
+  }
+
+  &--big-margin {
+    margin-bottom: 31px; 
+  }
+  
+  .common-field {
+    text-align: right;
+  }
+}
+
+.account-info__input-block {
+  margin-bottom: 50px; 
+}
+
+.account-info__button {
+  width: 183px;
+  display: block;
+  margin-left: auto; 
+}
+
+.account-info__flex-child {
+  width: 371px; 
+}

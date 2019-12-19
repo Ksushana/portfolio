@@ -1,0 +1,42 @@
+.count {
+  span {
+    font-family: $font-ttnorms;
+    font-size: size(16px);
+
+    letter-spacing: 0.025em;
+    color:  $color-white;
+  }
+
+  span.next {
+    width: size(13px);
+    height: size(35px);
+    display: block;
+    svg {
+      width: size(13px);
+      height: size(35px);
+      transform: rotate(-90deg) translate(70%, 40%);
+    }
+
+    @include tablet {
+      width: size(13px);
+      height: size(20px);
+
+
+      svg {
+        width: size(13px);
+        height: size(20px);
+        transform: rotate(-90deg) translate(23%, 80%);
+      }
+    }
+  }
+
+  span.back {
+    display: block;
+
+    svg {
+      width: size(13px);
+      height: size(35px);
+      transform: rotate(90deg) translate(-70%, 40%);
+    }
+  }
+}

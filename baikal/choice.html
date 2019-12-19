@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    //= templates/header-new.html
+    <main class="choice-main">
+      <section class="choice-breadcrumbs container ">
+        <ul class="breadcrumbs-list breadcrumbs-list--choice" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <a href="#"><span itemprop='name'>Главная</span></a>
+            <meta itemprop='position' content='1'>
+          </li>
+          <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <a href="#"><span itemprop='name'>Туры</span></a>
+            <meta itemprop='position' content='2'>
+          </li>
+          <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <a><span itemprop='name'>Выбор тура</span></a>
+            <meta itemprop='position' content='3'>
+          </li>
+        </ul>
+      </section>
+      //= templates/choice-heart.html
+      <div class="container container--choice">
+        <!-- Туры на Байкал -->
+        <section class="tours-baikal row">
+          <h2 class="visually-hidden">Форма - поиск и подбор туров на Байкал по различным критериям</h2>
+          <div class="tours-baikal__left col-xs-12 col-sm-12 col-lg-3">
+            <form class="form-choice">
+              <section class="form-choice__start start">
+                <h3 class="visually-hidden">Начало путешествия на Байкал</h3>
+                <p class="form-choice__title form-choice__title--start">Начало путешествия</p>
+                <div class="start__tabs">
+                  <label class="start__label" for="date">
+                    <input class="start__input start__input--tab visually-hidden" type="radio" id="date" name="start" value="date" checked/>
+                    <span class="start__indicator"><span>Дата</span></span>
+                  </label>
+                  <label class="start__label" for="month">
+                    <input class="start__input start__input--tab visually-hidden" type="radio" id="month" name="start" value="month" />
+                    <span class="start__indicator"><span>Месяц</span></span>
+                  </label>
+                  <label class="start__label" for="season">
+                    <input class="start__input start__input--tab visually-hidden" type="radio" id="season" name="start" value="season" />
+                    <span class="start__indicator"><span>Сезон</span></span>
+                  </label>
+                </div>
+                <ul class="start__tabs-list">
+                  <li class="start__tabs-item start__tabs-item--date start__tabs-item--active">
+                    <div class="start__date-tab">
+                      <label class="start__date-label">
+                        <span class="visually-hidden">Выберите первую дату из диапазона поиска</span>
+                        <input class="start__input" type="text"  value="18/01/2019" name="date-start" placeholder="18/01/2019">
+                      </label>
+                      <label class="start__date-label">
+                        <span class="visually-hidden">Выберите вторую дату из диапазона поиска</span>
+                        <input class="start__input" type="text"  value="25/01/2019" name="date-end" placeholder="25/01/2019">
+                      </label>
+                    </div>
+                  </li>
+                  <li class="start__tabs-item start__tabs-item--month">
+                    <label class="start__date-label">
+                      <span class="visually-hidden">Выберите месяц</span>
+                      <select class="start__input start__input--select" name="month-select">
+                        <option value="january">Январь</option>
+                        <option value="february">Февраль</option>
+                        <option value="march">Март</option>
+                        <option value="april">Апрель</option>
+                        <option value="may">Май</option>
+                        <option value="june">Июнь</option>
+                        <option value="july">Июль</option>
+                        <option value="august">Август</option>
+                        <option value="september">Сентябрь</option>
+                        <option value="october">Октябрь</option>
+                        <option value="november">Ноябрь</option>
+                        <option value="december">Декабрь</option>
+                      </select>
+                    </label>
+                  </li>
+                  <li class="start__tabs-item start__tabs-item--season">
+                    <ul class="start__season-list checkbox">
+                      <li class="start__season-item checkbox__item">
+                        <a  class="checkbox__label" href="#">
+                          <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                          Зима
+                        </a>
+                      </li>
+                      <li class="start__season-item checkbox__item">
+                        <a  class="checkbox__label" href="#">
+                          <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                          Весна
+                        </a>
+                      </li>
+                      <li class="start__season-item checkbox__item">
+                        <a  class="checkbox__label" href="#">
+                          <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                          Лето
+                        </a>
+                      </li>
+                      <li class="start__season-item checkbox__item">
+                        <a  class="checkbox__label" href="#">
+                          <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                          Осень
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="form-choice__duration range">
+                <h3 class="visually-hidden">Продолжительность путешествия на Байкал</h3>
+                <p class="form-choice__title">Продолжительность</p>
+                <div class="range__background">
+                  <div class="range__scale">
+                    <label for="durationMin">
+                      <span class='visually-hidden'>Ползунок минимальное количество дней</span>
+                      <input class="range__input range__input--duration visually-hidden" id="durationMin" type="range" name="durationMin" min="1" max="10" step="1" value="3">
+                      <span class="range__lever range__lever-min" aria-hidden="true"></span>
+                    </label>
+                    <label for="durationMax">
+                      <span class='visually-hidden'>Ползунок максимальное количество дней</span>
+                      <input class="range__input range__input--duration visually-hidden" id="durationMax" type="range" name="durationMax" min="1" max="10" step="1" value="8">
+                      <span class="range__lever range__lever-max" aria-hidden="true"></span>
+                    </label>
+                    <div class="range__bar"></div>
+                  </div>
+                </div>
+                <div class="range__label">
+                  От <label for="durationOutputMin">
+                    <span class="visually-hidden">Введите минимальное количество дней путешествия</span>
+                    <input  name="durationOutputMin" id="durationOutputMin"   class="range__output range__output--duration" type="text" value="3" >
+                  </label> до
+                  <label for="durationOutputMax">
+                    <span class="visually-hidden">Введите максимальное дней путешествия</span>
+                    <input name="durationOutputMax" id="durationOutputMax" type="text" aria-hidden="true" class="range__output range__output--duration"  value="8"  > дней
+                  </label>
+                </div>
+              </section>
+
+              <section class="form-choice__budget range">
+                <h3 class="visually-hidden">Бюджет для поездки на Байкал</h3>
+                <p class="form-choice__title">Бюджет <span>(на 1 чел)</span></p>
+                <div class="range__background">
+                  <div class="range__scale">
+                    <label for="budgetMin" >
+                      <span class='visually-hidden'>Ползунок минимальное значение цены</span>
+                      <input class="range__input range__input--budget visually-hidden" id="budgetMin" type="range" name="budgetMin" min="12500" max="15000000" step="500" value="12500">
+                      <span class="range__lever range__lever-min" aria-hidden="true"></span>
+                    </label>
+                    <label for="budgetMax">
+                      <span class="visually-hidden">Ползунок максимальное значение цены</span>
+                      <input class="range__input range__input--budget visually-hidden" id="budgetMax" type="range" name="budgetMax" min="12500" max="15000000" step="500" value="150000">
+                      <span class="range__lever range__lever-max" aria-hidden="true"></span>
+                    </label>
+                    <div class="range__bar"></div>
+                  </div>
+                </div>
+
+                <div class="range__label">
+                  От <label for="budgetOutputMin">
+                      <span class="visually-hidden">Введите минимальную цену путешествия</span>
+                      <input name="budgetOutputMin" id="budgetOutputMin" type="text" aria-hidden="true" class="range__output range__output--budget" value="12 500" >
+                    </label>руб. до
+                  <label for="budgetOutputMax">
+                    <span class="visually-hidden">Введите максимальную цену путешествия</span>
+                    <input name="budgetOutputMax" id="budgetOutputMax" type="text" aria-hidden="true" class="range__output range__output--budget" value="150 000" >
+                  </label>руб.
+                </div>
+              </section>
+
+              <section class="form-choice__format ">
+                <h3 class="visually-hidden">Формат тура на Бакал</h3>
+                <p class="form-choice__title form-choice__title--filters">Формат тура</p>
+                <ul class="checkbox">
+                  <li class="checkbox__item">
+                    <a  class="checkbox__label" href="#">
+                      <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                      Присоединиться к группе
+                    </a>
+                  </li>
+                  <li class="checkbox__item">
+                    <a  class="checkbox__label" href="#">
+                      <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                      Индивидуальный тур
+                    </a>
+                  </li>
+                  <li class="checkbox__item">
+                    <a  class="checkbox__label" href="#">
+                      <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                      Премиум тур
+                    </a>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="form-choice__kind">
+                <h3 class="visually-hidden">Виды туров на Байкал</h3>
+                <p class="form-choice__title form-choice__title--filters">Виды туров</p>
+                <ul class="checkbox">
+                  <li class="checkbox__item">
+                    <a  class="checkbox__label" href="#">
+                      <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                      Программы с экскурсиями
+                    </a>
+                  </li>
+                  <li class="checkbox__item">
+                    <a  class="checkbox__label" href="#">
+                      <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                      Активные туры
+                    </a>
+                  </li>
+                  <li class="checkbox__item">
+                    <a  class="checkbox__label" href="#">
+                      <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                      Круизы
+                    </a>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="form-choice__reserve">
+                <h3 class="visually-hidden">Со скидкой</h3>
+                <p class="form-choice__title form-choice__title--filters">Со скидкой</p>
+                <ul class="checkbox">
+                  <li class="checkbox__item">
+                    <a  class="checkbox__label checkbox__label--new" href="#">
+                      <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                      Раннее бронирование
+                    </a>
+                  </li>
+                </ul>
+              </section>
+
+              <button class="form-choice__button form-choice__button--filters form-choice__button--open" type="button">
+                <span class="form-choice__button-show">Все фильтры</span>
+                <span class="form-choice__button-hide">Скрыть фильтры</span>
+              </button>
+
+              <div class="form-choice__filters form-choice__filters--show">
+                <section class="form-choice__type">
+                  <h3 class="visually-hidden">Тип размещения при путешествии на Байкал</h3>
+                  <p class="form-choice__title form-choice__title--filters">Тип размещения</p>
+                  <ul class="checkbox form-choice__type-list">
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Отели
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Палатки
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <p  class="checkbox__p">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Каюты
+                      </p>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="form-choice__activity">
+                  <h3 class="visually-hidden">Чем заняться на Байкале во время путешествия</h3>
+                  <p class="form-choice__title form-choice__title--filters">Чем заняться</p>
+                  <ul class="checkbox form-choice__activity-list">
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Походы, трекинг
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Байдарки, сплавы
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Водные экскурсии
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Кони
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Рыбалка
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Аэролодка
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Джипы
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Пещеры
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Снегоходы
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Лыжи, сноуборд
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Горные туры
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Собачьи упряжки
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Вертолет
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Охота
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Квадроциклы
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Экскурсии
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Сплав на льдине
+                      </a>
+                    </li>
+                  </ul>
+                  <button class="form-choice__button" type="button">
+                    <span class="form-choice__button-show">Больше активностей</span>
+                    <span class="form-choice__button-hide">Скрыть фильтры</span>
+                  </button>
+                </section>
+
+                <section class="form-choice__collections">
+                  <h3 class="visually-hidden">Подборки путешествий на Байкал по различным тематикам</h3>
+                  <p class="form-choice__title form-choice__title--filters">Подборки</p>
+                  <ul class="checkbox form-choice__collections-list">
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Отдых с детьми
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Достопримечательности
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Туры выходного дня
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Места силы
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Горячие источники
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Дикие места
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Наблюдение за животными
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Туры на 23 февраля
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Туры на 8 марта
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Майские праздники
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Туры на Новый Год
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Фото-туры
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Школьные туры
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Корпоративные туры
+                      </a>
+                    </li>
+                  </ul>
+                  <button class="form-choice__button" type="button">
+                    <span class="form-choice__button-show">Больше подборок</span>
+                    <span class="form-choice__button-hide">Скрыть фильтры</span>
+                  </button>
+                </section>
+
+                <section class="form-choice__places">
+                  <h3 class="visually-hidden">Места, которые можно посетить на Байкале</h3>
+                  <p class="form-choice__title form-choice__title--filters">Места</p>
+                  <ul class="checkbox form-choice__places-list">
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Листвянка
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        КБЖД
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Остров Ольхон
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Мыс Хобой
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Аршан
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Байкало-Ленский заповедник
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Байкальск
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Байкальский заповедник
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Баргузинская долина
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Баргузинский залив
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Большие Коты
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Большое Голоустное
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Бугульдейка
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Бухта Аяя
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Бухта Песчаная
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Жемчуг
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Иволгинский дацан
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Иркутск
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Малое море
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Мыс Котельниковский
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Мыс Лударь
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Озеро Фролиха
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Остров Огой
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Остров Ярки
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Северобайкальск
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Скала Шаманка (мыс Бурхан)
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Тальцы
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Тарбагатай
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Тальцы
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Теплые озера
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Улан-Удэ
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Ушканьи острова
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <a  class="checkbox__label" href="#">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Хакусы
+                      </a>
+                    </li>
+                    <li class="checkbox__item">
+                      <p  class="checkbox__p">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Чивыркуйский залив
+                      </p>
+                    </li>
+                    <li class="checkbox__item">
+                      <p  class="checkbox__p">
+                        <svg width="18" height="18"><use xlink:href="#icon-heart"></use></svg>
+                        Шумак
+                      </p>
+                    </li>
+                  </ul>
+                  <button class="form-choice__button" type="button">
+                    <span class="form-choice__button-show">Больше мест</span>
+                    <span class="form-choice__button-hide">Скрыть фильтры</span>
+                  </button>
+                </section>
+              </div>
+            </form>
+          </div>
+          <div class="tours-baikal__right catalog-baikal col-xs-12 col-sm-12 col-lg-9">
+            <h2>Туры на Байкал</h2>
+            <p class="catalog-baikal__intro">Вас ждет увлекательное путешествие по Забайкалью. Город Иркутск встретит&nbsp;Вас стариной улиц
+            и историями жизни декабристов. Байкал&nbsp;таит в себе много уникальных мест, которые вызывают внутри трепет&nbsp;и восторг.</p>
+            <div class="catalog-baikal__sorting">
+              <span class="catalog-baikal__sort-title">Сортировать по:</span>
+              <div class="catalog-baikal__sort-filters">
+                <span class="catalog-baikal__sort-filter catalog-baikal__sort-filter--up">
+                  <a href="#">Цене</a>
+                </span>
+                <span class="catalog-baikal__sort-filter catalog-baikal__sort-filter--duration">
+                  <a href="#">Продолжительности</a>
+                </span>
+                <span class="catalog-baikal__sort-filter">
+                  <a href="#">Дате</a>
+                </span>
+              </div>
+              <div class="catalog-baikal__sort-summ">
+                <span class="catalog-baikal__sort-amount">146 туров</span>
+                <span class="catalog-baikal__sort-reset" >
+                  <a href="#">Очистить фильтр</a>
+                </span>
+              </div>
+            </div>
+            <ul class="catalog-baikal__list tours-list">
+              <!--Микроразметка блока с описанием тура как продукта - первый в цикле-Begin Product-->
+              <li class="tours-list__item" itemscope itemtype='http://schema.org/Product'>
+                <div class="tours-list__action">
+                  <span class="tours-list__action-item tours-list__action-item--recruiting">
+                    <svg width="20" height="20"><use xlink:href="#icon-recruiting"></use></svg>
+                    Идет набор в группу
+                  </span>
+                  <span class="tours-list__action-item tours-list__action-item--active">Активный тур</span>
+                </div>
+                <a itemprop="url" class="tours-list__picture" href="#">
+                  <img itemprop="image" class="cover" src="img/choice-list.jpg" alt="Туристы на Байкале">
+                </a>
+                <div class="tours-list__description">
+                  <a href="#">
+                    <h3 itemprop="name">Байкальское приключение</h3>
+                  </a>
+                  <p itemprop="description">Восхождение на Хамар-Дабан, путешествие на самый северный мыс острова Ольхон, посещение пещер</p>
+                  <ul class="tours-list__taglist taglist-pieces">
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Иркутск
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Листвянка
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="tours-list__taglist taglist-kind">
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Велосипедный тур
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Отдых с детьми
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Походы в горы
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Каяки
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <button class="taglist-kind__button" type="button">
+                        Еще 3
+                        <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!--Микроразметка блока offer внутри Product -Begin Offer-->
+                <div class="tours-list__organization organization" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <link itemprop="availability" href="http://schema.org/InStock" />
+                  <div class="organization__duration">
+                    <span class="organization__days">10 дней</span>
+                    <span class="organization__nights">10 ночей</span>
+                  </div>
+                  <meta itemprop="priceCurrency" content="RUB"/>
+                  <div class="organization__cost">
+                    <p class="organization__cost-old">от 77 000 p.</p>
+                    <p class="organization__cost-new" itemprop="price" content="44000">от 44 000 р.</p>
+                    <p class="organization__cost-validity">Раннее бронирование при&nbsp;оплате до <time itemprop="priceValidUntil" datetime="2019-06-05">05.06.2019</time></p>
+                  </div>
+                  <p class="organization__season">
+                    <span>Сезон:</span>
+                    весна, лето, осень, зима
+                  </p>
+                  <p class="organization__dates">Ближайшие даты:</p>
+                  <meta itemprop="availabilityStarts" content="2019-05-25" />
+                  <meta itemprop="availabilityEnds" content="2019-05-25" />
+                  <div class="organization__window-dates window-dates window-dates--large visually-hidden">
+                    <button class="window-dates__button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+                    <ul class="window-dates__list-dates">
+                      <li>
+                        <p>10 февраля - 20 февраля</p>
+                      </li>
+                      <li>
+                        <p>19 августа - 29 августа</p>
+                      </li>
+                      <li>
+                        <p>20 сентября - 30 сентября</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 сентября - 10 сентября</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 сентября - 10 сентября</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 сентября - 10 сентября</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="organization__list-dates">
+                    <li>
+                      <p>10 февраля - 20 февраля</p>
+                    </li>
+                    <li>
+                      <p>20 сентября - 30 сентября</p>
+                    </li>
+                  </ul>
+                  <button class="organization__button" type="button">
+                    Еще 3
+                    <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                  </button>
+                  <a itemprop="url" class="organization__open" href="#">Посмотреть тур</a>
+                </div>
+                <!--End Offer-->
+              </li>
+              <!--End Product-->
+
+              <li class="tours-list__item">
+                <div class="tours-list__action">
+                  <span class="tours-list__action-item tours-list__action-item--individual">Индивидуальный тур</span>
+                  <span class="tours-list__action-item tours-list__action-item--active">Активный тур</span>
+                </div>
+                <a class="tours-list__picture" href="#">
+                  <img class="cover" src="img/choice-list.jpg" alt="Туристы на Байкале">
+                </a>
+                <div class="tours-list__description">
+                  <a href="#">
+                    <h3>Байкальское приключение</h3>
+                  </a>
+                  <p>Восхождение на Хамар-Дабан, путешествие на самый северный мыс острова Ольхон, посещение пещер</p>
+                  <ul class="tours-list__taglist taglist-pieces">
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Иркутск
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Листвянка
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="tours-list__taglist taglist-kind">
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Велосипедный тур
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Отдых с детьми
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Походы в горы
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Каяки
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <button class="taglist-kind__button" type="button">
+                        Еще 3
+                        <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tours-list__organization organization">
+                  <div class="organization__duration">
+                    <span class="organization__days">10 дней</span>
+                    <span class="organization__nights">10 ночей</span>
+                  </div>
+                  <div class="organization__cost">
+                    <p class="organization__cost-old">от 77 000 p.</p>
+                    <p class="organization__cost-new">от 44 000 р.</p>
+                    <p class="organization__cost-validity">Раннее бронирование при&nbsp;оплате до&nbsp;<time datetime="2019-06-05">05.06.2019</time></p>
+                  </div>
+                  <p class="organization__season">
+                    <span>Сезон:</span>
+                    весна, лето, осень
+                  </p>
+                  <p class="organization__dates">Ближайшие даты:</p>
+                  <div class="organization__window-dates window-dates visually-hidden">
+                    <button class="window-dates__button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+                    <ul class="window-dates__list-dates">
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 сентября - 10 сентября</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="organization__list-dates">
+                    <li>
+                      <p>1 мая - 10 мая</p>
+                    </li>
+                    <li>
+                      <p>9 мая - 18 мая</p>
+                    </li>
+                  </ul>
+                  <button class="organization__button" type="button">
+                    Еще 3
+                    <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                  </button>
+
+                  <a class="organization__open" href="#">Посмотреть тур</a>
+                </div>
+              </li>
+
+              <li class="tours-list__item">
+                <div class="tours-list__action">
+                  <span class="tours-list__action-item tours-list__action-item--premium">Премиум тур</span>
+                  <span class="tours-list__action-item tours-list__action-item--active">Активный тур</span>
+                </div>
+                <a class="tours-list__picture" href="#">
+                  <img class="cover" src="img/choice-list.jpg" alt="Туристы на Байкале">
+                </a>
+                <div class="tours-list__description">
+                  <a href="#">
+                    <h3>Байкальское приключение</h3>
+                  </a>
+                  <p>Восхождение на Хамар-Дабан, путешествие на самый северный мыс острова Ольхон, посещение пещер</p>
+                  <ul class="tours-list__taglist taglist-pieces">
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Иркутск
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Листвянка
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="tours-list__taglist taglist-kind">
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Велосипедный тур
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Отдых с детьми
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Походы в горы
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Каяки
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <button class="taglist-kind__button" type="button">
+                        Еще 3
+                        <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tours-list__organization organization">
+                  <div class="organization__duration">
+                    <span class="organization__days">10 дней</span>
+                    <span class="organization__nights">10 ночей</span>
+                  </div>
+                  <div class="organization__cost">
+                    <p class="organization__cost-old">от 77 000 p.</p>
+                    <p class="organization__cost-new">от 44 000 р.</p>
+                    <p class="organization__cost-validity">Раннее бронирование при&nbsp;оплате до&nbsp;<time datetime="2019-06-05">05.06.2019</time></p>
+                  </div>
+                  <p class="organization__season">
+                    <span>Сезон:</span>
+                    весна, лето
+                  </p>
+                  <p class="organization__dates">Ближайшие даты:</p>
+                  <div class="organization__window-dates window-dates visually-hidden">
+                    <button class="window-dates__button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+                    <ul class="window-dates__list-dates">
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 сентября - 10 сентября</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="organization__list-dates">
+                    <li>
+                      <p>1 мая - 10 мая</p>
+                    </li>
+                    <li>
+                      <p>9 мая - 18 мая</p>
+                    </li>
+                  </ul>
+                  <button class="organization__button" type="button">
+                    Еще 3
+                    <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                  </button>
+
+                  <a class="organization__open" href="#">Посмотреть тур</a>
+                </div>
+              </li>
+
+              <li class="tours-list__item tours-list__item--premium tours-list__item--active">
+                <div class="tours-list__action">
+                  <span class="tours-list__action-item tours-list__action-item--premium">Премиум тур</span>
+                  <span class="tours-list__action-item tours-list__action-item--active">Активный тур</span>
+                </div>
+                <a class="tours-list__picture" href="#">
+                  <img class="cover" src="img/choice-list.jpg" alt="Туристы на Байкале">
+                </a>
+                <div class="tours-list__description">
+                  <a href="#">
+                    <h3>Байкальское приключение</h3>
+                  </a>
+                  <p>Восхождение на Хамар-Дабан, путешествие на самый северный мыс острова Ольхон, посещение пещер</p>
+                  <ul class="tours-list__taglist taglist-pieces">
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Иркутск
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Листвянка
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="tours-list__taglist taglist-kind">
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Велосипедный тур
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Отдых с детьми
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Походы в горы
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Каяки
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <button class="taglist-kind__button" type="button">
+                        Еще 3
+                        <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tours-list__organization organization">
+                  <div class="organization__duration">
+                    <span class="organization__days">10 дней</span>
+                    <span class="organization__nights">10 ночей</span>
+                  </div>
+                  <div class="organization__cost">
+                    <p class="organization__cost-old">от 77 000 p.</p>
+                    <p class="organization__cost-new">от 44 000 р.</p>
+                    <p class="organization__cost-validity">Раннее бронирование при&nbsp;оплате до&nbsp;<time datetime="2019-06-05">05.06.2019</time></p>
+                  </div>
+                  <p class="organization__season">
+                    <span>Сезон:</span>
+                    лето
+                  </p>
+                  <p class="organization__dates">Ближайшие даты:</p>
+                  <div class="organization__window-dates window-dates visually-hidden">
+                    <button class="window-dates__button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+                    <ul class="window-dates__list-dates">
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 сентября - 10 сентября</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="organization__list-dates">
+                    <li>
+                      <p>1 мая - 10 мая</p>
+                    </li>
+                    <li>
+                      <p>9 мая - 18 мая</p>
+                    </li>
+                  </ul>
+                  <button class="organization__button" type="button">
+                    Еще 3
+                    <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                  </button>
+
+                  <a class="organization__open" href="#">Посмотреть тур</a>
+                </div>
+              </li>
+
+            </ul>
+            <button class="catalog-baikal__button" type="button">Больше туров</button>
+
+            <template id="catalog-template">
+              <li class="tours-list__item">
+                <div class="tours-list__action">
+                  <span class="tours-list__action-item tours-list__action-item--individual">Индивидуальный тур</span>
+                  <span class="tours-list__action-item tours-list__action-item--active">Активный тур</span>
+                </div>
+                <a class="tours-list__picture" href="#">
+                  <img class="cover" src="img/choice-list.jpg" alt="Туристы на Байкале">
+                </a>
+                <div class="tours-list__description">
+                  <a href="#">
+                    <h3>Байкальское приключение</h3>
+                  </a>
+                  <p>Восхождение на Хамар-Дабан, путешествие на самый северный мыс острова Ольхон, посещение пещер</p>
+                  <ul class="tours-list__taglist taglist-pieces">
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Иркутск
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        Листвянка
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                    <li class="taglist-pieces__item">
+                      <a class="taglist-pieces__tag" href="#">
+                        КБЖД
+                      </a>
+                    </li>
+                  </ul>
+
+                  <div class="tours-list__taglist taglist-kind">
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Велосипедный тур
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Отдых с детьми
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Походы в горы
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <a class="taglist-kind__tag" href="#">
+                        Каяки
+                      </a>
+                    </div>
+                    <div class="taglist-kind__item">
+                      <button class="taglist-kind__button" type="button">
+                        Еще 3
+                        <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tours-list__organization organization">
+                  <div class="organization__duration">
+                    <span class="organization__days">10 дней</span>
+                    <span class="organization__nights">10 ночей</span>
+                  </div>
+                  <div class="organization__cost">
+                    <p class="organization__cost-old">от 77 000 p.</p>
+                    <p class="organization__cost-new">от 44 000 р.</p>
+                    <p class="organization__cost-validity">Раннее бронирование при&nbsp;оплате до&nbsp;<time datetime="2019-06-05">05.06.2019</time></p>
+                  </div>
+                  <p class="organization__season">
+                    <span>Сезон:</span>
+                    Лето
+                  </p>
+                  <p class="organization__dates">Ближайшие даты:</p>
+                  <div class="organization__window-dates window-dates visually-hidden">
+                    <button class="window-dates__button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+                    <ul class="window-dates__list-dates">
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 сентября - 10 сентября</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                      <li>
+                        <p>9 мая - 18 мая</p>
+                      </li>
+                      <li>
+                        <p>1 мая - 10 мая</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <ul class="organization__list-dates">
+                    <li>
+                      <p>1 мая - 10 мая</p>
+                    </li>
+                    <li>
+                      <p>9 мая - 18 мая</p>
+                    </li>
+                  </ul>
+                  <button class="organization__button" type="button">
+                    Еще 3
+                    <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+                  </button>
+
+                  <a class="organization__open" href="#">Посмотреть тур</a>
+                </div>
+              </li>
+            </template>
+          </div>
+
+        </section>
+        <!-- Третий экран - Советы -->
+        //= templates/advice.html
+        <section class="popular">
+          <h2>Популярные туры</h2>
+          //= templates/popular.html
+        </section>
+
+      </div>
+      <!-- Пятый экран - Заявка на отдых -->
+      <section class="order order--inner" style="background-image: url(img/bg-order.png); background-position: top left 65%;
+    background-size: 1445px 991px; background-repeat: no-repeat;">
+        <div class="container">
+          <div class="row">
+            <div class="order__form col-xs-12 col-sm-12 col-lg-5">
+              <h2 class="order__header">Заявка на отдых <span>на Байкале</span></h2>
+              <form class="form" action="#" method="post">
+                <p class="form__field">
+                  <label for="name">
+                    <span class="visually-hidden">Ваше имя</span>
+                    <input class="form__name" id="name" name="name" type="text" placeholder="Ваше имя">
+                  </label>
+                </p>
+                <p class="form__field form__field--required">
+                  <label for="phone">
+                    <span class="visually-hidden">Номер телефона</span>
+                    <input class="form__phone" id="phone" name="phone" type="text" placeholder="Номер телефона" required >
+                  </label>
+                </p>
+                <p class="form__field form__field--required">
+                  <label for="email">
+                    <span class="visually-hidden">E-mail</span>
+                    <input class="form__email" id="email" name="email" type="email" placeholder="E-mail" required>
+                  </label>
+                </p>
+                <label for="comment">
+                  <span class="visually-hidden">Комментарий</span>
+                  <textarea class="form__comment" id="comment" name="comment" placeholder="Комментарий"></textarea>
+                </label>
+                <button class="form__submit" type="submit">Отправить заявку</button>
+                <p class="form__notice">Нажимая на&nbsp;кнопку выше вы&nbsp;соглашаетесь с&nbsp;<a href="#" target="_blank">политикой конфиденциальности</a></p>
+              </form>
+            </div>
+            //= templates/manager-img.html
+          </div>
+        </div>
+      </section>
+      //= templates/scroll-up.html
+    </main>
+    //= templates/footer.html
+    //= templates/callback.html
+    //= templates/header-fixed-new.html
+    //= templates/request-response.html
+    //= templates/js.html
+  </body>
+</html>

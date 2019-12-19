@@ -1,0 +1,45 @@
+.daterangepicker .calendar-table th,
+.daterangepicker .calendar-table td {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  font-family: $fontSans;
+  font-size: 13px;
+  font-weight: normal;
+  color: $default-text;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.daterangepicker .calendar-table th {
+  text-transform: capitalize;
+
+  @include color-opacity($default-text, 0.25);
+}
+
+.daterangepicker th.month {
+  font-family: $fontSans;
+  font-size: 13px;
+  font-weight: normal;
+  color: $default-text;
+  text-transform: uppercase;
+}
+
+.daterangepicker td.off {
+  @include color-opacity($default-text, 0.25);
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover,
+.daterangepicker td.active.end-date {
+  background-color: $primary-color;
+  color: $light-color;
+}
+
+.daterangepicker td.in-range {
+  @include bg-opacity($primary-color, 0.25);
+}
+
+.daterangepicker.show-calendar .drp-buttons {
+  display: none;
+}

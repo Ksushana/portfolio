@@ -1,0 +1,156 @@
+.container-team {
+  .title {
+    margin-top: size(141px);
+    margin-bottom: size(111px);
+
+    @include desktop {
+      margin: size(85px) auto size(179px);
+
+      max-width: size(539px);
+    }
+
+    @include tablet {
+      max-width: size(350px);
+      margin-top: size(60px);
+      margin-bottom: size(32px);
+    }
+
+    @include mobile {
+      margin-top: size(39px);
+      margin-bottom: size(48px);
+    }
+  }
+}
+
+.team {
+  padding-bottom: size(121px);
+
+  @include desktop {
+    padding-bottom: size(159px);
+  }
+
+  @include tablet {
+    padding-bottom: size(26px);
+  }
+
+  ul {
+    @include list-reset;
+    max-width: size(1227px);
+    margin: 0 auto;
+
+    @include desktop {
+      max-width: size(981px);
+    }
+
+    @include tablet {
+      max-width: size(691px);
+    }
+
+    @include mobile {
+      max-width: max-content;
+      padding: 0 size(60px);
+    }
+  }
+
+  li {
+    @include desktop {
+      padding-right: size(50px);
+    }
+
+    @include tablet {
+      padding-right: 0;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    div {
+      margin-bottom: size(35px);
+
+      font-size: size(35px);
+      line-height: size(35px);
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+
+      @include desktop {
+        margin-bottom: size(32px);
+
+        font-size: size(30px);
+        line-height: size(30px);
+      }
+
+      @include tablet {
+        margin-bottom: size(26px);
+
+        font-size: size(25px);
+        line-height: size(25px);
+      }
+
+      @include mobile {
+        margin-bottom: size(24px);
+        font-size: size(23px);
+        line-height: size(23px);
+      }
+    }
+
+    p {
+      margin: 0;
+
+      font-size: size(35px);
+      line-height: size(35px);
+      letter-spacing: 0.025em;
+
+      @include desktop {
+        font-size: size(30px);
+        line-height: size(30px);
+      }
+
+      @include tablet {
+        font-size: size(25px);
+        line-height: size(25px);
+      }
+
+      @include mobile {
+        font-size: size(23px);
+        line-height: size(23px);
+      }
+    }
+
+    svg {
+      display: block;
+      width: size(84px);
+      height: size(84px);
+      margin-top: size(74px);
+      margin-bottom: size(65px);
+      margin-left: -3px;
+
+      background: url("../img/cross1.svg") no-repeat center;
+      background-size: cover;
+
+      @include desktop {
+        margin-top: size(54px);
+        margin-bottom: size(55px);
+      }
+
+      @include tablet {
+        width: size(48px);
+        height: size(48px);
+
+        margin-bottom: 54px;
+        margin-top: 40px;
+        margin-left: 2px;
+      }
+
+      @include mobile {
+        width: size(55px);
+        height: size(55px);
+
+        margin-bottom: size(31px);
+        margin-top: size(24px);
+      }
+    }
+  }
+}

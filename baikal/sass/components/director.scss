@@ -1,0 +1,149 @@
+.director {
+  width: 556px;
+  float: right;
+  padding-top: 70px;
+
+  @include laptop {
+    width: 420px;
+    padding-top: 60px;
+
+    &--tour {
+      margin-top: 140px;
+    }
+  }
+
+  @include tablet {
+    width: 595px;
+    margin: 90px auto 0;
+    padding-top: 0;
+    padding-left: 71px;
+    float: none;
+
+    &--tour {
+      margin-top: 140px;
+      margin-bottom: 12px;
+    }
+  }
+
+  @include mobile-wide {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 56px;
+    padding-left: 0;
+
+    &--tour {
+      margin-top: 7px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.director__img {
+  position: relative;
+  width: 436px;
+  margin: 0 0 55px 15px;
+
+  img {
+    width: 100%;
+    height: 506px;//auto;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 92px;
+    height: 78px;
+    bottom: -16px;
+    left: -14px;
+    background-image: url("../img/quote.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &--tour {
+    margin: 0 0 52px 15px;
+  }
+
+  @include laptop {
+    width: 420px;
+    margin-left: 0;
+    img {
+      height: 487px;
+    }
+
+    &::after {
+      left: 0;
+    }
+  }
+
+  @include tablet {
+    width: 450px;
+    padding-left: 14px;
+    img {
+      height: auto;
+    }
+  }
+
+  @include mobile-wide {
+    width: 100%;
+    margin-bottom: 48px;
+    padding-left: 10px;
+
+    &::after {
+      bottom: -11px;
+      width: 58px;
+      height: 51px;
+    }
+
+    &--tour {
+      margin-left: 15px;
+
+      img {
+        width: 90%;
+      }
+    }
+  }
+}
+
+.director__h {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 700;
+
+  @include mobile-wide {
+    margin-bottom: 13px;
+
+    &--tour {
+      padding-left: 18px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.director__quote {
+  font-size: 18px;
+  line-height: 31px;
+  font-style: italic;
+
+  &--tour {
+    padding-right: 20px;
+  }
+
+  @include mobile-wide {
+
+    &--tour {
+      padding-left: 15px;
+      padding-right: 10px;;
+    }
+  }
+}
+
+.landing {
+  .director__quote {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

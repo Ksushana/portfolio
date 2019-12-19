@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <main>
+    <h1 class="visually-hidden">Квиз</h1>
+    <article class="quiz">
+      <h2 class="visually-hidden">Поиск тура</h2>
+      <div class="quiz__container">
+        <form class="quiz__form">
+          <div class="quiz__step quiz__step--you quiz__step--current">
+            <fieldset class="quiz__field">
+              <h3 class="quiz__caption">Вы:</h3>
+              <ul class="quiz__you-list">
+                <li class="quiz__you-item">
+                  <input class="quiz__you-radio" id="quiz-single" type="radio" name="quiz-you" value="single">
+                  <label class="quiz__you-label" for="quiz-single">
+                    <svg class="quiz__you-icon quiz__you-icon--single" width="41" height="96"><use xlink:href="#icon-single" focusable="false"></use></svg>
+                    <span>Один</span></label>
+                  <span class="quiz__checked-description">Одиночный</span>
+                </li>
+                <li class="quiz__you-item">
+                  <input class="quiz__you-radio" id="quiz-pair" type="radio" name="quiz-you" value="pair">
+                  <label class="quiz__you-label" for="quiz-pair">
+                    <svg class="quiz__you-icon quiz__you-icon--pair" width="95" height="100"><use xlink:href="#icon-pair" focusable="false"></use></svg>
+                    <span>Пара</span>
+                  </label>
+                  <span class="quiz__checked-description">Пара</span>
+                </li>
+                <li class="quiz__you-item">
+                  <input class="quiz__you-radio" id="quiz-children" type="radio" name="quiz-you" value="children">
+                  <label class="quiz__you-label" for="quiz-children">
+                    <svg class="quiz__you-icon quiz__you-icon--children" width="100" height="85"><use xlink:href="#icon-children" focusable="false"></use></svg>
+                    <span>С детьми</span>
+                  </label>
+                  <span class="quiz__checked-description">С детьми</span>
+                </li>
+                <li class="quiz__you-item">
+                  <input class="quiz__you-radio" id="quiz-company" type="radio" name="quiz-you" value="company">
+                  <label class="quiz__you-label" for="quiz-company">
+                    <svg class="quiz__you-icon quiz__you-icon--company" width="91" height="91"><use xlink:href="#icon-company" focusable="false"></use></svg>
+                    <span>Компания</span>
+                  </label>
+                  <span class="quiz__checked-description">Компания</span>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="quiz__step quiz__step--type">
+            <fieldset class="quiz__field">
+              <h3 class="quiz__caption">Какой вид тура вас интересует?</h3>
+              <ul class="quiz__type-list">
+                <li class="quiz__type-item quiz__type-item--group">
+                  <input class="quiz__type-radio" id="quiz-group" type="radio" name="quiz-type" value="group">
+                  <label class="quiz__type-label" for="quiz-group">
+                    <svg class="quiz__type-icon quiz__type-icon--group" width="88" height="88"><use xlink:href="#icon-group-tour"></use></svg>
+                    <span class="quiz__type-caption">Сборный тур</span>
+                  </label>
+                  <p class="quiz__type-description">Если вы&nbsp;хотите присоединиться к&nbsp;сборной группе с&nbsp;известной программой и&nbsp;датами заезда</p>
+                  <span class="quiz__checked-description">Сборный тур</span>
+                </li>
+                <li class="quiz__type-item quiz__type-item--individual">
+                  <input class="quiz__type-radio" id="quiz-individual" type="radio" name="quiz-type" value="individual">
+                  <label class="quiz__type-label" for="quiz-individual">
+                    <svg class="quiz__type-icon quiz__type-icon--individual" width="129" height="80"><use xlink:href="#icon-individual-tour"></use></svg>
+                    <span class="quiz__type-caption">Тур по&nbsp;индивидуальной программе</span>
+                  </label>
+                  <p class="quiz__type-description">Если вы&nbsp;хотите, чтобы мы&nbsp;сделали программу по&nbsp;вашим пожеланиям</p>
+                  <span class="quiz__checked-description">Особый тур</span>
+                </li>
+                <li class="quiz__type-item quiz__type-item--premium">
+                  <input class="quiz__type-radio" id="quiz-premium" type="radio" name="quiz-type" value="premium">
+                  <label class="quiz__type-label" for="quiz-premium">
+                    <svg class="quiz__type-icon quiz__type-icon--premium" width="71" height="88"><use xlink:href="#icon-premium-tour"></use></svg>
+                    <span class="quiz__type-caption">Премиум тур</span>
+                  </label>
+                  <p class="quiz__type-description quiz__type-description--premium">Если вы&nbsp;хотите насладиться на Байкале самым лучшим и&nbsp;эксклюзивным</p>
+                  <span class="quiz__checked-description">Премиум отдых</span>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="quiz__step quiz__step--occupation">
+            <fieldset class="quiz__field">
+              <h3 class="quiz__caption">Чем бы вы хотели заняться?</h3>
+              <p class="quiz__notice">Можете отметить несколько вариантов</p>
+              <ul class="quiz__list">
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="fishing" name="fishing" type="checkbox">
+                  <label class="quiz__checkbox-label" for="fishing">Рыбалка</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="active" name="active" type="checkbox">
+                  <label class="quiz__checkbox-label" for="active">Активный отдых</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="hunting" name="hunting" type="checkbox">
+                  <label class="quiz__checkbox-label" for="hunting">Охота</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="relax" name="relax" type="checkbox">
+                  <label class="quiz__checkbox-label" for="relax">Релакс</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="ethnography" name="ethnography" type="checkbox">
+                  <label class="quiz__checkbox-label" for="ethnography">Этнография</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="recovery" name="recovery" type="checkbox">
+                  <label class="quiz__checkbox-label" for="recovery">Оздоровление</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="cruise" name="cruise" type="checkbox">
+                  <label class="quiz__checkbox-label" for="cruise">Круиз</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="tours" name="tours" type="checkbox">
+                  <label class="quiz__checkbox-label" for="tours">Экскурсии</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="quiz__step quiz__step--recreation">
+            <fieldset class="quiz__field">
+              <h3 class="quiz__caption">Какой вариант отдыха Вам предпочтителен?</h3>
+              <p class="quiz__notice">Можете отметить несколько вариантов</p>
+              <ul class="quiz__list">
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="extreme" name="extreme" type="checkbox">
+                  <label class="quiz__checkbox-label" for="extreme">Экстримальный</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="quiet" name="quiet" type="checkbox">
+                  <label class="quiz__checkbox-label" for="quiet">Спокойный</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="romantic" name="romantic" type="checkbox">
+                  <label class="quiz__checkbox-label" for="romantic">Романтический</label>
+                </li>
+                <li class="quiz__item quiz__item--only">
+                  <input class="quiz__checkbox" id="corporate" name="corporate" type="checkbox">
+                  <label class="quiz__checkbox-label" for="corporate">Корпоративный</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="mountains" name="mountains" type="checkbox">
+                  <label class="quiz__checkbox-label" for="mountains">Горы</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="beach" name="beach" type="checkbox">
+                  <label class="quiz__checkbox-label" for="beach">Пляж</label>
+                </li>
+                <li class="quiz__item">
+                  <input class="quiz__checkbox" id="water" name="water" type="checkbox">
+                  <label class="quiz__checkbox-label" for="water">На воде</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="quiz__step quiz__step--date">
+            <fieldset class="quiz__field">
+              <div class="quiz__range-block">
+                <h3 class="quiz__caption">Когда вы&nbsp;планируете поехать?</h3>
+                <div class="quiz__range quiz__range--month"></div>
+                <div class="quiz__range-data">
+                  <div class="quiz__range-label quiz__range-label--month"></div>
+                  <div class="quiz__range-label quiz__range-label--month"></div>
+                </div>
+              </div>
+              <div class="quiz__range-block">
+                <h3 class="quiz__caption">Как долго вы&nbsp;планируете отдыхать?</h3>
+                <div class="quiz__range quiz__range--days"></div>
+                <div class="quiz__range-data">
+                  <div class="quiz__range-label quiz__range-label--days"></div>
+                  <div class="quiz__range-label quiz__range-label--days"></div>
+                </div>
+              </div>
+              <div class="quiz__date-info">
+                <span class="quiz__date-months"></span>
+                <span class="quiz__date-days"></span>
+              </div>
+            </fieldset>
+          </div>
+          <div class="quiz__step quiz__step--budget">
+            <fieldset class="quiz__field">
+              <h3 class="quiz__caption">Какой бюджет на&nbsp;одного человека?</h3>
+              <div class="quiz__range quiz__range--budget" data-min="1000" data-max="100000" data-start="30000" data-end="60000"></div>
+              <div class="quiz__range-data">
+                <div class="quiz__range-label quiz__range-label--budget">от <span></span></div>
+                <div class="quiz__range-label quiz__range-label--budget">до <span></span></div>
+              </div>
+            </fieldset>
+          </div>
+          <ol class="quiz__pagination"></ol>
+          <button class="quiz__button quiz__button--next" type="button">Далее</button>
+          <button class="quiz__button quiz__button--submit js-hidden" type="submit">Подобрать</button>
+        </form>
+      </div>
+    </article>
+  </main>
+  //= templates/js.html
+</body>
+</html>

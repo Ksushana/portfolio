@@ -1,0 +1,287 @@
+.choice {
+  position: relative;
+  font-family: $font-muller;
+  margin-top: 26px;
+  margin-bottom: 53px;
+  background-color: $color-blue-dark;
+
+  @include laptop {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    margin-top: 44px;
+  }
+
+  @include mobile-wide {
+    margin-top: 38px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 365px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.choice__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 440px;
+  margin: 57px 0 73px;
+  font-weight: 900;
+
+  left: calc( 50vw - 570px - 6px);
+
+  @include laptop {
+    left: calc( 50vw - 485px);
+    margin-bottom: 63px;
+ }
+
+  @include tablet {
+  left: calc(50vw - 375px + 5px);
+  }
+
+  @include mobile-wide {
+  left: 15px;
+}
+
+  @include tablet {
+    margin-top: 67px;
+    margin-bottom: 78px;
+    width: 360px;
+  }
+
+  @include mobile-wide {
+    margin-top: 75px;
+    margin-bottom: 70px;
+    width: 272px;
+  }
+}
+
+.choice__orange {
+  display: block;
+  font-size: 76px;
+  line-height: 76px;
+  color: $color-orange;
+  margin-left: -5px;
+
+  @include tablet {
+    font-size: 62px;
+    line-height: 62px;
+    margin-left: 0;
+  }
+
+  @include mobile-wide {
+    font-size: 52px;
+    line-height: 52px;
+  }
+}
+
+.choice__white {
+  margin-bottom: 7px;
+  display: block;
+  font-size: 87px;
+  line-height: 87px;
+  color: $color-white;
+  margin-left: -5px;
+
+  @include tablet {
+    margin-top: 10px;
+    font-size: 72px;
+    line-height: 72px;
+    margin-left: 0;
+  }
+
+  @include mobile-wide {
+    font-size: 62px;
+    line-height: 62px;
+  }
+}
+
+.choice__text--excursion {
+  margin: 120px 0 0 0;
+  width: auto;
+  @include tablet {
+    width: auto;
+    margin-top: 140px;
+  }
+
+  @include mobile-wide {
+    width: auto;
+  }
+
+  .choice__orange {
+    font-size: 55px;
+    line-height: 55px;
+    margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 45px;
+      line-height: 45px;
+      margin-left: 0;
+    }
+
+    @include mobile-wide {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+  .choice__white {
+    font-size: 55px;
+    line-height: 55px;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 45px;
+      line-height: 45px;
+      margin-left: 0;
+    }
+
+    @include mobile-wide {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+}
+
+.choice__tour {
+  font-weight: 400;
+  font-size: 31px;
+  color: $color-white;
+  padding-left: 3px;
+
+  @include tablet {
+    display: block;
+    font-size: 24px;
+    padding-left: 7px;
+    margin-top: 8px;
+  }
+
+  @include mobile-wide {
+    margin-top: 14px;
+    height: 83px;
+    width: 210px;
+    padding-left: 0;
+  }
+}
+
+.choice__tour a {
+  font-family: $font-muller;
+  font-weight: 400;
+  font-size: 53px;
+  color: $color-blue-sky;
+  margin-left: 10px;
+  box-shadow: inset 0 -3px 0 0px currentColor;
+  transition: color 0.3s ease;
+
+  &:hover, &:focus {
+    color: $color-orange;
+  }
+
+  @include tablet {
+    margin-left: 10px;
+    font-size: 48px;
+    margin-right: 5px;
+  }
+
+  @include mobile-wide {
+    font-size: 32px;
+    line-height: 55px;
+    font-weight: 300;
+    margin-left: 3px;
+  }
+}
+
+.landing {
+  .choice {
+    background-repeat: no-repeat;
+
+    .choice__text {
+      margin-bottom: 63px;
+    }
+
+    @include tablet {
+      background-position: right -310px center;
+      background-size: cover;
+
+      .choice__img {
+        height: 281px;
+      }
+
+      .choice__text {
+        margin-top: 62px;
+        margin-bottom: 65px;
+        margin-left: 50px;
+      }
+
+      .choice__orange,
+      .choice__white {
+        font-size: 58px;
+        line-height: 51px;
+      }
+
+      .choice__white {
+        margin-bottom: 15px;
+      }
+
+      .choice__tour {
+        line-height: 25px;
+      }
+
+      .choice__scroll {
+        font-size: 33px;
+      }
+    }
+
+    @include mobile {
+      margin-top: 38px;
+      background-position: right -155px center;
+      background-size: cover;
+
+      .container {
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
+      }
+
+      .choice__text {
+        margin-top: 30px;
+        margin-bottom: 33px;
+      }
+
+      .choice__orange,
+      .choice__white {
+        font-size: 32px;
+        line-height: 32px;
+      }
+
+      .choice__tour {
+        font-size: 16px;
+        line-height: 16px;
+        margin-top: 8px;
+        padding-left: 0;
+        height: auto;
+      }
+
+      .choice__scroll {
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      .choice__img {
+        height: 172px;
+      }
+    }
+  }
+}
+
+
+.landing {
+  overflow-x: hidden;
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    //= templates/header-new.html
+    <main class="article" itemscope itemtype="http://schema.org/Article">
+      <!--Ссылка на статью - необходимо менять на актуальную ссылку-->
+      <link itemprop="mainEntityOfPage" itemscope href="http://fanatbaikala.ru/tury-po-bajjkalu/tury-na-bajjkal-letom/"/>
+      <div class="container">
+        <!-- Первый экран - Летний отдых на озере Байкал-->
+        <section class="article__picture col-xs-12 col-sm-12 col-lg-12">
+
+            <ul class="breadcrumbs-list breadcrumbs-list--article" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                <a itemprop='item' href="#"><span itemprop='name'>Главная</span></a>
+                <meta itemprop='position' content='1'>
+              </li>
+              <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                <a itemprop='item' href="#"><span itemprop='name'>Путеводитель</span></a>
+                <meta itemprop='position' content='2'>
+              </li>
+              <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs-list__item">
+                <a><span itemprop='name'>Летний отдых на озере Байкал, где лучше отдохнуть?</span></a>
+                <meta itemprop='position' content='3'>
+              </li>
+            </ul>
+            <div class="article__picture-background">
+              <!-- Главное изображение статьи -->
+              <img itemprop="image" class="cover" src="img/article-bg.jpg" alt="Байкал">
+              <div class="bottom-shadow"></div>
+              <h1 itemprop="headline">Летний отдых на озере Байкал, где лучше отдохнуть?</h1>
+            </div>
+
+        </section>
+
+        <div class="article__left col-xs-12 col-sm-12 col-lg-9">
+          <!-- Дата публикации статьи -->
+          <meta itemprop="datePublished" content="2016-01-24">
+          <!-- Дата последнего изменения статьи -->
+          <meta itemprop="dateModified" content="2016-01-24">
+          <!--Автор статьи -->
+          <meta itemprop="author" content="Иван Иваныч Иванов">
+          <!-- Первая часть контента -->
+          <section class="article__content" itemprop="articleBody">
+            <p class="article__boldtext">Давайте подробно узнаем про отдых на Байкале летом в 2019 году, цены на еду, отели, найдем лучшие авиабилеты и посетим самые знаменитые места южной части, где можно остановиться на неделю и более в палатке или на хорошей турбазе.</p>
+            <p class="article__text">Озеро является удивительным местом и отдых здесь является больше, чем просто отпуск. Это то место, куда приезжают отдыхать дикарями туристы со всего света, летний отдых на озере Байкал является одним из самых востребованных туристических направлений у туристов из Европы, вода&nbsp;здесь является самой чистой водой из всех озер на земле, а глубина самой глубокой точки составляет 1698 метров. Вы можете заказать тур на Байкал.</p>
+          </section>
+
+          <div class="article__promobanner promobanner" itemscope itemType = "https://schema.org/ImageObject">
+            <img itemprop="contentUrl" class="cover promobanner__picture" src="img/article-promobanner1.jpg" alt="Музей Тальцы">
+            <div class="promobanner__description">
+              <h3 itemprop="name">Экскурсия в музей “Тальцы”
+                <span class="promobanner__cost">от 47 000 р.</span>
+              </h3>
+              <p itemprop="description" class="promobanner__text">Тальцы и Листвянка — обязательные к посещению места для всех гостей Иркутска. Без них нельзя понять историю и культуру народов Прибайкалья, узнать самое важное о великом Байкале и окружающей его природе.</p>
+              <a class="orange-button promobanner__button" href="#">
+                Подробнее
+              </a>
+            </div>
+          </div>
+
+          <section class="article__banner-fixed article__banner-fixed--normal" >
+            <ul class="article__banner-list">
+              <!--Микроразметка блока с изображением - первый в цикле-Begin-->
+              <li class="article__banner banner" content_height="1700" begin_content_height="0">
+                <h2 >Гостиницы рядом</h2>
+                <div class="banner__content">
+                  <div class="banner__up" itemscope itemType = "https://schema.org/ImageObject">
+                    <div class="banner__img">
+                      <img itemprop="contentUrl" class="cover" src="img/article-banner1.jpg" alt="Популярные туры">
+                      <div class="bottom-shadow"></div>
+                    </div>
+                    <span itemprop="name" class="banner__label">
+                      Гостевой дом
+                    </span>
+                    <p itemprop="description" class="banner__title">Супер гостиница на Байкале</p>
+                  </div>
+                  <div class="banner__down">
+                    <p class="banner__cost">от 700 р. / сутки</p>
+                    <p class="banner__place">Правобережный округ (Иркутск)</p>
+                    <a class="orange-button banner__button" href="#">
+                      Подробнее
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <!--End-->
+
+              <li class="article__banner banner visually-hidden" content_height="1700" begin_content_height="1700">
+                <h2>Туры по Байкалу</h2>
+                <div class="banner__content">
+                  <div class="banner__up">
+                    <div class="banner__img">
+                      <img class="cover" src="img/article-banner2.jpg" alt="Популярные туры">
+                      <div class="bottom-shadow"></div>
+                    </div>
+                    <span class="banner__label">
+                      Тур
+                    </span>
+                    <p class="banner__title">Байкальское приключение</p>
+                  </div>
+                  <div class="banner__down">
+                    <p class="banner__cost">от 47 000 000 р.</p>
+                    <p class="banner__time">12 дней</p>
+                    <a class="orange-button banner__button" href="#">
+                      Подробнее
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="article__banner banner visually-hidden" content_height="1700" begin_content_height="3400">
+                <h2>Экскурсия по Байкалу</h2>
+                <div class="banner__content">
+                  <div class="banner__up">
+                    <div class="banner__img">
+                      <img class="cover" src="img/article-banner3.jpg" alt="Популярные туры">
+                      <div class="bottom-shadow"></div>
+                    </div>
+                    <span class="banner__label">
+                      Экскурсия
+                    </span>
+                    <p class="banner__title">Байкальское приключение</p>
+                  </div>
+                  <div class="banner__down">
+                    <p class="banner__cost">от 47 000 000 р.</p>
+                    <p class="banner__time">48 часов</p>
+                    <a class="orange-button banner__button" href="#">
+                      Подробнее
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="article__photo" itemscope itemtype="https://schema.org/ImageObject">
+            <img itemprop="contentUrl" class="cover" src="img/article-photo.jpg" alt="Тальцы">
+            <p itemprop="name">Фото: Photo by Toa Heftiba </p>
+            <p itemprop="description">on Unsplash</p>
+          </section>
+          <!-- Средняя часть контента -->
+          <section class="article__content" itemprop="articleBody">
+            <p class="article__text">На рыбном рынке не забываем торговаться и снижать цену, не нужно строить из себя отдыхающего туриста прибывшего издалека, для таких здесь особый ценник в полтора раза выше, чем обычно.</p>
+            <p class="article__quote">«Летний отдых на Байкале 2019 года просто обязан сопровождаться приготовлением байкальского омуля, это одно из условий байкальской природы. Если не удалось попробоватьрыбу, вы сможете ее отведать&nbsp;в&nbsp;любом кафе или ресторане, заведений возле дороги и на берегу достаточно»  - Василий Батькович</p>
+            <p class="article__text">Также в поселке организовано множество экскурсий, как пеших по специальной тропе до поселка Большие коты, так и водные экскурсии. Стоимость пеших экскурсий начинается от 500 рублей, водные экскурсии от 500 рублей до поселка «Большие коты», время прогулки 1 час вдоль побережья.</p>
+          </section>
+          <!-- Экскурсии, включающие Тальцы -->
+          <section class="article__included">
+            <h2 class="article__included-title">Экскурсии и туры, включающие&nbsp;музей «Тальцы»</h2>
+            //= templates/popular-article.html
+          </section>
+          <!-- Слайдер -->
+          <section>
+            <div class="article__slider swiper-container">
+              <button class="article__slider-arrow article__slider-arrow--prev" type="button">
+                <span class="visually-hidden">Предыдущий слайд</span>
+                <svg width="25" height="25">
+                  <use xlink:href="#icon-article-back"></use>
+                </svg>
+              </button>
+              <button class="article__slider-arrow article__slider-arrow--next" type="button">
+                <span class="visually-hidden">Следующий слайд</span>
+                <svg width="25" height="25">
+                  <use xlink:href="#icon-article-back"></use>
+                </svg>
+              </button>
+              <ul class="article__slider-container swiper-wrapper">
+                <!--Микроразметка блока с изображением - первый слайд в цикле-Begin-->
+                <li class="article__slide swiper-slide" itemscope itemtype="https://schema.org/ImageObject">
+                  <img itemprop="contentUrl" class="cover article__slide-photo" src="img/article-slider1.jpg" alt="<Байкал>">
+                  <meta itemprop="name" content="Байкал">
+                  <meta itemprop="description" content="Фото Байкала">
+                </li>
+                <!--End-->
+                <li class="article__slide swiper-slide">
+                  <img class="cover article__slide-photo" src="img/article-slider1.jpg" alt="<Байкал>">
+                </li>
+                <li class="article__slide swiper-slide">
+                  <img class="cover article__slide-photo" src="img/article-slider1.jpg" alt="<Байкал>">
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <div class="article__promobanner promobanner" itemscope itemtype="https://schema.org/ImageObject">
+              <img itemprop="contentUrl" class="cover promobanner__picture promobanner__picture--small" src="img/article-promobanner2.jpg" alt="Сплав по горной реке">
+              <div class="promobanner__description promobanner__description--no-price">
+                <h3 itemprop="name">Сплавы по горным рекам</h3>
+                <p itemprop="description" class="promobanner__text promobanner__text--low">Тальцы и Листвянка — обязательные к посещению места для всех гостей Иркутска. Без них нельзя понять историю и культуру народов Прибайкалья, узнать самое важное о великом Байкале и окружающей его природе.</p>
+                <a class="promobanner__button-single" href="#">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </section>
+          <!-- Последняя часть контента -->
+          <section class="article__content article__content--bottom" itemprop="articleBody">
+            <p class="article__text article__text--orange"><span class="article__orange">На территории музея ежегодно проводятся народные гулянья</span> и праздники с выступлением народных коллективов. В феврале-марте празднуется Масленица; в&nbsp;апреле – Пасха; в июне – Троица, а в июле – День всех Святых, в земле Российской просиявших, в августе – Спас.<br> Люди&nbsp;катаются&nbsp;на&nbsp;тройке&nbsp;с бубенцами,&nbsp;играют в перетягивание каната или качаются на больших качелях.</p>
+            <p class="article__text article__text--orange"><span class="article__orange">В башне Илимского острога летом часто поют хористы.</span> На территории работает трактир, где варят ароматный традиционный русский напиток сбитень. В меню так&nbsp;же можно встретить пирожки с черемшой, блины, уху из местной рыбы или позы. Цены очень демократичные.</p>
+            <p class="article__text article__text--orange">В качестве сувенира родным и близким из Тальцов везут керамику:</p>
+            <ul class="article__list">
+              <li>свистульки, горшки,</li>
+              <li>магнитики,</li>
+              <li>авторскую малую пластику</li>
+            </ul>
+            <p class="article__text">Так же представлен берестяной промысел и ручное ткачество.</p>
+          </section>
+
+          <!--  Цитата идейного вдохновителя-->
+          <section class="article__inspiration">
+            <h2 class="visually-hidden">Слова идейного вдохновителя</h2>
+            <div class="intro intro--article">
+              <div class="intro__quote intro__quote--article">
+                <div class="intro__photo intro__photo--article">
+                  <img class="cover" src="img/article-avatar.png" alt="Аватар" width="215" height="215">
+                </div>
+                <div class="intro__text intro__text--article">
+                  <p class="intro__caption intro__caption--article">
+                    <strong class="intro__caption-author intro__caption-author--article">Криcтина Краснокутская</strong>
+                    <span class="intro__caption-about intro__caption-about--article">Идейный вдохновитель проекта "Фанат Байкала"</span>
+                  </p>
+                  <p class="intro__quotation intro__quotation--article">
+                    <span class="intro__quotation-marks intro__quotation-marks--article">&laquo;&#8194;</span> Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+                    suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat. <span class="intro__quotation-marks intro__quotation-marks--article">&raquo;</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="article__navigation">
+              <div class="article__navigation-first">
+                <div class="article__social-left">
+                </div>
+                <ul class="article__tags-right">
+                  <li>
+                    <a href="#">Ольхон</a>
+                  </li>
+                  <li>
+                    <a href="#">Экскурсии</a>
+                  </li>
+                  <li>
+                    <a href="#">Активный отдых</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="article__navigation-second">
+                <a class="article__navigation-left-link" href="#">Название предыдущей статьи</a>
+                <a class="article__navigation-right-link" href="#">Название следующей статьи</a>
+              </div>
+            </div>
+          </section>
+        <!--  экран - С этой статьей так же читают-->
+          <section class="article__similar">
+            <h2 class="article__title">С этой статьей также читают:</h2>
+            <ul class="article__anounce anounce">
+              <li class="anounce__item">
+                <div class="anounce__picture">
+                  <img class="cover" src="img/article-anounce1.jpg" alt="Прибрежная полоса">
+                </div>
+                <div class="anounce__right">
+                  <h3>Топ 10 мест Байкала</h3>
+                  <p>Тальцы и Листвянка — обязательные к посещению места для всех гостей Иркутска.
+                    Без них нельзя понять историю и культуру народов Прибайкалья, узнать самое.</p>
+                  <a href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="anounce__item">
+                <div class="anounce__picture">
+                  <img class="cover" src="img/article-anounce2.jpg" alt="Байкальская вода">
+                </div>
+                <div class="anounce__right">
+                  <h3>Байкальская вода</h3>
+                  <p>Байкальская вода уникальна и удивительна, как и сам Байкал. Она необыкновенно
+                    прозрачна, чиста и насыщена кислородом.</p>
+                  <a href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="anounce__item">
+                <div class="anounce__picture">
+                  <img class="cover" src="img/article-anounce3.jpg" alt="Плот">
+                </div>
+                <div class="anounce__right">
+                  <h3>Сплавы по горным рекам</h3>
+                  <p>Тальцы и Листвянка — обязательные&nbsp;к посещению места для всех гостей Иркутска.
+                    Без них нельзя понять историю и культуру народов Прибайкалья, узнать самое.</p>
+                  <a href="#">Подробнее</a>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="article__right col-xs-12 col-sm-12 col-lg-3">
+        </div>
+        <!--  - Другие туры -->
+        <section class="more-tours more-tours--article col-xs-12 col-sm-12 col-lg-12">
+          <div class="container container--article">
+            <h2 class="article__title">Вам могут понравиться эти туры:</h2>
+          </div>
+          //= templates/popular.html
+        </section>
+      </div>
+      <!--  экран - Инстаграм -->
+      //= templates/instagram.html
+      //= templates/scroll-up.html
+    </main>
+    //= templates/footer.html
+    //= templates/callback.html
+    //= templates/js.html
+  </body>
+</html>

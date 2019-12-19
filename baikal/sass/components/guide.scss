@@ -1,0 +1,141 @@
+.guide {
+  margin-top: 38px;
+  padding-bottom: 100px;
+  position: relative;
+
+  @include tablet {
+    padding-bottom: 0;
+  }
+
+  @include mobile-wide {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 33px;
+  }
+}
+
+.guide__bg-image {
+  position: absolute;
+  z-index: -5;
+  right: 78px;
+  top: 35px;
+
+  @include laptop {
+    right: 0;
+  }
+
+  @include tablet {
+    right: 7px;
+    width: 360px;
+    top: 52px;
+  }
+
+  @include mobile-wide {
+    position: static;
+    order: 2;
+    width: 320px;
+    margin: 0 auto;
+    transform: translateX(-15px);
+    height: 325px;
+  }
+}
+
+.guide__breadcrumbs-list {
+  padding-left: 14px;
+}
+
+.guide__text {
+  width: 610px;
+  margin: 114px 0 0;
+  font-family: $font-muller;
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 43px;
+  // padding-left: 16px;
+
+  @include tablet {
+    margin: 106px 0 110px;
+    font-size: 26px;
+    line-height: 40px;
+  }
+
+  @include mobile-wide {
+    width: auto;
+    margin: 25px auto 0;
+    min-height: 175px;
+  }
+}
+
+.guide__dark {
+  display: block;
+  font-size: 74px;
+  line-height: 74px;
+  color: $color-blue-dark;
+
+  &--baikal {
+    margin-bottom: 33px;
+    font-size: 94px;
+    line-height: 122px;
+    transform: translateX(-8px);
+  }
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 48px;
+    padding-bottom: 12px;
+
+    &--baikal {
+      font-size: 62px;
+      line-height: 62px;
+      padding-bottom: 5px;
+      margin-bottom: 24px;
+    }
+  }
+
+  @include mobile-wide {
+    font-size: 32px;
+    line-height: 44px;
+    padding-bottom: 2px;
+
+    &--baikal {
+      font-size: 48px;
+      line-height: 48px;
+      padding-left: 8px;
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.guide__blue {
+  display: block;
+  font-size: 36px;
+  line-height: 41px;
+  color: $color-blue;
+  padding-bottom: 7px;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 0;
+  }
+
+  @include mobile-wide {
+    margin-bottom: -9px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+.guide__medium {
+  font-weight: 500;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  @include mobile-wide {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}

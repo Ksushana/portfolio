@@ -1,0 +1,60 @@
+.order {
+  padding: 0 22px;
+}
+
+.order__tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ededed;
+
+  &--booking {
+    margin-bottom: 16px;
+  }
+}
+
+.order__tabs .tabs__list::after {
+  content: none;
+}
+
+.order__tabs .tabs__link--active {
+  width: 150px;
+
+  &::after {
+    bottom: -1px;
+  }
+}
+
+.order__debt {
+  display: flex;
+  align-items: center;
+  padding: 0 26px;
+}
+
+.order__debt-caption {
+  width: 125px;
+  padding-right: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+
+  @include color-opacity($default-text, 0.5);
+}
+
+.order__debt-sum {
+  font-family: $fontSerif;
+  font-size: 24px;
+  text-transform: uppercase;
+
+  @include color-opacity(#f13c33, 0.8);
+}
+
+@media (max-width: $mobile-width) {
+  .order {
+    padding: 0;
+  }
+
+  .order__tabs {
+    display: none;
+  }
+}

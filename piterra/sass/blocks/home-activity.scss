@@ -1,0 +1,18 @@
+.home-activity {
+  margin-bottom: 40px;
+}
+
+.home-activity__title {
+  font-family: $fontSerif;
+  font-size: 16px;
+  font-weight: $regular;
+  letter-spacing: 0.6px;
+  color: $dark-text;
+  text-transform: uppercase;
+}
+
+@media (max-width: $mobile-width) {
+  .home-activity {
+    display: none;
+  }
+}

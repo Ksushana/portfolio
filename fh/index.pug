@@ -1,0 +1,33 @@
+doctype html
+html( lang="ru" )
+  head
+    meta( charset="UTF-8" )
+    title Фантастический дом
+    meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+
+  body
+    h1 Фантастический дом
+
+    ul
+      li: a( href='main.html' ) main.html" ---- Главная
+      li: a( href='main-second.html' ) main-second.html" ---- Главная с прелоадером
+      li: a( href='fantastic-house.html' ) fantaistic-house" ---- О фантастическом доме
+      li: a( href='location.html' ) location.html" ---- Правильное расположение
+      li: a( href='surroundings.html' ) surroundings.html" ---- Удивительное окружение
+      li: a( href='flats.html' ) flats.html" ---- 24 невероятные квартиры
+      li: a( href='penthouses.html' ) penthouses.html" ---- Исключительные пентхаусы
+      li: a( href='residences.html' ) residences.html" ---- Резиденции с патио
+      li: a( href='plans.html' ) plans.html" ---- Искусные планировки
+      li: a( href='garden.html' ) garden.html" ---- Таинственный сад
+      li: a( href='lobby.html' ) lobby.html" ---- Незабываемое лобби
+      li: a( href='engineering.html' ) engineering.html" ---- Идеальная инженерия
+      li: a( href='office.html' ) office.html" ---- Впечатляющий офис продаж
+      li: a( href='team.html' ) team.html" ---- Компетентная команда
+      li: a( href='gallery.html' ) gallery.html" ---- Галерея
+      li: a( href='progress.html' ) progress.html" ---- Ход строительства
+      li: a( href='documentation.html' ) documentation.html" ---- Документация
+      li: a( href='contacts.html' ) contacts.html" ---- Контакты
+      li: a( href='floor-detail.html' ) floor-detail.html ---- План этажа, квартиры, пример дизайна
+
+      - for (var n = 1; n < 6; n++)
+        li: a( href='floor-' + n + '.html' ) floor-#{n}.html" ---- План #{n}-го этажа

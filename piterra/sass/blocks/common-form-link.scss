@@ -1,0 +1,13 @@
+.common-form-link {
+  font-family: $fontSans;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $default-text;
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
+}

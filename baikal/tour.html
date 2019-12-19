@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+  <body>
+      <div style="display: none;">
+        <include src="build/img/sprite.svg"></include>
+      </div>
+      //= templates/header-new.html
+      <main>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <!-- Первый экран - Пробуждение Байкала-->
+        <section class="main-picture" itemscope itemtype="https://schema.org/ImageObject">
+          <div class="main-picture__bg main-picture__bg--tour">
+            <div class="container container--new main-picture__text-block main-picture__text-block">
+              <ul class="breadcrumbs-list breadcrumbs-list--tour" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                  <a itemprop='item' href="#"><span itemprop='name'>Туры на Байкал</span></a>
+                  <meta itemprop='position' content='1'>
+                </li>
+                <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                  <a itemprop='item' href="#"><span itemprop='name'>Зимние экскурсии</span></a>
+                  <meta itemprop='position' content='2'>
+                </li>
+                <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                  <a itemprop='item' href="#"><span itemprop='name'>Групповые экскурсии</span></a>
+                  <meta itemprop='position' content='3'>
+                </li>
+                <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                  <span itemprop='name'>На хивусе по Байкалу</span>
+                  <meta itemprop='position' content='4'>
+                </li>
+              </ul>
+              <h1 itemprop="name" class="main-picture__header main-picture__header--tour">Однодневная экскурсия в курортный поселок Аршан</h1>
+            </div>
+          </div>
+          <div>
+            <img  itemprop="contentUrl" src="img/bg-awakening.jpg" alt="Фоновое изображение" class="cover main-picture__bg-image main-picture__bg-image--tour">
+          </div>
+          <div class="bottom-shadow bottom-shadow--zindex"></div>
+        </section>
+        <div class="sticky-container container container--no-padding">
+          <!-- Второй экран - Цитата идейного вдохновителя-->
+          <!-- <section class="intro col-xs-12 col-sm-12 col-lg-8">
+            <h2 class="visually-hidden">Слова идейного вдохновителя</h2>
+            <div class="">
+              <div class="row intro__outer">
+                <div class="col-xs-12 col-sm-6 col-md-7 col-lg-12">
+                  <div class="intro__quote" itemscope itemtype="https://schema.org/ImageObject">
+                    <div class="intro__photo intro__photo--tour">
+                      <img itemprop="contentUrl" class="cover" src="img/avatar-tour-desktop@1x.png" alt="Аватар" width="233" height="250">
+                    </div>
+                    <div class="intro__text">
+                      <p class="intro__caption">
+                        <strong  itemprop="name" class="intro__caption-author">Криcтина Краснокутская</strong>
+                        <span  itemprop="description" class="intro__caption-about">Идейный вдохновитель проекта "Фанат Байкала"</span>
+                      </p>
+                      <p class="intro__quotation intro__quotation--tour">
+                        <span class="intro__quotation-marks">&laquo;&#8194;</span> Lorem ipsum dolor sit amet, consectetuer
+                        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                        magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+                        suscipit lobortis
+                        nisl
+                        ut aliquip ex ea commodo consequat.&#160;<span class="intro__quotation-marks">&#8194;&raquo;</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <ul class="intro__list col-xs-12 col-sm-12 col-lg-12">
+                  <li class="intro__list-item col-xs-6">
+                    <svg width="36" height="48" class="intro-icon">
+                      <use xlink:href="#icon-shopping-list"></use>
+                    </svg>
+                    <p>Комбинированные туры</p>
+                  </li>
+                  <li class="intro__list-item col-xs-6">
+                    <svg width="41" height="48" class="intro-icon">
+                      <use xlink:href="#icon-compass"></use>
+                    </svg>
+                    <p>Экспедиции</p>
+                  </li>
+                  <li class="intro__list-item col-xs-6">
+                    <svg width="43" height="48" class="intro-icon">
+                      <use xlink:href="#icon-uluru"></use>
+                    </svg>
+                    <p>Обзорные туры</p>
+                  </li>
+                  <li class="intro__list-item col-xs-6">
+                    <svg width="43" height="48" class="intro-icon">
+                      <use xlink:href="#icon-sheep"></use>
+                    </svg>
+                    <p>Наблюдение за животными</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section> -->
+          <!-- <form class="form__fixed form form--tour col-lg-2" action="#" method="post">
+            <div class="form__header form__header--tour">
+              <button class="form__refresh-button form__refresh-button--fixed" type="button">
+                <svg width="24" height="24" class="form__refresh form__refresh--fixed">
+                  <use xlink:href="#icon-refresh"></use>
+                </svg>
+              </button>
+              <h3>Набор в группу</h3>
+            </div>
+            <div class="form__inner form__inner--tour">
+              <div class="form__price col-xs-8 col-sm-8 col-lg-8">
+                <strong>от 24 789 000 р.</strong>
+              </div>
+              <div class="form__duration col-xs-4 col-sm-4 col-lg-4">
+                <p>
+                  <svg width="22" height="22" class="form__sun">
+                    <use xlink:href="#icon-sun"></use>
+                  </svg>
+                  <span class="form__duration-count form__duration-count--day">10 дней</span>
+                </p>
+                <p>
+                  <svg width="16" height="16" class="form__moon">
+                    <use xlink:href="#icon-moon"></use>
+                  </svg>
+                  <span class="form__duration-count form__duration-count--night">10 ночей</span>
+                </p>
+              </div>
+              <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                <label class="visually-hidden" for="name">Ваше имя</label>
+                <input class="form__name" id="name" name="name" type="text" placeholder="Ваше имя">
+              </fieldset>
+              <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                <label class="visually-hidden" for="phone">Номер телефона</label>
+                <input class="form__phone" id="phone" name="phone" type="text" placeholder="Номер телефона" required>
+              </fieldset>
+              <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                <label class="visually-hidden" for="email">E-mail</label>
+                <input class="form__email" id="email" name="email" type="email" placeholder="E-mail" required>
+              </fieldset>
+              <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                <div class="form__field-select  col-xs-12 col-sm-12 col-lg-12">
+                  <button class="form__field-button form__field-button--date" type="button"></button>
+                  <select class="form__select" title="Выбор даты поездки">
+                    <option>Выберите дату заезда</option>
+                    <option>Другая дата</option>
+                  </select>
+                </div>
+              </fieldset>
+              <label class="visually-hidden" for="comment">Комментарий</label>
+              <textarea class="form__comment" id="comment" name="comment"
+                placeholder="Кол-во чел и другие комментарии"></textarea>
+              <button class="form__submit form__submit--tour" type="submit">Отправить заявку</button>
+              <p class="form__notice form__notice--tour">Нажимая на&nbsp;кнопку выше вы&nbsp;соглашаетесь с&nbsp;<a
+                href="#" target="_blank">политикой конфиденциальности</a></p>
+            </div>
+          </form> -->
+          <!-- Третий экран - О туре -->
+          <section class="route  col-xs-12 col-lg-8" itemscope itemtype="http://schema.org/Product">
+            <meta itemprop="name" content="Тур Пробуждение Байкала">
+            <!-- <div class="container"> -->
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-lg-12">
+                <div class="route__gide">
+                  <h2 class="route__header">О туре</h2>
+                  <p itemprop="description" class="route__intro">Весна – время года, когда всё начинает цвести, дни становятся всё теплее и ярче,
+                    местами природу уже трогает зелёный
+                    цвет. Ещё в это время начинает просыпаться Байкал, в это время мы можем видеть толстый, крепкий лёд, но
+                    местами всё-таки
+                    видна вода, что говорит нам о начале Пробуждения Байкала 2019.
+                  </p>
+                  <div class="route__destinations">
+                    <h3 class="route__destination-header">
+                      <svg width="45" height="52" class="route__flag">
+                        <use xlink:href="#icon-flag"></use>
+                      </svg>
+                    </h3>
+                    <ul>
+                      <li class="route__destination">
+                          <strong>Маршрут тура:&nbsp;</strong>
+                      </li>
+                      <li class="route__destination">Иркутск</li>
+                      <li class="route__destination route__destination--arrow"></li>
+                      <li class="route__destination route__destination">Листвянка</li>
+                      <li class="route__destination route__destination--arrow"></li>
+                      <li class="route__destination route__destination">о.Ольхон</li>
+                      <li class="route__destination route__destination--arrow"></li>
+                      <li class="route__destination route__destination">Иркутск</li>
+                      <li class="route__destination route__destination--arrow"></li>
+                      <li class="route__destination route__destination">Иркутск</li>
+                      <li class="route__destination route__destination--arrow"></li>
+                      <li class="route__destination route__destination">Листвянка</li>
+                      <li class="route__destination route__destination--arrow"></li>
+                      <li class="route__destination route__destination">о.Ольхон</li>
+                      <li class="route__destination route__destination--arrow"></li>
+                      <li class="route__destination route__destination">Иркутск</li>
+                    </ul>
+                  </div>
+                  <div class="route__price">
+                    <h3 class="route__price-header">
+                      <svg width="58" height="47" class="route__wallet">
+                        <use xlink:href="#icon-wallet"></use>
+                      </svg>
+                      <strong class="route__price-heading">Варианты стоимости</strong>
+                    </h3>
+                    <ul class="route__pricelist">
+                      <!--Микроразметка одного блока в цикле, тип данных offer - Begin-->
+                      <li class="route__pricelist-item" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <link itemprop="availability" href="http://schema.org/InStock" />
+                        <svg width="20" height="16" class="route__tick">
+                          <use xlink:href="#icon-tick"></use>
+                        </svg>
+                        <meta itemprop="priceCurrency" content="RUB"/>
+                        <meta itemprop="name" content="Тур Пробуждение Байкала, Стандарт" />
+                        <meta itemprop="description" content="Маршрут тура: Иркутск - Листвянка - o.Ольхон - Иркутск - Листвянка - o.Ольхон - Иркутск" />
+                        <p class="route__class" itemprop="price" content="29990">Стандарт – 29 990 р.</p>
+                        <p class="route__price-info">Весна – время года, когда всё начинает цвести, дни становятся всё
+                          теплее и ярче, местами
+                        </p>
+                        <meta itemprop="availabilityStarts" content="2019-05-25" />
+                        <meta itemprop="availabilityEnds" content="2019-05-25" />
+                      </li>
+                      <!--End-->
+                      <li class="route__pricelist-item">
+                        <svg width="20" height="16" class="route__tick">
+                          <use xlink:href="#icon-tick"></use>
+                        </svg>
+                        <p class="route__class">Премиум – 29 990 р</p>
+                        <p class="route__price-info">Весна – время года, когда всё начинает цвести, дни становятся всё
+                          теплее и ярче, местами
+                        </p>
+                      </li>
+                      <li class="route__pricelist-item">
+                        <svg width="20" height="16" class="route__tick">
+                          <use xlink:href="#icon-tick"></use>
+                        </svg>
+                        <p class="route__class">Супер- Стандарт – 79 990 р</p>
+                        <p class="route__price-info">Весна – время года, когда всё начинает цвести, дни становятся всё
+                          теплее
+                        </p>
+                      </li>
+                      <li class="route__pricelist-item">
+                        <svg width="20" height="16" class="route__tick">
+                          <use xlink:href="#icon-tick"></use>
+                        </svg>
+                        <p class="route__class">Старндарт – 29 990 р.</p>
+                        <p class="route__price-info">Весна – время года, когда всё начинает цвести, дни становятся всё
+                          теплее и ярче, местами
+                        </p>
+                      </li>
+                      <li class="route__pricelist-item">
+                        <svg width="20" height="16" class="route__tick">
+                          <use xlink:href="#icon-tick"></use>
+                        </svg>
+                        <p class="route__class">Премиум – 29 990 р</p>
+                        <p class="route__price-info">Весна – время года, когда всё начинает цвести, дни становятся всё
+                          теплее и ярче, местами
+                        </p>
+                      </li>
+                      <li class="route__pricelist-item">
+                        <svg width="20" height="16" class="route__tick">
+                          <use xlink:href="#icon-tick"></use>
+                        </svg>
+                        <p class="route__class">Супер- Старндарт – 79 990 р</p>
+                        <p class="route__price-info">Весна – время года, когда всё начинает цвести, дни становятся всё
+                          теплее
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="route__dates">
+                    <h3 class="route__dates-header">
+                      <svg width="48" height="48" class="route__calendar">
+                        <use xlink:href="#icon-calendar-new"></use>
+                      </svg>
+                      <strong>Даты заезда</strong>
+                    </h3>
+                    <ul class="route__dates-info">
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">9 мая – 18 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">9 мая – 18 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">9 мая – 18 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">9 мая – 18 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">9 мая – 18 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">9 мая – 18 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">9 мая – 18 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">9 мая – 18 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">9 мая – 18 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                        <li class="route__dates-full col-xs-12 col-sm-4 col-lg-4">1 мая – 10 мая</li>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- </div> -->
+          </section>
+          <form class="form__fixed form form--tour col-lg-2" action="#" method="post">
+            <div class="form__header form__header--tour">
+              <button class="form__refresh-button form__refresh-button--fixed" type="button">
+                <svg width="24" height="24" class="form__refresh form__refresh--fixed">
+                  <use xlink:href="#icon-refresh"></use>
+                </svg>
+              </button>
+              <h3>Набор в группу</h3>
+            </div>
+            <div class="form__inner form__inner--tour">
+              <div class="form__price col-xs-8 col-sm-8 col-lg-8">
+                <p class="form__price-old">от 77 000 p.</p>
+                <p class="form__price-new">от 24 789 000 р.</p>
+                <p class="form__price-validity">Раннее бронирование при&nbsp;оплате до&nbsp;<time datetime="2019-06-05">05.06.2019</time></p>
+              </div>
+              <div class="form__duration col-xs-4 col-sm-4 col-lg-4">
+                <p>
+                  <svg width="22" height="22" class="form__sun">
+                    <use xlink:href="#icon-sun"></use>
+                  </svg>
+                  <span class="form__duration-count form__duration-count--day">10 дней</span>
+                </p>
+                <p>
+                  <svg width="16" height="16" class="form__moon">
+                    <use xlink:href="#icon-moon"></use>
+                  </svg>
+                  <span class="form__duration-count form__duration-count--night">10 ночей</span>
+                </p>
+              </div>
+              <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                <label class="visually-hidden" for="name">Ваше имя</label>
+                <input class="form__name" id="name" name="name" type="text" placeholder="Ваше имя">
+              </fieldset>
+              <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                <label class="visually-hidden" for="phone">Номер телефона</label>
+                <input class="form__phone" id="phone" name="phone" type="text" placeholder="Номер телефона" required>
+              </fieldset>
+              <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                <label class="visually-hidden" for="email">E-mail</label>
+                <input class="form__email" id="email" name="email" type="email" placeholder="E-mail" required>
+              </fieldset>
+              <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                <div class="form__field-select  col-xs-12 col-sm-12 col-lg-12">
+                  <button class="form__field-button form__field-button--date" type="button"></button>
+                  <select class="form__select" title="Выбор даты поездки">
+                    <option>Выберите дату заезда</option>
+                    <option>Другая дата</option>
+                  </select>
+                </div>
+              </fieldset>
+              <label class="visually-hidden" for="comment">Комментарий</label>
+              <textarea class="form__comment" id="comment" name="comment"
+                placeholder="Кол-во чел и другие комментарии"></textarea>
+              <button class="form__submit form__submit--tour" type="submit">Отправить заявку</button>
+              <p class="form__notice form__notice--tour">Нажимая на&nbsp;кнопку выше вы&nbsp;соглашаетесь с&nbsp;<a
+                href="#" target="_blank">политикой конфиденциальности</a></p>
+            </div>
+          </form>
+        </div>
+        <section class="map container container--no-padding">
+          <h2 class="visually-hidden">Карта Байкала</h2>
+          <div class="map__block col-xs-12 col-sm-12 col-lg-12" id="map__block">
+            <svg width="27" height="27" class="route-pin">
+              <use xlink:href="#icon-pin"></use>
+            </svg>
+            <strong class="map__heading">Карта</strong>
+            <div>
+              <img class="map__photo cover" src="img/map-big@1x.png" alt="карта Байкала"
+                height="400">
+              <div class="map__iframe" id="tour-map"></div>
+              <!--iframe class="map__iframe" src="https://yandex.com/map-widget/v1/-/CCR0IS4u?scroll=false" height="400"></iframe-->
+            </div>
+          </div>
+        </section>
+        <!-- Четвертый экран - Программа тура-->
+        <div class="container container--no-padding">
+          <section class="program">
+            <h2 class="program__heading program__padding-mobile">Программа тура</h2>
+            <ul>
+              <li class="program__day">
+                <div class="row program__day-block">
+                  <div class="program__info col-xs-12 col-sm-9 col-md-12 col-lg-12">
+                    <div class="program__photo col-xs-12 col-sm-10">
+                      <div class="program__slider swiper-container">
+                        <button class="program__slider-arrow program__slider-arrow--prev" type="button">
+                          <span class="visually-hidden">Предыдущий слайд</span>
+                          <svg width="25" height="46">
+                            <use xlink:href="#icon-new-arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="program__slider-arrow program__slider-arrow--next" type="button">
+                          <span class="visually-hidden">Следующий слайд</span>
+                          <svg width="25" height="46">
+                            <use xlink:href="#icon-new-arrow"></use>
+                          </svg>
+                        </button>
+                        <ul class="program__slider-container swiper-wrapper">
+                          <!--микроразметка первого слайда в слайдере - изображение -Begin-->
+                          <li class="program__slide swiper-slide" itemscope itemtype="http://schema.org/ImageObject">
+                            <img itemprop="contentUrl" class="program__slide-photo cover" src="img/tour-slider1@1x.jpg"
+                              alt="<Байкал>">
+                            <div class="bottom-shadow"></div>
+                            <meta itemprop="name" content="Байкал" />
+                            <meta itemprop="description" content="Вы проведете лучший в своей жизни пикник у прекрасного Ольхона" />
+                          </li>
+                          <!--End-->
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider2@1x.jpg"
+                              alt="<Байкал>">
+                            <div class="bottom-shadow"></div>
+                          </li>
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider3@1x.jpg"
+                              alt="<Байкал>">
+                            <div class="bottom-shadow"></div>
+                          </li>
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider4@1x.jpg"
+                              alt="<Байкал>">
+                            <div class="bottom-shadow"></div>
+                          </li>
+                        </ul>
+                        <div class="program__moto">
+                          <svg width="53" height="47" class="program__moto-hand">
+                            <use xlink:href="#icon-pointing-hand"></use>
+                          </svg>
+                          <p>Вы проведете лучший в своей жизни пикник у прекрасного Ольхона</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="program__info-heading program__padding-mobile">
+                      <svg width="33" height="30" class="program__tick">
+                        <use xlink:href="#icon-tick"></use>
+                      </svg>
+                      <h3 class="program__info-day">День 1</h3>
+                    </div>
+
+                    <div class="program__padding-mobile">
+                      <svg width="27" height="27" class="program__pin">
+                        <use xlink:href="#icon-pin"></use>
+                      </svg>
+                      <ul class="program__cities">
+                        <li class="program__city">Иркутск</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">музей Тальцы</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">Листвянка</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">Байкальский музей</li>
+                      </ul>
+                    </div>
+                    <div class="program__padding-mobile">
+                      <svg width="33" height="30" class="program__meal">
+                        <use xlink:href="#icon-meal"></use>
+                      </svg>
+                      <p class="program__catering"><strong>Включено: </strong>обед и ужин</p>
+
+
+                    <p class="program__agenda"><span>Прибытие в Иркутск,</span> встреча на жд вокзале и в аэропорту.
+                      Трансфер в п. Листвянка (70км. От Иркутска).
+                    </p>
+                    <p class="program__agenda"><span>По пути посещение музея деревянного зодчества </span>под открытым небом
+                      – Тальцы. Здесь можно поближе познакомиться с бытом
+                      народов Прибайкалья, посмотреть старинные постройки.<br>
+                      Обед в Листвянке.
+                    </p>
+                    <p class="program__agenda"><span>После обеда посещение Байкальского музея,</span> единственного в мире
+                      музея, полностью посвященного великому озеру. Вечером
+                      размещение в гостинице, ужин.
+                    </p>
+                    <p class="program__agenda"><span>Прибытие в Иркутск,</span> встреча на жд вокзале и в аэропорту.
+                      Трансфер в п. Листвянка (70км. От Иркутска).
+                    </p>
+                    <p class="program__agenda"><span>По пути посещение музея деревянного зодчества </span>под открытым небом
+                      – Тальцы. Здесь можно поближе познакомиться с бытом
+                      народов Прибайкалья, посмотреть старинные постройки.<br>
+                      Обед в Листвянке.
+                    </p>
+                    <p class="program__agenda"><span>После обеда посещение Байкальского музея,</span> единственного в мире
+                      музея, полностью посвященного великому озеру. Вечером
+                      размещение в гостинице, ужин.
+                    </p>
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+              <li class="program__day">
+                <div class="row program__day-block">
+                  <div class="program__info col-xs-12 col-sm-9 col-md-12 col-lg-12">
+                    <div class="program__photo col-xs-12 col-sm-10">
+                      <div class="program__slider swiper-container">
+                        <button class="program__slider-arrow program__slider-arrow--prev" type="button">
+                          <span class="visually-hidden">Предыдущий слайд</span>
+                          <svg width="25" height="46">
+                            <use xlink:href="#icon-new-arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="program__slider-arrow program__slider-arrow--next" type="button">
+                          <span class="visually-hidden">Следующий слайд</span>
+                          <svg width="25" height="46">
+                            <use xlink:href="#icon-new-arrow"></use>
+                          </svg>
+                        </button>
+                        <ul class="program__slider-container swiper-wrapper">
+                          <!--микроразметка первого слайда в слайдере - изображение -Begin-->
+                          <li class="program__slide swiper-slide" itemscope itemtype="http://schema.org/ImageObject">
+                            <img itemprop="contentUrl" class="program__slide-photo cover" src="img/tour-slider1@1x.jpg"
+                              alt="<Байкал>">
+                            <meta itemprop="name" content="Байкал" />
+                            <meta itemprop="description" content="Встретите рассвет на каяках и увидите самую редкую птицу на планете" />
+                          </li>
+                          <!--End-->
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider2@1x.jpg"
+                              alt="<Байкал>">
+                          </li>
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider1@1x.jpg"
+                              alt="<Байкал>">
+                          </li>
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider3@1x.jpg"
+                              alt="<Байкал>">
+                          </li>
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider4@1x.jpg"
+                              alt="<Байкал>">
+                          </li>
+                        </ul>
+                        <div class="program__moto">
+                          <svg width="53" height="47" class="program__moto-hand">
+                            <use xlink:href="#icon-pointing-hand"></use>
+                          </svg>
+                          <p>Встретите рассвет на каяках и увидите
+                            самую редкую птицу на планете
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="program__info-heading program__padding-mobile">
+                      <svg width="33" height="30" class="program__tick">
+                        <use xlink:href="#icon-tick"></use>
+                      </svg>
+                      <h3 class="program__info-day">День 2</h3>
+                    </div>
+                    <div class="program__padding-mobile">
+                      <svg width="27" height="27" class="program__pin">
+                        <use xlink:href="#icon-pin"></use>
+                      </svg>
+                      <ul class="program__cities">
+                        <li class="program__city">Иркутск</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">музей Тальцы</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">Листвянка</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">Байкальский музей</li>
+                      </ul>
+                    </div>
+                    <div class="program__padding-mobile">
+                      <svg width="33" height="30" class="program__meal">
+                        <use xlink:href="#icon-meal"></use>
+                      </svg>
+                      <p class="program__catering"><strong>Включено: </strong>обед и ужин</p>
+                    <p class="program__agenda"><span>Прибытие в Иркутск,</span> встреча на жд вокзале и в аэропорту.
+                      Трансфер в п.
+                      Листвянка (70км. От Иркутска).
+                    </p>
+                    <p class="program__agenda"><span>По пути посещение музея деревянного зодчества </span>под открытым небом
+                      – Тальцы.
+                      Здесь можно поближе познакомиться с бытом
+                      народов Прибайкалья, посмотреть старинные постройки.<br>
+                      Обед в Листвянке.
+                    </p>
+                    <p class="program__agenda"><span>После обеда посещение Байкальского музея,</span> единственного в мире
+                      музея,
+                      полностью посвященного великому озеру. Вечером
+                      размещение в гостинице, ужин.
+                    </p>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+              <li class="program__day">
+                <div class="row program__day-block">
+                  <div class="program__info col-xs-12 col-sm-9 col-md-12 col-lg-12">
+                    <div class="program__photo col-xs-12 col-sm-10">
+                      <div class="program__slider swiper-container">
+                        <button class="program__slider-arrow program__slider-arrow--prev" type="button">
+                          <span class="visually-hidden">Предыдущий слайд</span>
+                          <svg width="25" height="46">
+                            <use xlink:href="#icon-new-arrow"></use>
+                          </svg>
+                        </button>
+                        <button class="program__slider-arrow program__slider-arrow--next" type="button">
+                          <span class="visually-hidden">Следующий слайд</span>
+                          <svg width="25" height="46">
+                            <use xlink:href="#icon-new-arrow"></use>
+                          </svg>
+                        </button>
+                        <ul class="program__slider-container swiper-wrapper">
+                          <!--микроразметка первого слайда в слайдере - изображение -Begin-->
+                          <li class="program__slide swiper-slide" itemscope itemtype="http://schema.org/ImageObject">
+                            <img itemprop="contentUrl" class="program__slide-photo cover" src="img/tour-slider1@1x.jpg"
+                              alt="<Байкал>">
+                            <meta itemprop="name" content="Байкал" />
+                            <meta itemprop="description" content="Посетите старинные постойки и примете участие в магическом обряде" />
+                          </li>
+                          <!--End-->
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider2@1x.jpg"
+                              alt="<Байкал>">
+                          </li>
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider3@1x.jpg"
+                              alt="<Байкал>">
+                          </li>
+                          <li class="program__slide swiper-slide">
+                            <img class="program__slide-photo cover" src="img/tour-slider4@1x.jpg"
+                              alt="<Байкал>">
+                          </li>
+                        </ul>
+                        <div class="program__moto">
+                          <svg width="53" height="47" class="program__moto-hand">
+                            <use xlink:href="#icon-pointing-hand"></use>
+                          </svg>
+                          <p>Посетите старинные постойки
+                            и примете участие в магическом обряде
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="program__info-heading program__padding-mobile">
+                      <svg width="33" height="30" class="program__tick">
+                        <use xlink:href="#icon-tick"></use>
+                      </svg>
+                      <h3 class="program__info-day">День 3</h3>
+                    </div>
+                    <div class="program__padding-mobile">
+                      <svg width="27" height="27" class="program__pin">
+                        <use xlink:href="#icon-pin"></use>
+                      </svg>
+                      <ul class="program__cities">
+                        <li class="program__city">Иркутск</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">музей Тальцы</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">Листвянка</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">Байкальский музей</li>
+                      </ul>
+                    </div>
+                    <div class="program__padding-mobile">
+                      <svg width="33" height="30" class="program__meal">
+                        <use xlink:href="#icon-meal"></use>
+                      </svg>
+                      <p class="program__catering"><strong>Включено: </strong>обед и ужин</p>
+
+                    <p class="program__agenda"><span>Прибытие в Иркутск,</span> встреча на жд вокзале и в аэропорту.
+                      Трансфер в п.
+                      Листвянка (70км. От Иркутска).
+                    </p>
+                    <p class="program__agenda"><span>По пути посещение музея деревянного зодчества </span>под открытым небом
+                      – Тальцы.
+                      Здесь можно поближе познакомиться с бытом
+                      народов Прибайкалья, посмотреть старинные постройки.<br>
+                      Обед в Листвянке.
+                    </p>
+                    <p class="program__agenda"><span>После обеда посещение Байкальского музея,</span> единственного в мире
+                      музея,
+                      полностью посвященного великому озеру. Вечером
+                      размещение в гостинице, ужин.
+                    </p>
+                  </div>
+                 </div>
+                </div>
+              </li>
+              <li class="program__day">
+                <div class="row program__day-block">
+                  <div class="program__info col-xs-12 col-sm-9 col-md-12 col-lg-12">
+                      <div class="program__photo col-xs-12 col-sm-10">
+                        <div class="program__slider">
+                          <ul class="program__slider-container">
+                            <!--микроразметка первого слайда в слайдере - изображение -Begin-->
+                            <li class="program__slide" itemscope itemtype="http://schema.org/ImageObject">
+                              <img itemprop="contentUrl" class="program__slide-photo cover" src="img/tour-slider2@1x.jpg"
+                                alt="<Байкал>">
+                              <meta itemprop="name" content="Байкал" />
+                              <meta itemprop="description" content="Поразитесь наскальными рисунками и попробуете на вкус тысячилетний лед" />
+                            </li>
+                            <!--End-->
+                            <!--li class="program__slide swiper-slide">
+                              <img class="program__slide-photo cover" src="img/tour-slider1@1x.jpg"
+                                alt="<Байкал>">
+                            </li>
+                            <li class="program__slide swiper-slide">
+                              <img class="program__slide-photo cover" src="img/tour-slider2@1x.jpg"
+                                alt="<Байкал>">
+                            </li>
+                            <li class="program__slide swiper-slide cover">
+                              <img class="program__slide-photo cover" src="img/tour-slider3@1x.jpg"
+                                alt="<Байкал>">
+                            </li>
+                            <li class="program__slide swiper-slide">
+                              <img class="program__slide-photo cover" src="img/tour-slider4@1x.jpg"
+                                alt="<Байкал>">
+                            </li-->
+                          </ul>
+                          <!--div class="program__moto">
+                            <svg width="53" height="47" class="program__moto-hand">
+                              <use xlink:href="#icon-pointing-hand"></use>
+                            </svg>
+                            <p>Поразитесь наскальными рисунками и попробуете на вкус тысячилетний лед</p>
+                          </div-->
+                        </div>
+                      </div>
+                    <div class="program__info-heading  program__padding-mobile">
+                      <svg width="33" height="30" class="program__tick">
+                        <use xlink:href="#icon-tick"></use>
+                      </svg>
+                      <h3 class="program__info-day">День 4</h3>
+                    </div>
+                    <div class="program__padding-mobile">
+                      <svg width="27" height="27" class="program__pin">
+                        <use xlink:href="#icon-pin"></use>
+                      </svg>
+                      <ul class="program__cities">
+                        <li class="program__city">Иркутск</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">музей Тальцы</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">Листвянка</li>
+                        <li class="program__city program__city--arrow"></li>
+                        <li class="program__city">Байкальский музей</li>
+                      </ul>
+                    </div>
+                    <div class="program__padding-mobile">
+                      <svg width="33" height="30" class="program__meal">
+                        <use xlink:href="#icon-meal"></use>
+                      </svg>
+                      <p class="program__catering"><strong>Включено: </strong>обед и ужин</p>
+
+                    <p class="program__agenda"><span>Прибытие в Иркутск,</span> встреча на жд вокзале и в аэропорту.
+                      Трансфер в п.
+                      Листвянка (70км. От Иркутска).
+                    </p>
+                    <p class="program__agenda"><span>По пути посещение музея деревянного зодчества </span>под открытым небом
+                      – Тальцы.
+                      Здесь можно поближе познакомиться с бытом
+                      народов Прибайкалья, посмотреть старинные постройки.<br>
+                      Обед в Листвянке.
+                    </p>
+                    <p class="program__agenda"><span>После обеда посещение Байкальского музея,</span> единственного в мире
+                      музея,
+                      полностью посвященного великому озеру. Вечером
+                      размещение в гостинице, ужин.
+                    </p>
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <!-- пятый экран - Набор в группу-->
+        <section class="order order--tour relative">
+          <img src="img/bg-order.png" alt="фон формы" class="cover order__bg-image">
+
+          <div class="container container--no-padding">
+            <div class="row">
+              <div class="order__form order__form--tour col-xs-12 col-sm-12 col-lg-6">
+                <form class="form form--tour" action="#" method="post">
+                  <div class="form__header form__header--tour">
+                    <button class="form__refresh-button" type="button">
+                      <svg width="24" height="24" class="form__refresh form__refresh--fixed">
+                        <use xlink:href="#icon-refresh"></use>
+                      </svg>
+                    </button>
+                    <h3>Набор в группу</h3>
+                  </div>
+                  <div class="form__inner form__inner--tour">
+                    <div class="form__price col-xs-8 col-sm-8 col-lg-8">
+                      <strong>от 24 789 000 р.</strong>
+                    </div>
+                    <div class="form__duration col-xs-4 col-sm-4 col-lg-4">
+                      <p>
+                        <svg width="22" height="22" class="form__sun">
+                          <use xlink:href="#icon-sun"></use>
+                        </svg>
+                        <span class="form__duration-count form__duration-count--day">10 дней</span>
+                      </p>
+                      <p>
+                        <svg width="16" height="16" class="form__moon">
+                          <use xlink:href="#icon-moon"></use>
+                        </svg>
+                        <span class="form__duration-count form__duration-count--night">10 ночей</span>
+                      </p>
+                    </div>
+                    <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                      <label class="visually-hidden" for="name-tour">Ваше имя</label>
+                      <input class="form__name" id="name-tour" name="name" type="text" placeholder="Ваше имя">
+                    </fieldset>
+                    <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                      <label class="visually-hidden" for="phone-tour">Номер телефона</label>
+                      <input class="form__phone" id="phone-tour" name="phone" type="text" placeholder="Номер телефона" required>
+                    </fieldset>
+                    <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                      <label class="visually-hidden" for="email-tour">E-mail</label>
+                      <input class="form__email" id="email-tour" name="email" type="email" placeholder="E-mail" required>
+                    </fieldset>
+                    <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                      <div class="form__field-select  col-xs-12 col-sm-12 col-lg-12">
+                        <button class="form__field-button form__field-button--date" type="button"></button>
+                        <select class="form__select" title="Выбор даты поездки">
+                          <option>Выберите дату заезда</option>
+                          <option>Другая дата</option>
+                        </select>
+                      </div>
+                    </fieldset>
+                    <label class="visually-hidden" for="comment-tour">Комментарий</label>
+                    <textarea class="form__comment" id="comment-tour" name="comment"
+                      placeholder="Кол-во чел и другие комментарии"></textarea>
+                    <button class="form__submit form__submit--tour" type="submit">Отправить заявку</button>
+                    <p class="form__notice form__notice--tour">Нажимая на&nbsp;кнопку выше вы&nbsp;соглашаетесь с&nbsp;<a
+                      href="#" target="_blank">политикой конфиденциальности</a></p>
+                  </div>
+                </form>
+              </div>
+              <div class="order__mobile-inner">
+                //= templates/manager-img.html
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container">
+          <!-- шестой экран - Купить авиабилеты-->
+          //= templates/tickets.html
+          <!--седьмой экран - Важно знать -->
+          <section class="important">
+            <h2 class="important__heading">Важно знать</h2>
+            <div class="row">
+              <ul class="important__list">
+                <!-- <li class="col-sm-9 col-lg-6"> -->
+                  <!-- <div> -->
+                    <li class="important__list-item  col-xs-11 col-sm-9 col-lg-5 important__list-item--odd">
+                      <p class="important__list-header"><button class="important__list-button" type="button">+</button>Что включено в стоимость?</p>
+                      <ul class="important__sublist important__sublist--hidden">
+                        <li>В стоимость НЕ включено:</li>
+                        <li>- авиабилеты в г. Иркутск и обратно;</li>
+                        <li>- питание, не включенное в программу;</li>
+                        <li>- дополнительные экскурсии и развлечения;</li>
+                        <li>- алкогольная и табачная продукция.</li>
+                      </ul>
+                    </li>
+                    <li class="important__list-item col-xs-11 col-sm-9 col-lg-5">
+                      <p class="important__list-header"><button class="important__list-button" type="button">+</button>Что взять с собой?
+                      </p>
+                      <ul class="important__sublist important__sublist--hidden">
+                        <li>В стоимость НЕ включено:</li>
+                        <li>- авиабилеты в г. Иркутск и обратно;</li>
+                        <li>- питание, не включенное в программу;</li>
+                        <li>- дополнительные экскурсии и развлечения;</li>
+                        <li>- алкогольная и табачная продукция.</li>
+                      </ul>
+                    </li>
+                    <li class="important__list-item col-xs-11 col-sm-9 col-lg-5 important__list-item--odd">
+                      <p class="important__list-header"><button class="important__list-button" type="button">+</button>В стоимость не включено!</p>
+                      <ul class="important__sublist">
+                        <li>В стоимость НЕ включено:</li>
+                        <li>- авиабилеты в г. Иркутск и обратно;</li>
+                        <li>- питание, не включенное в программу;</li>
+                        <li>- дополнительные экскурсии и развлечения;</li>
+                        <li>- алкогольная и табачная продукция.</li>
+                      </ul>
+                    </li>
+                    <li class="important__list-item col-xs-11 col-sm-9 col-lg-5">
+                      <p class="important__list-header"><button class="important__list-button" type="button">+</button>Дополнительные услуги</p>
+                      <ul class="important__sublist important__sublist--hidden">
+                        <li>В стоимость НЕ включено:</li>
+                        <li>- авиабилеты в г. Иркутск и обратно;</li>
+                        <li>- питание, не включенное в программу;</li>
+                        <li>- дополнительные экскурсии и развлечения;</li>
+                        <li>- алкогольная и табачная продукция.</li>
+                      </ul>
+                    </li>
+              </ul>
+            </div>
+          </section>
+          <!-- Восьмой экран - Отзывы -->
+          //= templates/feedback.html
+        </div>
+        <!-- Девятый экран - Набор в группу-->
+        <section class="order order--tour order--tour-double relative">
+          <img src="img/bg-order.png" alt="фон формы" class="cover order__bg-image order__bg-image--tour-double">
+          <div class="container container--no-padding">
+            <div class="row">
+              <div class="order__form order__form--tour order__form--tour-double col-xs-12 col-sm-12 col-lg-6">
+                <form class="form form--tour form--tour-double" action="#" method="post">
+                  <div class="form__header form__header--tour">
+                    <button class="form__refresh-button" type="button">
+                      <svg width="24" height="24" class="form__refresh form__refresh--fixed">
+                        <use xlink:href="#icon-refresh"></use>
+                      </svg>
+                    </button>
+                    <h3>Набор в группу</h3>
+                  </div>
+                  <div class="form__inner form__inner--tour">
+                    <div class="form__price col-xs-8 col-sm-8 col-lg-8">
+                      <strong>от 24 789 000 р.</strong>
+                    </div>
+                    <div class="form__duration col-xs-4 col-sm-4 col-lg-4">
+                      <p>
+                        <svg width="22" height="22" class="form__sun">
+                          <use xlink:href="#icon-sun"></use>
+                        </svg>
+                        <span class="form__duration-count form__duration-count--day">10 дней</span>
+                      </p>
+                      <p>
+                        <svg width="16" height="16" class="form__moon">
+                          <use xlink:href="#icon-moon"></use>
+                        </svg>
+                        <span class="form__duration-count form__duration-count--night">10 ночей</span>
+                      </p>
+                    </div>
+                    <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                      <label class="visually-hidden" for="name-tour-double">Ваше имя</label>
+                      <input class="form__name" id="name-tour-double" name="name" type="text" placeholder="Ваше имя">
+                    </fieldset>
+                    <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                      <label class="visually-hidden" for="phone-tour-double">Номер телефона</label>
+                      <input class="form__phone" id="phone-tour-double" name="phone" type="text" placeholder="Номер телефона" required>
+                    </fieldset>
+                    <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                      <label class="visually-hidden" for="email-tour-double">E-mail</label>
+                      <input class="form__email" id="email-tour-double" name="email" type="email" placeholder="E-mail" required>
+                    </fieldset>
+                    <fieldset class="form__field form__field--tour col-xs-12 col-sm-12 col-lg-12">
+                      <div class="form__field-select  col-xs-12 col-sm-12 col-lg-12">
+                        <button class="form__field-button form__field-button--date" type="button"></button>
+                        <select class="form__select" title="Выбор даты поездки">
+                          <option>Выберите дату заезда</option>
+                          <option>Другая дата</option>
+                        </select>
+                      </div>
+                    </fieldset>
+                    <label class="visually-hidden" for="comment-tour-double">Комментарий</label>
+                    <textarea class="form__comment" id="comment-tour-double" name="comment"
+                      placeholder="Кол-во чел и другие комментарии"></textarea>
+                    <button class="form__submit form__submit--tour" type="submit">Отправить заявку</button>
+                    <p class="form__notice form__notice--tour">Нажимая на&nbsp;кнопку выше вы&nbsp;соглашаетесь с&nbsp;<a
+                      href="#" target="_blank">политикой конфиденциальности</a></p>
+                  </div>
+                </form>
+              </div>
+              <div class="order__mobile-inner">
+                //= templates/manager-img.html
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Десятый экран - Инстаграм -->
+        //= templates/instagram.html
+        <!-- Одиннадцатый экран - Другие туры -->
+        <section class="more-tours">
+          <div class="container container--no-padding">
+            <strong class="more-tours__moto more-tours__moto--b">Посмотрите туры,</strong>
+            <p class="more-tours__moto more-tours__moto--s">похожие на тур “Пробуждение Байкала”</p>
+            //= templates/popular.html
+          </div>
+        </section>
+        //= templates/scroll-up.html
+      </main>
+      //= templates/footer.html
+      //= templates/callback.html
+      //= templates/request-response.html
+      //= templates/js.html
+      <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap;
+
+        function init() {
+          myMap = new ymaps.Map("tour-map", {
+            center: [53.405316, 107.673220], // Координаты объекта
+            zoom: 7 // Маштаб карты
+          });
+
+          myMap.behaviors.disable('scrollZoom');
+          myMap.behaviors.disable('dblClickZoom');
+
+          myMap.controls.add(
+            new ymaps.control.ZoomControl()
+          );
+
+          myPlacemark = new ymaps.Placemark([53.405316, 107.673220], { // Координаты метки объекта
+            balloonContent: "" // Надпись метки
+          }, {
+            preset: "twirl#redDotIcon" // Тип метки
+          });
+          myMap.geoObjects.add(myPlacemark);
+        };
+
+        if (document.body.clientWidth < 768) addListener();
+
+        function addListener() {
+          var mapContainer = document.getElementById("map__block");
+          var map = document.getElementById("tour-map");
+          var timeout;
+          var lastTap = 0;
+          map.style.pointerEvents = "none";
+
+          mapContainer.addEventListener("touchend", function(event) {
+            var currentTime = new Date().getTime();
+            var tapLength = currentTime - lastTap;
+            clearTimeout(timeout);
+            if (tapLength < 500 && tapLength > 0) {
+              //console.log('456');
+              if (map.style.pointerEvents == "none") {
+                map.style.pointerEvents = "auto";
+                event.preventDefault();
+              } else
+              {
+                map.style.pointerEvents = "none";
+              }
+            } else {
+              timeout = setTimeout(function() {
+                clearTimeout(timeout);
+              }, 500);
+            }
+            lastTap = currentTime;
+          });
+        }
+    </script>
+  </body>

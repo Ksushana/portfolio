@@ -1,0 +1,7 @@
+.quiz {
+  @include tablet {
+    //height: 1023px;
+    width: 100%;
+    background: grey;
+  }
+}

@@ -1,0 +1,36 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Компетентная команда';
+  - let isInner = true;
+  - let isTeeamPage = true;
+  - let headerBackground = 'header__menu--team';
+
+block content
+  .container.container-team
+
+    h1.title.title--page.title--big !{title}
+    section.team
+      ul
+        li
+          div Полинессо
+          p Застройщик the outdoor space features large patio tables where you can enjoy your morning coffee or share a bottle of wine by the fireplace at night
+          +svg( "cross", 84, 84 )
+        li
+          div Kalinka Realty
+          p Брокер the outdoor space features large patio tables where you can enjoy your morning coffee or share a bottle of wine by the fireplace at night.
+          +svg( "cross", 84, 84 )
+        li
+          div Svargo Group
+          p Генеральный подрядчик the outdoor space features large patio tables where you can enjoy your morning coffee or share a bottle of wine by the fireplace at night.
+          +svg( "cross", 84, 84 )
+        li
+          div Цимайло ляшенко и партенры
+          p Архитектeра и дизайн интерьера — the outdoor space features large patio tables where you can enjoy your morning coffee or share a bottle of wine by the fireplace at night. Keep up with your daily exercise routine outside in the quiet yoga area or inside in the state-of-the-art fitness room.
+          +svg( "cross", 84, 84 )
+        li
+          div Цимайло ляшенко и партенры
+          p Брендинг и маркетинг — the outdoor space features large patio tables where you can enjoy your morning coffee or share a bottle of wine by the fireplace at night. Keep up with your daily exercise routine outside in the quiet yoga area or inside in the state-of-the-art fitness room.
+block footer
+  .footer-inner
+    a.footer-inner__link.button(href="#") Выбрать прекрасную квартиру

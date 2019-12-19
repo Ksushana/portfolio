@@ -1,0 +1,379 @@
+.catalog {
+  margin-bottom: 65px;
+  font-family: $font-muller;
+  font-weight: 900;
+
+  &--error {
+    margin-bottom: 45px;
+  }
+
+  @include tablet {
+    margin-bottom: 69px;
+  }
+
+  @include mobile-wide {
+    margin-bottom: 30px;
+  }
+
+  &--guide {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 38px;
+    margin-bottom: 0;
+
+    @include tablet {
+      padding-top: 0;
+    }
+  }
+
+  @include desktop-full {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.catalog__h {
+  margin-bottom: 22px;
+  font-size: 62px;
+  color: $color-orange;
+
+  @include tablet {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @include mobile-wide {
+    font-size: 32px;
+    line-height: 46px;
+  }
+
+    @include desktop-full {
+    margin-left: 15px;
+  }
+}
+
+.catalog__item {
+  @include tablet {
+    margin-bottom: 30px;
+
+    &:nth-child(odd) {
+      padding-right: 15px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 15px;
+    }
+
+    &--guide {
+      margin-bottom: 0;
+
+      &:nth-child(odd) {
+        padding-left: 15px;
+      }
+
+      &:nth-child(even) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  @include mobile-wide {
+    margin-bottom: 36px;
+
+    &:nth-child(odd) {
+      padding-right: 0;
+    }
+
+    &:nth-child(even) {
+      padding-left: 0;
+    }
+
+    &--guide {
+      margin-bottom: 19px;
+
+      &:nth-child(odd) {
+        padding-left: 0;
+      }
+
+      &:nth-child(even) {
+        padding-left: 0;
+
+      }
+    }
+  }
+
+  @include desktop-full {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.catalog__link {
+  position: relative;
+  display: block;
+  min-height: 242px;
+  margin-bottom: 35px;
+  padding: 36px 30px 20px 30px;
+  border-radius: 3px;
+  background-color: $color-white;
+  transition: background-color 0.3s, color 0.3s;
+
+  h3 {
+    padding-left: 70px;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    span {
+      @include underline;
+    }
+  }
+
+  p {
+    font-family: $font-roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  svg {
+    transition: fill 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    text-decoration: none;
+    background: $color-orange;
+
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  @include laptop {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    width: 345px;
+    min-height: 200px;
+    margin-right: 0;
+    padding: 13px 10px 10px 0;
+
+    h3 {
+      margin-bottom: 6px;
+      padding-left: 63px;
+    }
+
+    p {
+      line-height: 21px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-orange;
+      text-decoration: none;
+      background: $color-white;
+
+      svg {
+        fill: $color-orange;
+      }
+    }
+  }
+
+  @include mobile-wide {
+    min-height: 156px;
+    width: 290px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+
+  &--guide {
+    min-height: 300px;
+    padding-left: 38px;
+    margin-bottom: 16px;
+    padding-right: 20px;
+
+    p {
+      padding-bottom: 12px;
+      // color: $color-black;
+    }
+
+    h3 {
+      padding-left: 64px;
+      padding-right: 20px;
+      // color: $color-black;
+    }
+
+    svg {
+      left: 34px;
+      top: 43px;
+      transition: fill 0.3s;
+    }
+
+    .catalog__item-places {
+      transition: color 0.3s;
+    }
+
+
+    .catalog__item-number--infinity {
+      fill: $color-black;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      text-decoration: none;
+      background: $color-orange;
+
+      .catalog__item-places {
+        color: $color-white;
+      }
+    }
+
+    @include tablet {
+      padding-left: 3px;
+      padding-top: 16px;
+      min-height: 150px;
+      margin-bottom: 14px;
+
+      h3 {
+        margin-bottom: 21px;
+        padding-right: 50px;
+      }
+
+      svg {
+        left: 0;
+        top: 21px;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color-orange;
+        text-decoration: none;
+        background: $color-white;
+
+        svg {
+          fill: $color-orange;
+        }
+
+        .catalog__item-places {
+          color: $color-white;
+        }
+
+        // .catalog__item-icon {
+        //   fill: $color-white;
+        // }
+      }
+    }
+
+    @include mobile-wide {
+      margin-bottom: 0;
+      width: 100%;
+      max-width: 400px;
+      padding: 13px 15px 0;
+
+      h3 {
+        padding-right: 10px;
+        margin-bottom: 14px;
+      }
+
+      svg {
+        left: 15px;
+      }
+    }
+  }
+}
+
+.catalog__item-icon {
+  fill: $color-blue;
+  position: absolute;
+  left: 30px;
+  top: 42px;
+  transition: fill 0.3s;
+
+  @include tablet {
+    top: 21px;
+    left: 0;
+    height: auto;
+
+    &--tour {
+      width: 51px;
+    }
+
+    &--intour {
+      width: 49px;
+    }
+
+    &--cruise {
+      width: 47px;
+    }
+
+    &--excursion {
+      width: 47px;
+    }
+
+    &--hotel {
+      width: 49px;
+    }
+
+    &--guide {
+      width: 50px;
+    }
+  }
+
+  @include mobile-wide {
+    top: 11px;
+  }
+}
+
+.catalog__item-number {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-left: 70px;
+  font-size: 15px;
+  font-weight: 400;
+  min-height: 13px;
+  //display: none;
+
+
+  svg {
+    position: static;
+    fill: currentColor;
+  }
+
+  @include tablet {
+    padding-left: 63px;
+  }
+
+  @include mobile-wide {
+    margin-bottom: 5px;
+  }
+}
+
+.catalog__item-places {
+  color: $color-blue;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @include underline;
+  transition: color 0.1s;
+}
+
+.catalog--guide {
+  @include tablet {
+    .catalog__item-number {
+      display: none;
+    }
+
+    .catalog__item-places {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.preloader {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  background-color: $color-blue;
+  z-index: 300;
+  display: flex;
+
+  opacity: 1;
+  transition: opacity 1s;
+
+  &--faded {
+    opacity: 0;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  svg {
+    margin: size(70px) size(70px) auto auto;
+
+    width: size(809px);
+    height: size(825px);
+
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-name: logo;
+
+    @keyframes logo {
+      from {
+        width: size(809px);
+        height: size(825px);
+        margin: size(70px) size(70px) auto auto;
+      }
+
+      to {
+        width: size(562px);
+        height: size(573px);
+        margin: size(35px) size(35px) auto auto;
+      }
+    }
+
+    @include desktop {
+
+      @keyframes logo {
+        from {
+          width: size(809px);
+          height: size(825px);
+          margin: size(70px) size(70px) auto auto;
+        }
+
+        to {
+          width: size(531px);
+          height: size(542px);
+          margin: size(31px) size(36px) auto auto;
+        }
+      }
+
+    }
+
+    @include tablet {
+
+      @keyframes logo {
+        from {
+          width: size(504px);
+          height: size(514px);
+          margin: size(70px) size(70px) auto auto;
+        }
+
+        to {
+          width: size(454px);
+          height: size(463px);
+          margin: size(45px) size(36px) auto auto;
+        }
+      }
+    }
+
+    @include mobile {
+
+      @keyframes logo {
+        from {
+          width: size(307px);
+          height: size(414px);
+          margin: size(26px) size(26px) auto auto;
+        }
+
+        to {
+          width: size(250px);
+          height: size(255px);
+          margin: size(22px) size(22px) auto auto;
+        }
+      }
+
+    }
+  }
+}

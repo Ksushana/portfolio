@@ -1,0 +1,28 @@
+.irkutsk-tickets {
+  @include tablet {
+    margin-top: 77px;
+  }
+
+  @include mobile-wide {
+    margin-top: 19px;
+  }
+
+  &--guide {
+    padding-top: 5px;
+  }
+}
+
+.irkutsk-tickets__header {
+  font-size: 26px;
+  line-height: 26px;
+  margin-bottom: 49px;
+  margin-top: 30px;
+
+  @include tablet {
+    display: none;
+  }
+
+  &--guide {
+    margin-top: 16px;
+  }
+}

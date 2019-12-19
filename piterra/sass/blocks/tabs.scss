@@ -1,0 +1,54 @@
+.tabs__list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style-type: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0.24;
+    background-color: $default-text;
+  }
+}
+
+.tabs__link {
+  display: block;
+  padding-top: 19px;
+  padding-bottom: 8px;
+  min-width: 120px;
+  font-family: $fontSans;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $default-text;
+  opacity: 0.8;
+
+  &--active {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $primary-color;
+    }
+  }
+
+  &--big-width {
+    min-width: 145px;
+  }
+}

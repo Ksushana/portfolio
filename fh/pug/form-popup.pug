@@ -1,0 +1,25 @@
+.form-popup
+  button.form-popup__close.form-popup__close--main( type="button" title="Закрыть форму" aria-label="Закрыть форму" )
+    +svg( "cross-radius", 20, 20 )
+
+  form( action="/callback_request" method="post" novalidate)
+    h2.title.title--page Оставить заявку
+    fieldset
+      p
+        label(for="name-1")
+        input( id="name-1" type="text" name="user-name" aria-label="user-name" placeholder="Ваше имя" autocomplete="off")
+      p
+        label(for="tel-1")
+        input( id="tel-1" type="tel" placeholder="телефон *" name="user-phone"  aria-label="user-phone" pattern="[0-9]+" autocomplete="off")
+      p
+        label(for="email-1")
+        input( id="email-1" type="email" placeholder="Email" name="user-email"  aria-label="user-email" autocomplete="off")
+
+    button.button( type="submit" ) Отправить
+    p.
+      Отправляя сообщение, вы&nbsp;подтверждаете согласие на&nbsp;обработку #[a(href="#") персональных данных]
+
+.form-popup-result
+  button.form-popup-result__close( type="button" title="Закрыть форму" aria-label="Закрыть форму" )
+    +svg( "cross-radius", 20, 20 )
+  p.form-popup-result__text Благодарим за заявку. Мы&nbsp;свяжемся с вами

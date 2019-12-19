@@ -1,0 +1,15 @@
+.tab {
+  display: none;
+}
+
+.tab.is-active {
+  display: block;
+}
+
+.progress-tab {
+  display: none;
+}
+
+.progress-tab.is-active {
+  display: block;
+}

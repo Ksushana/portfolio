@@ -1,0 +1,177 @@
+.site-nav {
+  position: relative;
+}
+
+.site-nav__list {
+  position: relative;
+  display: flex;
+  margin-top: 35px;
+  flex-wrap: wrap;
+
+  &--new {
+    margin-top: 27px;
+    z-index: 5;//100;
+  }
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 826px;
+    height: 1px;
+    background-color: $color-gray-light;
+  }
+
+  @include laptop {
+    margin-top: 50px;
+
+    &::after {
+      width: 970px;
+    }
+
+    &--new {
+      margin-top: 30px;
+      padding-left: 11px;
+    }
+  }
+
+  @include tablet {
+    &::after {
+      width: 720px;
+    }
+  }
+
+  @include mobile-wide {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 33px;
+    left: -15px;
+    width: 100vw;
+    margin: 0;
+    padding: 31px 15px 55px 58px;
+    background-color: $color-ice-blue;
+    z-index: 14;
+
+    &::after {
+      display: none;
+    }
+
+    &--open {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      width: 865px;
+    }
+  }
+}
+
+.site-nav__item {
+  margin-right: 23px;
+
+  &--new {
+    margin-right: 24px;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    margin-right: 23px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include mobile-wide {
+    margin: 0 0 23px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.site-nav__item a {
+  position: relative;
+  display: block;
+  padding-bottom: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-blue-dark;
+  transition: color .3s ease;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    z-index: 10;
+    transition: background-color .3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $color-orange;
+
+    &:after {
+      background-color: $color-orange;
+    }
+  }
+
+  @include mobile-wide {
+    display: inline-block;
+    padding: 0;
+    font-size: 14px;
+    line-height: 16px;
+    @include underline;
+
+    &:after {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-orange;
+    }
+  }
+}
+
+.site-nav__item--new a {
+  @include mobile-wide {
+    padding-bottom: 0;
+  }
+}
+
+.site-nav__button {
+  display: none;
+  width: 73px;
+  height: 18px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $color-blue-dark;
+  background-color: transparent;
+  border: none;
+
+  svg {
+    fill: currentColor;
+  }
+
+  @include mobile-wide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 32px;
+  }
+}

@@ -1,0 +1,534 @@
+.intro {
+  margin-top: 44px;
+
+  &--article {
+    margin-top: 10px;
+  }
+
+  @include tablet {
+    margin-top: 15px;
+
+    &--exc {
+      margin-top: 10px;
+    }
+  }
+
+  @include mobile-wide {
+    margin-top: 0;
+  }
+}
+
+.intro__quote {
+  background-color: $color-blue-light-bg;
+  border-radius: 23px;
+  padding-top: 10px;
+  display: flex;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  margin-right: 20px;
+
+  &--exc {
+    margin-right: 44px;
+    margin-left: 6px;
+  }
+
+  @include laptop {
+    align-items: center;
+    flex-direction: column;
+    margin-top: -20px;
+    margin-right: 0;
+    margin-left: 30px;
+
+    &--exc {
+      min-height: 650px;
+    }
+  }
+
+  @include tablet {
+    padding: 25px 33px 20px;
+    align-items: center;
+    min-height: 300px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 20px;
+    padding-bottom: 0;
+
+    &--exc {
+      margin-right: 15px;
+      padding-bottom: 53px;
+    }
+  }
+
+  @include mobile-wide {
+    border-radius: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &--exc {
+      padding: 17px 7px 24px 7px;
+    }
+  }
+
+  &--article {
+    background-color: transparent;
+    margin-bottom: 30px;
+
+    @include laptop {
+      padding-top: 7px;
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0;
+      flex-direction: row;
+    }
+
+    @include tablet {
+      min-height: 256px;
+      padding-top: 20px;
+      padding-bottom: 38px;
+      margin-bottom: 0;
+    }
+
+    @include mobile-wide {
+      padding-top: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 28px;
+    }
+  }
+}
+
+.intro__photo {
+  margin: 30px;
+  width: 233px;
+  height: 250px;
+
+  background-color: $color-blue;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--exc {
+    background-color: transparent;
+    height: 250px;
+    width: 250px;
+    margin: 38px 15px 28px 35px;
+  }
+
+  &--tour {
+    background-color: transparent;
+  }
+
+  &--article {
+
+    height: 215px;
+    width: 215px;
+    background-color: transparent;
+    margin: 0;
+    margin-right: 35px;
+  }
+
+  @include laptop {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    margin: 0;
+  }
+
+  @include mobile-wide {
+    &--exc {
+      min-height: 184px;
+      min-width: 184px;
+    }
+  }
+}
+
+.intro__text {
+  margin-top: 21px;
+  margin-right: 40px;
+  font-family: $font-muller;
+  // font-weight: 300;
+
+  &--exc {
+    margin-top: 44px;
+    margin-right: 25px;
+  }
+
+  @include laptop {
+    padding: 5px 30px 30px 60px;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  @include tablet {
+    margin: 25px 0;
+    margin-right: 10px;
+    padding: 0;
+
+    &--exc {
+      font-size: 16px;
+      line-height: 16px;
+      margin: 34px 10px 0 -5px;
+    }
+
+    &--article {
+      margin: 0;
+      padding-left: 35px;
+      padding-top: 5px;
+    }
+  }
+
+  @include mobile-wide {
+    margin-left: 20px;
+
+    &--exc {
+      margin: 22px 22px 4px 0;
+      padding-left: 21px;
+    }
+
+    &--article {
+      margin: 0;
+      padding-left: 0;
+      padding-top: 18px;
+    }
+  }
+
+  @include mobile {
+    margin-left: 0;
+
+    &--exc {
+      margin: 22px 22px 4px 0;
+      padding-left: 21px;
+    }
+  }
+}
+
+.intro__text--exc strong {
+  font-weight: 700;
+}
+
+.intro__caption {
+  &--exc {
+    margin-top: 34px;
+  }
+
+  &--article {
+    font-family: $font-roboto;
+    margin-top: 5px;
+    margin-left: 3px;
+  }
+
+  @include mobile {
+    &--exc {
+      margin-top: 28px;
+    }
+  }
+}
+
+.intro__caption-author {
+  font-family: $font-roboto;
+  display: block;
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 700;
+  margin-bottom: 3px;
+
+  &--exc {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 11px;
+  }
+
+  &--article {
+    line-height: 30px;
+    font-family: $font-roboto;
+    margin-bottom: 0;
+  }
+}
+
+.intro__caption-about {
+  font-family: $font-roboto;
+  font-size: 14px;
+  line-height: 21px;
+  font-style: italic;
+
+  &--exc {
+    font-family: $font-roboto;
+    line-height: 14px;
+    margin-top: 17px;
+    color :#6A6A6A;
+    width: 396px;
+
+    @include laptop {
+      width: auto;
+    }
+  }
+
+  &--article {
+    font-family: $font-roboto;
+  }
+
+  @include mobile {
+    &--exc {
+      margin-top: 13px;
+    }
+  }
+}
+
+.intro__quotation {
+  font-family: $font-muller;
+  font-size: 16px;
+  line-height: 21px;
+  font-style: italic;
+  // text-indent: 20px;
+  margin-top: 36px;
+
+  &--exc {
+    font-family: $font-roboto;
+    line-height: 16px;
+    margin-top: 11px;
+    color :#6A6A6A;
+    max-width: 396px;
+    @include laptop {
+      width: auto;
+    }
+  }
+
+  &--tour {
+    width: 392px;
+    @include laptop {
+      width: auto;
+    }
+  }
+
+  &--article {
+    font-family: $font-roboto;
+    margin-top: 20px;
+    font-weight: 400;
+    max-width: 525px;
+  }
+
+  @include tablet {
+    margin-top: 16px;
+
+    &--article {
+      margin-top: 22px;
+    }
+  }
+
+  @include mobile-wide {
+    margin-top: 12px;
+
+    &--exc {
+      margin-top: 17px;
+      max-width: 100%;
+    }
+
+    &--article {
+      margin-top: 0;
+    }
+  }
+}
+
+.intro__quotation-marks {
+  color: #0089d0;
+  font-style: initial;
+
+  &--article {
+    font-size: 25px;
+    max-width: 17px;
+    max-height: 21px;
+    display: inline-block;
+    line-height: 15px;
+  }
+}
+
+.intro__list {
+  font-family: $font-muller;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0;
+  margin: 30px 0;
+  justify-content: space-between;
+  justify-content: flex-start;
+  padding-right: 130px;
+
+  &--exc {
+    padding-right: 87px;
+  }
+
+  @include tablet {
+    padding: 8px 65px 0 25px;
+    margin-bottom: 20px;
+
+
+    &--exc {
+      padding: 3px 38px 0 3px;
+      margin: 11px 0;
+    }
+  }
+
+  @include mobile-wide {
+    padding: 0 35px 0 35px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+
+
+    &--exc {
+      padding: 3px 60px 0 60px;
+      margin: 11px auto;
+      max-width: 500px;
+    }
+  }
+
+  @include mobile {
+    padding: 0 5px 0 10px;
+    margin: 15px 0 0;
+
+    &--exc {
+      padding: 0 0 0 10px;
+      margin: 28px 0 0;
+    }
+  }
+}
+
+.intro__list-item {
+  line-height: 21px;
+  max-width: 139px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-right: 50px;
+
+  @include mobile-wide {
+    margin-right: 0;
+  }
+
+  p {
+    width: 160px;
+  }
+
+  &:nth-child(2) {
+    max-width: 94px;
+  }
+
+  &:nth-child(3) {
+    max-width: 91px;
+  }
+
+  &:nth-child(4) {
+    max-width: 114px;
+    margin-right: 0;
+  }
+
+  &--exc {
+    font-family: $font-muller;
+    font-size: 18px;
+    line-height: 18px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 300;
+    align-items: center;
+    width: fit-content;
+  }
+
+  &--exc:nth-child(2) {
+    max-width: 190px;
+  }
+
+  &--exc:nth-child(3) {
+    max-width: 160px;
+  }
+
+  &--exc:nth-child(4) {
+    max-width: 120px;
+  }
+
+  @include tablet {
+
+    &--exc {
+      max-width: 192px;
+    }
+  }
+
+
+  @include mobile-wide {
+    min-width: 140px;
+    padding-bottom: 10px;
+    padding-right: 24px;
+
+    p {
+      width: 111px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 10px;
+    }
+
+    &--exc {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 0;
+      margin: 0;
+      width: 50%;
+      margin-bottom: 36px;
+
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+
+      &:nth-child(3) {
+        padding-left: 17px;
+        padding-right: 11px;
+      }
+
+      &:nth-child(4) {
+        padding-right: 19px;
+      }
+    }
+  }
+}
+
+// .intro__list-item--exc p {
+//   max-width: 190px;
+// }
+
+.intro__list-item svg {
+  margin-bottom: 4px;
+
+  @include tablet {
+    margin-bottom: 2px;
+    // margin-bottom: 18px;
+  }
+}
+
+.intro__list-item--exc svg {
+  @include tablet {
+    margin-bottom: 15px;
+  }
+
+  @include mobile-wide {
+    margin-bottom: 18px;
+  }
+}
+
+.intro-icon {
+  fill: #0089d0;
+}
+
+.intro__outer {
+  @include mobile-wide {
+    display: flex;
+    flex-direction: column;
+  }
+}

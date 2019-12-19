@@ -1,0 +1,302 @@
+.moment-search {
+  font-family: $font-muller;
+  color: #1b2748;
+  font-weight: 700;//800;
+  line-height: normal;
+  padding-top: 50px;
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right -50px top -20px;
+  // background-position: left 715px top -20px;
+  background-size: 1200px auto;
+  overflow: hidden;
+
+  @include tablet {
+    background-size: 624px auto;
+    background-position: right top 101px;
+    padding-top: 59px;
+  }
+
+  @include mobile {
+    background-size: 426px auto;
+    background-position: center top 248px;
+    padding-top: 14px;
+  }
+}
+
+.moment-search--bg {
+  position: absolute;
+  left: 450px;
+  top: -7px;
+  z-index: 0;
+
+  @include tablet {
+    width: 530px;
+    height: auto;
+    left: 240px;
+    top: 87px;
+  }
+
+  @include mobile {
+    width: 376px;
+    height: auto;
+    left: -30px;
+    top: 237px;
+  }
+}
+
+.moment-search__container.container {
+
+  background-repeat: no-repeat;
+  background-position: left 500px top -20px;
+  background-size: 1200px auto;
+
+  @include desktop-full {
+    width: 1600px;
+    margin: 0 auto;
+    padding-left: 61px;
+  }
+
+  @include mobile {
+    width: 320px;
+    padding-top: 14px;
+  }
+}
+
+.moment-search__title {
+  font-size: 84px;
+  font-weight: 900;
+  padding: 0;
+
+  @include tablet {
+    font-size: 48px;
+    margin-left: 35px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+    margin-left: 0;
+  }
+}
+
+.moment-search__subtitle {
+  font-size: 58px;
+  display: block;
+  margin-bottom: 44px;
+
+  span {
+    color: #4d88dd;
+  }
+
+  @include tablet {
+    font-size: 32px;
+    margin-left: 42px;
+    line-height: 30px;
+    margin-bottom: 27px;
+  }
+
+  @include mobile {
+    font-size: 22px;
+    line-height: 22px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.moment-search__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 115px;
+  position: relative;
+  margin-bottom: 83px;
+
+  @include tablet {
+    padding-left: 35px;
+    margin-left: 65px;
+    margin-bottom: 25px;
+  }
+
+  @include mobile {
+    margin-left: 2px;
+    margin-bottom: 255px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 656px;
+    width: 88px;
+    background: url("../img/moment-search-arrow-desktop.svg") no-repeat center;
+    left: -87px;
+    top: -33px;
+
+    @include tablet {
+      background: url("../img/moment-search-arrow-tablet.svg") no-repeat center;
+      left: -15px;
+      top: -22px;
+      width: 61px;
+      height: 455px;
+    }
+
+    @include mobile {
+      background: url("../img/moment-search-arrow-mobile.svg") no-repeat center;
+      left: 5px;
+      top: -6px;
+      width: 31px;
+      height: 543px;
+    }
+  }
+}
+
+.moment-search__item {
+  width: 470px;
+  margin-bottom: 73px;
+
+  @include tablet {
+    width: 295px;
+    margin-bottom: 57px;
+  }
+
+  @include mobile {
+    margin-bottom: 15px;
+    width: 180px;
+  }
+}
+
+.moment-search__item:last-child {
+  margin: 0;
+}
+
+.moment-search__link {
+  font-size: 36px;
+
+  & span {
+    color: #e4842a;
+  }
+
+  @include tablet {
+    font-size: 24px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 14px;
+    // margin-left: 0;
+  }
+}
+
+.moment-search__seemore {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 45px;
+
+  @include desktop-full {
+    margin-left: -18px;
+  }
+
+  @include tablet {
+    align-items: flex-end;
+  }
+}
+
+.moment-search__text {
+  text-align: center;
+  width: 535px;
+  font-size: 24px;
+  margin-bottom: 21px;
+
+  span {
+    color: #e2a13c;
+  }
+
+  @include tablet {
+    font-size: 18px;
+    width: 400px;
+    margin-bottom: 5px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 14px;
+    width: 233px;
+    margin-bottom: 10px;
+  }
+}
+
+.moment-search__tour-link {
+  font-size: 24px;
+  line-height: 24px;
+  display: block;
+  text-align: center;
+  width: 534px;
+  color: #ffffff;
+  background: linear-gradient(to right, #ECAF32, #E4842A);
+  border-radius: 4px;
+  padding: 24px 0;
+  transition: color 0.3s ease, background 0.3s ease;
+
+
+  &:hover,
+  &:focus {
+    color: $color-orange;
+    background: linear-gradient(to right, $color-white, $color-white);
+    padding: 22px 0;
+    border: 2px solid #e4842a;
+  }
+
+  &--widget-btn {
+    width: 473px;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 16px 0;
+
+    &:hover,
+    &:focus {
+      line-height: 46px;
+    }
+
+    @include mobile {
+      width: 240px;
+
+      &:hover,
+      &:focus {
+        line-height: 40px;
+      }
+    }
+  }
+
+  @include tablet {
+    font-size: 18px;
+    width: 400px;
+    line-height: 18px;
+    padding: 21px 0;
+
+    &:hover,
+    &:focus {
+      color: $color-orange;
+      background: linear-gradient(to right, $color-white, $color-white);
+      padding: 19px 0;
+      border: 2px solid #e4842a;
+    }
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 12px 0;
+    width: 233px;
+
+    &:hover,
+    &:focus {
+      color: $color-orange;
+      background: linear-gradient(to right, $color-white, $color-white);
+      padding: 10px 0;
+      border: 2px solid #e4842a;
+    }
+  }
+}

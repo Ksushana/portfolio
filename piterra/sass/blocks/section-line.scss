@@ -1,0 +1,14 @@
+.section-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 46px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: .24;
+    background-color: #525a65;
+  }
+}

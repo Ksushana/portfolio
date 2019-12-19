@@ -1,0 +1,25 @@
+.arrow-button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 23px;
+    height: 18px;
+    margin-top: -9px;
+    margin-left: -12px;
+    // background-image: url("../img");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &--right {
+    &::before {
+      background-image: url("");
+    }
+  }
+}

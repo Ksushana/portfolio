@@ -1,0 +1,7 @@
+.tours-baikal {
+  margin-bottom: 110px;
+
+  @include laptop {
+    margin-bottom: 50px;
+  }
+}

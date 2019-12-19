@@ -1,0 +1,59 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Искусные планировки';
+  - let isInner = true;
+  - let isFHPage = true;
+  - let logoNoScroll = true;
+  - let headerBackground = 'header__menu--fantastic';
+
+block content
+  .container.floor-detail-container.blue-burger-container
+    include pug/phone-icon.pug
+    h1.title.title--page.title--big искусные планировки
+
+    .choice
+      .swiper-container.choice-container
+      .swiper-wrapper.tabs-links
+        .swiper-slide
+          button.switch-button.switch-button-active( type="button") план квартиры
+        .swiper-slide
+          button.switch-button( type="button") план этажа
+        .swiper-slide
+          button.switch-button( type="button") пример дизайна
+    .tab.is-active
+      include pug/flat-plan.pug
+    .tab
+      section.floor.floor--4
+        .floor__col.floor__col--left
+          .floor__desc
+            p.floor__number Этаж 4
+            p.floor__text Возможно объединение квартир
+        .floor__col.floor__col--center
+          .floor__img
+            p.floor__img-text.floor__img-text--left Малая Грузинская
+            p.floor__img-text.floor__img-text--bottom Большой Тишинский переулок
+            p.floor__img-text.floor__img-text--garden Сад
+            a(href="floor-detail-4.1.html").floor__flat.floor__flat--1.floor__flat--active
+              .floor__flat-number № 1<br>65 м<sup>2</sup>
+            a(href="floor-detail-4.2.html").floor__flat.floor__flat--2
+              .floor__flat-number № 2<br>98 м<sup>2</sup>
+            a(href="floor-detail-4.3.html").floor__flat.floor__flat--3
+              .floor__flat-number № 3<br>124 м<sup>2</sup>
+            a(href="floor-detail-4.4.html").floor__flat.floor__flat--4
+              .floor__flat-number № 4<br>164 м<sup>2</sup>
+            a(href="floor-detail-4.5.html").floor__flat.floor__flat--5
+              .floor__flat-number № 5<br>118 м<sup>2</sup>
+            a(href="floor-detail-4.6.html").floor__flat.floor__flat--6
+              .floor__flat-number № 6<br>63 м<sup>2</sup>
+            .floor__img-cover
+              +flats-hover-4
+              img(src='img/fh_floor_4.svg', alt='План этажа')
+        .floor__col.floor__col--right
+          .floor__compas
+            span C
+            svg(width='14', height='25', viewbox='0 0 14 25', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M4.57587 1.56719C4.33685 1.42891 4.03098 1.51057 3.8927 1.7496L1.63926 5.64472C1.50097 5.88375 1.58264 6.18961 1.82167 6.3279C2.06069 6.46618 2.36656 6.38451 2.50484 6.14549L4.5079 2.68315L7.97023 4.68621C8.20926 4.8245 8.51512 4.74283 8.65341 4.5038C8.79169 4.26478 8.71002 3.95891 8.471 3.82063L4.57587 1.56719ZM10.4838 23.1264L4.80857 1.871L3.84241 2.12896L9.51766 23.3844L10.4838 23.1264Z', fill='#10069F')
+    .tab.tab-gallery
+      section.example-design
+        img(src="img/example-design@1x.jpg", alt="Пример дизайна", srcset="img/example-design@2x.jpg")

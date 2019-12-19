@@ -1,0 +1,124 @@
+.start {
+  margin-bottom: 17px;
+}
+
+.start__tabs {
+  width: 220px;
+  min-height: 38px;
+  border: 2px solid $color-gray-line;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.start__label {
+  padding: 0;
+  margin: 0;
+  width: 71px;
+  height: auto;
+}
+
+.start__input {
+  background-color: transparent;
+}
+
+.start__input + .start__indicator {
+  margin: 0;
+  font-size: 14px;
+  width: 71px;
+  height: 100%;
+  border-radius: 18px;
+  padding: 9px 4px 7px 4px;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.3s ease;
+
+  span {
+    width: 62px;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+.start__input:hover + .start__indicator,
+.start__input:active + .start__indicator {
+  background-color: $color-orange-lite;
+  cursor: pointer;
+}
+
+.start__input:focus + .start__indicator,
+.start__input:active + .start__indicator {
+  background-color: $color-orange;
+  color: $color-white;
+}
+
+.start__input:checked + .start__indicator {
+  background-color: $color-orange;
+  color: $color-white;
+}
+
+.start__tabs-item {
+  display: none;
+  width: 220px;
+  padding-bottom: 19px;
+
+  &--active {
+    display: block;
+  }
+
+  &--season {
+    padding-bottom: 2px;
+  }
+}
+
+.start__date-tab {
+  display: flex;
+  justify-content: space-between;
+}
+
+.start__date-label {
+  &:first-child .start__input {
+    padding-left: 14px;
+  }
+
+  &:last-child .start__input {
+    padding-left: 18px;
+  }
+}
+
+.start__input {
+  width: 105px;
+  min-height: 35px;
+  border: 2px solid $color-gray-line;
+  border-radius: 20px;
+  padding: 9px 16px;
+  font-size: 12px;
+  outline: none;
+
+  @include tablet {
+    background-color: transparent;
+  }
+}
+
+.start__input--select {
+  padding: 9px 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.start__season-list.checkbox {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.start__season-item.checkbox__item {
+  width: 50%;
+  margin-bottom: 5px;
+}

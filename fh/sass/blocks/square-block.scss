@@ -1,0 +1,13 @@
+.square-block {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  color: $color-white;
+  background-color: $color-blue;
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}

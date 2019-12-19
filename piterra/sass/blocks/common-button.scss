@@ -1,0 +1,47 @@
+.common-button {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 100%;
+  font-family: $fontSans;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $dark-text;
+  border-radius: 2px;
+  border: none;
+  background-color: $accent-color;
+  cursor: pointer;
+
+  &--facebook {
+    position: relative;
+    margin-bottom: 19px;
+    padding-left: 34px;
+    text-align: left;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 15px;
+      top: 50%;
+
+      width: 22px;
+      height: 22px;
+      margin-top: -11px;
+      margin-left: -11px;
+
+      background-image: url("../img/icons/icon-facebook--dark.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      // backgroound-size: contain;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
+}

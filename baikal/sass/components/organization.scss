@@ -1,0 +1,482 @@
+.organization {
+  font-family: $font-muller;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mobile-wide {
+    padding-left: 20px;
+  }
+
+  @include mobile {
+    padding-left: 0;
+  }
+}
+
+.organization__duration {
+  margin-bottom: 18px;
+  margin-left: calc(#{$organization-desktop-margin} - 8px);
+
+  @include tablet {
+    margin-bottom: 21px;
+  }
+
+  @include  mobile-wide {
+    margin-left: 0;
+  }
+
+  @include mobile {
+    margin-bottom: 13px;
+  }
+}
+
+.organization__days {
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 10px;
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -4px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/sun.svg");
+    background-repeat: no-repeat;
+  }
+
+  @include tablet {
+    font-size: 12px;
+    &:after {
+      left: 5px;
+      width: 19px;
+      height: 19px;
+      background-size: contain;
+    }
+  }
+
+  @include mobile-wide {
+    font-size: 14px;
+
+    &:after {
+      left: 5px;
+      width: 18px;
+      height: 18px;
+      background-size: contain;
+    }
+  }
+
+  @include mobile {
+    font-size: 13px;
+    padding-left: 35px;
+
+    &:after {
+      left: 12px;
+      bottom: -3px;
+    }
+  }
+}
+
+.organization__nights {
+  position: relative;
+  padding-left: 25px;
+  font-size: 14px;
+  font-weight: 400;
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 5px;
+    bottom: 0;
+    width: 15px;
+    height: 16px;
+    background-image: url("../img/moon.svg");
+    background-repeat: no-repeat;
+  }
+
+  @include tablet {
+    padding-left: 16px;
+    font-size: 12px;
+
+    &:after {
+      bottom: -2px;
+      left: 1px;
+      width: 14px;
+      height: 15px;
+      background-size: contain;
+    }
+  }
+
+  @include mobile-wide {
+    font-size: 14px;
+  }
+
+  @include mobile {
+    font-size: 13px;
+    padding-left: 16px;
+  }
+}
+
+.organization__cost {
+  font-weight: 400;
+  margin-bottom: 28px;
+  margin-left: $organization-desktop-margin;
+  padding-right: 20px;
+
+  @include tablet {
+    font-size: 18px;
+    margin-bottom: 12px;//14px;
+  }
+
+  @include mobile-wide {
+    margin-left: 12px;
+    margin-bottom: 14px;
+  }
+
+  @include mobile {
+    margin-left: 15px;
+  }
+}
+
+.organization__cost-old {
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-gray-price;
+  text-decoration: line-through;
+}
+
+.organization__cost-new {
+  font-size: 16px;
+  font-weight: 700;
+  color: $color-red-filter;
+
+}
+
+.organization__cost-validity {
+  font-size: 12px;
+  line-height: 13px;
+  color: $color-gray-note;
+}
+
+.organization__season {
+  position: absolute;
+  left: 30px;
+  bottom: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 17px;
+  color: $color-white;
+
+  @include tablet {
+    font-size: 12px;
+    margin-bottom: 11px;
+  }
+
+  @include mobile-wide {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    margin-bottom: 7px;
+    margin-left: 20px;
+    color: $color-black;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  @include mobile {
+    position: absolute;
+    width: 33%;
+    left: 5px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    bottom: 1px;
+    min-height: 30px;
+  }
+}
+
+.organization__dates {
+  margin-left: $organization-desktop-margin;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+
+  @include tablet {
+    font-size: 13px;
+  }
+  @include mobile-wide {
+    margin-left: 12px;
+  }
+}
+
+.organization__list-dates {
+  font-family: $font-muller;
+  margin-left: $organization-desktop-margin;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+
+  height: 41px;
+  overflow: hidden;
+
+  @include tablet {
+    font-size: 13px;
+    line-height: 17px;
+    height: 36px;
+  }
+
+  @include mobile-wide {
+    margin-left: 12px;
+
+    &--hidden-mobile {
+      display: none;
+    }
+  }
+}
+
+.organization__button {
+  width: 85px;
+
+  display: block;
+  margin-left: calc(#{$organization-desktop-margin} - 9px);
+  text-align: center;
+  margin-top: 9px;
+  margin-bottom: 23px;
+  padding-right: 18px;
+  background: none;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: $color-blue-sorting;
+  position: relative;
+  outline: none;
+  transition: color 0.3s ease;
+
+  svg {
+    position: absolute;
+    content: "";
+    right: 3px;
+    bottom: 2px;
+    width: 15px;
+    height: 15px;
+    transform: rotate(90deg);
+    fill: $color-blue-sorting;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-orange;
+
+    svg {
+      fill: $color-orange;
+    }
+  }
+
+  @include tablet {
+    font-size: 12px;
+    margin-bottom: 18px;
+    margin-left: 18px;
+    margin-top: 5px;
+
+    svg {
+      right: 8px;
+      bottom: 3px;
+      width: 11px;
+      height: 11px;
+    }
+  }
+
+  @include mobile-wide {
+    margin-top: 9px;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    padding-left: 0;
+    height: 15px;
+
+    svg {
+      right: 7px;
+      height: 12px;
+    }
+
+    &--hidden-mobile {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    margin-left: 3px;
+    margin-top: 8px;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.organization__open {
+  padding: 19px 12px 19px 35px;
+  background-color: $color-gray-button-bg;
+  border-radius: 25px 0 0 0;
+  color: $color-gray-button-txt;
+  font-weight: 900;
+  font-size: 20px;
+  display: inline-block;
+  float: right;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  margin-left: calc(#{$organization-desktop-margin} - 8px);//22px;
+
+  @include tablet {
+    padding: 13px 10px 15px 24px;
+    font-size: 18px;
+    margin-left: 22px;
+  }
+
+  @include mobile-wide {
+    margin-top: 5px;
+    padding: 16px 10px 15px 26px;
+    margin-left: auto;
+    width: 50%;
+  }
+
+  @include mobile {
+    margin-left: 35%;
+    width: 65%;
+    margin-top: 0;
+    padding-bottom: 15px;
+  }
+}
+
+.organization__window-dates {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include mobile-wide {
+    width: 320px;
+    flex-wrap: nowrap;
+    &--show{
+      position: relative;
+    }
+  }
+  @include mobile {
+    width: 290px;
+  }
+}
+
+.organization--landing {
+  .organization__button {
+    margin-bottom: 27px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 0;
+    font-size: 14px;
+    line-height: 14px;
+
+    .organization__duration {
+      order: 0;
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 14px;
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 45px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 44px;
+    }
+
+    .organization__cost {
+      order: 0;
+      width: 40%;
+      margin: 0;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 14px;
+      margin-left: 34px;
+    }
+
+    .organization__dates {
+      order: 0;
+      width: 40%;
+      margin: 0;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .organization__season {
+      width: 100px;
+      position: static;
+      order: 1;
+      margin-top: 13px;
+      margin-left: 34px;
+    }
+
+    .organization__list-dates {
+      width: 40%;
+      order: 2;
+      margin-right: 20px;
+    }
+
+    .organization__button {
+      order: 5;
+      margin-left: auto;
+      margin-top: 17px;
+      margin-right: 75px;
+      margin-bottom: 20px;
+    }
+
+    .organization__open {
+      padding: 17px 0 19px 0;
+      order: 5;
+      font-size: 20px;
+      line-height: 20px;
+      margin-left: auto;
+      width: 223px;
+      text-align: center;
+
+      @include tablet {
+        padding: 20px 0 19px 0;
+      }
+
+      @include mobile {
+        padding: 20px 0 19px 0;
+      }
+    }
+
+    .organization__days {
+      @include mobile {
+        padding-left: 40px;
+
+        &::after {
+          left: 5px;
+          width: 27px;
+          height: 27px;
+          background-size: contain;
+        }
+      }
+    }
+
+    .organization__nights {
+      padding-left: 40px;
+
+      @include mobile {
+        &::after {
+          left: 5px;
+          top: -8px;
+          width: 27px;
+          height: 27px;
+        }
+      }
+    }
+  }
+}

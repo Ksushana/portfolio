@@ -1,0 +1,81 @@
+.surraundings {
+  h1 {
+    @include desktop {
+      width: size(380px);
+      margin: size(81px) auto size(58px);
+
+      // font-size: size(30px);
+      // line-height: size(40px);
+      // letter-spacing: 0.025em;
+    }
+
+    @include tablet {
+      width: auto;
+      margin: 0;
+      margin-top: size(68px);
+      margin-bottom: size(60px);
+    }
+
+    @include mobile {
+      margin-top: size(38px);
+      margin-bottom: size(46px);
+
+      font-size: size(23px);
+      line-height: size(23px);
+    }
+  }
+
+  .choice {
+    margin-bottom: size(74px);
+
+    @include desktop {
+      margin-bottom: size(91px);
+    }
+
+    @include tablet {
+      margin-bottom: size(74px);
+    }
+
+    @include mobile {
+      margin-bottom: size(41px);
+    }
+
+    button {
+      background-color: $color-blue;
+    }
+
+    &.js-scrool-start {
+      position: sticky;
+      z-index: 10000;
+      top: size(45px);
+      opacity: 0;
+
+      transition: all 1s ease-in-out;
+
+      @include tablet {
+        top: size(35px);
+      }
+
+      @include mobile {
+        position: static;
+      }
+    }
+
+    &.js-scrool-stop {
+      position: sticky;
+      z-index: 100;
+      top: size(45px);
+
+      opacity: 1;
+      transition: all 1s ease-in-out;
+
+      @include tablet {
+        top: size(35px);
+      }
+
+      @include mobile {
+        position: static;
+      }
+    }
+  }
+}

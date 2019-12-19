@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    //= templates/header-new.html
+    <main class="hotels-main">
+      <!-- Первый экран - Гостиницы и Базы отдыха на Байкале-->
+      <section class="main-picture main-picture--hotels">
+        <!-- <div class="main-picture__bg main-picture__bg--hotels" style="background-image: url(img/main-picture--hotels__desktop@1x.jpg);"> -->
+        <div class="main-picture__bg main-picture__bg--hotels" itemscope itemtype="https://schema.org/ImageObject">
+        <img itemprop="contentUrl" src="img/main-picture--hotels__desktop@1x.jpg" alt="фон формы" class="cover main-picture__bg-image main-picture__bg-image--hotels">
+        <div class="bottom-shadow bottom-shadow--zindex"></div>
+        <div class="container main-picture__text-block main-picture__text-block--hotels">
+          <ul class="breadcrumbs-list breadcrumbs-list--hotels" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <a itemprop='item' href="#"><span itemprop='name'>Туры на Байкал</span></a>
+              <meta itemprop='position' content='1'>
+            </li>
+            <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <a itemprop='item' href="#"><span itemprop='name'>Зимние экскурсии</span></a>
+              <meta itemprop='position' content='2'>
+            </li>
+            <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <a itemprop='item' href="#"><span itemprop='name'>Групповые экскурсии</span></a>
+              <meta itemprop='position' content='3'>
+            </li>
+            <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <span itemprop='name'>На хивусе по Байкалу</span>
+              <meta itemprop='position' content='4'>
+            </li>
+          </ul>
+          <h1  itemprop="name" class="main-picture__header main-picture__header--hotels">
+            Гостиницы и Базы отдыха на Байкале
+          </h1>
+        </div>
+        </div>
+      </section>
+
+      <!-- Второй экран - Посмотрите отели на Байкале-->
+      <section class="look">
+        <div class="container">
+          <div class="look__title-wrapper">
+            <h2 class="look__title">
+              Посмотрите <span>отели&nbsp;на Байкале</span></b>
+            </h2>
+            <h3 class="look__subtitle">
+              <b>в&nbsp;самых&nbsp;популярных местах</b>
+            </h3>
+          </div>
+          <div class="look__widget">
+            <script charset="utf-8" src="//www.travelpayouts.com/widgets/52040142f47fc97dc7bf967e490030e0.js?v=1685" async></script>
+          </div>
+        </div>
+        <div class="slider_wrapper">
+          <div class="look__slider hotels-slider hotels-slider--witharrows swiper-container">
+            <ul class="hotels-slider__list swiper-wrapper">
+              <!--Микроразметка блока с изображением - первый слайд в цикле-Begin-->
+              <li class="swiper-slide hotels-slider__item" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="#">
+                  <img  itemprop="contentUrl" class="cover" src="img/hotels__slide1--desktop@1x.jpg" alt="Листвянка">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper"><h3 itemprop="name" class="">Листвянка</h3></div>
+                  <span itemprop="description" class="slider">87 отелей</span>
+                </a>
+              </li>
+              <!--End-->
+              <li class="swiper-slide hotels-slider__item">
+                <a href="#">
+                  <img class="cover" src="img/hotels__slide2--desktop@1x.jpg" alt="Ольхон">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper"><h3 class="">Ольхон</h3></div>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+              <li class="swiper-slide hotels-slider__item">
+                <a href="#">
+                  <img class="cover" src="img/hotels__slide3--desktop@1x.jpg" alt="Малое море">
+                  <div class="bottom-shadow"></div>
+                  <dvi class="title_wrapper"><h3 class="">Малое море</h3></dvi>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+              <li class="swiper-slide hotels-slider__item">
+                <a href="#">
+                  <img  class="cover" src="img/hotels__slide4--desktop@1x.jpg" alt="КБЖД">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper"><h3 class="">КБЖД</h3></div>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+              <li class="swiper-slide hotels-slider__item">
+                <a href="#">
+                  <img  class="cover" src="img/hotels__slide5--desktop@1x.jpg" alt="Иркутск">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper"><h3 class="">Иркутск</h3></div>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+              <li class="swiper-slide hotels-slider__item">
+                <a href="#">
+                  <img  class="cover" src="img/hotels__slide6--desktop@1x.jpg" alt="Байкальский тракт">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper"><h3 class="">Байкальский тракт</h3></div>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-button-next hotels-slider__arrow--next look__slider-arrow--next">
+          </div>
+          <div class="swiper-button-prev hotels-slider__arrow--prev look__slider-arrow--prev">
+          </div>
+        </div>
+      </section>
+
+      <!-- Третий экран - Все отели Байкала на карте-->
+      <section class="hotels-map">
+        <div class="container container--big">
+          <!-- <h2 class="hotels-map__title section-title">
+            Все отели Байкала <span>на карте</span>
+          </h2>
+          <div class="hotels-map__bar"></div>
+          <a href="#" class="hotels-map__btn">Посмотреть отели на карте</a> -->
+          <div class="hotel-map__header trakt-header col-sm-10 col-lg-7">
+            <h2>Все отели и гостевые дома</h2>
+            <p class="hotel-map__header--text">Байкала <span>на карте</span></p>
+            <p class="hotel-map__header--blue">Выбирай и бронируй!</p>
+          </div>
+          <a class="hotel-map__link hotel-map__link--hotels col-sm-12 col-lg-5">
+            Полная карта<br> отелей на Байкалe
+            <svg width="14" height="27" class="hotel-map__icon">
+              <use xlink:href="#icon-new-arrow"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="hotels-map__wrapper">
+          <div class="hotels-map__map" style="background-image: url(img/hotels-map--desktop@1x.png);">
+            <a href="#"><span class="hotels-map__pin hotels-map__pin--1">Иркутск</span></a>
+            <a href="#"></a><span class="hotels-map__pin hotels-map__pin--2">Ольхон</span></a>
+            <a href="#"> <span class="hotels-map__pin hotels-map__pin--3">Бухта Песчаная</span></a>
+            <a href="#"><span class="hotels-map__pin hotels-map__pin--4">Улан-Удэ</span></a>
+            <a href="#"><span class="hotels-map__pin hotels-map__pin--5">Листвянка</span></a>
+            <a href="#"><span class="hotels-map__pin hotels-map__pin--6">Аршан</span></a>
+            <a href="#"><span class="hotels-map__pin hotels-map__pin--7">Байкальск</span></a>
+            <a href="#"><span class="hotels-map__pin hotels-map__pin--8">Северобайкальск</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Четвертый экран - Гостиницы Байкала-->
+      <section class="hotels-raiting">
+        <div class="container">
+          <h2 class="hotels-raiting__title section-title">
+              Гостиницы Байкала <b><span>с&nbsp;лучшим</span> рейтингом</b>
+          </h2>
+          <div class="hotels-raiting__bar"></div>
+        </div>
+        <div class="container container--widget">
+          <div class="hotels-raiting__widget">
+            <script async
+              src="//www.travelpayouts.com/blissey/scripts.js?categories=price%2Cpool%2Chighprice&id=12122&type=compact&currency=rub&host=booking.fanatbaikala.ru%2Fhotels&marker=214841.&limit=2&powered_by=true"
+              charset="UTF-8"></script>
+            <a href="#" class="widget-btn">Посмотреть все отели с лучшим рейтингом</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Пятый экран - Подборки отелей на Байкале-->
+      <section class="hotels-selection">
+        <div class="container">
+          <h2 class="hotels-selection__title section-title">
+            Подборки отелей на <span>Байкале</span>
+          </h2>
+          <div class="hotels-selection__bar"></div>
+        </div>
+        <div class="container">
+          <div class="hotels-selection__widget selection-widget">
+            <script async
+              src="//www.travelpayouts.com/blissey/scripts.js?categories=price%2Cpool%2Chighprice&id=12122&type=compact&currency=rub&host=search.hotellook.com&marker=224797.&limit=2&powered_by=false"
+              charset="UTF-8"></script>
+              <a href="#" class="widget-btn">Посмотреть все отели с лучшим рейтингом</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Шестой экран - Найдите свой отель на Байкале-->
+      <section class="find-hotels">
+        <img src="img/find-hotels__bg--desktop@1x.png" alt="фон формы" class="find-hotels__bg-image">
+        <div class="container">
+          <h2 class="find-hotels__title section-title">
+            Найдите <span>свой</span> отель на Байкале
+          </h2>
+        </div>
+        <div class="container container--fullwidth">
+          <div class="find-hotels__bar"></div>
+          <div class="find-hotels__widget finder-widget">
+            <script charset="utf-8" src="//www.travelpayouts.com/widgets/5b55a75d9c3c64f3af88095b089fdb08.js?v=1691" async></script>
+          </div>
+          <div class="find-hotels__bar find-hotels__bar--right"></div>
+        </div>
+      </section>
+
+      <!-- Седьмой экран - Гостиницы Иркутска и Юго-западного побережья-->
+      <!-- <section class="hotels hotels--first-list" style="background-image: url(img/hotels__first-list__bg--tablet@1x.png);"> -->
+      <section class="hotels hotels--first-list">
+        <div class="container">
+          <h2 class="hotels__title hotels__title--first-list section-title">
+            Гостиницы <b><span>Иркутска</span>&nbsp;и&nbsp;<span>Юго&#8209;западного&nbsp;побережья</span></b>
+          </h2>
+        </div>
+        <div class="container">
+          <div class="wrapper">
+            <div class="empty">
+              <img src="img/hotels__first-list__bg--tablet@1x.png" alt="фон формы" class="cover hotels--bg">
+            </div>
+            <ul class="hotels__list">
+              //= templates/hotels-list.html
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Восьмой экран - Базы отдыха и отели-->
+      <!-- <section class="hotels hotels--second-list" style="background-image: url(img/hotels__second-list__bg--tablet@1x.png);"> -->
+      <section class="hotels hotels--second-list">
+        <div class="container">
+          <h2 class="hotels__title hotels__title--second-list section-title">
+            Базы отдыха и отели <span><b>Малое&nbsp;море</b></span>
+          </h2>
+        </div>
+        <div class="container">
+          <div class="wrapper">
+            <div class="empty empty--left">
+                <img src="img/hotels__second-list__bg--tablet@1x.png" alt="фон формы" class="cover hotels--bg">
+            </div>
+            <ul class="hotels__list">
+              //= templates/hotels-list.html
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Девятый экран - Гостиницы Аршана и Тунскинской долыны -->
+      <!-- <section class="hotels hotels--third-list" style="background-image: url(img/hotels__third-list__bg--tablet@1x.png);"> -->
+      <section class="hotels hotels--third-list">
+        <div class="container">
+          <h2 class="hotels__title hotels__title--third-list section-title">
+            Гостиницы <span><b>Аршана</b></span>&nbsp;и&nbsp;<span><b>Тунскинской&nbsp;долины</b></span>
+          </h2>
+        </div>
+        <div class="container">
+          <div class="wrapper">
+            <div class="empty">
+                <img src="img/hotels__third-list__bg--tablet@1x.png" alt="фон формы" class="cover hotels--bg">
+            </div>
+            <ul class="hotels__list">
+              //= templates/hotels-list.html
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Десятый экран - Гостиницы и базы Улан-удэ и Восточного побережьяы -->
+      <!-- <section class="hotels hotels--fourth-list" style="background-image: url(img/hotels__fourth-list__bg--tablet@1x.png);"> -->
+      <section class="hotels hotels--fourth-list hotels--fourth-list hotels--big-list">
+        <div class="container">
+          <h2 class="hotels__title hotels__title--fourth-list section-title">
+            Гостиницы&nbsp;и&nbsp;базы&nbsp;отдыха
+            <b><span>Улан-удэ</span>&nbsp;и&nbsp;<span>Восточного&nbsp;побережья</span></b>
+          </h2>
+        </div>
+        <div class="container">
+          <div class="wrapper">
+            <div class="empty empty--left">
+                <img src="img/hotels__fourth-list__bg--tablet@1x.png" alt="фон формы" class="cover hotels--bg">
+            </div>
+            <ul class="hotels__list">
+              <li class="hotels-slider__item hotels__item" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="#">
+                  <img  itemprop="contentUrl" class="cover" src="img/hotels__slide1--desktop@1x.jpg" alt="Листвянка">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper">
+                    <h3 itemprop="name" class="">Листвянка</h3>
+                  </div>
+                  <span itemprop="description" class="slider">87 отелей</span>
+                </a>
+              </li>
+              <!--End-->
+              <li class="hotels-slider__item hotels__item">
+                <a href="#">
+                  <img  class="cover" src="img/hotels__slide2--desktop@1x.jpg" alt="Ольхон">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper">
+                    <h3 class="">Ольхон</h3>
+                  </div>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+              <li class="hotels-slider__item hotels__item">
+                <a href="#">
+                  <img  class="cover" src="img/hotels__slide3--desktop@1x.jpg" alt="Малое море">
+                  <div class="bottom-shadow"></div>
+                  <dvi class="title_wrapper">
+                    <h3 class="">Малое море</h3>
+                  </dvi>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+              <li class="hotels-slider__item hotels__item">
+                <a href="#">
+                  <img  class="cover" src="img/hotels__slide4--desktop@1x.jpg" alt="КБЖД">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper">
+                    <h3 class="">КБЖД</h3>
+                  </div>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+              <li class="hotels-slider__item hotels__item" itemscope itemtype="https://schema.org/ImageObject">
+                <a href="#">
+                  <img  itemprop="contentUrl" class="cover" src="img/hotels__slide1--desktop@1x.jpg" alt="Листвянка">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper">
+                    <h3 itemprop="name" class="">Листвянка</h3>
+                  </div>
+                  <span itemprop="description" class="slider">87 отелей</span>
+                </a>
+              </li>
+              <!--End-->
+              <li class="hotels-slider__item hotels__item">
+                <a href="#">
+                  <img  class="cover" src="img/hotels__slide2--desktop@1x.jpg" alt="Ольхон">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper">
+                    <h3 class="">Ольхон</h3>
+                  </div>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+              <li class="hotels-slider__item hotels__item">
+                <a href="#">
+                  <img  class="cover" src="img/hotels__slide3--desktop@1x.jpg" alt="Малое море">
+                  <div class="bottom-shadow"></div>
+                  <dvi class="title_wrapper">
+                    <h3 class="">Малое море</h3>
+                  </dvi>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+              <li class="hotels-slider__item hotels__item">
+                <a href="#">
+                  <img  class="cover" src="img/hotels__slide4--desktop@1x.jpg" alt="КБЖД">
+                  <div class="bottom-shadow"></div>
+                  <div class="title_wrapper">
+                    <h3 class="">КБЖД</h3>
+                  </div>
+                  <span class="slider">87 отелей</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Двенадцатый экран - Как выбрать отель на Байкале? -->
+      <section class="selections">
+        <div class="container">
+          <h2 class="selections__title section-title">
+            Как выбрать <span>отель</span>&nbsp;на&nbsp;Байкале?
+          </h2>
+        </div>
+        <ul class="selections__list">
+          <li class="selections__item selections__item--right">
+            <div class="selections__block selections__block--right">
+              <p class="selections__text">
+                На Байкале огромное количество гостиниц, баз отдыха и кемпингов на любой вкус и кошелек – всего более 700.
+              </p>
+              <p class="selections__text">Отели и гостиницы на Байкале в основном работают круглый год, гостевые дома и базы
+                отдыха зачастую закрываются на зиму.</p>
+            </div>
+          </li>
+          <li class="selections__item">
+            <div class="selections__block">
+              <p class="selections__text">Летний отельный сезон начинается с середины июня и заканчивается в середине
+                сентября. В летний период базы отдыха и отели на Байкале переполнены – туристы и путешественники приезжают
+                со всего света.</p>
+              <p class="selections__text">Зимой на Байкале тоже сезон, туристов привлекают прозрачный лед, сверкающие на
+                солнце торосы, причудливые ледяные скульптуры.</p>
+            </div>
+          </li>
+          <li class="selections__item selections__item--right">
+            <div class="selections__block selections__block--right">
+              <p class="selections__text">Весной и осенью можно забронировать отели на Байкале по самой привлекательной цене
+                – в 1,5-2 раза дешевле по сравнению с летом.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Тринадцатый экран - Инстаграм -->
+      //= templates/instagram.html
+    </main>
+    //= templates/footer.html
+    //= templates/callback.html
+    //= templates/js.html
+</body>

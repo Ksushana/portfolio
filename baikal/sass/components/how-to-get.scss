@@ -1,0 +1,397 @@
+.how-to-get {
+  position: relative;
+  margin-top: 145px;
+  // background-image: url("./../img/map-trakt@1x.png");
+  background-repeat: no-repeat;
+  background-position: left 550px top -124px;
+  padding-bottom: 199px;
+  // height: 1255px;
+
+  // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  //   background-image: url("./../img/map-trakt@2x.png");
+  //   background-size: 1468px 1255px;
+  //   background-position: left 550px top -124px;
+  // }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  // @include desktop {
+  //   background-position: left 320px top -124px;
+  // }
+
+  @include desktop {
+    margin-top: 86px;
+    padding-bottom: 99px;
+  }
+
+  @include laptop {
+    background-position: 100% 6%!important;
+  }
+
+  @include tablet {
+    margin-top: 86px;
+    padding-bottom: 102px;
+    background-position: center 5%!important;
+    background-size: 855px auto!important;
+    background-repeat: no-repeat;
+  }
+
+  @include mobile-wide {
+    margin-top: 23px;
+    background-position: center 2%!important;
+    background-size: 561px auto!important;
+    padding-bottom: 82px;
+  }
+}
+
+.how-to-get__bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 73%;
+  height: auto;
+  z-index: -5;
+
+  @include desktop-full {
+    top: -145px;
+  }
+
+  @include laptop {
+    top: 0;
+    right: 0;
+  }
+
+  @include tablet {
+    top: -34px;
+    left: 50%;
+    transform: translateX(-54%);
+    width: 917px;
+  }
+
+  @include mobile-wide {
+    width: 615px;
+  }
+}
+
+.how-to-get__inner {
+  margin: 0 auto;
+}
+
+.how-to-get__header {
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 674px;
+    padding-left: 174px;
+  }
+
+  @include mobile-wide {
+    padding-left: 0;
+    margin-bottom: 444px;
+  }
+}
+
+.how-to-get__header h2 {
+  font-weight: inherit;
+  width: 495px;
+  margin-right: 40px;
+
+  @include mobile-wide {
+    width: auto;
+    margin-right: 0;
+  }
+}
+
+.how-to-get__bar {
+  height: 5px;
+  background: #4d88cc;
+  flex-grow: 1;
+
+  @include tablet {
+    width: 366px;
+    margin-right: 174px;
+    margin-top: 23px;
+  }
+
+  @include mobile-wide {
+    width: 182px;
+    margin-right: 0;
+    margin-top: 18px;
+  }
+}
+
+.how-to-get__listitem {
+  position: relative;
+  padding-left: 130px;
+  width: 650px;
+  margin-bottom: 45px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 102px;
+    height: 102px;
+    border: 3px solid #E2A13C;
+    border-radius: 50%;
+    left: 7px;
+  }
+
+  &:first-child::before {
+    top: -13px;
+  }
+
+  h3 {
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 19px;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 24px;
+    font-style: italic;
+    padding-bottom: 18px;
+  }
+
+  a {
+    font-size: 24px;
+    line-height: 24px;
+    color: #4d88cc;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+    position: relative;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 51px;
+  }
+
+  &:nth-child(3) {
+    width: 600px;
+  }
+
+  @include desktop {
+    width: 480px;
+
+    &:nth-child(3) {
+      width: 480px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  @include laptop {
+    width: 450px;
+  }
+
+  @include tablet {
+    width: 600px;
+    margin-bottom: 29px;
+
+    &:nth-child(2) {
+      margin-bottom: 35px;
+    }
+  }
+
+  @include mobile-wide {
+    padding-top: 112px;
+    padding-left: 0;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 46px;
+
+    &::before {
+      left: 174px;
+      top: -14px;
+    }
+
+    &:first-child::before {
+      top: -9px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 45px;
+
+      p {
+        padding-right: 20px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 22px;
+      text-align: center;
+      padding-bottom: 13px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 14px;
+      padding-bottom: 25px;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 14px;
+      text-align: center;
+      padding-left: 5px;
+      width: 147px;
+      margin: 0 auto;
+    }
+
+    &:nth-child(3) {
+      width: 450px;
+    }
+  }
+
+  @include mobile {
+    width: 250px;
+    margin: 0 auto 46px;
+
+    &::before {
+      left: 80px;
+      top: -14px;
+    }
+
+    &:nth-child(3) {
+      width: 250px;
+    }
+  }
+}
+
+.how-to-get__listitem-arrow {
+  position: absolute;
+  right: -24px;
+  top: 3px;
+
+  @include desktop {
+    height: 15px;
+  }
+
+  @include mobile-wide {
+    width: 9px;
+    height: 12px;
+    right: -8px;
+  }
+}
+
+.how-to-get__icon {
+  position: absolute;
+  left: 21px;
+  top: 15px;
+
+  &--first {
+    left: 19px;
+    top: 0;
+  }
+
+  @include mobile-wide {
+    left: 190px;
+    top: 0;
+
+    &--first {
+      left: 187px;
+    }
+  }
+
+  @include mobile {
+    left: 95px;
+    top: 0;
+
+    &--first {
+      left: 91px;
+    }
+  }
+}
+
+.how-to-get__info {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-left: 90px;
+
+  @include mobile-wide {
+    padding-left: 81px;
+    padding-top: 13px;
+    padding-right: 20px;
+    // width: 500px;
+    position: relative;
+    margin: 0 auto;
+
+    @include mobile {
+      width: auto;
+    }
+  }
+}
+
+.how-to-get__note {
+  width: 460px;
+  font-size: 12px;
+  line-height: 12px;
+  font-style: italic;
+  padding-left: 42px;
+
+  a {
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @include mobile-wide {
+    font-size: 9px;
+    line-height: 9px;
+    padding-left: 0;
+  }
+}
+
+.how-to-get__list {
+  margin-top: 69px;
+  margin-left: 46px;
+
+  @include tablet {
+    margin-left: 55px;
+  }
+
+  @include mobile-wide {
+    margin-left: 33px;
+    margin-right: 33px;
+  }
+}
+
+.how-to-get__question {
+  fill: #ffffff;
+  width: 44px;
+  height: 44px;
+
+  @include mobile-wide {
+    position: absolute;
+    left: 26px;
+  }
+}

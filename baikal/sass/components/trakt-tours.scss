@@ -1,0 +1,64 @@
+.trakt-tours {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 138px;
+
+  @include tablet {
+    margin-bottom: 96px;
+  }
+
+  @include mobile-wide {
+    margin-bottom: 56px;
+  }
+}
+
+.trakt-tours__header {
+  text-align: center;
+  padding-left: 40px;
+  font-weight: inherit;
+
+  span {
+    color: #E2A13C;
+  }
+
+  @include tablet {
+    text-align: center;
+    padding-left: 30px;
+    transform: translateX(-13px);
+  }
+
+  @include mobile-wide {
+    padding-bottom: 20px;
+  }
+}
+
+.trakt-tours__inner {
+  padding: 0 30px;
+
+  @include tablet {
+    padding: 0 30px;
+  }
+}
+
+.trakt-tours__button {
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-white;
+  font-weight: 700;
+  text-align: center;
+  min-width: 849px;
+  padding: 24px 0;
+  margin: 0 auto;
+
+  @include tablet {
+    min-width: 551px;
+    transform: translateX(-13px);
+  }
+
+  @include mobile-wide {
+    min-width: 299px;
+    width: 299px;
+    padding: 13px 0;
+    transform: translateX(0);
+  }
+}

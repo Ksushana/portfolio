@@ -1,0 +1,396 @@
+.popular {
+  margin-bottom: 10px;
+  font-family: $font-muller;
+  font-weight: 900;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.popular__list {
+  &--article {
+    margin-top: 18px;
+  }
+}
+
+.popular h2 {
+  width: 580px;
+  margin-bottom: 55px;
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 59px;
+  color: $color-blue-dark;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: -60px;
+    bottom: 10px;
+    width: 57px;
+    height: 60px;
+    background-image: url("../img/fire.svg");
+    background-repeat: no-repeat;
+  }
+
+  @include tablet {
+    font-size: 48px;
+    width: 430px;
+    margin-bottom: 35px;
+
+    &::after {
+      width: 42px;
+      height: 42px;
+      background-size: contain;
+      right: -53px;
+      bottom: 15px;
+    }
+  }
+
+  @include mobile-wide {
+    &::after {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    font-size: 32px;
+    width: 290px;
+    margin-bottom: 8px;
+  }
+}
+
+.popular__item {
+  margin-bottom: 32px;
+
+  &:nth-of-type(3n + 1) {
+    padding-right: 20px;
+  }
+
+  &:nth-of-type(3n + 2) {
+    padding: 0 10px;
+  }
+
+  &:nth-of-type(3n + 3) {
+    padding-left: 20px;
+  }
+
+  // @include laptop {
+  //   &--exc {
+  //     height: 260px;
+  //   }
+  // }
+
+  @include tablet {
+    &--exc {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      height: 266px;
+      margin-top: -6px;
+
+      &:nth-of-type(3n + 1) {
+        padding-right: 0;
+      }
+
+      &:nth-of-type(3n + 2) {
+        padding: 0 0;
+      }
+
+      &:nth-of-type(3n + 3) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  @include mobile-wide {
+    &:nth-of-type(3n + 1) {
+      padding-right: 0;
+    }
+
+    &:nth-of-type(3n + 2) {
+      padding: 0;
+    }
+
+    &:nth-of-type(3n + 3) {
+      padding-left: 0;
+    }
+    margin-bottom: 16px;
+  }
+}
+
+.popular__item a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &:after {
+    position: absolute;
+    content: "Посмотреть тур";
+    color: $color-white;
+    background-color: $color-orange;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding-top: 117px;
+    padding-left: 0;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    &:after {
+      display: block;
+    }
+  }
+  @include laptop {
+    &:after {
+      padding-top: 90px;
+      // padding-left: 50px;
+      font-size: 24px;
+    }
+  }
+  @include tablet {
+    &:after {
+      padding-top: 65px;
+      // padding-left: 38px;
+      font-size: 20px;
+    }
+  }
+
+
+  @include mobile-wide {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    &:after {
+      padding-top: 30%;
+      // padding-left: 25%;
+      font-size: 22px;
+    }
+  }
+
+  @include mobile {
+    &:after {
+      // padding-left: 20%;
+    }
+  }
+}
+
+.popular__item--large a {
+  height: 260px;
+
+  @include laptop {
+    height: 219px;
+  }
+
+  @include tablet {
+    height: 159px;
+  }
+  @include mobile-wide {
+    height: auto;
+  }
+}
+
+.popular__item--small a {
+  height: 189px;
+
+  @include tablet {
+    height: 159px;
+  }
+  @include mobile-wide {
+    height: auto;
+  }
+}
+.popular__item--exc a {
+  @include tablet {
+    &::after {
+      padding-top: 116px;
+      padding-left: 286px;
+      font-size: 26px;
+    }
+  }
+}
+
+.popular__item--trakt a {
+
+  &:after {
+    padding-top: 30%;
+    text-align: center;
+    font-size: 34px;
+    line-height: 100%;
+    padding-left: 0;
+
+  }
+
+  @include laptop {
+    &:after {
+      font-size: 24px;
+    }
+  }
+
+  @include mobile-wide {
+    &::after {
+      padding-top: 34%;
+    }
+  }
+}
+
+.popular__item--small a {
+
+  &:after {
+    content: "Подробнее";
+    padding-top: 80px;
+    // padding-left: 15px;
+    font-size: 19px;
+  }
+
+  @include laptop {
+    &:after {
+      padding-top: 81px;
+      // padding-left: 15px;
+      font-size: 22px;
+    }
+  }
+  @include tablet {
+    &:after {
+      padding-top: 65px;
+      // padding-left: 15px;
+      font-size: 20px;
+    }
+  }
+  @include mobile-wide {
+    &:after {
+      padding-top: 33%;
+      // padding-left: 25px;
+    }
+  }
+}
+
+
+
+.popular__item-price {
+  width: 100%;
+  //background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.48) 66%, rgba(0, 0, 0, 0.55) 76%, rgba(0, 0, 0, 0.6) 82%, rgba(0, 0, 0, 0.66) 91%, rgba(0, 0, 0, 0.72) 98%, rgba(0, 0, 0, 0.73) 100%);
+  min-height: 112px;
+  bottom: 0;
+  position: absolute;
+  padding-left: 32px;
+  color: $color-white;
+
+  &--article {
+    background: none;
+    min-height: 83px;
+    padding-left: 20px;
+    //width: 200px;
+  }
+
+  @include tablet {
+    min-height: 77px;
+    padding-left: 25px;
+
+    &--exc {
+      font-size: 26px;
+      line-height: 26px;
+      padding-left: 73px;
+      padding-bottom: 52px;
+    }
+  }
+
+  @include mobile-wide {
+    min-height: 95px;
+    padding-right: 80px;
+  }
+}
+
+.popular__item-price h3 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 29px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include mobile-wide {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.popular__item-price--exc h3 {
+  @include tablet {
+    font-size: 26px;
+    line-height: 26px;
+    padding-bottom: 10px;
+  }
+}
+
+.popular__item-price--article h3 {
+  font-size: 19px;
+  line-height: 22px;
+  padding-bottom: 7px;
+}
+
+.popular__item-price p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: $color-blue-skytext-choice;
+
+  @include tablet {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+
+  @include mobile-wide {
+    font-size: 14px;
+    bottom: 24px;
+    padding-bottom: 20px;
+  }
+}
+
+.popular__item-price--exc p {
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.popular__item-price--article p {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.popular__item img {
+  width: 100%;
+  height: 100%;
+}
+
+.more-tours--exc .container {
+  @include tablet {
+    margin: 0;
+    width: 768px;
+  }
+}
+
+.popular__item--exc a {
+  @include tablet {
+    border-radius: 0;
+  }
+}

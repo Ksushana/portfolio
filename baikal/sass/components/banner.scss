@@ -1,0 +1,284 @@
+.banner {
+  font-family: $font-muller;
+  color: $color-white;
+  font-weight: 700;
+  width: 261px;
+  margin-top: 30px;
+
+  @include laptop {
+    width: 100%;
+    margin-top: 23px;
+  }
+
+  @include tablet {
+    width: 720px;
+  }
+
+  @include mobile-wide {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  h2 {
+    color: $color-black;
+    font-family: $font-roboto;
+    font-size: 18px;
+    line-height: 27px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+
+    @include tablet {
+      padding-left: 27px;
+    }
+    @include mobile-wide {
+      padding-left: 0;
+    }
+  }
+
+  &__content {
+      display: flex;
+      flex-direction: column;
+      @include laptop {
+        width: 100%;
+        flex-direction: row;
+      }
+      @include tablet {
+        width: 720px;
+      }
+      @include mobile-wide {
+        width: 261px;
+        flex-direction: column;
+      }
+  }
+
+  &__up {
+    width: 261px;
+    height: 205px;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+    background: $color-blue;
+
+    @include laptop {
+      border-radius: 3px 0 0 3px;
+    }
+
+    @include mobile-wide {
+      border-radius: 3px 3px 0 0;
+    }
+  }
+
+  &__img {
+      border-radius: 3px;
+      overflow: hidden;
+      width: 261px;
+      height: 205px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+  }
+
+
+  &__label {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    background: $color-orange;
+    padding: 8px 15px 7px 30px;
+    font-size: 15px;
+    line-height: 15px;
+    max-width: 230px;
+
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      height: 100%;
+      content: '';
+      width: 15px;
+      height: 100%;
+      background: inherit;
+      right: -13px;
+      transform-origin: right top;
+      transform: skewX(-30deg);
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      height: 100%;
+      content: '';
+      width: 15px;
+      height: 100%;
+      background: inherit;
+      right: -13px;
+      bottom: 0;
+      transform-origin: right bottom;
+      transform: skewX(30deg);
+    }
+
+    @include tablet {
+      padding: 8px 15px 7px 27px;
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+    line-height: 24px;
+    position: absolute;
+    width: 186px;
+    bottom: 15px;
+    left: 30px;
+
+    @include tablet {
+      left: 27px;
+    }
+  }
+
+  &__down {
+    background-color: $color-blue;
+    padding-bottom: 1px;
+    border-radius: 0 0 3px 3px;
+
+    @include laptop {
+      width: 100%;//459px;
+      border-radius: 0 3px 3px 0;
+    }
+    @include mobile-wide {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+
+  &__cost {
+    padding-top: 14px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 27px;
+    padding-left: 60px;
+    padding-right: 50px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 22px;
+      height: 18px;
+      left: 30px;
+      top: 16px;
+      background-image: url("../img/tag.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform:scaleX(-1);
+    }
+
+    @include laptop {
+
+      padding-top: 25px;
+      padding-left: 80px;
+
+      &:before {
+        left: 50px;
+        top: 26px;
+        width: 23px;
+      }
+    }
+
+    @include mobile-wide {
+      padding-top: 15px;
+      padding-left: 60px;
+
+      &:before {
+        left: 28px;
+        top: 17px;
+      }
+    }
+  }
+
+  &__place {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    padding-left: 60px;
+    padding-right: 30px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 27px;
+      left: 32px;
+      top: 2px;
+      background-image: url("../img/placeholder.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform:scaleX(-1);
+    }
+
+    @include laptop {
+      padding-left: 80px;
+      padding-right: 218px;
+
+      &:before {
+        left: 53px;
+        width: 21px;
+      }
+    }
+
+    @include mobile-wide {
+      padding-top: 0;
+      padding-right: 20px;
+      padding-left: 60px;
+
+      &:before {
+        left: 32px;
+        top: 1px;
+      }
+    }
+  }
+
+  &__time {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    padding-left: 60px;
+    padding-right: 50px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 17px;
+      height: 17px;
+      left: 35px;
+      top: 0;
+      background-image: url("../img/banner-clock-circular.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform:scaleX(-1);
+    }
+
+    @include laptop {
+      padding-left: 80px;
+      padding-bottom: 17px;
+      &:before {
+        left: 53px;
+      }
+    }
+  }
+
+  &__button {
+    width: 206px;
+    margin: 15px 27px 28px 27px;
+
+    @include laptop {
+      margin: 25px 27px 18px 55px;
+    }
+
+    @include mobile-wide {
+      margin: 15px 20px 26px 26px;
+    }
+  }
+}

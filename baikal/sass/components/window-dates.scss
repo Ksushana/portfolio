@@ -1,0 +1,55 @@
+.window-dates {
+  width: 270px;
+  height: 274px;
+  background-color: $color-white;
+  z-index: 5;
+  border: 1px solid $color-gray-line;
+  padding: 25px 40px;
+  padding-right: 15px;
+  font-size: 15px;
+  font-weight: 400;
+
+  &--large {
+    width: 690px;
+
+    .window-dates__list-dates {
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+
+  @include mobile-wide {
+    font-size: 13px;
+    background-color: $color-orange-lite;
+    margin-right: 10px;
+    height: auto;
+    width: 100%;
+
+    &--large {
+      width: 100%;
+
+      .window-dates__list-dates {
+        height: auto;
+      }
+    }
+  }
+}
+
+.window-dates__list-dates {
+  margin-left: 0;
+}
+
+.window-dates__button {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+}

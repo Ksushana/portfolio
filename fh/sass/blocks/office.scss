@@ -1,0 +1,10 @@
+.office {
+  &.housing p {
+    margin-top: size(91px);
+    margin-bottom: size(109px);
+  }
+}
+
+.office .housing__slider .count-cursor {
+  top: size(20px);
+}

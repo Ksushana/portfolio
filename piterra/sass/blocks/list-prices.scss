@@ -1,0 +1,74 @@
+.list-prices {
+  min-width: 545px;
+}
+
+.list-prices__title {
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+  padding-top: 11px;
+  padding-bottom: 8px;
+  font-family: $fontSerif;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.6px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: left;
+  color: $table-heading-text;
+  border: 1px solid rgba($default-text, 0.24);
+  border-radius: 3px 3px 0 0;
+  border-bottom-width: 0;
+}
+
+.list-prices__table {
+  border: solid 1px $field-shadow-color;
+  border-spacing: 0;
+  border-radius: 0 0 3px 3px;
+}
+
+.list-prices__tr {
+  .list-prices__td--header.list-prices__td--second {
+    padding-left: 63px; 
+  }
+
+  .list-prices__td--second {
+    padding-right: 50px;
+    padding-left: 66px;
+  }
+
+  .list-prices__td--third {
+    padding-right: 4px;
+    padding-left: 84px;
+  }
+
+  .list-prices__td--fourth {
+    padding-right: 15px;
+  }
+
+  &:last-child {
+    td:not(.list-prices__td--header) {
+      border: none; 
+    }
+  }
+}
+
+.list-prices__td {
+  padding-top: 19px;
+  padding-bottom: 14px;
+  padding-left: 28px;
+  padding-right: 30px;
+  font-family: $fontSans;
+  font-size: 13px;
+  color: $default-text;
+  border-bottom: 1px solid rgba($default-text, 0.24);
+
+  &--header {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 28px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    border-bottom-width: 2px;
+  }
+}

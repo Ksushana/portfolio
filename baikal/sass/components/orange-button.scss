@@ -1,0 +1,37 @@
+.orange-button {
+  display: inline-block;
+  min-height: 63px;
+  padding: 15px 30px 11px 30px;
+  font-family: $font-muller;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: right;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $color-orange;
+  background: linear-gradient(to right, #ffa819, #ff8619);
+  border-radius: 30px;
+  box-shadow: 0 5px 22.56px 1.44px rgba(255, 132, 25, 0.46);
+  border: none;
+  border-bottom: 2px solid #e16c09;
+  transition: box-shadow .3s ease, border-color .3s ease, background .3s ease;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background: linear-gradient(to right, $color-orange, $color-orange);
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom-color: transparent;
+  }
+
+  @include mobile-wide {
+    font-size: 22px;
+    text-align: center;
+    padding: 15px 30px 11px 34px;
+  }
+
+  &:--width {
+    //width: auto;
+  }
+}

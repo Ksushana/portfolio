@@ -1,0 +1,46 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Незабываемое лобби';
+  - let isInner = true;
+  - let isLobbyPage = true;
+  - let headerBackground = 'header__menu--lobby';
+
+block content
+  .container.housing.gradient.slider-page
+    include pug/phone-icon.pug
+    h1.title.title--page.title--big  !{title}
+    .housing__first-screen.housing__first-screen--lobby.gradient-top.img-content( style="background-image: url(img/lobby-2@2x.jpg)")
+      span.arrow
+        svg(width="57", height="96", viewbox="0 0 57 96", fill="none", xmlns="http://www.w3.org/2000/svg")
+          path(d="M28.5756 22.4202V73.4296", stroke="#ffffff", stroke-width="3", stroke-linecap="round", stroke-linejoin="round")
+          path(d="M40.9734 61.2415L28.5756 73.58L16.0265 61.2415", stroke="#ffffff", stroke-width="3", stroke-linecap="round", stroke-linejoin="round")
+    p#description
+      |  Пишем текст про незабываемое лобби. The outdoor space features large patio tables where you can enjoy your morning coffee or share a bottle of wine by the fireplace at night. Keep up with your daily exercise routine outside in the quiet yoga area or inside in the state-of-the-art fitness room.with your daily exercise routine outside in the quiet yoga area or inside in the by the fireplace state-of-the-art fitness room.
+
+    .housing__slider.gradient-bottom
+      .housing__slider-container.img-content
+        .housing__slides
+          .housing__slider-slide
+            img(src="img/lobby-1@1x.jpg" alt="Невероятные квартиры" srcset="img/lobby-1@2x.jpg 2x")
+
+
+      .count-cursor.count.visually-hidden
+        span.back.visually-hidden
+          svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+            path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+            path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+        span.current 1
+        span  /
+        span.total
+        span.next
+          svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+            path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+            path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+
+block footer
+  .footer-inner
+    a.footer-inner__link.button(href="#") Выбрать эффектную квартиру
+
+
+

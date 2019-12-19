@@ -1,0 +1,43 @@
+.img-content {
+  box-sizing: border-box;
+  position: relative;
+
+  // height: size(1080px);
+  width: 100%;
+
+  overflow: hidden;
+
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+
+  @include tablet {
+    height: size(562px);
+  }
+
+  @include mobile {
+    height: size(375px);
+  }
+
+  picture {
+    height: 120%;
+    position: relative;
+    top: -20%;
+
+    @include tablet {
+      height: 100%;
+      position: static;
+    }
+
+    img {
+      object-fit: cover;
+      // IE object-fit polyfill
+      font-family: "object-fit: cover;";
+    }
+  }
+
+  &--no-paralax {
+    picture {
+      position: static;
+    }
+  }
+}

@@ -1,0 +1,317 @@
+.housing {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: size(108px);
+
+    @include desktop {
+      padding-top: size(75px);
+    }
+
+    @include tablet {
+      padding-top: size(51px);
+    }
+
+    @include mobile {
+      padding-top: size(28px);
+    }
+  }
+
+  p {
+    @include description-text;
+    margin: size(132px) size(503px) size(155px) size(194px);
+
+    @include desktop {
+      font-size: size(30px);
+      line-height: 1;
+      margin: size(83px) size(310px) size(100px) size(142px);
+    }
+
+    @include tablet {
+      font-size: size(25px);
+      line-height: sixe(30px);
+      margin: size(73px) size(265px) size(62px) size(118px);
+    }
+
+    @include mobile {
+      font-size: 23px;
+      line-height: 23px;
+      letter-spacing: 0.025em;
+      margin: size(50px) size(50px) size(38px) size(49px);
+    }
+  }
+}
+
+.housing__first-screen {
+  background-size: cover;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-position: 50%;
+
+  // &--flats {
+  //   background-image: url("./../img/flats-1@2x.jpg");
+
+  //   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  //     background-image: url("./../img/flats-1@2x.jpg");
+  //   }
+  // }
+
+  // &--garden {
+  //   background-image: url("./../img/garden-1@2x.jpg");
+
+  //   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  //     background-image: url("./../img/garden-1@2x.jpg");
+  //   }
+  // }
+
+  // &--lobby {
+  //   background-image: url("./../img/lobby-2@2x.jpg");
+
+  //   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  //     background-image: url("./../img/lobby-2@2x.jpg");
+  //   }
+  // }
+
+  &--office {
+    // background-image: url("./../img/office-1@2x.jpg");
+
+    // @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    //   background-image: url("./../img/office-1@2x.jpg");
+    // }
+
+    span.arrow {
+      path {
+        stroke: $color-white;
+      }
+    }
+  }
+
+  &--penthouse {
+    // background-image: url("./../img/penthouse-1@2x.jpg");
+
+    // @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    //   background-image: url("./../img/penthouse-1@2x.jpg");
+    // }
+
+    span.arrow {
+      path {
+        stroke: $color-white;
+      }
+    }
+  }
+
+  &--residences {
+    // background-image: url("./../img/patio-1@2x.jpg");
+
+    // @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    //   background-image: url("./../img/patio-1@2x.jpg");
+    // }
+
+    span.arrow {
+      path {
+        stroke: $color-white;
+      }
+    }
+  }
+
+  @include desktop {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  @include tablet {
+    height: size(562px);
+  }
+
+  @include mobile {
+    height: size(375px);
+  }
+
+  span.arrow {
+    position: absolute;
+    bottom: size(36px);
+    left: 50%;
+    z-index: 10;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+
+    transform: translateX(-50%);
+    transition: 0.5s opacity ease-in-out;
+
+    @include desktop {
+      bottom: size(53px);
+
+      width: size(37px);
+      height: size(63px);
+    }
+
+    @include tablet {
+      bottom: size(33px);
+
+      width: size(37px);
+      height: size(63px);
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    svg {
+      width: size(57px);
+      height: size(96px);
+
+      @include desktop {
+        width: size(37px);
+        height: size(75px);
+      }
+
+      @include tablet {
+        width: size(37px);
+        height: size(75px);
+      }
+    }
+  }
+}
+
+.housing__slider {
+  position: relative;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+
+  .housing__slides {
+    height: 100%;
+  }
+
+  .housing__slider-container {
+    height: 100%;
+    position: relative;
+    width: 100vw;
+    height: size(1080px);
+
+    @include desktop {
+      height: size(720px);
+    }
+
+    @include tablet {
+      height: size(562px);
+    }
+
+    @include mobile {
+      height: size(375px);
+    }
+  }
+
+  .housing__slider-slide  {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+
+    @include non-touch {
+      position: absolute;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    // IE object-fit polyfill
+    font-family: "object-fit: cover;";
+  }
+
+
+  .count-cursor {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: translate(0,0);
+    pointer-events: none;
+    will-change: transform;
+
+    @include touch {
+      position: absolute;
+      top: size(-70px);
+      left: size(145px);
+      right: auto;
+      visibility: visible;
+    }
+
+
+
+
+    @include tablet {
+      top: size(-30px);
+      left: size(120px);
+    }
+
+    @include mobile {
+      left: size(50px);
+    }
+
+    span {
+      font-size: size(12px);
+    }
+
+    .next {
+      visibility: visible;
+    }
+  }
+}
+
+.housing__slider__swiper-button-next {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  outline: none;
+  z-index: 100;
+}
+
+.housing__slider__swiper-button-prev {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index: 100;
+}
+
+.housing__map {
+  width: 100%;
+  height: size(567px);
+  background-color: grey;
+
+  @include tablet {
+    height: size(300px);
+  }
+}
+
+.fanastic-house {
+  .count-cursor {
+    @include touch {
+
+      @include tablet {
+        top: size(-30px);
+        left: size(165px);
+      }
+      @include mobile {
+        left: size(35px);
+      }
+    }
+  }
+}

@@ -1,0 +1,915 @@
+.plan {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+
+  h1 {
+    margin-bottom: size(65px);
+
+    @include desktop {
+      padding-top: size(55px);
+      margin-bottom: size(22px);
+      margin-left: size(17px);
+    }
+
+    @include tablet {
+      padding-top: size(47px);
+      margin-bottom: size(10px);
+    }
+
+    @include mobile {
+      position: absolute;
+      top: size(-22px);
+      padding-bottom: 0;
+      margin-bottom: 0;
+
+      // padding-top: size(25px);
+      // margin-top: size(13px);
+      // margin-left: size(3px);
+    }
+  }
+
+  .choice {
+    position: sticky;
+    top: 0;
+    background-color: $color-blue;
+    z-index: 95;
+
+    .swiper-wrapper {
+      width: size(420px);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .swiper-slide button {
+      min-width: size(200px);
+    }
+
+    .swiper-slide:nth-of-type(2) button {
+
+      &.soldout{
+        opacity: 0.5;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .choice-container {
+    height: 80px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    .swiper-wrapper {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  @include mobile {
+    .choice,
+    .plan__info.is-active {
+      display: none;
+    }
+
+    .plan__table {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .hovered {
+    color: transparent;
+  }
+}
+
+.plan__tabs {
+  width: size(1550px);
+  margin: 0 auto;
+  padding: 0;
+
+  @include desktop {
+    width: size(1280px);
+  }
+
+  @include tablet {
+    width: size(997px);
+  }
+
+  @include mobile {
+    width: size(375px);
+    margin-top: size(87px);
+  }
+}
+
+.plan__info {
+  display: flex;
+  flex-direction: column;
+
+  margin: size(25px) size(50px) 0 size(70px);
+
+  @include desktop {
+    margin: size(29px) size(90px) 0 size(90px);
+  }
+
+  @include tablet {
+    margin: size(43px) size(50px) 0 size(1px);
+  }
+}
+
+.plan__description {
+  position: relative;
+
+
+  ul {
+    @include list-reset;
+    padding: size(22px) 0 size(10px);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      padding: size(16px) 0 size(10px);
+    }
+
+    @include tablet {
+      padding: size(10px) 0 size(10px);
+    }
+
+    li {
+      height: size(103px);
+      width: 100%;
+      position: static;
+      display: flex;
+
+
+
+      &:nth-child(2) {
+        height: size(110px);
+      }
+
+      &:nth-child(3) {
+        height: size(97px);
+      }
+
+      @include desktop {
+        height: size(83px);
+
+        &:nth-child(2) {
+          height: size(89px);
+        }
+
+        &:nth-child(3) {
+          height: size(80px);
+        }
+      }
+
+      @include tablet {
+        height: size(61px);
+
+        &:nth-child(2) {
+          height: size(61px);
+        }
+
+        &:nth-child(3) {
+          height: size(61px);
+        }
+      }
+
+      div {
+        display: block;
+        width: size(145px);
+        // padding: size(10px) 0 size(18px);
+        margin-right: size(25px);
+        order: 1;
+        // color: transparent;
+        transition: color 0.5s;
+
+        p {
+          color: transparent;
+        }
+
+        span {
+          color: transparent;
+        }
+
+        @include desktop {
+          padding: 0;
+          margin-right: size(10px);
+          position: relative;
+          // top: size(-10px);
+          width: size(125px);
+        }
+
+        @include tablet {
+          padding-left: size(35px);
+          width: size(110px);
+        }
+
+        &.soldout {
+          padding: size(10px) 0 size(18px);
+
+          @include tablet {
+            padding: 0 0 0 size(35px);
+          }
+
+          p {
+            // display: none;
+          }
+
+          span {
+            display: block;
+            font-family: $font-ttnorms;
+            padding-right: size(20px);
+            width: size(125px);
+
+            font-size: size(13px);
+            line-height: size(16px);
+
+            @include tablet {
+              width: size(90px);
+          }
+          }
+        }
+      }
+
+      h2 {
+        margin: 0;
+
+        font-size: size(25px);
+        line-height: size(35px);
+        letter-spacing: 0.025em;
+        transition: color 0.5s;
+
+        @include desktop {
+          font-size: size(20px);
+        }
+      }
+
+      p {
+        margin: size(10px) size(10px) 0 0;
+
+        font-family: $font-ttnorms;
+        font-size: size(13px);
+        line-height: size(16px);
+        letter-spacing: 0.04em;
+
+        @include desktop {
+          margin: 0 0 0 0;
+        }
+      }
+
+      a,
+      .sold-out-floor {
+        display: block;
+        width: 74%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 10;
+        order: 2;
+        background-color: transparent;
+        transition: all 0.5s;
+        margin-left: size(7px);
+        padding-left: 0;
+
+        &:hover {
+          background-color: rgba(101, 177, 248, 0.25);
+        }
+
+        div h2 {
+          color: $color-white;
+          transition: color 1s;
+        }
+
+        &:hover + div {
+          h2 {
+            color: $color-white;
+            transition: all 0.5s;
+          }
+
+          p {
+            color: $color-white;
+            transition: all 0.5s;
+          }
+        }
+
+        @include desktop {
+          // height: 75%;
+          width: 78.8%;
+          margin-left: 0;
+        }
+
+        @include tablet {
+
+          width: 67.8%;
+          margin-left: size(22px);
+        }
+      }
+
+      &:first-child {
+        height: size(120px);
+
+        @include desktop {
+          height: size(103px);
+        }
+
+        @include tablet {
+          height: size(81px);
+        }
+
+        div {
+          padding-top: size(30px);
+
+          @include tablet {
+            padding-top: size(25px);
+          }
+        }
+
+        h1 {
+          @include desktop {
+            top: size(10px);
+          }
+        }
+
+        a {
+          width: 75%;
+          transition: background-image 0.5s;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 101.4%;
+            height: 100%;
+            background-image: url('../img/plan-floor-hover@1x.png');
+            background-repeat: no-repeat;
+            background-size: 98% 110%;
+            background-position-y: size(5px);
+            background-position-x: size(1px);
+            opacity: 0;
+            transition: opacity 0.5s;
+
+            @include desktop {
+              background-size: 98% 110%;
+            }
+
+            @include tablet {
+              background-size: 99% 110%;
+            }
+
+            // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            //   background: url('./../img/plan-floor-hover@2x.png');
+            // }
+          }
+
+
+          &:hover {
+            background-color: transparent;
+
+            &::after {
+              opacity: 1;
+              background-color: transparent;
+            }
+          }
+
+          @include desktop {
+            width: 79.5%;
+            &:hover {
+              background-size: 98% 110%;
+            }
+          }
+
+          @include tablet {
+            width: 67.8%;
+            &:hover {
+              background-size: 100% 110%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.plan__img {
+  position: absolute;
+  top: 0;
+  left: size(145px);
+
+  height: size(587px);
+  width: auto;
+
+  img {
+    width: auto;
+  }
+
+  @include desktop {
+    height: size(480px);
+    left: size(110px);
+  }
+
+  @include tablet {
+    height: size(354px);
+    left: size(160px);
+  }
+}
+
+.plan__price {
+  width: 100%;
+  display: flex;
+  padding-right: size(30px);
+
+  font-family: $font-ttnorms;
+  font-size: size(15px);
+  line-height: size(20px);
+  letter-spacing: 0.04em;
+  margin: size(22px) 0 size(10px);
+
+  p {
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    margin: size(18px) 0 size(10px) size(17px);
+  }
+
+  @include tablet {
+    margin: size(36px) 0 0 size(23px);
+  }
+}
+
+.plan__table {
+  height: auto;
+
+  @include mobile {
+
+    position: relative;
+
+    thead th:nth-child(3),
+    thead th:nth-child(5),
+    table td:nth-child(3),
+    table td:nth-child(5) {
+      display: none;
+    }
+  }
+
+  thead {
+    position: sticky;
+    top: size(68px);
+    background: $color-blue;
+    z-index: 10;
+    display: flex;
+    width: size(1550px);
+    // margin-top: size(20px);
+    padding-top: size(60px);
+
+    font-family: $font-ttnorms;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: size(13px);
+    line-height: size(20px);
+    text-align: center;
+
+    @include desktop {
+      padding-top: size(42px);
+      width: size(1010px);
+      margin-left: 0;
+      top: size(60px);
+
+      font-size: size(13px);
+      line-height: size(15px);
+    }
+
+    @include tablet {
+      // margin-top: size(29px);
+      width: size(790px);
+      font-size: size(13px);
+      top: size(70px);
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-top: 0;
+      margin-left: 0;
+      padding-top: size(48px);
+      position: sticky;
+      top: 0;
+      background-color: $color-blue;
+      z-index: 90;
+      font-size: size(11px);
+    }
+
+    th {
+      padding-bottom: size(3px);
+      height: size(22px);
+      width: size(255px);
+      position: relative;
+
+      @include desktop {
+        width: size(165px);
+        height: size(20px);
+      }
+
+      @include tablet {
+        text-align: left;
+        height: size(20px);
+        width: size(119px);
+      }
+
+      @include mobile {
+        text-align: center;
+        height: size(25px);
+        width: size(70px);
+        padding-left: 0;
+      }
+
+      &:first-child {
+        text-align: left;
+        padding-left: size(53px);
+        width: size(205px);
+
+        @include desktop {
+          text-align: left;
+          padding-left: size(10px);
+          width: size(157px);
+        }
+
+        @include tablet {
+          width: size(154px);
+          padding-left: size(26px);
+        }
+
+        @include mobile {
+          width: size(50px);
+          padding-left: size(15px);
+        }
+
+        span:first-of-type {
+          display: none;
+
+          @include mobile {
+            display: block;
+            background: transparent;
+            border: none;
+            font-size: size(13px);
+            line-height: size(16px);
+            color: $color-white;
+            padding: 0;
+            text-transform: uppercase;
+          }
+        }
+
+        span:nth-of-type(2) {
+          display: none;
+
+          @include desktop {
+            display: block;
+            background: transparent;
+            border: none;
+            font-size: size(13px);
+            line-height: size(16px);
+            color: $color-white;
+            padding: 0;
+            text-transform: uppercase;
+          }
+
+          @include mobile {
+            display: none;
+          }
+        }
+
+        span:nth-of-type(3) {
+          @include desktop {
+            display: none;
+          }
+        }
+
+        // button {
+        //   width: size(25px);
+        //   height: size(25px);
+        //   border: none;
+
+        //   background: transparent;
+        //   padding: 0;
+        //   position: absolute;
+        //   right: size(25px);
+        //   top: size(-5px);
+        //   outline: none;
+        //   transition: all 0.5s;
+
+        //   &:before {
+        //     content: "";
+        //     position: absolute;
+        //     width: size(9px);
+        //     height: size(9px);
+        //     border-top: 1px solid #E5E5E5;
+        //     border-right: 1px solid #E5E5E5;
+        //     transform: rotate(-45deg);
+        //     transition: all 0.5s;
+        //     right: size(5px);
+        //   }
+
+        //   &.turn {
+        //     &:before {
+        //       transform: rotate(135deg) translateY(5px);
+        //     }
+        //   }
+
+        //   &:hover {
+        //     opacity: 0.5;
+        //   }
+
+        //   @include desktop {
+        //     right: size(16px);
+        //     &:before {
+        //       top: size(10px);
+        //     }
+        //   }
+
+        //   @include tablet {
+        //     right: size(16px);
+        //     &:before {
+        //       top: size(10px);
+        //     }
+        //   }
+
+        //   @include mobile {
+        //     display: none;
+        //   }
+        // }
+      }
+
+      &:nth-child(2) {
+        span:last-child {
+          display: none;
+
+          @include mobile {
+            display: block;
+          }
+        }
+
+        span:first-child {
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+
+      &:last-child {
+        display: none;
+
+        @include mobile {
+          display: block;
+          transform: none;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  table {
+    width: size(1532px);
+    text-align: center;
+    font-family: $font-ttnorms;
+    font-size: size(13px);
+    line-height: size(20px);
+    border-collapse: collapse;
+    // display: flex;
+
+    margin-left: size(10px);
+    margin-bottom: size(30px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    @include desktop {
+      width: size(997px);
+      margin-left: auto;
+      margin-right: auto;
+
+      font-size: size(15px);
+      letter-spacing: 0.04em;
+    }
+
+    @include tablet {
+      width: size(765px);
+      // margin-left: calc(50% - #{size(383px)});
+
+      font-size: size(13px);
+    }
+
+    @include mobile {
+      width: 94vw;
+      margin: 0 3vw 0;
+    }
+
+    tbody {
+      display: flex;
+      flex-direction: column;
+
+      &.reverse {
+        flex-direction: column-reverse;
+      }
+    }
+
+    tr {
+      display: flex;
+      flex-direction: row;
+      transition: background-color 0.5s;
+      margin-right: 0.8%;
+      cursor: pointer;
+
+      @include desktop {
+        margin-right: 0.8%;
+      }
+
+      @include tablet {
+        margin-right: 0.8%;
+      }
+
+      &:hover {
+        background-color: rgba(101, 177, 248, 0.25);
+
+      }
+
+      &.soldout {
+        td {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+
+    td {
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      position: relative;
+      height: size(51px);
+      width: size(255px);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: size(30px);
+        right: 0;
+        top: 20%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      &:first-child {
+        justify-content: start;
+        padding-left: size(53px);
+        width: size(205px);
+      }
+
+      &:nth-last-child(2) {
+        &::after {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        display: none;
+      }
+
+      @include desktop {
+        height: size(59px);
+        width: size(165px);
+
+        &::after {
+          height: size(37px);
+        }
+
+        &:first-child {
+          justify-content: start;
+          padding-left: size(10px);
+          width: size(157px);
+        }
+      }
+
+      @include tablet {
+        height: size(47px);
+        width: size(119px);
+
+        &::after {
+          top: 13%;
+          height: size(37px);
+        }
+
+        &:first-child {
+          width: size(154px);
+          padding-left: size(26px);
+        }
+      }
+
+      @include mobile {
+        height: size(65px);
+        padding-top: size(3px);
+        width: size(70px);
+
+        &::after {
+          display: none;
+        }
+
+        &:first-child {
+          padding-left: size(15px);
+          width: size(50px);
+
+          span:first-child {
+            display: none;
+          }
+        }
+
+        &:nth-child(2) {
+          span {
+            display: none;
+          }
+        }
+
+        &:last-child {
+          display: flex;
+        }
+      }
+
+      a {
+        padding-left: size(10px);
+
+        svg {
+          position: relative;
+          bottom: size(-3px);
+        }
+      }
+    }
+
+    thead {
+      tr {
+        &:hover {
+          background-color: $color-blue;
+        }
+      }
+    }
+  }
+}
+
+
+// таблица
+th[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+}
+
+th[role=columnheader]:not(.no-sort)::after {
+  content: "";
+
+  position: absolute;
+  right: size(12px);
+  top: size(2px);
+  width: size(9px);
+  height: size(9px);
+  border-left: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  transform: rotate(-45deg);
+
+  @include tablet {
+    right: size(15px);
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+th[aria-sort=ascending]:not(.no-sort)::after {
+  position: absolute;
+  right: size(12px);
+  top: size(7px);
+  width: size(9px);
+  height: size(9px);
+  border-left: none;
+  border-bottom: none;
+  border-top: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5;
+
+  @include tablet {
+    right: size(15px);
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+th[aria-sort]:not(.no-sort)::after {
+  visibility: visible;
+  opacity: 0.4;
+}
+
+th[role=columnheader]:not(.no-sort):hover::after {
+  visibility: visible;
+  opacity: 1;
+}

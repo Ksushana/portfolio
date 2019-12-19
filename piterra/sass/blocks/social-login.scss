@@ -1,0 +1,34 @@
+.social-login {
+  padding-top: 16px;
+  padding-left: 20px;
+  width: 50%;
+}
+
+.social-login__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.social-login__item:not(:last-child) {
+  margin-right: 13px;
+}
+
+.social-login__text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 19px;
+  font-size: 13px;
+  font-family: $fontSans;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $default-text;
+}

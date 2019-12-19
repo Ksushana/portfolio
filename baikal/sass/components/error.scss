@@ -1,0 +1,100 @@
+.error {
+  margin-top: 156px;
+  @include tablet {
+    margin-top: 100px;
+  }
+  @include mobile-wide {
+    margin-top: 60px;
+  }
+}
+
+.error__top {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  padding-left: 15px;
+
+  p {
+    font-size: 74px;
+    line-height: 93px;
+    font-family: $font-muller;
+    font-weight: 900;
+    color: $color-blue-dark;
+    width: 430px;
+    padding-left: 108px;
+  }
+  img {
+    width: 463px;
+    height: 166px;
+  }
+  @include laptop {
+
+    p {
+      font-size: 54px;
+      line-height: 73px;
+      padding-left: 50px;
+      width: 330px;
+    }
+    img {
+      width: 350px;
+      height: 125px;
+    }
+  }
+
+  @include tablet {
+    width: 560px;
+    margin: 0 auto;
+    p {
+      font-size: 36px;
+      line-height: 53px;
+      padding-left: 50px;
+      width: 260px;
+    }
+    img {
+      width: 250px;
+      height: 92px;
+    }
+  }
+
+  @include mobile-wide {
+    width: 250px;
+    flex-wrap: wrap;
+    padding-left: 0;
+    p {
+      padding-top: 20px;
+    }
+  }
+}
+.error__down {
+  display: inline-block;
+  margin-top: 25px;
+  padding-left: 3px;
+  margin-bottom: 76px;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+
+  @include mobile-wide {
+    margin-bottom: 30px;
+  }
+}
+.error__down p {
+  font-size: 27px;
+  line-height: 43px;
+  font-family: $font-muller;
+  color: $color-black;
+
+  @include mobile-wide {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+.error__information {
+  font-weight: 400;
+}
+
+.error__choice {
+  font-weight: 700;
+}

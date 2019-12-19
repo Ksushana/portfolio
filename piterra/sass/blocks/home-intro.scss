@@ -1,0 +1,264 @@
+.home-intro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.home-intro__img {
+  flex: 0 0 100%;
+  width: 1085px;
+  height: 300px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+.home-intro__documents {
+  flex: 0 0 500px;
+  min-height: 204px;
+  background-color: $light-color;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.home-intro__greeting {
+  flex: 0 0 510px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 22px;
+    color: $default-text;
+    line-height: 2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.home-intro__subtitle {
+  margin: 12px 15px;
+  font-family: $fontSerif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: $dark-text;
+  font-weight: $regular;
+}
+
+.home-intro__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-intro__item {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding-right: 30px;
+  padding-left: 40px;
+  border-top: 1px solid #dddddd;
+}
+
+.home-intro__caption {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 22px;
+    height: 22px;
+    margin-right: 16px;
+  }
+
+  span {
+    color: $dark-text;
+  }
+}
+
+.home-intro__download {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 107px;
+  margin-left: auto;
+  padding: 2px;
+  font-size: 13px;
+  color: $dark-text;
+  text-transform: uppercase;
+  background-color: $accent-color;
+  border-radius: 3px;
+}
+
+.home-intro__copy-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-left: 29px;
+}
+
+.home-intro__link-show {
+  width: 23px;
+  height: 23px;
+}
+
+.home-intro__modal {
+  position: absolute;
+  top: 50px;
+  right: -30px;
+  display: none;
+  width: 332px;
+  height: 105px;
+  padding: 25px 12px;
+  background-color: $light-color;
+  box-shadow: 0 5px 15px 0 rgba(82, 90, 101, 0.15);
+  z-index: 1;
+}
+
+.home-intro__copy-wrap:hover .home-intro__modal {
+  display: block;
+}
+
+.home-intro__modal-arrow {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  right: 30px;
+  overflow: hidden;
+  pointer-events: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: $light-color;
+    transform: translateX(-50%) translateY(-100%) rotate(-45deg);
+    top: 25px;
+    left: 50%;
+    box-shadow: 0 0 10px 0 rgba(82, 90, 101, 0.15);
+  }
+}
+
+.home-intro__modal-content {
+  display: flex;
+  align-items: flex-end;
+}
+
+.home-intro__label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  text-transform: uppercase;
+
+  @include color-opacity($default-text, 0.5);
+}
+
+.home-intro__field {
+  width: 200px;
+  height: 32px;
+  padding: 7px;
+  font-family: $fontSans;
+  font-size: 13px;
+  color: $default-text;
+  background-color: $light-color;
+  border: 1px solid rgba(168, 172, 178, 0.3);
+  border-radius: 2px;
+}
+
+.home-intro__copy {
+  height: 32px;
+  width: 100%;
+  margin-left: -2px;
+  font-family: $fontSans;
+  font-size: 13px;
+  text-align: center;
+  color: $default-text;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.home-intro__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/icons/icon-example.svg");
+  background-size: contain;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (max-width: $tablet-width) {
+  .home-intro__documents {
+    flex: 0 0 56%;
+  }
+
+  .home-intro__greeting {
+    flex: 0 0 40%;
+
+    p {
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+  }
+
+  .home-intro__subtitle {
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  .home-intro__item {
+    padding: 0 10px;
+  }
+
+  .home-intro__caption img {
+    margin-right: 10px;
+  }
+
+  .home-intro__copy-wrap {
+    margin-left: 10px;
+  }
+
+  .home-intro__link-show {
+    width: 20px;
+    height: 20px;
+  }
+
+  .home-intro__modal {
+    right: -10px;
+  }
+
+  .home-intro__modal-arrow {
+    right: 10px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .home-intro__documents {
+    display: none;
+  }
+
+  .home-intro__greeting {
+    flex: 0 0 100%;
+
+    p {
+      font-size: 13px;
+      line-height: 20px;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

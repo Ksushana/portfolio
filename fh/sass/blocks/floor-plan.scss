@@ -1,0 +1,1798 @@
+.floor {
+  display: flex;
+
+  padding-top: size(33px);
+  padding-bottom: size(130px);
+
+  background: #ffffff;
+
+  .floor__img-cover {
+    position: relative;
+
+    .flat-hover {
+      opacity: 0;
+      transition: opacity 0.6s;
+    }
+
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      .st3 {
+        opacity:0.1;
+        fill:#0068E2;
+      }
+
+      .st4 {
+        opacity:0.4;
+      }
+    }
+  }
+
+  @include desktop {
+    padding-top: size(23px);
+    padding-bottom: size(85px);
+  }
+
+  @include tablet {
+    padding-top: size(53px);
+    padding-bottom: size(100px);
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  &--1 {
+    .floor__img-cover {
+      width: 90%;
+      margin-left: 12%;
+    }
+
+    .floor__flat {
+
+      &.floor__flat--soldout {
+        pointer-events: none;
+        &:hover ~ .floor__img-cover{
+          .flat-hover-1 {
+            opacity: 0;
+          }
+        }
+
+        .floor__flat-number {
+          opacity: 0.4;
+        }
+      }
+
+      &--1 {
+        width: size(140px);
+        height: size(186px);
+
+        left: size(279px);
+        top: size(52px);
+
+        @include desktop {
+          left: size(180px);
+          top: size(35px);
+
+          width: size(95px);
+          height: size(120px);
+        }
+
+        @include tablet {
+          left: size(159px);
+
+          width: size(85px);
+          height: size(102px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover{
+          .flat-hover-1 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-110px);
+          top: size(52px);
+
+          white-space: nowrap;
+
+          &::before {
+            left: size(-31px);
+            top: size(13px);
+          }
+
+          @include desktop {
+            right: size(-80px);
+          }
+
+          @include tablet {
+            right: size(-70px);
+            &::before {
+              left: size(-21px);
+            }
+          }
+        }
+      }
+
+      &--2 {
+        width: size(140px);
+        height: size(176px);
+
+        left: size(279px);
+        top: size(238px);
+
+        @include desktop {
+          left: size(180px);
+          top: size(155px);
+
+          width: size(95px);
+          height: size(115px);
+        }
+
+        @include tablet {
+          left: size(159px);
+          top: size(134px);
+
+          width: size(85px);
+          height: size(102px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-2 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-110px);
+          top: size(52px);
+
+          white-space: nowrap;
+
+          @include desktop {
+            right: size(-80px);
+          }
+
+          &::before {
+            left: size(-31px);
+            top: size(13px);
+          }
+
+          @include tablet {
+            right: size(-70px);
+            &::before {
+              left: size(-21px);
+            }
+          }
+        }
+      }
+
+      &--3 {
+        width: size(160px);
+        height: size(120px);
+
+        left: size(470px);
+        top: size(442px);
+
+        @include desktop {
+          width: size(100px);
+          height: size(80px);
+
+          left: size(310px);
+          top: size(290px);
+        }
+
+        @include tablet {
+          width: size(90px);
+          height: size(70px);
+
+          left: size(270px);
+          top: size(250px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-3 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: 50%;
+          top: size(-84px);
+
+          &::before {
+            transform: rotate(-90deg);
+            top: size(51px);
+            left: 0
+          }
+
+          @include desktop {
+            top: size(-75px);
+          }
+
+          @include tablet {
+            top: size(-60px);
+            &::before {
+              top: size(41px);
+            }
+          }
+        }
+      }
+
+      &--4 {
+        width: size(170px);
+        height: size(120px);
+
+        left: size(630px);
+        top: size(442px);
+
+        @include desktop {
+          width: size(120px);
+          height: size(80px);
+
+          left: size(410px);
+          top: size(290px);
+        }
+
+        @include tablet {
+          width: size(100px);
+          height: size(70px);
+
+          left: size(360px);
+          top: size(250px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-4 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: 50%;
+          top: size(-84px);
+
+          &::before {
+            transform: rotate(-90deg);
+            top: size(51px);
+            left: 0
+          }
+
+          @include desktop {
+            top: size(-75px);
+          }
+
+          @include tablet {
+            top: size(-60px);
+            &::before {
+              top: size(41px);
+            }
+          }
+        }
+      }
+    }
+    .floor__img-cover {
+      &::before {
+        background: url("../img/flats_hovers_fl_1.svg") no-repeat center;
+      }
+    }
+  }
+
+  &--2 {
+    .floor__img-cover {
+      width: 83%;
+      margin-left: 17%;
+    }
+    .floor__col--center {
+      @include tablet {
+        padding-left: size(43px);
+      }
+    }
+
+    .floor__img-cover {
+      &::before {
+        background: url("../img/flats_hovers_fl_2.svg") no-repeat center;
+      }
+    }
+
+    .floor__flat {
+
+      &.floor__flat--soldout {
+        pointer-events: none;
+        &:hover ~ .floor__img-cover{
+          .flat-hover-1 {
+            opacity: 0;
+          }
+        }
+
+        .floor__flat-number {
+          opacity: 0.4;
+        }
+      }
+
+      &--1 {
+        width: size(140px);
+        height: size(155px);
+        top: size(8px);
+        left: size(176px);
+
+        @include desktop {
+          width: size(100px);
+          height: size(100px);
+          top: size(8px);
+          left: size(113px);
+        }
+
+        @include tablet {
+          left: size(100px);
+          top: size(6px);
+          width: size(80px);
+          height: size(90px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-1 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: size(-80px);
+          top: size(26px);
+
+          white-space: nowrap;
+
+          @include desktop {
+            left: size(-77px);
+          }
+
+          &::before {
+            left: size(45px);
+            top: size(12px);
+            width: size(18px);
+          }
+        }
+      }
+
+      &--2 {
+        width: size(144px);
+        height: size(224px);
+        top: size(8px);
+        left: size(321px);
+
+        @include desktop {
+          width: size(104px);
+          height: size(144px);
+          top: size(8px);
+          left: size(211px);
+        }
+
+        @include tablet {
+          bottom: size(33px);
+          left: size(184px);
+          width: size(89px);
+          height: size(125px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-2 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-81px);
+          top: size(21px);
+
+          &::before {
+            width: size(18px);
+            top: size(13px);
+            right: size(41px);
+            transform: rotate(0);
+          }
+        }
+      }
+
+      &--3 {
+        left: size(178px);
+        top: size(237px);
+        height: size(160px);
+        width: size(290px);
+
+        @include desktop {
+          left: size(108px);
+          top: size(155px);
+          width: size(200px);
+          height: size(105px);
+        }
+
+        @include tablet {
+          left: size(100px);
+          top: size(136px);
+          width: size(166px);
+          height: size(90px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-3 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-85px);
+          top: size(9px);
+
+          &::before {
+            width: size(18px);
+            top: size(13px);
+            right: size(46px);
+          }
+        }
+      }
+
+      &--4 {
+        left: size(158px);
+        bottom: size(16px);
+        width: size(204px);
+        height: size(325px);
+
+        @include desktop {
+          left: size(108px);
+          bottom: size(16px);
+          width: size(124px);
+          height: size(210px);
+        }
+
+        @include tablet {
+          left: size(88px);
+          bottom: size(8px);
+          width: size(120px);
+          height: size(189px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-4 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: size(-79px);
+          top: size(67px);
+
+          @include desktop {
+            left: size(-77px);
+          }
+
+          @include tablet {
+            top: size(137px);
+          }
+
+          &::before {
+            left: size(45px);
+            top: size(12px);
+            width: size(18px);
+          }
+        }
+      }
+
+      &--5 {
+        width: size(170px);
+        height: size(299px);
+        bottom: size(15px);
+        left: size(362px);
+
+        @include desktop {
+          width: size(120px);
+          height: size(189px);
+          bottom: size(15px);
+          left: size(232px);
+        }
+
+        @include tablet {
+          left: size(205px);
+          bottom: size(7px);
+          width: size(100px);
+          height: size(175px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-5 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-26px);
+          top: size(-69px);
+
+          @include tablet {
+            right: size(-26px);
+            top: size(-55px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(33px);
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      &--6 {
+        width: size(170px);
+        height: size(299px);
+        bottom: size(15px);
+        left: size(532px);
+
+        @include desktop {
+          width: size(110px);
+          height: size(189px);
+          bottom: size(15px);
+          left: size(352px);
+        }
+
+        @include tablet {
+          left: size(305px);
+          bottom: size(17px);
+          width: size(100px);
+          height: size(165px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-6 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(36px);
+          top: size(-69px);
+
+          @include desktop {
+            // right: size(-2px);
+            top: size(-67px);
+          }
+
+          @include tablet {
+            right: size(26px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(13px);
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      &--7 {
+        width: size(190px);
+        height: size(125px);
+        bottom: size(180px);
+        left: size(702px);
+
+        @include desktop {
+          left: size(459px);
+          bottom: size(114px);
+          width: size(130px);
+          height: size(92px);
+        }
+
+        @include tablet {
+          left: size(405px);
+          bottom: size(100px);
+          width: size(110px);
+          height: size(80px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-7 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(36px);
+          top: size(-69px);
+
+          @include desktop {
+            // right: size(-2px);
+            top: size(-67px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(13px);
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      &--8 {
+        width: size(190px);
+        height: size(155px);
+        bottom: size(18px);
+        left: size(702px);
+
+        @include desktop {
+          left: size(459px);
+          bottom: size(10px);
+          width: size(130px);
+          height: size(107px);
+        }
+
+        @include tablet {
+          left: size(405px);
+          bottom: size(20px);
+          width: size(110px);
+          height: size(80px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-8 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-81px);
+          top: size(21px);
+
+          &::before {
+            width: size(18px);
+            top: size(13px);
+            right: size(41px);
+            transform: rotate(0);
+          }
+        }
+      }
+
+      &--sold {
+        width: size(178px);
+        height: size(114px);
+        right: size(119px);
+        bottom: size(200px);
+
+        background: #ffffff;
+
+        @include desktop {
+          right: size(78px);
+          bottom: size(132px);
+          width: size(117px);
+          height: size(72px);
+        }
+
+        @include tablet {
+          right: size(69px);
+          bottom: size(113px);
+          width: size(102px);
+          height: size(67px);
+        }
+
+        .floor__flat-number {
+          left: size(54px);
+          top: size(50px);
+
+          @include desktop {
+            left: size(31px);
+            top: size(30px);
+          }
+
+          @include tablet {
+            left: size(23px);
+            top: size(26px);
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--3 {
+    .floor__img-cover {
+      width: 83%;
+      margin-left: 17%;
+    }
+    .floor__col--center {
+      @include tablet {
+        padding-left: size(43px);
+      }
+    }
+
+    .floor__img-cover {
+      &::before {
+        background: url("../img/flats_hovers_fl_2.svg") no-repeat center;
+      }
+    }
+
+    .floor__flat {
+
+      &.floor__flat--soldout {
+        pointer-events: none;
+        &:hover ~ .floor__img-cover{
+          .flat-hover-1 {
+            opacity: 0;
+          }
+        }
+
+        .floor__flat-number {
+          opacity: 0.4;
+        }
+      }
+
+      &--1 {
+        width: size(140px);
+        height: size(155px);
+        top: size(8px);
+        left: size(176px);
+
+        @include desktop {
+          width: size(100px);
+          height: size(100px);
+          top: size(8px);
+          left: size(113px);
+        }
+
+        @include tablet {
+          left: size(100px);
+          top: size(6px);
+          width: size(80px);
+          height: size(90px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-1 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: size(-80px);
+          top: size(26px);
+
+          white-space: nowrap;
+
+          @include desktop {
+            left: size(-77px);
+          }
+
+          &::before {
+            left: size(45px);
+            top: size(12px);
+            width: size(18px);
+          }
+        }
+      }
+
+      &--2 {
+        width: size(144px);
+        height: size(224px);
+        top: size(8px);
+        left: size(321px);
+
+        @include desktop {
+          width: size(104px);
+          height: size(144px);
+          top: size(8px);
+          left: size(211px);
+        }
+
+        @include tablet {
+          bottom: size(33px);
+          left: size(184px);
+          width: size(89px);
+          height: size(125px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-2 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-81px);
+          top: size(21px);
+
+          &::before {
+            width: size(18px);
+            top: size(13px);
+            right: size(41px);
+            transform: rotate(0);
+          }
+        }
+      }
+
+      &--3 {
+        left: size(178px);
+        top: size(237px);
+        height: size(160px);
+        width: size(290px);
+
+        @include desktop {
+          left: size(108px);
+          top: size(155px);
+          width: size(200px);
+          height: size(105px);
+        }
+
+        @include tablet {
+          left: size(100px);
+          top: size(136px);
+          width: size(166px);
+          height: size(90px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-3 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-85px);
+          top: size(9px);
+
+          &::before {
+            width: size(18px);
+            top: size(13px);
+            right: size(46px);
+          }
+        }
+      }
+
+      &--4 {
+        left: size(158px);
+        bottom: size(16px);
+        width: size(204px);
+        height: size(325px);
+
+        @include desktop {
+          left: size(108px);
+          bottom: size(16px);
+          width: size(124px);
+          height: size(210px);
+        }
+
+        @include tablet {
+          left: size(88px);
+          bottom: size(8px);
+          width: size(120px);
+          height: size(189px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-4 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: size(-79px);
+          top: size(67px);
+
+          @include desktop {
+            left: size(-77px);
+          }
+
+          @include tablet {
+            top: size(137px);
+          }
+
+          &::before {
+            left: size(45px);
+            top: size(12px);
+            width: size(18px);
+          }
+        }
+      }
+
+      &--5 {
+        width: size(170px);
+        height: size(299px);
+        bottom: size(15px);
+        left: size(362px);
+
+        @include desktop {
+          width: size(120px);
+          height: size(189px);
+          bottom: size(15px);
+          left: size(232px);
+        }
+
+        @include tablet {
+          left: size(205px);
+          bottom: size(7px);
+          width: size(100px);
+          height: size(175px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-5 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-26px);
+          top: size(-69px);
+
+          @include tablet {
+            right: size(-26px);
+            top: size(-55px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(33px);
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      &--6 {
+        width: size(170px);
+        height: size(299px);
+        bottom: size(15px);
+        left: size(532px);
+
+        @include desktop {
+          width: size(110px);
+          height: size(189px);
+          bottom: size(15px);
+          left: size(352px);
+        }
+
+        @include tablet {
+          left: size(305px);
+          bottom: size(17px);
+          width: size(100px);
+          height: size(165px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-6 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(36px);
+          top: size(-69px);
+
+          @include desktop {
+            // right: size(-2px);
+            top: size(-67px);
+          }
+
+          @include tablet {
+            right: size(26px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(13px);
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      &--7 {
+        width: size(190px);
+        height: size(290px);
+        bottom: size(20px);
+        left: size(702px);
+
+        @include desktop {
+          left: size(459px);
+          bottom: size(10px);
+          width: size(130px);
+          height: size(200px);
+        }
+
+        @include tablet {
+          left: size(405px);
+          bottom: size(20px);
+          width: size(110px);
+          height: size(160px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-7 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(36px);
+          top: size(-69px);
+
+          @include desktop {
+            // right: size(-2px);
+            top: size(-67px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(13px);
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+
+  &--4 {
+    .floor__img-cover {
+      width: 83%;
+      margin-left: 17%;
+    }
+    .floor__col--center {
+      @include tablet {
+        padding-left: size(43px);
+      }
+    }
+
+    .floor__img-cover {
+      &::before {
+        background: url("../img/flats_hovers_fl_2.svg") no-repeat center;
+      }
+    }
+
+    .floor__flat {
+
+      &.floor__flat--soldout {
+        pointer-events: none;
+        &:hover ~ .floor__img-cover{
+          .flat-hover-1 {
+            opacity: 0;
+          }
+        }
+
+        .floor__flat-number {
+          opacity: 0.4;
+        }
+      }
+
+      &--1 {
+        width: size(290px);
+        height: size(224px);
+        top: size(8px);
+        left: size(176px);
+
+        @include desktop {
+          width: size(200px);
+          height: size(144px);
+          top: size(8px);
+          left: size(113px);
+        }
+
+        @include tablet {
+          left: size(100px);
+          top: size(6px);
+          width: size(166px);
+          height: size(125px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-1 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: size(-80px);
+          top: size(26px);
+
+          white-space: nowrap;
+
+          @include desktop {
+            left: size(-77px);
+          }
+
+          &::before {
+            left: size(45px);
+            top: size(12px);
+            width: size(18px);
+          }
+        }
+      }
+
+      &--2 {
+        left: size(178px);
+        top: size(237px);
+        height: size(160px);
+        width: size(290px);
+
+        @include desktop {
+          left: size(108px);
+          top: size(155px);
+          width: size(200px);
+          height: size(105px);
+        }
+
+        @include tablet {
+          left: size(100px);
+          top: size(136px);
+          width: size(166px);
+          height: size(90px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-2 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-85px);
+          top: size(9px);
+
+          &::before {
+            width: size(18px);
+            top: size(13px);
+            right: size(46px);
+          }
+        }
+      }
+
+      &--3 {
+        left: size(158px);
+        bottom: size(16px);
+        width: size(204px);
+        height: size(325px);
+
+        @include desktop {
+          left: size(108px);
+          bottom: size(16px);
+          width: size(124px);
+          height: size(210px);
+        }
+
+        @include tablet {
+          left: size(88px);
+          bottom: size(8px);
+          width: size(120px);
+          height: size(189px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-3 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: size(-79px);
+          top: size(67px);
+
+          @include desktop {
+            left: size(-77px);
+          }
+
+          @include tablet {
+            top: size(137px);
+          }
+
+          &::before {
+            left: size(45px);
+            top: size(12px);
+            width: size(18px);
+          }
+        }
+      }
+
+      &--4 {
+        width: size(170px);
+        height: size(299px);
+        bottom: size(15px);
+        left: size(362px);
+
+        @include desktop {
+          width: size(120px);
+          height: size(189px);
+          bottom: size(15px);
+          left: size(232px);
+        }
+
+        @include tablet {
+          left: size(205px);
+          bottom: size(7px);
+          width: size(100px);
+          height: size(175px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-4 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(-26px);
+          top: size(-69px);
+
+          @include tablet {
+            right: size(-26px);
+            top: size(-55px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(33px);
+            transform: rotate(-45deg);
+          }
+        }
+      }
+
+      &--5 {
+        width: size(170px);
+        height: size(299px);
+        bottom: size(15px);
+        left: size(532px);
+
+        @include desktop {
+          width: size(110px);
+          height: size(189px);
+          bottom: size(15px);
+          left: size(352px);
+        }
+
+        @include tablet {
+          left: size(305px);
+          bottom: size(17px);
+          width: size(100px);
+          height: size(165px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-5 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(36px);
+          top: size(-69px);
+
+          @include desktop {
+            // right: size(-2px);
+            top: size(-67px);
+          }
+
+          @include tablet {
+            right: size(26px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(13px);
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      &--6 {
+        width: size(190px);
+        height: size(290px);
+        bottom: size(20px);
+        left: size(702px);
+
+        @include desktop {
+          left: size(459px);
+          bottom: size(10px);
+          width: size(130px);
+          height: size(200px);
+        }
+
+        @include tablet {
+          left: size(405px);
+          bottom: size(20px);
+          width: size(110px);
+          height: size(160px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-6 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(36px);
+          top: size(-69px);
+
+          @include desktop {
+            // right: size(-2px);
+            top: size(-67px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(13px);
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+
+  &--5 {
+    .floor__img-cover {
+      width: 83%;
+      margin-left: 17%;
+
+      svg {
+        width: 110%;
+        height: 117%;
+        top: -17%;
+        left: -5%;
+      }
+    }
+    .floor__col--center {
+      @include tablet {
+        padding-left: size(43px);
+      }
+    }
+
+    .floor__flat {
+
+      &.floor__flat--soldout {
+        pointer-events: none;
+        &:hover ~ .floor__img-cover{
+          .flat-hover-1 {
+            opacity: 0;
+          }
+        }
+
+        .floor__flat-number {
+          opacity: 0.4;
+        }
+      }
+
+      &--1 {
+        width: size(290px);
+        height: size(385px);
+        top: size(8px);
+        left: size(176px);
+
+        @include desktop {
+          width: size(200px);
+          height: size(254px);
+          top: size(8px);
+          left: size(113px);
+        }
+
+        @include tablet {
+          left: size(100px);
+          top: size(6px);
+          width: size(166px);
+          height: size(220px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-1 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: size(-80px);
+          top: size(26px);
+
+          white-space: nowrap;
+
+          @include desktop {
+            left: size(-77px);
+          }
+
+          &::before {
+            left: size(45px);
+            top: size(12px);
+            width: size(18px);
+          }
+        }
+      }
+
+      &--2 {
+        left: size(158px);
+        bottom: size(36px);
+        width: size(380px);
+        height: size(300px);
+
+        @include desktop {
+          left: size(108px);
+          bottom: size(16px);
+          width: size(244px);
+          height: size(210px);
+        }
+
+        @include tablet {
+          left: size(88px);
+          bottom: size(28px);
+          width: size(220px);
+          height: size(169px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-2 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          left: size(-79px);
+          top: size(67px);
+
+          @include desktop {
+            left: size(-77px);
+          }
+
+          @include tablet {
+            top: size(137px);
+          }
+
+          &::before {
+            left: size(45px);
+            top: size(12px);
+            width: size(18px);
+          }
+        }
+      }
+
+      &--3 {
+        width: size(360px);
+        height: size(279px);
+        bottom: size(35px);
+        left: size(532px);
+
+        @include desktop {
+          width: size(235px);
+          height: size(189px);
+          bottom: size(15px);
+          left: size(352px);
+        }
+
+        @include tablet {
+          left: size(305px);
+          bottom: size(27px);
+          width: size(210px);
+          height: size(155px);
+        }
+
+        &:hover ~ .floor__img-cover,
+        &.floor__flat--active ~ .floor__img-cover {
+          .flat-hover-3 {
+            opacity: 1;
+          }
+        }
+
+        .floor__flat-number {
+          right: size(36px);
+          top: size(-69px);
+
+          @include desktop {
+            // right: size(-2px);
+            top: size(-67px);
+          }
+
+          @include tablet {
+            right: size(26px);
+          }
+
+          &::before {
+            width: size(18px);
+            top: size(40px);
+            right: size(13px);
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+
+  // &--5 {
+  //   .floor__img-cover {
+  //     &::before {
+  //       background: url("../../img/flats_hovers_fl_5.svg") no-repeat;
+  //       background-size: cover;
+  //       height: 111%;
+  //       top: -110px;
+  //     }
+  //   }
+  // }
+}
+
+.floor__col {
+  box-sizing: border-box;
+
+  &--left {
+    width: size(434px);
+    padding-left: size(221px);
+    padding-right: size(23px);
+    padding-top: size(37px);
+
+    @include desktop {
+      width: size(338px);
+      padding-left: size(145px);
+      padding-top: size(78px);
+      padding-right: size(3px);
+    }
+
+    @include tablet {
+      width: size(204px);
+      padding-left: size(107px);
+      padding-top: 0;
+    }
+  }
+
+  &--center {
+    width: size(903px);
+
+    @include desktop {
+      width: size(592px);
+      padding-top: size(16px);
+    }
+
+    @include tablet {
+      width: size(518px);
+      padding: 0;
+    }
+  }
+
+  &--right {
+    width: size(583px);
+    padding-left: size(100px);
+    padding-top: size(57px);
+
+    @include desktop {
+      width: size(353px);
+      padding-top: size(102px);
+      padding-left: size(60px);
+    }
+
+    @include tablet {
+      width: size(276px);
+      padding-top: size(11px);
+      padding-left: size(58px);
+    }
+  }
+}
+
+.floor__desc {
+  color: $color-blue;
+}
+
+.floor__number {
+  margin: 0 0 size(25px);
+
+  font-size: size(30px);
+  line-height: size(35px);
+  letter-spacing: 0.025em;
+}
+
+.floor__text {
+  margin: 0 0 0 -4px;
+  width: size(100px);
+
+  font-family: $font-ttnorms;
+  font-size: size(13px);
+  line-height: size(16px);
+  letter-spacing: 0.04em;
+}
+
+.floor__img {
+  position: relative;
+
+  width: size(903px);
+  height: size(735px);
+
+  @include desktop {
+    width: size(592px);
+    height: size(482px);
+  }
+
+  @include tablet {
+    width: size(518px);
+    height: size(422px);
+  }
+}
+
+
+.floor__flat {
+  position: absolute;
+
+  display: block;
+  transition: 0.3s ease-in-out;
+  z-index: 10;
+
+  &:hover {
+    .floor__flat-number {
+      color: $color-blue;
+      transition: 0.3s ease-in-out;
+
+      &::before {
+        background: $color-blue;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &--sold {
+    width: size(337px);
+    height: size(269px);
+
+    right: size(78px);
+    bottom: size(73px);
+
+    @include desktop {
+      bottom: size(39px);
+      right: size(54px);
+
+      width: size(220px);
+      height: size(177px);
+    }
+
+    @include tablet {
+      bottom: size(46px);
+      right: size(42px);
+
+      width: size(196px);
+      height: size(143px);
+    }
+
+    .floor__flat-number {
+      left: size(175px);
+      top: size(-69px);
+
+      @include desktop {
+        left: size(112px);
+        top: size(-78px);
+      }
+
+      &::before {
+        transform: rotate(90deg);
+        bottom: size(-15px);
+        left: size(22px);
+      }
+    }
+  }
+}
+
+.floor__flat-number {
+  position: absolute;
+
+  font-family: $font-ttnorms;
+  font-size: size(11px);
+  line-height: size(15px);
+  letter-spacing: 0.02em;
+  color: #4F4F4F;
+  text-transform: uppercase;
+
+  @include desktop {
+    font-size: size(9px);
+    line-height: size(15px);
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    width: size(25px);
+    height: 1px;
+    background: #4F4F4F;
+
+    @include tablet {
+      width: size(15px);
+    }
+  }
+}
+
+.floor__img-text {
+  position: absolute;
+
+  font-family: $font-ttnorms;
+  font-size: size(13px);
+  line-height: size(15px);
+  color: #949494;
+  letter-spacing: 0.04em;
+
+  &--left {
+    left: size(-20px);
+    top: size(321px);
+
+    transform: rotate(-90deg);
+
+    @include desktop {
+      left: size(-46px);
+      top: size(253px);
+    }
+  }
+
+  &--bottom {
+    bottom: size(-55px);
+    left: size(368px);
+
+    @include desktop {
+      bottom: size(-49px);
+      left: size(194px);
+    }
+  }
+
+  &--garden {
+    right: size(200px);
+    top: size(113px);
+
+    @include desktop {
+      right: size(89px);
+      top: size(50px);
+    }
+  }
+}
+
+.floor__compas {
+  position: relative;
+
+  font-family: $font-ttnorms;
+  font-size: size(18px);
+  line-height: size(21px);
+  color: $color-blue;
+
+  span {
+    display: block;
+    transform: rotate(-9deg);
+  }
+
+  svg {
+    position: absolute;
+    top: size(-18px);
+    left: size(-6px);
+  }
+}

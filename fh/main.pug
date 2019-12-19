@@ -1,0 +1,65 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'О нас';
+  - let isInner = true;
+  //- - let isFHPage = true;
+  - let headerBackground = 'header__menu--fantastic';
+
+block content
+  .fanastic-house.gradient
+    include pug/phone-icon.pug
+    section.main-screen.gradient-top
+      picture
+        source(media="(max-width: 767px)", srcset="img/main-building-1-mobile@1x.jpg 1x, img/main-building-1-mobile@2x.jpg 2x")
+        source(media="(max-width: 1023px)", srcset="img/main-building-1-tablet@1x.jpg 1x, img/main-building-1-tablet@2x.jpg 2x")
+        img(src='img/main-building-full-1@1x.jpg' alt='' srcset='img/main-building-full-1@2x.jpg 2x').img-parallax-1
+      h1.visually-hidden Fantastic House
+      span.arrow
+        svg(width="57", height="96", viewbox="0 0 57 96", fill="none", xmlns="http://www.w3.org/2000/svg")
+          path(d="M28.5756 22.4202V73.4296", stroke="white", stroke-width="3", stroke-linecap="round", stroke-linejoin="round")
+          path(d="M40.9734 61.2415L28.5756 73.58L16.0265 61.2415", stroke="white", stroke-width="3", stroke-linecap="round", stroke-linejoin="round")
+    section.text-content
+      p.text-content__desc Fantastic<br>House
+      p.text-content__desc.text-content__desc--right Дом на Малой<br>Грузинской, 44
+    section.img-content.img-content--1
+      picture
+        source(media="(max-width: 767px)", srcset="img/main-building-2-mobile@1x.jpg 1x, img/main-building-2-mobile@2x.jpg 2x")
+        source(media="(max-width: 1023px)", srcset="img/main-building-2-tablet@1x.jpg 1x, img/main-building-2-tablet@2x.jpg 2x")
+        img(src='img/main-building-full-2@1x.jpg' alt='' srcset='img/main-building-full-2@2x.jpg 2x').img-parallax-1
+    section.text-content
+      p.text-content__desc 24 квартиры<br>60—243 м
+        sup 2
+      p.text-content__desc.text-content__desc--right Пентхаусы<br>с каминами<br>и террасами
+    section.img-content.img-content--2
+      picture
+        source(media="(max-width: 767px)", srcset="img/main-interior-1-mobile@1x.jpg 1x, img/main-interior-1-mobile@2x.jpg 2x")
+        source(media="(max-width: 1023px)", srcset="img/main-interior-1-tablet@1x.jpg 1x, img/main-interior-1-tablet@2x.jpg 2x")
+        img(src='img/main-interior-full-1@1x.jpg' alt='' srcset='img/main-interior-full-1@2x.jpg 2x').img-parallax-2
+    section.text-content
+      p.text-content__desc Современная<br>инженерия
+      p.text-content__desc.text-content__desc--right Подземная<br>парковка<br>48 м/м
+    section.img-content.img-content--3
+      picture
+        source(media="(max-width: 767px)", srcset="img/main-parking-mobile@1x.jpg 1x, img/main-parking-mobile@2x.jpg 2x")
+        source(media="(max-width: 1023px)", srcset="img/main-parking-tablet@1x.jpg 1x, img/main-parking-tablet@2x.jpg 2x")
+        img(src='img/main-parking-full@1x.jpg' alt='' srcset='img/main-parking-full@2x.jpg 2x').img-parallax-3
+    section.text-content
+      p.text-content__desc Тихий жилой<br>квартал
+      p.text-content__desc.text-content__desc--right 18 минут<br>пешком до<br>патриарших<br>Прудов
+    section.img-content.img-content--4
+      picture
+        source(media="(max-width: 767px)", srcset="img/ponds-people-mobile@1x.jpg 1x, img/ponds-people-mobile@2x.jpg 2x")
+        source(media="(max-width: 1023px)", srcset="img/ponds-people-tablet@1x.jpg 1x, img/ponds-people-tablet@2x.jpg 2x")
+        img(src='img/ponds-people-full@1x.jpg' alt='' srcset='img/ponds-people-full@2x.jpg 2x').img-parallax-4
+    section.text-content
+      p.text-content__desc.text-content__desc--right Готовность<br>2021 год
+    section.img-content.img-content--gradient.gradient-bottom
+      picture
+        source(media="(max-width: 767px)", srcset="img/main-house-mobile@1x.jpg 1x, img/main-house-mobile@2x.jpg 2x")
+        source(media="(max-width: 1023px)", srcset="img/main-house-tablet@1x.jpg 1x, img/main-house-tablet@2x.jpg 2x")
+        img(src='img/main-house-full-1@1x.jpg' alt='' srcset='img/main-house-full-1@2x.jpg 2x')
+
+block footer
+  .footer-inner
+    a.footer-inner__link.button(href="#") Выбрать невероятную квартиру

@@ -1,0 +1,109 @@
+.common-label {
+  display: block;
+  font-family: $fontSans;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: $default-text;
+
+  @include color-opacity($default-text, 0.5);
+
+  &--icon {
+    position: relative;
+    opacity: 0.7;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 25px;
+      opacity: 1;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      // background-size: contain;
+    }
+  }
+
+  &--icon-email {
+    &::before {
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/icons/icon-user.svg");
+    }
+  }
+
+  &--icon-opacity {
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &--icon-password {
+    &::before {
+      left: 7px;
+      width: 18px;
+      height: 19.1px;
+      background-image: url("../img/icons/icon-close-password.svg");
+    }
+  }
+
+  &--icon-phone {
+    &::before {
+      left: 4px;
+      top: 21px;
+      width: 26px;
+      height: 26px;
+      background-image: url("../img/icons/icon-tel.svg");
+    }
+  }
+
+  &--icon-security,
+  &--icon-hide {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 9px;
+      top: 28px;
+      width: 12px;
+      height: 12px;
+      margin-left: -6px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      cursor: pointer;
+    }
+  }
+
+  &--icon-security {
+    &::after {
+      background-image: url("../img/icons/icon-securitylevel.svg");
+    }
+  }
+
+  &--icon-hide {
+    &::after {
+      top: 27px;
+      width: 14px;
+      height: 14px;
+      background-image: url("../img/icons/icon-hide.svg");
+    }
+  }
+
+  &--select-triangle {
+    position: relative;
+
+    &::after {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      right: -2px;
+      top: 16px;
+      transform: rotate(-45deg);
+      border: 4px solid transparent;
+      border-left: 4px solid #c7b799;
+    }
+  }
+}

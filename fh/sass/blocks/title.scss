@@ -1,0 +1,48 @@
+.title {
+  color: $color-white;
+  font-weight: 400;
+
+  &--page {
+    text-align: center;
+  }
+
+  &--big {
+    @include big-header;
+    padding: 0 32.5%;
+    z-index: 10;
+
+    @include desktop {
+      font-size: size(45px);
+      line-height: size(48px);
+      padding: 0 25.5%;
+    }
+
+    @include tablet {
+      font-size: size(30px);
+      line-height: size(30px);
+    }
+
+    @include mobile {
+      font-size: size(23px);
+      line-height: size(23px);
+      padding: 0 20%;
+    }
+  }
+
+  &--small {
+    @include desktop {
+      font-size: size(45px);
+      line-height: size(48px);
+    }
+
+    @include tablet {
+      font-size: size(30px);
+      line-height: size(30px);
+    }
+
+    @include mobile {
+      font-size: size(23px);
+      line-height: size(23px);
+    }
+  }
+}

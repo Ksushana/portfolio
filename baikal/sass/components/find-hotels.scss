@@ -1,0 +1,214 @@
+.find-hotels {
+  padding-top: 400px;
+  padding-bottom: 482px;
+  position: relative;
+  overflow: hidden;
+
+  &--trakt {
+    padding-top: 375px;
+    background-position: center top 0;
+    background-size: 1357px 1029px;
+    background-image: none;
+    padding-bottom: 410px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      // background-image: url("../img/find-hotels__bg--desktop2@2x.png");
+      background-size: 1357px 1029px;
+    }
+  }
+
+  @include desktop {
+    padding-top: 250px;
+    background-image: none;
+    padding-bottom: 250px;
+
+    &--trakt {
+      padding-top: 250px;
+      background-image: none;
+      padding-bottom: 250px;
+    }
+  }
+
+  @include tablet {
+    padding-top: 87px;
+    padding-bottom: 117px;
+
+
+    &--trakt {
+      padding-top: 98px;
+      padding-left: 0;
+      background-size: 968px 814px;
+      background-image: none;;
+      background-position: center top -50px;
+    }
+  }
+
+  @include mobile-wide {
+    padding-top: 11px;
+    padding-bottom: 61px;
+    padding-top: 65px;
+    padding-bottom: 50px;
+
+    &--trakt {
+      padding-top: 65px;
+      padding-bottom: 50px;
+      background-size: 693px 546px;
+      background-image: none;
+      background-position: center top -54px;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    &--fullwidth {
+      width: 100%;
+
+      @include tablet {
+        width: auto;
+      }
+    }
+
+
+    @include desktop-wide {
+      position: relative;
+      width: 1700px;
+      align-items: center;
+    }
+
+    @include tablet {
+      align-items: center;
+    }
+
+    @include mobile-wide {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+.find-hotels__title {
+  font-family: $font-muller;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 900;
+  color: #1b2748;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  @include desktop {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 48px;
+    width: 530px;
+    text-align: right;
+    margin-bottom: 60px;
+    margin-left: 48px;
+  }
+
+  @include mobile-wide {
+    font-size: 22px;
+    line-height: 22px;
+    margin-right: 18px;
+    margin-bottom: 13px;
+    width: auto;
+
+    &--trakt {
+      margin-left: 20px;
+      margin-right: 13px;
+      margin-bottom: 14px;
+    }
+  }
+
+  & b {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  & span {
+    color: #e2a13c;
+  }
+}
+
+.find-hotels__bar {
+  flex-grow: 1;
+  height: 3px;
+  background: linear-gradient(to right, #4d88cc, #e2a13c);
+
+  &--right {
+    background: linear-gradient(to left, #4d88cc, #e2a13c);
+  }
+
+  @include mobile-wide {
+    width: 180px;
+  }
+}
+
+.find-hotels__widget {
+  width: 972px;
+  margin: 0 75px;
+  position: relative;
+
+  @include laptop {
+
+    &--irkutsk {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  @include tablet {
+    width: 296px;
+    margin: 0 20px;
+
+    &--irkutsk {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  @include mobile-wide {
+    margin-top: 21px;
+    margin-bottom: 21px;
+  }
+}
+
+.find-hotels__widget .mewtwo-hotels--xs .mewtwo-widget .mewtwo-hotels-guests {
+  margin-bottom: 10px!important;
+}
+
+.find-hotels__bg-image {
+  width: 1377px;
+  height: auto;
+  position: absolute;
+  z-index: -5;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-47%, -53%);
+
+  @include desktop {
+    width: 1200px;
+    transform: translate(-50%, -52%);
+  }
+
+  @include laptop {
+    width: 1000px;
+    transform: translate(-50%, -52%);
+  }
+
+  @include tablet {
+    width: 923px;
+    transform: translate(-48%, -45%);
+  }
+
+  @include mobile-wide {
+    width: 700px;
+  }
+}

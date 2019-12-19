@@ -1,0 +1,171 @@
+.progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  @include touch {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  @include tablet {
+    // height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .year-choice {
+    .switch-button.inactive{
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  }
+
+  .choice-progress {
+    .switch-button.inactive {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  }
+
+  h1 {
+    padding-top: size(140px);
+    padding-bottom: size(45px);
+    margin: 0;
+
+    @include desktop {
+      padding-top: size(96px);
+    }
+
+
+    @include touch {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .choice {
+    @include tablet {
+      padding-top: size(36px);
+      margin: 0;
+    }
+
+    @include touch {
+      padding-top: size(36px);
+      margin: 0;
+    }
+
+    @include mobile {
+      padding-top: size(64px);
+    }
+
+    .swiper-slide {
+      padding: 0 size(4px);
+
+      button {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        justify-content: center;
+      }
+
+      @include tablet {
+        padding: 0 size(2px);
+
+        button {
+          min-width: size(90px);
+          width: size(90px);
+        }
+      }
+
+      @include mobile {
+        padding: 0 size(2px);
+
+        button {
+          min-width: size(75px);
+          width: size(77px);
+        }
+      }
+
+      button ~ span {
+        min-width: size(150px);
+        display: flex;
+        align-items: center;
+        height: size(50px);
+        font-family: $font-ttnorms;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-sizing: border-box;
+        border-radius: 36.6595px;
+        color: rgba(255, 255, 255, 0.3);
+        text-transform: uppercase;
+        outline: none;
+        font-size: size(12px);
+        line-height: size(15px);
+        padding: 0 size(40px);
+        margin: 0 size(5px);
+        text-align: center;
+        white-space: nowrap;
+        justify-content: center;
+
+        @include desktop {
+          font-size: size(12px);
+          line-height: size(15px);
+          min-width: size(114px);
+        }
+
+        @include tablet {
+          height: size(45px);
+          font-size: size(10px);
+          padding: 0 size(30px);
+          min-width: size(90px);
+        }
+
+        @include mobile {
+          height: size(40px);
+          padding: 0 size(25px);
+          min-width: size(75px);
+        }
+      }
+    }
+  }
+
+  .progress__tabs-years {
+    @include touch {
+      max-height: 90%;
+
+      @include tablet {
+        max-height: 95%;
+      }
+
+      @include mobile {
+        max-height: 80%;
+      }
+    }
+  }
+
+  .housing__slider-container {
+    height: calc(100vh - 15rem);
+
+    @include tablet {
+      height: calc(100vh - 15rem);
+    }
+
+    @include mobile {
+      height: calc(100vh - 18rem);
+    }
+  }
+
+  .count-cursor {
+    @include touch {
+      top: size(-47px);
+      left: size(50px);
+
+      @include mobile {
+        left: size(25px);
+        top: size(-35px);
+      }
+    }
+  }
+}

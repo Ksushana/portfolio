@@ -1,0 +1,356 @@
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-blue;
+  z-index: 1000;
+
+  &--show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 4.6% auto auto;
+    padding-left: size(12px);
+    width: size(600px);
+
+    @include desktop {
+      margin-top: 3%;
+      padding-left: 0;
+    }
+
+    @include tablet {
+      margin-top: 3.5%;
+      width: size(448px);
+    }
+
+    @include mobile {
+      margin-top: 3.5%;
+      width: size(326px);
+    }
+
+    h2 {
+      font-size: size(35px);
+      line-height: size(35px);
+      text-align: center;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+
+      padding: 0;
+      margin-top: size(18px);
+
+      @include tablet {
+        font-size: size(25px);
+      }
+
+      @include mobile {
+        font-size: size(28px);
+        line-height: size(28px);
+        margin-top: size(25px);
+      }
+    }
+  }
+
+
+
+  fieldset {
+    border: none;
+    border: none;
+    width: size(600px);
+    margin: size(13px) auto size(13px) size(-12px);
+
+    @include desktop {
+      margin-top: size(15px);
+      // width: size(448px);
+    }
+
+    @include tablet {
+      margin-top: size(39px);
+      margin-bottom: size(9px);
+      width: size(448px);
+    }
+
+    @include mobile {
+      margin-top: size(30px);
+      margin-bottom: size(37px);
+      width: size(326px);
+    }
+
+    p {
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      margin-bottom: size(15px);
+
+      &.input-error {
+
+        border-bottom: 1px solid $color-red;
+
+        input {
+          color: $color-red;
+          animation: blinker 1.5s linear infinite;
+
+          @keyframes blinker {
+            50% {
+              opacity: 0;
+            }
+          }
+
+          &::-webkit-input-placeholder {
+            color: $color-red;
+          }
+
+          &:-ms-input-placeholder {
+            color: $color-red;
+          }
+
+          &:focus::-webkit-input-placeholder {
+            color: transparent;
+          }
+
+          &:focus::-moz-placeholder {
+            color: transparent;
+          }
+
+          &:focus:-ms-input-placeholder {
+            color: transparent;
+          }
+
+          &:focus:-moz-placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    visibility: hidden;
+  }
+
+  input {
+    width: 100%;
+    height: size(50px);
+    background-color: transparent;
+    padding: 0 size(7px);
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    outline: none;
+
+    font-family: $font-ttnorms;
+    color: $color-white;
+    font-size: size(15px);
+    line-height: size(20px);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+
+
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &:focus::-moz-placeholder {
+      color: transparent;
+    }
+
+    &:focus:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    &:focus:-moz-placeholder {
+      color: transparent;
+    }
+
+
+
+    @include tablet {
+      font-size: size(14px);
+      height: size(34px);
+      margin-bottom: size(30px);
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: $color-white;
+    -webkit-box-shadow: 0 0 0px 1000px $color-blue inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  button.button {
+    width: size(300px);
+    height: size(75px);
+    margin: size(10px) auto size(39px);
+
+    background-color: $color-blue;
+
+    font-family: Austin Cyr;
+    font-size: size(25px);
+    line-height: size(29px);
+    text-align: center;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    outline: none;
+
+    &:hover {
+      color: $color-blue;
+
+      background-color: $color-white;
+
+      transition: 0.3s all ease-in-out;
+    }
+
+    @include tablet {
+      width: size(200px);
+      height: size(70px);
+
+      margin-top: 0;
+      margin-bottom: size(44px);
+
+      font-size: size(20px);
+      line-height: size(24px);
+    }
+
+    @include mobile {
+      width: size(275px);
+      height: size(55px);
+
+      margin-top: 0;
+      margin-bottom: size(54px);
+
+      font-size: size(25px);
+      line-height: size(25px);
+    }
+  }
+
+  p {
+    width: size(330px);
+    margin: 0 auto;
+
+    font-family: $font-ttnorms;
+    font-size: size(14px);
+    line-height: size(15px);
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    a {
+      transition: opacity 0.5s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    @include mobile {
+      width: size(240px);
+
+      font-size: size(13px);
+      line-height: size(13px);
+    }
+  }
+
+}
+
+.form-popup__close {
+  width: size(40px);
+  height: size(40px);
+  border: none;
+  background-color: transparent;
+
+  margin: 6.65% auto 0;
+
+  transition: 0.3s all ease-in-out;
+  outline: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    margin: 4.8% auto 0;
+  }
+
+  @include mobile {
+    margin: size(27px) auto 0;
+  }
+}
+
+.form-popup-result {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-blue;
+  z-index: 1001;
+
+  &--show {
+    display: flex;
+  }
+
+  p {
+    font-family: $font-ttnorms;
+    font-size: size(15px);
+    line-height: size(20px);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    margin: 12.5% auto auto;
+
+
+    @include tablet {
+      margin-top: size(250px);
+    }
+
+    @include mobile {
+      width: size(280px);
+      margin-top: size(179px);
+    }
+  }
+}
+
+.form-popup-result__close {
+  width: size(40px);
+  height: size(40px);
+  border: none;
+  background-color: transparent;
+
+  margin: 6.65% auto 0;
+
+  transition: 0.3s all ease-in-out;
+  outline: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    margin: 4.8% auto 0;
+  }
+
+  @include mobile {
+    margin: size(27px) auto 0;
+  }
+}

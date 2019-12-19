@@ -1,0 +1,20 @@
+.floor-compas {
+  font-family: $font-ttnorms;
+  font-size: size(18px);
+  line-height: size(21px);
+  color: $color-blue;
+
+  span {
+    position: relative;
+
+    display: block;
+
+    transform: rotate(-9deg);
+  }
+
+  svg {
+    position: absolute;
+    top: size(-30px);
+    left: size(-8px);
+  }
+}

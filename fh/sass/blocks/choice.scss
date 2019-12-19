@@ -1,0 +1,63 @@
+.choice {
+  width: 100%;
+
+  @include mobile {
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .choice-container {
+    width: 100%;
+    display: flex;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    margin: 0 auto;
+    width: auto;
+
+    .swiper-slide {
+      width: auto;
+      height: size(50px);
+
+      .switch-button,
+      button {
+        @include switch-button;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 0 size(30px);
+        margin: 0 2px;
+        min-width: size(150px);
+        text-align: center;
+        white-space: nowrap;
+        background-color: $color-blue;
+
+        @include desktop {
+          font-size: size(12px);
+          line-height: size(15px);
+        }
+
+        @include desktop {
+          min-width: size(114px);
+          margin: 0 2px;
+        }
+
+        @include tablet {
+          font-size: size(10px);
+        }
+
+        @include mobile {
+          min-width: size(80px);
+          padding: 0 size(10px);
+          margin: 0 2px;
+        }
+      }
+    }
+  }
+}

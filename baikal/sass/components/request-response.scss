@@ -1,0 +1,118 @@
+.request-response {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, .9);
+  z-index: 100;
+
+  transition: all 0.3s;
+
+  &--js {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &--show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.request-response__block {
+  width: 460px;
+  // height: 423px;
+  background-color: $color-white;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 0 0 rgba(#a1b7b9, 0.34);
+  transition: transform 0.5s ease, box-shadow 0.5s linear 0.3s;
+  padding: 70px 60px 41px;
+  align-items: center;
+
+  @include mobile {
+    max-width: 380px;
+    width: 100%;
+    padding: 49px 20px 45px;
+  }
+}
+
+.request-response--show .request-response__block {
+  transform: translateY(0);
+  box-shadow: 0 12px 57px 6px rgba(#a1b7b9, .34);
+}
+
+.request-response__tick {
+  fill: #7aac48;
+}
+
+.request-response__heading {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  color: $color-black;
+
+  @include mobile {
+    font-size: 28px;
+  }
+}
+
+.request-response__social-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.request-response__bar {
+  height: 2px;
+  width: 334px;
+  background-color: $color-blue-grey;
+  margin-top: 36px;
+  margin-bottom: 26px;
+}
+
+.request-response__social-text {
+  font-size: 20px;
+  margin-bottom: 17px;
+  text-align: center;
+  color: $color-black;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.request-response__text {
+  font-size: 20px;
+  color: $color-black;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.request-response__social-item {
+  padding-left: 5px;
+  padding-right: 5px;
+  &--vkontakte svg {
+    fill: #4d76a1;
+  }
+
+  &--instagram svg {
+    fill: $color-orange;;
+  }
+
+  &--facebook svg {
+    fill: #3b5998;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

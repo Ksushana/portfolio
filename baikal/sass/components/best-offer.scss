@@ -1,0 +1,171 @@
+.best-offer {
+  margin-bottom: 150px;
+
+  @include tablet {
+    margin-bottom: 98px;
+  }
+
+  @include mobile-wide {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 65px;
+  }
+}
+
+.best-offer__header {
+  text-align: right;
+  margin-top: 37px;
+  padding-right: 59px;
+  margin-bottom: 30px;
+
+
+  @include desktop {
+    padding-right: 30px;
+  }
+
+  @include laptop {
+    padding-right: 29px;
+    padding-left: 50px;
+  }
+
+  @include tablet {
+    padding-right: 13px;
+    font-size: 48px;
+    line-height: 48px;
+    margin-top: 43px;
+  }
+
+  @include mobile-wide {
+    order: 2;
+    padding-right: 23px;
+    margin-top: 4px;
+  }
+}
+
+.best-offer__header h2 {
+  padding-bottom: 8px;
+  font-weight: inherit;
+
+  @include laptop {
+    padding-left: 10px;
+    max-width: 550px;
+    text-align: right;
+  }
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 48px;
+    max-width: 550px;
+  }
+
+  @include mobile-wide {
+    padding-bottom: 4px;
+  }
+}
+
+.best-offer__header p {
+  @include laptop {
+    padding-left: 10px;
+    max-width: 550px;
+    text-align: right;
+  }
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+    max-width: 550px;
+  }
+}
+
+.best-offer__widget-form {
+  position: relative;
+
+  @include mobile-wide {
+    order: 1;
+    min-height: 320px;
+  }
+}
+
+.best-offer__widget-inner {
+  width: 296px;
+  box-shadow: 0 0 20px #E2A13C;
+  position: absolute;
+  z-index: 10;
+  bottom: -162px;
+  left: 5px;
+
+  .mewtwo-hotels--xs .mewtwo-widget .mewtwo-hotels-guests {
+    margin: 0 0 10px!important;
+  }
+
+  @include tablet {
+    bottom: -185px;
+  }
+
+  @include mobile-wide {
+    bottom: 21px;
+    left: 50%;
+    margin-left: -148px;
+  }
+}
+
+.best-offer__widget {
+  margin-top: 20px;
+  padding-left: 195px;//85px;
+  padding-right: 209px;//99px;
+
+  @include tablet {
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  @include mobile-wide {
+    order: 3;
+    margin-top: 0;
+    padding-left: 0;
+  }
+}
+
+.best-offer__button {
+  font-family: $font-muller;
+  width: fit-content;
+  font-size: 18px;
+  line-height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 34px;
+  padding: 16px;
+  // padding-left: 16px;
+  text-align: center;
+
+  &:hover {
+    box-shadow: inset 0px 0px 0px 2px rgba(247,162,46,1);
+    background-color: transparent;
+    color: rgba(247,162,46,1);
+  }
+
+  @include tablet {
+    padding: 16px 16px 16px 15px;
+    margin-top: 29px;
+  }
+
+  @include mobile-wide {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 11px 16px 11px 15px;
+    max-width: 300px;
+    margin-top: 29px;
+    width: 300px;
+  }
+}
+
+.best-offer__button-outer {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+
+  @include mobile-wide {
+    order: 4;
+  }
+}

@@ -1,0 +1,30 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Ход строительства';
+  - let isInner = true;
+  - let isProgressPage = true;
+  - let headerBackground = 'header__menu--progress';
+  - let tabletNoLogo = true;
+
+block content
+  .container.progress.slider-page
+    include pug/phone-icon.pug
+    h1.title.title--page.title--big !{title}
+
+    .choice.year-choice
+      .swiper-container.choice-container
+        .swiper-wrapper.tabs-links
+          .swiper-slide( data-year=2019 )
+            button.switch-button.switch-button-active( type="button" ) 2019
+          .swiper-slide( data-year=2020 )
+            button.switch-button( type="button" )  2020
+          .swiper-slide( data-year=2021 )
+            button.switch-button( type="button" )  2021
+
+    section.progress__tabs-years
+      include pug/progress/2019/2019.pug
+      include pug/progress/2020/2020.pug
+      include pug/progress/2021/2021.pug
+
+

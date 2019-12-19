@@ -1,0 +1,651 @@
+.contacts  {
+  display: flex;
+  flex-direction: column;
+
+  .contacts__header {
+    margin: size(159px) auto 0;
+    position: absolute;
+    top: 0;
+    padding: 0 42%;
+    transition: color 2s;
+
+    &.blue {
+      color: $color-blue;
+    }
+
+    @include desktop {
+      margin: size(108px) auto 0;
+      padding: 0 40%;
+    }
+
+    @include tablet {
+      margin: size(72px) auto 0;
+    }
+
+    @include mobile {
+      padding: 0 33%;
+      margin: size(39px) auto 0;
+    }
+  }
+
+  a {
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+
+.contacts__map {
+  height: size(890px);
+  background-color: #fff;
+
+  @include desktop {
+    height: size(600px);
+  }
+
+  @include tablet {
+    height: size(450px);
+  }
+
+  @include mobile {
+    height: size(280px);
+  }
+}
+
+// a {
+//   position: absolute;
+//   bottom: 36px;
+//   left: 50%;
+//   z-index: 10;
+
+//   padding: 0;
+
+  // background: transparent;
+  // border: none;
+
+  // transform: translateX(-50%);
+  // cursor: pointer;
+//   transition: 0.5s opacity ease-in-out;
+
+//   &:hover {
+//     opacity: 0.5;
+//     transition: 0.5s opacity ease-in-out;
+//   }
+
+//   path {
+//     stroke: $color-white;
+//   }
+
+//   @include desktop {
+//     bottom: 15px;
+
+//     width: size(37px);
+//     height: size(63px);
+//   }
+
+//   @include tablet {
+//     bottom: 33px;
+
+//     width: size(37px);
+//     height: size(63px);
+//   }
+
+//   @include mobile {
+//     display: none;
+//   }
+
+//   svg {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
+
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: size(100px);
+  width: size(1225px);
+  margin: 0 auto;
+
+  @include desktop {
+    width: size(1000px);
+    padding-top: size(57px);
+  }
+
+  @include tablet {
+    width: size(768px);
+    padding-top: size(61px);
+  }
+
+  @include mobile {
+    width: size(280px);
+    padding-top: size(32px);
+  }
+}
+
+.contacts__address p:first-child,
+.contacts__office-address p:first-child,
+.contacts__office-schedule p,
+.contacts__telegram-whatsapp a {
+    font-family: $font-ttnorms;
+    font-size: size(15px);
+    line-height: size(22px);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: size(12px) 0 size(13px);
+
+    @include tablet {
+      font-size: size(12px);
+      line-height: size(15px);
+      margin: size(12px) 0 size(7px);
+    }
+
+    @include mobile {
+      font-size: size(11px);
+      line-height: size(11px);
+      margin: size(12px) 0 size(10px);
+    }
+}
+
+.contacts__address p:nth-child(2),
+.contacts__office-address p:nth-child(2),
+.contacts__phone-email a {
+  font-size: size(35px);
+  line-height: size(41px);
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  margin: 0;
+
+
+  @include desktop {
+    font-size: size(30px);
+    line-height: size(35px);
+  }
+
+  @include tablet {
+    font-size: size(25px);
+    line-height: size(25px);
+  }
+
+  @include tablet {
+    font-size: size(28px);
+    line-height: size(28px);
+  }
+}
+.contacts__phone-email a {
+  width: fit-content;
+}
+
+.contacts__address {
+  margin-bottom: size(36px);
+
+  @include desktop {
+    margin-bottom: size(24px);
+  }
+
+  @include tablet {
+    margin-bottom: size(41px);
+  }
+
+  @include mobile {
+    margin-bottom: size(23px);
+    padding-right: size(15px);
+  }
+}
+
+.contacts__office {
+  display: flex;
+  margin-bottom: size(86px);
+
+  @include desktop {
+    margin-bottom: size(69px);
+  }
+
+  @include tablet {
+    margin-bottom: size(50px);
+  }
+
+  @include mobile {
+    flex-direction: column;
+    margin-bottom: size(33px);
+  }
+}
+
+.contacts__contact-details {
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.contacts__office-address {
+  width: size(450px);
+  margin-right: size(320px);
+
+  @include desktop {
+    margin-right: size(56px);
+  }
+
+  @include tablet {
+    width: size(350px);
+    margin-right: size(153px);
+  }
+
+  @include tablet {
+    width: size(300px);
+    margin-right: size(203px);
+  }
+
+  @include mobile {
+    margin-right: 0;
+  }
+}
+
+.contacts__office-schedule {
+  width: size(300px);
+  margin-top: size(38px);
+
+  @include desktop {
+    margin-top: size(31px);
+  }
+
+  @include tablet {
+    width: size(250px);
+    margin-top: size(23px);
+  }
+
+  @include mobile {
+    width: size(200px);
+    margin-top: size(3px);
+    p {
+      line-height: size(13px);
+    }
+
+  }
+}
+
+.contacts__phone-email {
+  display: flex;
+  flex-direction: column;
+  width: size(450px);
+  margin-right: size(320px);
+
+  a:last-child {
+    padding-left: size(8px);
+
+    @include mobile {
+      padding-left: 0;
+    }
+  }
+
+  @include desktop {
+    margin-right: size(56px);
+  }
+
+  @include mobile {
+    flex-direction: column-reverse;
+    margin-bottom: size(18px);
+    width: size(250px);
+  }
+}
+
+.contacts__telegram-whatsapp {
+  display: flex;
+
+  a {
+    margin: 0;
+    text-decoration: underline;
+    align-items: flex-start;
+    align-self: flex-start;
+
+    &:first-child {
+      margin-right: size(10px);
+
+      @include mobile {
+        margin-right: size(13px);
+      }
+    }
+  }
+}
+
+.contacts__form {
+  margin-top: size(15px);
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: size(52px) size(348px);
+
+    @include desktop {
+      margin-top: 3%;
+      padding-left: 0;
+      margin: size(37px) size(140px);
+    }
+
+    @include tablet {
+      margin: size(37px) size(115px);
+    }
+
+    @include mobile {
+      margin: size(16px) size(26px);
+    }
+
+    h2 {
+      font-size: size(35px);
+      line-height: size(35px);
+      text-align: left;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+
+      padding: 0;
+      margin-top: size(18px);
+      margin-bottom: size(5px);
+
+      @include desktop {
+        font-size: size(30px);
+      }
+
+      @include tablet {
+        font-size: size(25px);
+      }
+
+      @include mobile {
+        font-size: size(28px);
+        line-height: size(28px);
+        margin-top: size(25px);
+        padding-left: size(23px);
+        padding-right: size(65px);
+      }
+    }
+  }
+
+
+
+  fieldset {
+    border: none;
+    border: none;
+    width: size(760px);
+    margin: size(10px) auto size(13px) size(-12px);
+    padding-left: size(14px);
+
+    @include desktop {
+      margin-top: size(2px);
+      width: size(691px);
+    }
+
+    @include tablet {
+      margin-top: size(21px);
+      margin-bottom: size(21px);
+      width: size(610px);
+    }
+
+    @include mobile {
+      margin-top: size(18px);
+      margin-bottom: size(14px);
+      width: size(326px);
+    }
+
+    p {
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      margin-bottom: size(15px);
+      margin-top: 0;
+
+      @include mobile {
+        margin-bottom: size(27px);
+      }
+
+      &.input-error {
+
+        border-bottom: 1px solid $color-red;
+
+        input {
+          color: $color-red;
+          animation: blinker 1.5s linear infinite;
+
+          @keyframes blinker {
+            50% {
+              opacity: 0;
+            }
+          }
+
+          &::-webkit-input-placeholder {
+            color: $color-red;
+          }
+
+          &:-ms-input-placeholder {
+            color: $color-red;
+          }
+
+          &:focus::-webkit-input-placeholder {
+            color: transparent;
+          }
+
+          &:focus::-moz-placeholder {
+            color: transparent;
+          }
+
+          &:focus:-ms-input-placeholder {
+            color: transparent;
+          }
+
+          &:focus:-moz-placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    visibility: hidden;
+  }
+
+  input {
+    width: 100%;
+    height: size(50px);
+    background-color: transparent;
+    padding: 0 size(7px);
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    outline: none;
+
+    font-family: $font-ttnorms;
+    color: $color-white;
+    font-size: size(15px);
+    line-height: size(20px);
+    text-align: left;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+
+
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    &:focus::-moz-placeholder {
+      color: transparent;
+    }
+
+    &:focus:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    &:focus:-moz-placeholder {
+      color: transparent;
+    }
+
+
+
+    @include tablet {
+      font-size: size(12px);
+      line-height: size(12px);
+      height: size(34px);
+      margin-bottom: size(15px);
+    }
+
+    @include mobile {
+      font-size: size(15px);
+      line-height: size(20px);
+      margin-bottom: size(5px);
+      padding-left: size(22px);
+      width: size(296px);
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: $color-white;
+    -webkit-box-shadow: 0 0 0px 1000px $color-blue inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  button.button {
+    width: size(300px);
+    height: size(75px);
+    margin: size(9px) auto size(14px) 0;
+
+    background-color: $color-blue;
+
+    font-family: Austin Cyr;
+    font-size: size(25px);
+    line-height: size(29px);
+    text-align: center;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    outline: none;
+
+    &:hover {
+      color: $color-blue;
+
+      background-color: $color-white;
+
+      transition: 0.3s all ease-in-out;
+    }
+
+    @include tablet {
+      width: size(200px);
+      height: size(70px);
+
+      margin-top: 0;
+      margin-bottom: size(19px);
+
+      font-size: size(20px);
+      line-height: size(24px);
+    }
+
+    @include mobile {
+      width: size(275px);
+      height: size(55px);
+
+      margin: 0 auto size(19px);
+
+      font-size: size(25px);
+      line-height: size(25px);
+    }
+  }
+
+  .button ~ p {
+    width: size(330px);
+    margin-right: auto;
+    margin-left: size(9px);
+
+    font-family: $font-ttnorms;
+    font-size: size(14px);
+    line-height: size(15px);
+    text-align: left;
+    letter-spacing: 0.04em;
+
+    @include tablet {
+      width: size(300px);
+
+      font-size: size(13px);
+      line-height: size(13px);
+    }
+
+    @include mobile {
+      width: size(290px);
+      margin-left: size(25px);
+    }
+  }
+}
+
+.contacts-result__button {
+  width: size(40px);
+  height: size(40px);
+  border: none;
+  background-color: transparent;
+
+  margin: 10% auto 0;
+
+  transition: 0.3s all ease-in-out;
+
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    margin: 4.8% auto 0;
+  }
+
+  @include mobile {
+    margin: 20% auto 0;
+  }
+}
+
+.contacts-result {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-blue;
+  z-index: 1001;
+
+  &--show {
+    display: flex;
+  }
+
+  p {
+    font-family: $font-ttnorms;
+    font-size: size(15px);
+    line-height: size(20px);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    margin: 12.5% auto auto;
+
+    @include tablet {
+      margin-top: size(250px);
+    }
+
+    @include mobile {
+      width: size(280px);
+      margin-top: size(179px);
+    }
+  }
+}

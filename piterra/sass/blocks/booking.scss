@@ -1,0 +1,37 @@
+.booking__picked-items {
+  margin-bottom: 74px;
+}
+
+.booking__flex-wrapper {
+  margin-bottom: 78px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.booking__pagination {
+  flex-grow: 1;
+}
+
+.booking__button {
+  position: relative;
+  width: auto;
+  padding-right: 11px;
+  padding-left: 34px;
+  color: $light-color;
+  background-color: $primary-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 22.5px;
+    height: 20px;
+    margin-top: -10px;
+    background-image: url("../img/icons/icon-cart.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}

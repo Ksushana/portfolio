@@ -1,0 +1,43 @@
+.booking-form__block {
+  padding-left: 19px;
+  padding-right: 20px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.booking-form__input {
+  width: 100%;
+  padding-left: 6px;
+  height: 32px;
+}
+
+.booking-form__field {
+  margin-right: 30px;
+  flex-grow: 1;
+  width: 434px;
+}
+
+.booking-form__select-block {
+  flex-grow: 1;
+}
+
+.booking-form__select {
+  min-height: 32px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.booking-form__filters {
+  margin-bottom: 19px;
+}
+
+.booking-form__filters-select {
+  width: 176px;
+}
+
+.booking-form__multi-selects {
+  margin-bottom: 40px;
+}

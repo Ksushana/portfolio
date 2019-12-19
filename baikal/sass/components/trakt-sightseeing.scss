@@ -1,0 +1,314 @@
+.trakt-sightseeing {
+  margin-bottom: 187px;
+  width: 100%;
+
+  @include tablet {
+    margin-bottom: 57px;
+  }
+}
+
+.trakt-sightseeing__header {
+  text-align: center;
+  padding-bottom: 58px;
+  padding-left: 40px;
+  font-weight: inherit;
+
+  span {
+    color: #E2A13C;
+  }
+
+  @include desktop {
+    padding-left: 0;
+  }
+
+  @include laptop {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include tablet {
+    padding-left: 0;
+    padding-bottom: 39px;
+  }
+
+  @include mobile-wide {
+    padding-bottom: 31px;
+  }
+}
+
+.trakt-sightseeing__slider {
+  width: 100%;
+  margin: 0 auto;
+  // margin-left: 10px;
+  position: relative;
+  padding: 0 110px 0 110px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    width: 110px;
+    height: 100%;
+    background-color: $color-white;
+    z-index: 2;
+
+    @include tablet {
+      width: 55px;
+    }
+
+    @include mobile-wide {
+      width: 22px;
+    }
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  @include tablet {
+    padding: 0 55px;
+  }
+
+  @include mobile-wide {
+    padding: 0 22px;
+  }
+}
+
+
+.trakt-sightseeing-arrow {
+  position: absolute;
+  width: 28px;
+  height: 51px;
+  padding: 0;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  outline: none;
+  z-index: 9999;
+
+
+  svg {
+    fill: #4D88CC;
+    transition: fill 0.3s ease;
+    width: 32px;
+    height: 60px;
+  }
+
+  &--prev {
+    left: 35px;//22px;
+    top: 48%;
+  }
+
+  &--next {
+    transform: translateY(-50%) rotate(180deg);
+    top: 50%;//52%;
+    right: 35px;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $color-orange;
+  }
+
+  @include tablet {
+    svg {
+      width: 16px;
+      height: 57px;
+    }
+
+    &--prev {
+      left: 22px;
+      top: 50%;
+    }
+
+    &--next {
+      right: 22px;
+      top: 52%;
+    }
+  }
+
+  @include mobile-wide {
+    svg {
+      width: 8px;
+      height: 35px;
+    }
+
+    &--prev {
+      left: 0;
+      top: 50%;
+    }
+
+    &--next {
+      right: 0;
+      top: 48%;
+    }
+  }
+}
+
+.trakt-sightseeing__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.trakt-sightseeing__item {
+  position: relative;
+  border-radius: 20px;
+  height: 507px;
+
+  @include desktop {
+    // width: 320px;
+    height: 398px;
+  }
+
+  @include mobile-wide {
+    background-position: center;
+    height: 181px;
+  }
+
+  a {
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    display: block;
+    overflow: hidden;
+    height: 507px;
+    // background-image: url("./../img/hotels__slide1--desktop@1x.jpg");
+    // background-size: cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      // background-image: url("./../img/hotels__slide1--desktop@2x.jpg");
+    }
+
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background-color: rgba(247, 163, 46, 0.562);
+      }
+    }
+
+    @include desktop {
+      height: 398px;
+    }
+
+    @include tablet {
+      height: 398px;
+    }
+
+    @include mobile-wide {
+      background-position: center;
+      height: 181px;
+    }
+  }
+
+  h3 {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    //text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    z-index: 20;
+    padding: 0 10px;
+
+    @include desktop-full {
+      font-size: 20px;//48px;
+      line-height: 28px;//48px;
+      padding: 0 10px;
+    }
+
+    @include desktop {
+      top: 165px;
+      font-size: 20px;//36px;
+      line-height: 28px;//36px;
+    }
+
+    @include laptop {
+      font-size: 20px;//24px;
+      line-height: 28px;//24px;
+      top: 165px;
+    }
+
+    @include mobile-wide {
+      font-size: 20px;//14px;
+      line-height: 22px;//14px;
+      top: 74px;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 271px;
+    right: 0;
+    font-size: 24px;
+    line-height: 64px;
+    color: #ffffff;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #e2a13c;
+    border-radius: 0 0 0 20px;
+    padding: 0 48px;
+    z-index: 20;
+
+    @include laptop {
+      font-size: 18px;
+      line-height: 50px;
+      top: 213px;
+      padding: 0 38px;
+    }
+
+    @include mobile-wide {
+      font-size: 12px;
+      line-height: 25px;
+      top: 96px;
+      padding: 0 11px 0 11px;
+    }
+  }
+}
+
+.trakt-sightseeing__photo {
+  width: 100%;
+  height: 507px;
+  object-fit: cover;
+
+  @include desktop {
+    height: 398px;
+  }
+
+  @include mobile-wide {
+    transform: translateY(-30%);
+  }
+}
+
+.trakt-sightseeing__item-header {
+  text-shadow: none;
+  transition: text-shadow 0.3s ease;
+}
+
+.trakt-sightseeing__item a:hover .trakt-sightseeing__item-header {
+  text-shadow: 5px 3px 2px rgba(43, 19, 11, 0.22);
+}

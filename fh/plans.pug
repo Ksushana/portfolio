@@ -1,0 +1,416 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Искусные планировки';
+  - let isInner = true;
+  - let isPlansPage = true;
+  //- - let isLogoScrollPage = true;
+  - let headerBackground = 'header__menu--plans';
+
+block content
+  .container.plan
+    include pug/phone-icon.pug
+
+    h1.title.title--page.title--big  !{title}
+
+    .choice
+      .swiper-container.choice-container
+        .swiper-wrapper.tabs-links
+          .swiper-slide
+            button.switch-button.switch-button-active( type="button") Визуальный подбор
+          .swiper-slide
+            button.switch-button( type="button")  подбор по параметрам
+
+    ul.plan__tabs.tabs-content
+      li.plan__info.tab.is-active
+        .plan__description
+          ul
+            li
+              a( href='floor-5.html' )
+              div
+                h2 Этаж 5
+                p Доступно 1&nbsp;из&nbsp;3&nbsp;пентхаусов 185&#8209;243&nbsp;м #[sup #[small 2 ]]
+                span Все квартиры проданы
+            li
+              a( href='floor-4.html' )
+              //- .sold-out-floor
+              //- div.soldout
+              div
+                h2 Этаж 4
+                p Доступно 6&nbsp;из&nbsp;6&nbsp;квартир 108&#8209;165&nbsp;м #[sup #[small 2 ]]
+                span Все квартиры проданы
+            li
+              a( href='floor-3.html' )
+              div
+                h2 Этаж 3
+                p Доступно 3&nbsp;из&nbsp;7&nbsp;квартир 64&#8209;164&nbsp;м #[sup #[small 2 ]]
+                span Все квартиры проданы
+            li
+              a( href='floor-2.html' )
+              div
+                h2 Этаж 2
+                p Доступно 5&nbsp;из&nbsp;8&nbsp;квартир 63&#8209;164&nbsp;м #[sup #[small 2 ]]
+                span Все квартиры проданы
+            li
+              a( href='floor-1.html' )
+              div
+                h2 Этаж 1
+                p Доступно 2&nbsp;из&nbsp;4&nbsp;резиденций 53&#8209;91&nbsp;м #[sup #[small 2 ]]
+                span Все квартиры проданы
+
+          .plan__img
+            img(src="img/plan@1x.png" alt="план дома" srcset="img/plan@2x.png" height='587')
+
+        .plan__price
+          p от 700 000 ₽ / м #[sup #[small 2 ]]
+
+      li.plan__table.tab
+        table#table
+          thead
+            tr
+              th(data-sort-method='number')
+                span Лот
+                span Лоты
+                span Резиденция
+              th(data-sort-method='number')
+                span площадь
+                span S, м #[sup #[small 2 ]]
+              th(data-sort-method='number') комнаты
+              th(data-sort-method='number') спальни
+              th(data-sort-method='number') терраса
+              th(data-sort-method='number') этаж
+              th(data-sort-method='number') План
+
+          tbody
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Пентхаус&nbsp;
+                span № 1
+              td 243 #[span м #[sup #[small 2 ]]]
+              td 5
+              td 4
+              td 10 м #[sup #[small 2 ]]
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Пентхаус&nbsp;
+                span № 2
+              td 224 #[span м #[sup #[small 2 ]]]
+              td 5
+              td 3
+              td 6 м #[sup #[small 2 ]]
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr.soldout
+              td ПРОДАНО
+              td
+              td
+              td
+              td
+              td
+              td
+            tr(data-href='/floor-detail-2.5.html')
+
+              td
+                span Квартира&nbsp;&nbsp;
+                span № 4
+              td 65 #[span м #[sup #[small 2 ]]]
+              td 1
+              td 1
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 4
+              td 98 #[span м #[sup #[small 2 ]]]
+              td 3
+              td 2
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 4
+              td 124 #[span м #[sup #[small 2 ]]]
+              td 3
+              td 2
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 7
+              td 243 #[span м #[sup #[small 2 ]]]
+              td 5
+              td 4
+              td -
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 8
+              td 224 #[span м #[sup #[small 2 ]]]
+              td 5
+              td 3
+              td -
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 9
+              td 185 #[span м #[sup #[small 2 ]]]
+              td 4
+              td 3
+              td -
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 10
+              td 65 #[span м #[sup #[small 2 ]]]
+              td 1
+              td 1
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 11
+              td 98 #[span м #[sup #[small 2 ]]]
+              td 3
+              td 2
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 12
+              td 124 #[span м #[sup #[small 2 ]]]
+              td 3
+              td 2
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 13
+              td 243 #[span м #[sup #[small 2 ]]]
+              td 5
+              td 4
+              td -
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 14
+              td 224 #[span м #[sup #[small 2 ]]]
+              td 5
+              td 3
+              td -
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 15
+              td 185 #[span м #[sup #[small 2 ]]]
+              td 4
+              td 3
+              td -
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 16
+              td 65 #[span м #[sup #[small 2 ]]]
+              td 1
+              td 1
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 17
+              td 98 #[span м #[sup #[small 2 ]]]
+              td 3
+              td 2
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 18
+              td 124 #[span м #[sup #[small 2 ]]]
+              td 3
+              td 2
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 19
+              td 243 #[span м #[sup #[small 2 ]]]
+              td 5
+              td 4
+              td -
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 20
+              td 224 #[span м #[sup #[small 2 ]]]
+              td 5
+              td 3
+              td -
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 21
+              td 185 #[span м #[sup #[small 2 ]]]
+              td 4
+              td 3
+              td -
+              td 5
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 22
+              td 65 #[span м #[sup #[small 2 ]]]
+              td 1
+              td 1
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 23
+              td 98 #[span м #[sup #[small 2 ]]]
+              td 3
+              td 2
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Квартира&nbsp;
+                span № 24
+              td 124 #[span м #[sup #[small 2 ]]]
+              td 3
+              td 2
+              td -
+              td 2
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Таунхаус&nbsp;
+                span № 25
+              td 91 #[span м #[sup #[small 2 ]]]
+              td 1
+              td 1
+              td -
+              td 1
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Таунхаус&nbsp;
+                span № 26
+              td 74 #[span м #[sup #[small 2 ]]]
+              td 1
+              td 1
+              td -
+              td 1
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Таунхаус&nbsp;
+                span № 27
+              td 54 #[span м #[sup #[small 2 ]]]
+              td 1
+              td 1
+              td -
+              td 1
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)
+
+            tr(data-href='/floor-detail-2.5.html')
+              td
+                span Таунхаус&nbsp;
+                span № 28
+              td 60 #[span м #[sup #[small 2 ]]]
+              td 1
+              td 1
+              td -
+              td 1
+              td: a( href="#" download ) PDF
+                +svg('download', 13, 13)

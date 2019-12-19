@@ -1,0 +1,81 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Идеальная инженерия';
+  - let isInner = true;
+  - let isEngineeringPage = true;
+  - let headerBackground = 'header__menu--engineering';
+
+block content
+  .container.container-engineering
+
+    h1.title.title--page.title--big !{title}
+
+    .choice
+      .swiper-container.choice-container
+      .swiper-wrapper.tabs-links
+        .swiper-slide
+          button.switch-button.switch-button-active( type="button") конструктив
+        .swiper-slide
+          button.switch-button( type="button") фасад
+        .swiper-slide
+          button.switch-button( type="button") окна
+        .swiper-slide
+          button.switch-button( type="button") лифт
+        .swiper-slide
+          button.switch-button( type="button") электроснабжение
+        .swiper-slide
+          button.switch-button( type="button") водоснабжение
+        .swiper-slide
+          button.switch-button( type="button") водоотведение
+        .swiper-slide
+          button.switch-button( type="button") отопление
+        .swiper-slide
+          button.switch-button( type="button") вентиляция
+        .swiper-slide
+          button.switch-button( type="button") кондиционирование
+        .swiper-slide
+          button.switch-button( type="button") безопасность
+        .swiper-slide
+          button.switch-button( type="button") системы связи
+
+    .tab.is-active
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с&nbsp;подготовкой и&nbsp;увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+    .tab
+      section.engineering
+        p Централизованная, приточно-вытяжная принудительная с подготовкой и увлажнением воздуха. Инновационная система очистки воздуха TION.
+
+block footer
+  .footer-inner
+    a.footer-inner__link.button(href="#") Выбрать незабываемую квартиру

@@ -1,0 +1,22 @@
+@mixin color-opacity($color, $opacity) {
+  color: rgba($color, $opacity);
+}
+
+@mixin bg-opacity($color, $opacity) {
+  background-color: rgba($color, $opacity);
+}
+
+@mixin common-notify($top, $right, $width, $height) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+  height: $height;
+  font-size: 10px;
+  color: $light-color;
+  background-color: #f13c33;
+  border-radius: 50%;
+}

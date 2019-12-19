@@ -1,0 +1,667 @@
+.form {
+  margin-right: 52px;
+  padding: 58px 73px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+  box-shadow: 0 12px 53.58px 3.42px rgba(161, 183, 185, 0.34);
+
+  &--tour {
+    padding: 0;
+    margin-left: 100px;
+    margin-right: 0;
+    margin-top: 78px;
+    width: 365px;
+  }
+
+  &--fixed {
+    width: 360px;
+  }
+
+  &--tour-double {
+    margin-top: 63px;
+  }
+
+  @include laptop {
+    margin-right: 0;
+  }
+
+  @include tablet {
+    margin-top: 72px;
+
+    &--tour-double {
+      margin-top: 63px;
+    }
+  }
+
+  @include mobile-wide {
+    padding: 49px 15px 45px;
+
+    &--tour {
+      width: 100%;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    &--tour-double {
+      margin-top: 63px;
+      border-radius: 0;
+    }
+  }
+}
+
+.form__header--tour {
+  font-family: $font-muller;
+  font-size: 26px;
+  line-height: 77px;
+  width: 100%;
+  min-height: 77px;
+  color: $color-white;
+  background-color: $color-blue;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  padding-right: 5px;
+
+  @include mobile-wide {
+    border-radius: 0;
+  }
+
+  h3 {
+    font-size: 26px;
+    line-height: 77px;
+
+    @include mobile-wide {
+      padding-left: 25px;
+    }
+  }
+}
+
+.form__inner--tour {
+  padding: 22px 33px 39px;
+
+  @include tablet {
+    padding-top: 10px;
+  }
+
+  @include mobile-wide {
+    padding-left: 12px;
+    padding-right: 17px;
+  }
+}
+
+.form fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.form__field {
+  position: relative;
+  margin-bottom: 10px;
+
+  &--required::after {
+    position: absolute;
+    display: inline;
+    content: "*";
+    top: 18px;
+    right: 26px;
+    color: #ff0000;
+  }
+
+  &--page {
+    margin-bottom: 8px;
+  }
+}
+
+.form__select {
+  position: relative;
+  z-index: 100;
+}
+
+.form__select-item {
+  font-family: $font-muller;
+  height: 60px;
+  font-size: 18px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.form__field-select {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+
+.form__field-button {
+  background-color: #cedfe1;
+  height: 46px;
+  width: 35px;
+  position: absolute;
+  right: 1px;
+  top: 2px;
+  bottom: 0;
+  border: none;
+  border-radius: 0 8px 8px  0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    border-left: 1px solid  #abb8b9;
+    border-bottom: 1px solid  #abb8b9;
+    transform: rotate(-45deg);
+    width: 10px;
+    height: 10px;
+    left: 12px;
+    top: 15px;
+  }
+
+
+  &--price {
+    height: 58px;
+
+    &::before {
+      left: 12px;
+      top: 20px;
+    }
+  }
+}
+
+.form__duration {
+  padding-left: 38px;
+  padding-top: 10px;
+
+  &--page {
+    margin-left: 20px;
+    padding-top: 9px;
+    padding-left: 15px;
+  }
+
+  @include mobile-wide {
+    padding-top: 20px;
+    padding-left: 37px;
+  }
+}
+
+.form__duration-count {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    left: -28px;
+  }
+
+  &--day {
+    padding-bottom: 7px;
+  }
+}
+
+.form__sun {
+  fill: #ffb244;
+  position: absolute;
+  left: 6px;
+}
+
+.form__moon {
+  fill: #0088d0;
+  position: absolute;
+  left: 9px;
+}
+
+.form__duration span {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $font-muller;
+}
+
+.form input, .form textarea, .form select {
+  background-color: rgba(216, 216, 216, 0);
+  width: 100%;
+  height: 61px;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-family: $font-roboto;
+  font-size: 16px;
+  line-height: 17px;
+  font-weight: 300;
+  border: 2px solid #cedfe1;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color .3s ease;
+
+  &::placeholder {
+    color: $color-blue-dark;
+  }
+
+  &:focus {
+    border-color: $color-orange;
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.form--tour input,
+.form--tour textarea,
+.form--tour select {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__field--tour input,
+.form__field--tour select:not(.form__select--price) {
+  height: 50px;
+}
+
+.form input[type=text],
+.form input[type=email],
+.form textarea,
+.form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 2px solid #cedfe1;
+  border-radius: 10px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: rgba(216, 216, 216, 0);
+
+  &:hover {
+    border-color: $color-orange;
+  }
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.form--tour input[type=text],
+.form--tour input[type=email],
+.form textarea,
+.form select {
+  padding-left: 18px;
+}
+
+.form textarea {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  height: 103px;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+.form--tour textarea {
+  padding-top: 17px;
+  height: 90px;
+  margin-bottom: 25px;
+  margin-left: 3px;
+
+  @include tablet {
+    padding-top: 22px;
+  }
+}
+
+.form__submit {
+  display: block;
+  width: 306px;
+  min-height: 63px;
+  margin: 0 auto 30px;
+  padding: 15px 30px;
+  padding-top: 17px;
+  padding-bottom: 13px;
+  font-family: $font-muller;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: right;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $color-orange;
+  background: linear-gradient(to right, #ffa819, #ff8619);
+  border-radius: 30px;
+  box-shadow: 0 5px 22.56px 1.44px rgba(255, 132, 25, 0.46);
+  border: none;
+  border-bottom: 2px solid #e16c09;
+  transition: box-shadow .3s ease, border-color .3s ease, background .3s ease;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(to right, $color-orange, $color-orange);
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom-color: transparent;
+  }
+
+  &--tour {
+    width: 300px;
+    padding: 15px 30px 10px;
+  }
+
+  @include mobile-wide {
+    width: 100%;
+    font-size: 20px;//22px;
+    text-align: center;
+
+    &--tour {
+      padding: 15px 30px 10px;
+    }
+  }
+
+  &--landing {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 12px 30px 6px;
+    min-height: 55px;
+    text-align: center;
+  }
+}
+
+.form__notice {
+  padding-right: 16px;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+
+  &--tour {
+    padding-left: 23px;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    padding-top: 3px;
+  }
+
+  a {
+    @include underline;
+    transition: color .3s ease, box-shadow 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: $color-orange;
+    }
+  }
+}
+
+.form__fixed {
+  margin: -230px 0 0 20px;
+  position: sticky;
+  border-radius: 6px;
+  top: 30px;
+  z-index: 20;
+  width: 360px;
+
+  &--exc {
+    margin: -244px 0 0 40px;
+  }
+
+  @include laptop {
+    position: absolute;
+    margin-top: -79px;
+    top: 0;
+    right: 18px;
+    display: none;
+
+    &--exc {
+      margin: -44px 0 0 40px;
+      display: block;
+    }
+  }
+
+  @include tablet {
+    position: absolute;
+    margin-top: -77px;
+    top: 0;
+    right: 18px;
+
+    &--exc {
+      margin: -6px -5px 0 40px;
+      top: -37px;
+    }
+  }
+
+  @include mobile-wide {
+    position: static;
+    order: -1;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+  }
+}
+
+.form__fixed section {
+  @include tablet {
+    position: absolute;
+    margin-top: -77px;
+    top: 0;
+    right: 18px;
+  }
+}
+
+.form__fixed .form__header--tour {
+  border-radius: 6px 6px 0 0;
+
+  @include tablet {
+    line-height: 80px;
+  }
+
+  @include mobile-wide {
+    padding-left: 20px;
+    border-radius: 0;
+  }
+}
+
+.form__fixed .form__inner--tour {
+  padding-top: 8px;
+  padding-left: 27px;
+
+  @include tablet {
+    padding-top: 10px;
+  }
+
+  @include mobile-wide {
+    padding-left: 12px;
+    padding-right: 17px;
+  }
+}
+
+.form__refresh-button {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: none;
+  top: 25px;
+  left: 40px;
+  background-color: $color-blue;
+
+
+  @include tablet {
+    top: 2px;
+    left: 0;
+  }
+
+  @include mobile-wide {
+    top: 2px;
+    left: 0;
+  }
+
+  @include mobile {
+    top: 2px;
+    left: -10px;
+  }
+}
+
+.form__refresh {
+  position: absolute;
+  fill: $color-white;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+
+  &--fixed {
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @include tablet {
+    left: 100px;
+    top: 15px;
+
+    &--fixed {
+      left: 40px;
+      top: 25px;
+    }
+  }
+
+  @include mobile-wide {
+    left: 50px;
+    top: 60px;
+
+    &--fixed {
+      left: 80px;
+      top: 25px;
+    }
+
+    &--double {
+      top: 16px;
+    }
+  }
+
+  @include mobile {
+    left: 30px;
+    top: 60px;
+
+    &--fixed {
+      left: 40px;
+      top: 25px;
+    }
+  }
+}
+
+.form__price {
+  min-height: 48px;
+  font-family: $font-muller;
+  margin-bottom: 18px;
+  margin-top: 12px;
+  padding-left: 3px;
+
+
+  &--exc-page {
+    padding-left: 28px;
+  }
+
+  @include tablet {
+    padding-left: 5px;
+  }
+
+  @include mobile-wide {
+    padding-left: 15px;
+    min-height: 64px;
+    margin-bottom: 9px;
+    margin-top: 20px;
+  }
+
+  @include mobile {
+    padding-left: 3px;
+    font-size: 22px;
+    line-height: 70px;
+    min-height: 74px;
+    margin-top: 0;
+  }
+}
+
+.form__fixed .form__price {
+  min-height: 60px;
+  padding-left: 7px;
+
+  &--exc {
+    padding-top: 6px;
+    padding-left: 8px;
+    font-size: 27px;
+  }
+
+  @include mobile-wide {
+    min-height: 60px;
+    padding-left: 15%;
+    padding-top: 15px;
+    line-height: 57px;
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+
+  @include mobile {
+    min-height: 60px;
+    margin-top: 0;
+    padding-left: 15px;
+    padding-top: 15px;
+
+  }
+}
+
+.form__price-old {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-gray-price;
+  text-decoration: line-through;
+}
+
+.form__price-new {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: $color-red-filter;
+
+}
+
+.form__price-validity {
+  font-size: 12px;
+  line-height: 13px;
+  color: $color-gray-note;
+}
+
+.form__fixed .form__duration {
+  padding-left: 35px;
+
+  @include mobile-wide {
+    padding-top: 5px;
+    padding-left: 37px;
+  }
+}
+
+.form__fixed h3 {
+  padding-left: 5px;
+}
+
+.form__exc-hours {
+  font-family: $font-muller;
+  font-weight: 700;
+  color: #4D88CC;
+      padding-top: 58px;
+    padding-left: 13px;
+    margin-bottom: 24px;
+
+  &--page {
+        padding-top: 53px;
+    padding-left: 28px;
+    margin-bottom: 18px;
+  }
+}
+
+.excursion__clock-hours {
+  position: absolute;
+      top: 19px;
+    left: 18px;
+
+    &--page {
+      top: 13px;
+    left: 35px;
+    }
+}

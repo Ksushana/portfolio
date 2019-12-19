@@ -1,0 +1,251 @@
+.hotels-selection {
+  padding-top: 20px;
+
+  &--trakt {
+    margin: 0 auto;
+    padding-left: 39px;
+
+    .container--big {
+      display: flex;
+      align-items: center;
+      // min-width: 1620px;`
+    }
+  }
+
+  @include desktop {
+    &--trakt {
+      .container {
+        padding-right: 40px;
+        // width: -webkit-fill-available;
+      }
+    }
+  }
+
+
+  @include tablet {
+    &--trakt {
+      padding-left: 0;
+      padding-top: 50px;
+
+      .container--big {
+        align-items: center;
+        flex-direction: column;
+        // min-width: 768px;
+      }
+    }
+  }
+
+  @include mobile-wide {
+    &--trakt {
+      padding-top: 28px;
+
+      .container {
+        padding-right: 0;
+      }
+
+      .container--big {
+        align-items: center;
+        flex-direction: column;
+        min-width: 320px;
+        width: 320px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+
+
+    &--trakt {
+      align-items: center;
+      margin: 0;
+    }
+
+    @include desktop-wide {
+      position: relative;
+      width: 1700px;
+      align-items: center;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}
+
+.hotels-selection--trakt .container {
+  margin-left: auto;
+  margin-right: 0;
+  @include desktop-wide {
+    min-width: 1650px;
+    width: auto;
+  }
+}
+
+
+.hotels-selection__title {
+  font-family: $font-muller;
+  font-size: 4vw;//64px;
+  line-height: 58px;//64px;
+  font-weight: 900;
+  color: #1b2748;
+  // width: 630px;
+  width: 543px;
+  text-align: right;
+
+
+  &--trakt {
+    margin-left: 5px;
+    margin-right: 35px;
+  }
+
+  @include desktop-wide {
+    margin-left: 40px;
+    margin-right: 35px;
+    font-size: 64px;
+    line-height: 64px;
+
+    &--trakt {
+      margin-left: 5px;
+      margin-right: 35px;
+    }
+  }
+
+  @include desktop {
+    font-size: 48px;
+    line-height: 48px;
+
+    &--trakt {
+      font-size: 48px;
+      line-height: 48px;
+      width: 525px;
+    }
+  }
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 48px;
+    width: auto;
+    text-align: center;
+    margin-bottom: 28px;
+
+    &--trakt {
+      margin-left: 243px;
+      margin-right: 35px;
+      margin-bottom: 18px;
+    }
+  }
+
+  @include mobile-wide {
+    font-size: 22px;
+    line-height: 22px;
+    text-align: right;
+    margin-right: 18px;
+    margin-bottom: 7px;
+
+    &--trakt {
+      margin-left: 0;
+      margin-right: 28px;
+    }
+  }
+
+  & b {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  & span {
+    color: #e2a13c;
+  }
+}
+
+.hotels-selection__bar {
+  height: 3px;
+  background: #4d88cc;
+  flex-grow: 1;
+
+  @include tablet {
+    width: 447px;
+    flex-grow: 0;
+    margin-left: auto;
+    margin-right: 21px;
+
+    &--trakt {
+      margin-right: 45px;
+    }
+  }
+
+  @include mobile-wide {
+    width: 176px;
+    margin-right: 20px;
+  }
+}
+
+.hotels-selection__widget-outer {
+  @include laptop {
+    max-width: 950px;
+  }
+}
+
+.hotels-selection__widget {
+  width: 979px;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &--trakt {
+    padding-top: 29px;
+    margin-right: 0;
+  }
+
+  @include desktop-wide {
+    &--trakt {
+      margin-right: 8px;
+    }
+  }
+
+  @include tablet {
+    width: 100%;
+    padding-bottom: 15px;
+
+    &--trakt {
+      padding-top: 24px;
+    }
+  }
+
+  @include mobile-wide {
+    &--trakt {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.hotels-selection__widget .blissey-widget-footer {
+  display: none;
+}
+
+.hotels-selection__button {
+  &--trakt {
+    font-family: $font-muller;
+    display: block;
+    text-align: center;
+    padding: 16px 0;
+    width: 473px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff;
+    background: linear-gradient(90deg, #ECAF32 0%, #E4842A 100%);
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 15px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 14px;
+      width: 240px;
+      padding: 6px 0;
+    }
+  }
+}

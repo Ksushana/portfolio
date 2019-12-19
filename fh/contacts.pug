@@ -1,0 +1,65 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Контакты';
+  - let isInner = true;
+  - let isContactPage = true;
+  - let headerBackground = 'header__menu--contacts';
+
+block content
+  .container.contacts.gradient
+    include pug/phone-icon.pug
+    h1.title.title--page.title--big.contacts__header  !{title}
+
+    .contacts__map.gradient-top
+      .map-office#map( data-center-lat=55.770991 )
+        +route
+
+      //- span.arrow
+      //-   svg(width="57", height="96", viewbox="0 0 57 96", fill="none", xmlns="http://www.w3.org/2000/svg")
+      //-     path(d="M28.5756 22.4202V73.4296", stroke="#002FA6", stroke-width="3", stroke-linecap="round", stroke-linejoin="round")
+      //-     path(d="M40.9734 61.2415L28.5756 73.58L16.0265 61.2415", stroke="#002FA6", stroke-width="3", stroke-linecap="round", stroke-linejoin="round")
+
+    .contacts__info
+      .contacts__address
+        p Адрес Fantastic House
+        p Малая Грузинская, 44
+      .contacts__office
+        .contacts__office-address
+          p Офис продаж в 2-х минутах
+          p Большой Тишинский переулок 43/20 с2
+        .contacts__office-schedule
+          p Понедельник — воскресенье 09:00 — 21.00
+      .contacts__contact-details
+        .contacts__phone-email
+          a( href="tel:+74956787800" ) + 7 495 678 78 00
+          a( href="mailto:SALES@FH.MOSCOW" ) SALES@FH.MOSCOW
+        .contacts__telegram-whatsapp
+          a( href="tg://resolve?domain=" ) Telegram
+          a( href="whatsapp://send?phone=+1234567890" ) whatsapp
+    .contacts__form.order-form
+      form( action="/callback_request" method="post" autocomplete="off")
+        h2 Оставить заявку
+        fieldset
+          p
+            label(for="name")
+            input( id="name" type="text" name="user-name" placeholder="Ваше имя" aria-label="user-name" autocomplete="off")
+          p
+            label(for="tel")
+            input( id="tel" type="tel" placeholder="телефон *" name="user-phone" aria-label="user-phone" autocomplete="off")
+          p
+            label(for="email")
+            input( id="email" type="email" placeholder="Email" name="user-email" aria-label="user-email" autocomplete="off")
+
+        button.button( type="submit" ) Отправить
+        p.
+          Отправляя сообщение, вы&nbsp;подтверждаете согласие на&nbsp;обработку #[a(href="#") персональных данных]
+
+  .contacts-result
+    button.contacts-result__button( type="button" title="Закрыть форму" aria-label="Закрыть форму" )
+      +svg( "cross-radius", 20, 20 )
+    p.contacts-result__text Благодарим за заявку. Мы&nbsp;свяжемся с вами
+
+block bottom
+  script( src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_jY3_nW7rZP_WJt5el5FWKp8rBO9ufF8&callback=initMap"
+    async defer )

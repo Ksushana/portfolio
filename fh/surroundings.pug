@@ -1,0 +1,36 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Удивительное окружение';
+  - let isInner = true;
+  - let isSurroundingsPage = true;
+  - let headerBackground = 'header__menu--fantastic';
+
+block content
+  .container.surraundings.gradient.slider-page
+    include pug/phone-icon-scroll-top.pug
+
+    h1.title.title--page.title--big !{title}
+
+    .choice
+      .swiper-container.choice-container
+        .swiper-wrapper
+          .swiper-slide
+            button.switch-button-active( type="button" ) вокруг малой грузинской
+          .swiper-slide
+            button( type="button" ) Зоопарк
+          .swiper-slide
+            button( type="button" ) патриаршие пруды
+          .swiper-slide
+            button( type="button" ) фудмолл депо.Москва
+
+    section.surraundings-gallery
+      include pug/surraundings-arround.pug
+      include pug/surraundings-zoo.pug
+      include pug/surraundings-ponds.pug
+      include pug/surraundings-depo.pug
+
+
+block footer
+  .footer-inner
+    a.footer-inner__link.button(href="#") Выбрать потрясающую квартиру

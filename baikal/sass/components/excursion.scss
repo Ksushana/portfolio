@@ -1,0 +1,550 @@
+.excursion {
+  font-family: $font-muller;
+
+  @include mobile-wide {
+    padding-top: 20px;
+  }
+
+  @include mobile {
+    padding-left: 15px;
+  }
+}
+
+// .excursion__main {
+//   font-family: $font-muller;
+//   font-size: 16px;
+//   line-height: 16px;
+// }
+
+.excursion__row {
+  padding-top: 0;
+
+  @include mobile-wide {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  @include mobile {
+    width: 290px;
+  }
+}
+
+.excursion__column {
+  display: flex;
+  @include laptop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.excursion__plan,
+.excursion__dates,
+.excursion__price,
+.excursion__included {
+  padding-left: 68px;
+  padding-right: 110px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $font-roboto;
+
+  @include mobile-wide {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.excursion__plan {
+  @include laptop {
+    padding-left: 134px;
+    padding-right: 17px;
+    padding-top: 6px;
+    padding-bottom: 20px;
+  }
+
+  @include tablet {
+    padding-left: 104px;
+    padding-right: 17px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+  }
+
+  @include mobile-wide {
+    margin-top: 18px;
+    padding-left: 77px;
+  }
+}
+
+.excursion__dates {
+  padding-left: 72px;
+  padding-right: 80px;
+
+  @include laptop {
+    padding-left: 134px;
+    padding-right: 0;
+    padding-bottom: 34px;
+  }
+
+  @include tablet {
+    padding-left: 134px;
+    padding-right: 0;
+    padding-bottom: 4px;
+    margin-left: 58px;
+  }
+}
+
+.excursion__plan-row {
+  display: flex;
+}
+
+.excursion__destinations {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 25px;
+
+  @include mobile-wide {
+    font-size: 12px;
+    line-height: 12px;
+    flex-direction: column;
+  }
+}
+
+.excursion__destination-header {
+  margin-bottom: 50px;
+
+  @include tablet {
+    margin-bottom: 41px;
+    position: relative;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @include mobile-wide {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 23px;
+  }
+}
+
+.excursion__destination {
+  font-family: $font-roboto;
+  position: relative;
+  padding-left: 28px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  @include mobile-wide {
+    font-size: 12px;
+    line-height: 12px;
+    padding-left: 14px;
+    padding-bottom: 11px;
+
+    &:first-child {
+      padding-left: 14px;
+    }
+  }
+}
+
+.excursion__destination:first-child svg {
+  display: none;
+
+  @include mobile-wide {
+    display: block;
+  }
+}
+
+.excursion__arrow {
+  position: absolute;
+  transform: rotate(180deg);
+  fill: #4D88CC;
+  top: 1px;
+  left: 7px;
+
+  @include mobile-wide {
+    top: -4px;
+    left: -5px;
+  }
+}
+
+.excursion__destination-header,
+.excursion__dates-header,
+.excursion__price-header,
+.excursion__included-header {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    left: -92px;
+    top: -37px;
+  }
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 16px;
+
+    &::before {
+      top: -30px;
+    }
+
+    @include mobile-wide {
+      font-size: 12px;
+      line-height: 12px;
+
+      &::before {
+        width: 60px;
+        height: 60px;
+        top: -26px;
+        left: -72px;
+      }
+    }
+  }
+}
+
+.excursion__dates {
+  padding-right: 36px;
+
+  @include tablet {
+    padding-right: 0;
+  }
+
+  @include mobile-wide {
+    margin-top: 18px;
+    padding-left: 50px;
+  }
+
+  @include mobile {
+    width: 262px;
+    padding-left: 32px;
+  }
+}
+
+.excursion__dates-header {
+  @include tablet {
+    padding-bottom: 3px;
+  }
+}
+
+.excursion__table {
+  font-family: $font-roboto;
+  font-size: 16px;
+  line-height: 16px;
+  padding-top: 4px;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  @include mobile-wide {
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 6px;
+  }
+}
+
+.excursion__table div:nth-child(2) {
+  @include tablet {
+    padding-left: 0;
+
+    &h2 {
+      margin-top: 14px;
+    }
+  }
+
+  @include mobile-wide {
+    padding-left: 0;
+  }
+}
+
+.excursion__table h4 {
+  @include mobile-wide {
+    margin-bottom: 5px;
+  }
+}
+
+.excursion__table p {
+  padding-left: 41px;
+  line-height: 16px;
+  padding-bottom: 18px;
+
+  @include tablet {
+    line-height: 20px;
+    padding-bottom: 13px;
+
+    // &:nth-child(2) {
+    //       padding-left: 55px;
+    // }
+  }
+
+  @include mobile-wide {
+    padding-bottom: 0;
+  }
+}
+
+.excursion__calendar-small {
+  position: absolute;
+  left: -2px;
+  top: 66px;
+
+  @include laptop {
+    left: -3px;
+    top: 64px;
+  }
+
+  @include tablet {
+    left: -3px;
+    top: 68px;
+  }
+
+  @include mobile-wide {
+    left: -3px;
+    top: 34px;
+  }
+}
+
+.excursion__clock {
+  position: absolute;
+    left: -2px;
+    top: 66px;
+
+  @include laptop {
+    left: -3px;
+    top: 64px;
+  }
+
+  @include tablet {
+    left: -2px;
+    top: 62px;
+  }
+
+  @include mobile-wide {
+    left: -3px;
+    top: 30px;
+  }
+}
+
+.excursion__flag {
+  position: absolute;
+  left: -73px;
+  top: -21px;
+
+  @include tablet {
+    top: -14px;
+  }
+
+  @include mobile-wide {
+    width: 35px;
+    height: 40px;
+    left: -58px;
+    top: -15px;
+  }
+}
+
+.excursion__calendar {
+  position: absolute;
+  left: -74px;
+  top: -20px;
+
+  @include tablet {
+    top: -13px;
+  }
+
+  @include mobile-wide {
+    width: 35px;
+    height: 40px;
+    left: -58px;
+    top: -15px;
+  }
+}
+
+.excursion__price,
+.excursion__included {
+  margin-top: 71px;
+}
+
+.excursion__price {
+  @include laptop {
+    margin-top: 25px;
+    padding-left: 134px;
+    padding-right: 0;
+    padding-bottom: 4px;
+  }
+
+  @include tablet {
+    margin-top: 25px;
+    padding-left: 134px;
+    padding-right: 0;
+    padding-bottom: 4px;
+  }
+
+   @include mobile-wide {
+    margin-top: 22px;
+    padding-left: 77px;
+  }
+}
+
+.excursion__wallet {
+  fill: #619D50;
+  position: absolute;
+  left: -80px;
+  top: -24px;
+
+  @include tablet {
+    top: -17px;
+  }
+
+  @include mobile-wide {
+    left: -61px;
+    top: -17px;
+    width: 40px;
+    height: 37px;
+  }
+}
+
+.excursion__tick {
+  fill: #619D50;
+  position: absolute;
+      left: 0;
+    top: -10px;
+
+  @include mobile-wide {
+    left: -3px;
+    top: -2px;
+    width: 28px;
+    height: 23px;
+  }
+}
+
+.excursion__pricelist {
+  margin-top: 42px;
+
+   @include mobile-wide {
+    margin-top: 21px;
+  }
+}
+
+.excursion__pricelist-item {
+  position: relative;
+  font-size: 16px;
+  line-height: 16px;
+  padding-left: 45px;
+  min-height: 57px;
+
+  @include mobile-wide {
+    font-size: 12px;
+    line-height: 15px;
+    padding-left: 28px;
+    padding-right: 5px;
+    min-height: 39px;
+  }
+}
+
+.excursion__add {
+  font-size: 14px;
+  line-height: 36px;
+  padding-bottom: 12px;
+  color: #787878;
+
+  @include mobile-wide {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.excursion__tick-in-romb {
+  position: absolute;
+  left: -78px;
+  top: -21px;
+
+  @include tablet {
+    top: -16px;
+  }
+
+  @include mobile-wide {
+    left: -62px;
+    top: -14px;
+    width: 40px;
+    height: 37px;
+  }
+}
+
+.excursion__included {
+  padding-right: 40px;
+  padding-left: 72px;
+
+  @include laptop {
+    margin-top: 0;
+    padding-left: 134px;
+    padding-right: 0;
+    padding-bottom: 4px;
+  }
+
+  @include tablet {
+    margin-top: 0;
+    padding-left: 193px;
+    padding-right: 0;
+    padding-bottom: 4px;
+  }
+
+  @include mobile-wide {
+    margin-top: 7px;
+    padding-left: 77px;
+  }
+}
+
+.excursion__included-list {
+  margin-top: 42px;
+
+  @include mobile-wide {
+    margin-top: 19px;
+    padding-left: 4px;
+  }
+}
+
+.excursion__included-item {
+  position: relative;
+  font-size: 16px;
+  line-height: 16px;
+  padding-left: 45px;
+  min-height: 60px;
+
+  @include mobile-wide {
+    font-size: 12px;
+    line-height: 12px;
+    padding-left: 24px;
+    min-height: 41px;
+  }
+}
+
+.excursion__included-tick {
+  fill: #E2A13C;
+  position: absolute;
+      left: 0;
+    top: -10px;
+
+  @include mobile-wide {
+    left: -5px;
+    top: -2px;
+    width: 28px;
+    height: 23px;
+  }
+}
+
+.excursion__outer {
+  @include mobile-wide {
+    display: flex;
+    flex-direction: column;
+  }
+}

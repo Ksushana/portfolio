@@ -1,0 +1,19 @@
+@function size($size-in-px) {
+  @return $size-in-px / $font-base * 1rem;
+}
+
+@function size-desktop-wide($size-in-px) {
+  @return $size-in-px / $width-desktop-wide-layout * 100vw;
+}
+
+@function size-desktop($size-in-px) {
+  @return $size-in-px / $width-desktop-layout * 100vw;
+}
+
+@function size-tablet($size-in-px) {
+  @return $size-in-px / $width-tablet-layout * 100vw;
+}
+
+@function size-mobile($size-in-px) {
+  @return $size-in-px / $width-mobile-layout * 100vw;
+}

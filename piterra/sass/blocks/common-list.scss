@@ -1,0 +1,133 @@
+.common-list {
+  color: #727272;
+  background-color: $light-color;
+}
+
+.common-list__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 14px;
+  padding-bottom: 9px;
+  letter-spacing: 0.6px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.common-list__title-text {
+  margin: 0;
+  font-family: $fontSerif;
+  font-weight: $regular;
+  font-size: 16px;
+  color: $dark-text;
+  text-transform: uppercase;
+}
+
+.common-list__content {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.common-list__link {
+  display: flex;
+  padding-top: 6px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+  padding-left: 18px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.common-list__img {
+  width: 53px;
+  height: 53px;
+  margin-right: 10px;
+}
+
+.common-list__date {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 9px;
+  width: 83px;
+  min-width: 83px;
+}
+
+.common-list__day {
+  margin-bottom: 7px;
+  font-family: $fontSerif;
+  font-size: 16px;
+}
+
+.common-list__month {
+  font-size: 12px;
+
+  @include color-opacity($default-text, 0.5);
+}
+
+.common-list__time,
+.common-list__timezone {
+  font-size: 13px;
+  color: #727272;
+}
+
+.common-list__caption {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+.common-list__more {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 17px;
+  padding-left: 18px;
+  font-size: 13px;
+}
+
+@media (max-width: $mobile-width) {
+  .common-list {
+    width: 260px;
+  }
+
+  .common-list__title {
+    padding: 10px;
+  }
+
+  .common-list__title span {
+    font-size: 14px;
+  }
+
+  .common-list__link {
+    font-size: 12px;
+  }
+
+  .common-list__img {
+    display: none;
+  }
+
+  .common-list__date {
+    width: 70px;
+    min-width: 70px;
+    margin-right: 10px;
+    margin-left: 0;
+  }
+
+  .common-list__caption {
+    font-size: 12px;
+  }
+
+  .common-list__day {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .common-list__more {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

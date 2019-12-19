@@ -1,0 +1,78 @@
+.container {
+  &--no-padding-all {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &--choice {
+    .advice {
+      margin-bottom: 70px;
+    }
+  }
+
+  @include tablet {
+    padding: 0 15px;
+
+    &--choice {
+      .advice {
+        margin-bottom: 29px;
+      }
+    }
+
+    &--article {
+      padding: 0;
+    }
+
+    &--new {
+      padding: 0;
+    }
+
+    &--big {
+      width: auto;
+      padding: 0;
+    }
+
+    &--no-padding-all {
+      padding: 0;
+    }
+  }
+
+  @include mobile-wide {
+    // padding: 0;
+    &--no-padding {
+      padding: 0;
+    }
+
+    &--new {
+    //  padding: 0 15px;
+    }
+
+    &--no-padding-all {
+      padding: 0;
+    }
+
+    &--choice {
+      .advice__picture {
+        margin-bottom: 38px;
+      }
+
+      .advice {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1140px;
+
+    &--no-padding-all {
+      width: 100%;
+    }
+
+    &--big {
+      width: 100%;
+      max-width: 1700px;
+    }
+  }
+}

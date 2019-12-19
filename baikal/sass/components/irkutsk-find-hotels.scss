@@ -1,0 +1,23 @@
+.irkutsk-find-hotels {
+  margin-top: 77px;
+  margin-bottom: 50px;
+
+  @include mobile-wide {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.irkutsk-find-hotels h2 {
+  margin-bottom: 30px;
+}
+
+.irkutsk-find-hotels__block {
+  background-color: $color-blue-light-bg;
+  padding: 50px 0;
+
+  @include laptop {
+    background-color: transparent;
+    padding: 0;
+  }
+}

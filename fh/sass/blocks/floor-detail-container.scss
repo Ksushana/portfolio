@@ -1,0 +1,46 @@
+.floor-detail-container {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+
+  .tab-gallery {
+    flex-grow: 2;
+    background-color: $color-blue;
+  }
+
+  .choice {
+    padding-bottom: size(70px);
+    background-color: $color-blue;
+
+    @include desktop {
+      padding-bottom: size(20px);
+    }
+
+    @include tablet {
+      padding-bottom: 41px;
+    }
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    padding-top: size(150px);
+    padding-bottom: size(70px);
+    margin: 0;
+    background-color: $color-blue;
+
+    @include desktop {
+      padding-top: size(95px);
+    }
+
+    @include tablet {
+      padding-top: size(74px);
+      padding-bottom: size(40px);
+    }
+  }
+}

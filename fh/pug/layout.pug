@@ -1,0 +1,155 @@
+include mixins
+
+block variables
+- let mainTitle = "Фантастический дом";
+
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    title #{mainTitle} !{title && "| " + title}
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="csrf-token" content="token-value")
+    link( rel="preload" href="fonts/AustinCyr-Italic.woff2" as="font" type="font/woff2" )
+    link( rel="preload" href="fonts/AustinCyr-Roman.woff2" as="font" type="font/woff2" )
+    link( rel="preload" href="fonts/TTNorms-Regular.woff2" as="font" type="font/woff2" )
+    link( rel="preload" href="img/sprite.svg" as="image" )
+    link( rel="stylesheet" href="css/style.min.css" )
+    link( rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" )
+    link( rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" )
+    link( rel="icon" type="image/png" sizes="192x192"  href="android-chrome-192x192.png" )
+    link( rel="icon" type="image/png" sizes="512x512"  href="android-icon-512x512.png" )
+    link( rel="apple-touch-icon"  href="apple-touch-icon.png" )
+    link( rel="manifest" href="manifest.json" )
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js")
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+    block head
+    noscript
+      style.
+        .header__menu {
+          display: block;
+          position: static;
+          height: 100vh;
+        }
+        .header__menu-close,
+        .header__menu-open {
+          display: none;
+        }
+        .header__logo {
+          display: none;
+        }
+
+  body
+    header.header
+      .header__wrapper
+        button.header__menu-open.header__menu-button( type="button" title="Открыть меню" aria-label="Открыть меню" )
+          svg( width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg" )
+            path( d="M0.658514 0.0130615C0.277099 0.0475443 -0.0349674 0.357881 -0.000293375 0.737191C0.0343807 1.1165 0.346447 1.42685 0.727862 1.39237H24.3062C24.6876 1.39237 24.9997 1.08203 24.9997 0.702717C24.9997 0.323406 24.6876 0.0130615 24.3062 0.0130615C24.3062 0.0130615 24.3062 0.0130615 24.2716 0.0130615H0.693188C0.693188 0.0130615 0.693188 0.0130615 0.658514 0.0130615ZM0.658514 9.32341C0.277099 9.35789 -0.0349674 9.66822 -0.000293375 10.0475C0.0343807 10.4268 0.346447 10.7372 0.727862 10.7027H24.3062C24.6876 10.7027 24.9997 10.3924 24.9997 10.0131C24.9997 9.63375 24.6876 9.32341 24.3062 9.32341C24.3062 9.32341 24.3062 9.32341 24.2716 9.32341H0.693188C0.693188 9.32341 0.693188 9.32341 0.658514 9.32341Z" fill="white" fill-opacity="1" )
+        a.header__logo( class=(isMain ? 'header__logo--main' : null ) class=(logoNoScroll ? 'header__logo--noscroll' : null ) class=(isLogoScrollPage ? 'header__logoscroll' : null ) class=(tabletNoLogo ? 'tablet-hide' : null) href=(isMain ? null : 'main.html') aria-label="Ссылка на главную страницу" )
+          +svg-logo-new
+          +svg-logo-mobile
+
+      div(class=('header__menu') class=(isMain ? 'header__menu--main' : null ))
+        button.header__menu-close.header__menu-button( type="button" title="Закрыть меню" aria-label="Закрыть меню" )
+          +svg( "cross-radius", 20, 20 )
+        a.header__menu-logo( href=(isMain ? null : 'main.html') )
+          +svg( "fh_logo", '15.6vw', '15.6vw' )
+
+        ul
+          li
+            a( href=(isLocationPage ? '#' : 'location.html') class=(isInner ? 'inner' : null) class=(isLocationPage ? 'active' : null) ) Правильное расположение
+          li
+            span.desktop
+              +svg( "cross", 54, 54 )
+            span.tablet
+              +svg( "cross", 54, 54 )
+            a( href=(isSurroundingsPage ? '#' : 'surroundings.html') class=(isInner ? 'inner' : null) class=(isSurroundingsPage ? 'active' : null) ) Удивительное окружение
+          li.new-line
+          li
+            a( href=(isFlatsPage ? '#' : 'flats.html') class=(isInner ? 'inner' : null) class=(isFlatsPage ? 'active' : null) ) 24 невероятные квартиры
+          li
+            span.desktop
+              +svg( "cross", 54, 54 )
+            span.tablet
+              +svg( "cross", 54, 54 )
+            a( href=(isPenthousesPage ? '#' : 'penthouses.html') class=(isInner ? 'inner' : null) class=(isPenthousesPage ? 'active' : null) ) Исключительные пентхаусы
+            span.tablet-after
+              +svg( "cross", 54, 54 )
+          li.new-line.new-line--tablet
+          li
+            span.desktop
+              +svg( "cross", 54, 54 )
+            a( href=(isResidencesPage ? '#' : 'residences.html') class=(isInner ? 'inner' : null) class=(isResidencesPage ? 'active' : null) ) Резиденции с патио
+          li
+            span.tablet
+              +svg( "cross", 54, 54 )
+            a( href=(isPlansPage ? '#' : 'plans.html') class=(isInner ? 'inner' : null) class=(isPlansPage ? 'active' : null) ) Искусные планировки
+          li
+            span.desktop
+              +svg( "cross", 54, 54 )
+            span.tablet
+              +svg( "cross", 54, 54 )
+            a( href=(isGardenPage ? '#' : 'garden.html') class=(isInner ? 'inner' : null) class=(isGardenPage ? 'active' : null) ) Таинственный сад
+          li
+            span.desktop
+              +svg( "cross", 54, 54 )
+            a( href=(isLobbyPage ? '#' : 'lobby.html') class=(isInner ? 'inner' : null) class=(isLobbyPage ? 'active' : null) ) Незабываемое лобби
+          li
+            span.desktop
+              +svg( "cross", 54, 54 )
+            span.tablet
+              +svg( "cross", 54, 54 )
+            a( href=(isEngineeringPage ? '#' : 'engineering.html') class=(isInner ? 'inner' : null) class=(isEngineeringPage ? 'active' : null) ) Идеальная инженерия
+          li
+            span.desktop
+              +svg( "cross", 54, 54 )
+            span.tablet
+              +svg( "cross", 54, 54 )
+            a( href=(isOfficePage ? '#' : 'office.html') class=(isInner ? 'inner' : null) class=(isOfficePage ? 'active' : null) ) Впечатляющий офис&nbsp;продаж
+            span.desktop.desktop--right
+              +svg( "cross", 54, 54 )
+          li.new-line
+          li
+            span.desktop
+              +svg( "cross", 54, 54 )
+            span.tablet
+              +svg( "cross", 54, 54 )
+            a( href=(isTeamPage ? '#' : 'team.html') class=(isInner ? 'inner' : null) class=(isTeamPage ? 'active' : null) ) Компетентная команда
+          li
+            span.desktop.equal
+              +svg( "equal", 45, 22 )
+            span.tablet
+              +svg( "equal", 45, 22 )
+            a( href=(isFHPage ? '#' : 'fantastic-house.html') class=(isInner ? 'inner' : null) class=(isFHPage ? 'active' : null) ) Fantastic house
+
+
+        ul
+          li: a( href=(isGalleryPage ? '#' : 'gallery.html') class=(isInner ? 'inner' : null) class=(isGalleryPage ? 'active' : null) ) Галерея
+          li: a( href=(isProgressPage ? '#' : 'progress.html') class=(isInner ? 'inner' : null) class=(isProgressPage ? 'active' : null) ) Ход строительства
+          li: a( href=(isDocumentationPage ? '#' : 'documentation.html') class=(isInner ? 'inner' : null) class=(isDocumentationPage ? 'active' : null) ) Документация
+          li: a( href=(isContactPage ? '#' : 'contacts.html') class=(isInner ? 'inner' : null) class=(isContactPage ? 'active' : null) ) Контакты
+          li: a( href='presentation.html' class=(isInner ? 'inner' : null) class=(isPresentationPage ? 'active' : null) ) Презентация
+
+
+        .header__menu-contacts
+          p Дом на Малой Грузинской, 44
+          p #[span Оставить заявку] #[a( href='tel:+74956787800' ) + 7 495 678 78 00]
+
+    main
+      block content
+
+    footer
+      block footer
+
+    include form-popup.pug
+
+    block scripts
+
+    script( src="js/script.js" )
+    script.
+      svg4everybody();
+      objectFitImages();
+
+    block bottom

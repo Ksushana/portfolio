@@ -1,0 +1,54 @@
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  padding: size(95px) size(20px) size(99px);
+
+  background: $color-blue;
+
+  @include desktop {
+    padding: size(63px) 0 size(66px);
+  }
+
+  @include tablet {
+    padding: size(24px) size(10px) size(73px);
+  }
+
+  @include mobile {
+    padding: size(30px) size(5px) size(42px);
+  }
+}
+
+.footer-inner__link {
+  min-width: size(606px);
+  min-height: size(115px);
+  padding: 0 size(40px);
+
+  @include description-text;
+
+
+  @include desktop {
+    min-width: size(530px);
+    min-height: size(80px);
+    font-size: size(30px);
+    line-height: 1.1;
+    border-radius: size(42px);
+  }
+
+  @include tablet {
+    min-width: size(430px);
+    padding: 0 size(20px);
+    min-height: size(70px);
+    font-size: size(25px);
+    line-height: sixe(30px);
+    border-radius: size(42px);
+  }
+
+  @include mobile {
+    min-width: size(342px);
+    min-height: size(55px);
+    font-size: size(16px);
+    line-height: size(35px);
+    border-radius: size(42px);
+    text-transform: uppercase;
+  }
+}

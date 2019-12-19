@@ -1,0 +1,160 @@
+.look {
+  min-width: 320px;
+  padding-top: 79px;
+  width: 100%;
+  padding-bottom: 50px;
+
+  .container {
+    position: relative;
+
+    @include desktop-wide {
+      width: 1700px;
+    }
+
+    @include mobile-wide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @include tablet {
+    padding-top: 59px;
+  }
+}
+
+.look__title-wrapper {
+  width: 950px;
+  margin-bottom: 70px;
+  margin-right: 360px;
+
+  @include desktop-wide {
+    margin-left: 84px;
+    width: 1200px;
+    margin-right: 360px;
+  }
+
+  @include desktop {
+    // width: auto;
+    width: 950px;
+  }
+
+  @include laptop {
+    width: 800px;
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    width: 410px;
+    margin-bottom: 20px;
+  }
+
+  @include mobile-wide {
+    order: 1;
+    width: auto;
+    margin-bottom: 14px;
+    margin-right: 0;
+  }
+}
+
+.look__title {
+  font-family: $font-muller;
+  font-size: 64px;
+  line-height: 58px;
+  color: #1b2748;
+  text-align: right;
+  font-weight: 900;
+
+  @include desktop {
+    font-size: 4vw;
+  }
+
+  @include laptop {
+    font-size: 4.2vw;
+  }
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 44px;
+  }
+
+  @include mobile-wide {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  & span {
+    color: #e2a13c;
+  }
+}
+
+.look__subtitle {
+  font-family: $font-muller;
+  font-size: 48px;
+  line-height: 48px;
+  color: #4d88cc;
+  text-align: right;
+  font-weight: 900;
+
+  @include desktop {
+    font-size: 3.1vw;
+  }
+
+  @include laptop {
+    font-size: 3.5vw;
+  }
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @include mobile-wide {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.look__widget {
+  width: 360px;
+  box-shadow: 0 0 20px #E2A13C;
+  position: absolute;
+  right: 10px;
+  // top: -230px;
+  top: -480px;
+
+  @include desktop-wide {
+    right: 246px;
+    top: -480px;
+  }
+
+  @include desktop {
+    right: -2px;
+    top: -480px;
+  }
+
+  @include laptop {
+    top: -480px;
+  }
+
+  @include tablet {
+    width: 294px;
+    right: 10px;
+    top: -226px;
+  }
+
+  @include mobile-wide {
+    display: block;
+    width: 296px;
+    position: static;
+    order: 0;
+    margin-top: -110px;
+    margin-bottom: 62px;
+    // margin-left: auto;
+  }
+}
+
+.look__widget .mewtwo-hotels--xs .mewtwo-widget .mewtwo-hotels-guests {
+  margin-bottom: 10px!important;
+}
+

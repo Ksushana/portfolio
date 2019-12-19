@@ -1,0 +1,153 @@
+.more-tours {
+  margin-bottom: 12px;
+
+  @include tablet {
+    padding-top: 22px;
+    margin-bottom: 45px;
+  }
+
+  @include mobile-wide {
+    padding: 7px 15px 25px;
+  }
+
+  &--article {
+    @include tablet {
+      padding-top: 14px;
+    }
+  }
+}
+
+.more-tours__moto {
+  font-family: $font-muller;
+  font-size: 48px;
+  line-height: 62px;
+  margin-left: -5px;
+  color: $color-blue-dark;
+
+  &--b {
+    font-weight: 900;
+  }
+
+  &--b-exc {
+    padding-left: 16px;
+  }
+
+  &--s-exc {
+    font-size: 36px;
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+
+  @include laptop {
+    &--b-exc {
+      font-size: 40px;
+      line-height: 40px;
+      display: block;
+      // padding-left: 53px;
+      // padding-right: 64px;
+      // margin-bottom: 11px;
+    }
+
+    &--s-exc {
+      font-size: 30px;
+      line-height: 30px;
+      display: block;
+      padding-top: 20px;
+      // padding-left: 53px;
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 22px;
+
+    &--s {
+      font-size: 32px;
+      line-height: 48px;
+      margin-top: -2px;
+    }
+
+    &--b-exc {
+      font-size: 48px;
+      line-height: 48px;
+      display: block;
+      padding-left: 53px;
+      padding-right: 34px;
+      margin-bottom: 11px;
+    }
+
+    &--s-exc {
+      font-size: 36px;
+      line-height: 36px;
+      display: block;
+      padding-left: 53px;
+    }
+  }
+
+  @include mobile-wide {
+    &--b {
+      padding-left: 22px;
+    }
+
+    &--s {
+      padding-left: 22px;
+    }
+
+    &--b-exc {
+      font-size: 22px;
+      line-height: 22px;
+      padding-left: 10px;
+      padding-right: 0;
+    }
+
+    &--s-exc {
+      font-size: 14px;
+      line-height: 14px;
+      display: block;
+      padding-left: 10px;
+      padding-right: 0;
+      font-weight: 300;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 15px;
+
+    &--b {
+      font-size: 32px;
+      line-height: 45px;
+      padding-left: 0;
+    }
+
+    &--s {
+      font-size: 20px;
+      line-height: 32px;
+      font-weight: 700;
+      padding-left: 0;
+    }
+
+    &--b-exc {
+      font-size: 22px;
+      line-height: 22px;
+      padding-left: 10px;
+      padding-right: 0;
+    }
+
+    &--s-exc {
+      font-size: 14px;
+      line-height: 14px;
+      display: block;
+      padding-left: 10px;
+      padding-right: 0;
+      font-weight: 300;
+    }
+  }
+}
+
+
+.more-tours-popular {
+  margin-top: 41px;
+
+  @include tablet {
+    margin-top: 6px;
+  }
+}

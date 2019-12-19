@@ -1,0 +1,113 @@
+.checkbox {
+  display: flex;
+  flex-direction: column;
+
+  &--open {
+    height: auto;
+  }
+
+}
+
+.checkbox__label {
+  //margin: 0;
+  //padding: 0;
+  margin-bottom: 1px;
+  padding-left: 26px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s ease;
+
+    svg {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -2px;
+    left: 0;
+
+    stroke: #aacace;
+    stroke-width: 50;
+    fill: #ffffff;
+    transition: fill 0.3s ease;
+  }
+
+  &.checked,
+  &:hover.checked {
+    color: $color-orange;
+  }
+
+  &.checked svg
+  {
+    stroke:  $color-orange;
+    fill: $color-orange;
+  }
+
+  &:hover svg {
+    stroke:  $color-orange-lite;
+  }
+
+  &:hover.checked svg {
+    stroke:  $color-orange;
+  }
+
+  &--new {
+    color: $color-red-filter;
+
+    svg {
+      stroke: $color-red-filter;
+    }
+
+    &.checked {
+      color: $color-red-filter;
+    }
+
+    &.checked svg {
+      stroke:  $color-red-filter;
+      fill: $color-red-filter;
+    }
+
+    &:hover,
+    &.checked:hover {
+      color: $color-black;
+    }
+
+    &:hover svg {
+      stroke:  $color-orange-lite;
+    }
+
+    &:hover.checked svg {
+      stroke:  $color-red-filter;
+    }
+  }
+}
+
+
+.checkbox__p {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding-left: 26px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  position: relative;
+  color: $color-gray-line;
+
+  svg {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+
+    stroke: #aacace;
+    stroke-width: 50;
+    fill: #ffffff;
+  }
+}
+
+
+.checkbox__item {
+  line-height: 21px;
+  width: 230px;
+}

@@ -1,0 +1,385 @@
+.route {
+  padding-top: 50px;
+
+  &--exc {
+    padding-left: 4px;
+    padding-top: 35px;
+  }
+
+  @include tablet {
+    padding-top: 30px;
+
+    &--exc {
+      padding-top: 23px;
+    }
+  }
+
+  @include mobile-wide {
+    padding-top: 20px;
+
+    &--exc {
+      padding-top: 0;
+    }
+  }
+}
+
+.route__gide {
+  @include laptop {
+    margin-top: 8px;
+  }
+
+  @include mobile-wide {
+    margin-top: 3px;
+    padding-left: 11px;
+
+    &--exc {
+      margin-top: 0;
+    }
+  }
+}
+
+.route__gide--exc p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.route__header {
+  font-family: $font-muller;
+  font-size: 48px;
+  line-height: 55px;
+  font-weight: 900;
+  color: $color-blue-dark;
+  padding-bottom: 11px;
+
+  &--exc {
+    padding-bottom: 23px;
+    font-size: 62px;
+    line-height: 64px;
+  }
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 55px;
+
+    &--exc {
+      text-align: center;
+      padding-left: 4px;
+      padding-top: 2px;
+      // font-size: 48px;
+    }
+  }
+
+  @include mobile-wide {
+    // font-size: 32px;
+    padding-bottom: 8px;
+
+    &--exc {
+      // font-size: 22px;
+      // line-height: 22px;
+      // padding-left: 53px;
+      text-align: left;
+      margin-bottom: 9px;
+    }
+  }
+
+  @include mobile {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.route__intro {
+  font-family: $font-roboto;
+  padding-left: 2px;
+  line-height: 24px;
+
+  @include tablet {
+    &--exc {
+
+      padding-left: 47px;
+    }
+  }
+
+  @include mobile-wide {
+    padding-right: 20px;
+
+    &--exc {
+
+      padding-left: 2px;
+    }
+  }
+}
+
+.route__destinations {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 92px;
+  padding-top: 53px;
+  padding-bottom: 30px;
+
+  @include desktop {
+    padding-bottom: 30px;
+  }
+
+  @include mobile-wide {
+    padding-top: 40px;
+    padding-left: 78px;
+    padding-right: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.route__flag {
+  position: absolute;
+  left: -71px;
+  top: -10px;
+
+  @include mobile-wide {
+    width: 35px;
+    height: 40px;
+    left: -58px;
+    top: -14px;
+  }
+}
+
+
+.route__destination {
+  line-height: 24px;
+  position: relative;
+
+  &:first-child {
+    padding-right: 5px;
+  }
+
+  &--arrow {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-right: 1px solid $color-blue-arrow;
+      border-top: 1px solid $color-blue-arrow;
+      width: 7px;
+      height: 7px;
+      transform: rotate(45deg);
+      left: 14px;
+      top: 8px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      border-top: 1px solid $color-blue-arrow;
+      width: 16px;
+      height: 1px;
+      top: 11px;
+      left: 6px;
+    }
+  }
+}
+
+.route__price {
+  padding-left: 92px;
+  margin-top: 40px;
+
+  @include mobile-wide {
+    padding-left: 78px;
+    padding-right: 40px;
+    margin-top: 33px;
+  }
+}
+
+.route__wallet {
+  fill: $color-green-bright;
+  left: -79px;
+  top: -14px;
+  position: absolute;
+
+  @include mobile-wide {
+    width: 40px;
+    height: 37px;
+    left: -60px;
+    top: -17px;
+  }
+}
+
+.route__price-heading {
+  position: relative;
+  font-size: 16px;
+
+  @include mobile-wide {
+  }
+}
+
+.route__pricelist {
+  margin-top: 35px;
+  padding-left: 34px;
+
+  @include mobile-wide {
+    padding-left: 0;
+  }
+}
+
+.route__pricelist-item {
+  margin-bottom: 22px;
+  position: relative;
+
+  &:nth-child(3) {
+    margin-bottom: 27px;
+  }
+
+  @include laptop {
+    margin-bottom: 21px;
+
+    &:nth-child(3) {
+      margin-bottom: 28px;
+    }
+  }
+
+  @include mobile-wide {
+    line-height: 21px;
+    margin-bottom: 21px;
+
+    &:nth-child(3) {
+      margin-bottom: 23px;
+    }
+  }
+}
+
+.route__class {
+  line-height: 22px;
+
+  @include mobile-wide {
+    line-height: 21px;
+  }
+}
+
+.route__tick {
+  fill: #329e49;
+  left: -31px;
+  position: absolute;
+  top: 2px;
+}
+
+.route__price-info {
+  font-size: 14px;
+  line-height: 18px;
+
+  @include mobile-wide {
+    line-height: 22px;
+  }
+}
+
+.route__dates {
+  padding-left: 92px;
+  margin-top: 46px;
+
+  @include tablet {
+    margin-top: 49px;
+  }
+
+  @include mobile-wide {
+    padding-left: 72px;
+    margin-top: 60px;
+    margin-left: 7px;
+  }
+}
+
+.route__calendar {
+  position: absolute;
+  left: -74px;
+  top: -8px;
+  fill: $color-orange;
+
+  @include mobile-wide {
+    width: 35px;
+    height: 40px;
+    left: -58px;
+    top: -15px;
+  }
+}
+
+.route__dates-info {
+  width: 640px;
+  text-align: left;
+  margin-top: 22px;
+  margin-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile-wide {
+    width: 200px;
+    flex-direction: column;
+  }
+}
+
+.route__dates-info tr {
+  @include mobile-wide {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.route__dates-full {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 8px;
+
+  &::before {
+    position: absolute;
+    content: "—";
+    color: $color-bright-orange;
+    left: 0;
+  }
+}
+
+.route__destination-header,
+.route__dates-header,
+.route__price-header,
+.route__included-header {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    left: -92px;
+    top: -28px;
+  }
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 16px;
+
+    &::before {
+      top: -28px;
+    }
+
+    @include mobile-wide {
+      font-size: 12px;
+      line-height: 12px;
+
+      &::before {
+        width: 60px;
+        height: 60px;
+        top: -26px;
+        left: -72px;
+      }
+    }
+  }
+}
+
+.route__dates-header strong {
+  @include mobile-wide {
+    font-size: 16px;
+  }
+}

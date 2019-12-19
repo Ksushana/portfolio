@@ -1,0 +1,75 @@
+.floors-container {
+  .title {
+    padding-top: size(150px);
+    padding-bottom: size(70px);
+    margin: 0;
+
+    @include desktop {
+      padding-top: size(95px);
+    }
+
+    @include tablet {
+      padding-top: size(74px);
+      padding-bottom: size(40px);
+    }
+  }
+
+  .choice {
+    padding-bottom: size(70px);
+
+    @include desktop {
+      padding-bottom: size(20px);
+    }
+
+    @include tablet {
+      padding-bottom: 41px;
+    }
+
+    .swiper-wrapper {
+      align-items: center;
+      justify-content: center;
+
+      .swiper-slide {
+        .switch-button,
+        button {
+          min-width: size(140px);
+          margin-right: size(13px);
+        }
+      }
+    }
+
+    .tabs-links {
+      a:not(.switch-button) {
+        display: inline-block;
+        margin-right: size(32px);
+
+        font-size: size(12px);
+        line-height: size(15px);
+        letter-spacing: 0.04em;
+        font-family: $font-ttnorms;
+        text-transform: uppercase;
+
+        svg {
+          margin-right: size(13px);
+
+          path {
+            transition: 0.5s all ease-in-out;
+          }
+        }
+
+        &:hover {
+          svg {
+            path {
+              fill-opacity: 1;
+              transition: 0.5s all ease-in-out;
+            }
+          }
+        }
+
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+  }
+}

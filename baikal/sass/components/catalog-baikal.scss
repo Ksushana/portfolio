@@ -1,0 +1,268 @@
+.catalog-baikal {
+  margin: 0;
+  padding: 0;
+  padding-left: 7px;
+  font-family: $font-muller;
+  position: relative;
+
+  @include laptop {
+    padding-left: 0;
+  }
+}
+
+.catalog-baikal h2 {
+  margin-top: 5px;
+  margin-bottom: 22px;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 55px;
+  color: $color-black;
+
+  @include tablet {
+    margin-top: 14px;
+  }
+
+  @include mobile-wide {
+    margin-top: 0;
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  @include mobile {
+    margin-bottom: 5px;
+  }
+}
+
+.catalog-baikal__intro {
+  font-family: $font-roboto;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 300;
+  margin-bottom: 40px;
+
+  @include mobile-wide {
+    width: auto;
+    margin-bottom: 25px;
+  }
+
+  @include mobile {
+    width: 300px;
+    margin-bottom: 25px;
+  }
+}
+
+.catalog-baikal__sorting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: $font-muller;
+  margin-bottom: 55px;
+
+  a {
+    @include underline;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  @include laptop {
+    justify-content: flex-start;
+    margin-bottom: 27px;
+  }
+
+  @include tablet {
+    margin-bottom: 35px;
+  }
+
+  @include mobile-wide {
+    flex-direction: column;
+    margin-bottom: 55px;
+
+    a {
+      font-size: 14px;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 59px;
+  }
+}
+
+.catalog-baikal__sort-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: $color-black;
+}
+
+.catalog-baikal__sort-filters {
+  width: 325px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 95px;
+
+  @include laptop {
+    margin-left: 30px;
+  }
+
+  @include tablet {
+    width: 326px;
+    margin-left: 25px;
+  }
+
+  @include mobile-wide {
+    width: 290px;
+    margin-top: 15px;
+    margin-left: 0;
+
+  }
+
+  @include mobile {
+    margin-top: 12px;
+  }
+}
+
+.catalog-baikal__sort-summ {
+  font-family: $font-roboto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+
+  @include laptop {
+    position: absolute;
+    left: 0;
+    top: -50px;
+  }
+
+  @include tablet {
+    top: -52px;
+    width: 247px;
+  }
+
+  @include mobile {
+    top: -54px;
+    width: 250px;
+  }
+}
+.catalog-baikal__sort-filter {
+  padding-left: 15px;
+  position: relative;
+  color:$color-blue-sorting;
+  margin-left: 4px;
+  transition: color .3s ease, box-shadow .3s ease;
+
+  &--duration {
+    margin-left: 8px;
+  }
+
+  a {
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 5px;
+      width: 11px;
+      height: 16px;
+      background-image: url("../img/filter-arrow.png");
+    }
+
+
+    &:hover,
+    &:focus {
+      color: $color-orange;
+      &:before {
+        background-image: url("../img/filter-arrow-orange.png");
+      }
+    }
+  }
+
+  &--up {
+    a {
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  @include mobile {
+    margin-left: 0;
+    a {
+      &:before {
+        left: -3px;
+      }
+    }
+  }
+}
+
+.catalog-baikal__sort-reset {
+  color:$color-blue-sorting;
+  padding-left: 19px;
+  position: relative;
+  transition: color .3s ease, box-shadow .3s ease;
+
+  a {
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 5px;
+      width: 11px;
+      height: 11px;
+      background-image: url("../img/filter-close.png");
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-orange;
+      &:before {
+        background-image: url("../img/filter-close-orange.png");
+      }
+    }
+  }
+
+  @include mobile {
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+.catalog-baikal__button {
+  width: 100%;
+  border: 2px solid $color-orange;
+  background-color: transparent;
+  border-radius: 2px;
+  font-family: $font-roboto;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 22px 33px 21px 5px ;
+  border-radius: 4px;
+  transition: background-color .3s, color .3s;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-orange;
+  }
+
+  @include laptop {
+    width: 850px;
+  }
+
+  @include tablet {
+    width: 720px;
+    padding: 22px 5px 21px 11px;
+  }
+
+  @include mobile-wide {
+    width: 100%;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding-left: 4px;
+    padding-right: 15px;
+  }
+}

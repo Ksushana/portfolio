@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    //= templates/header-new.html
+    <main>
+      <div class="container" itemscope itemtype="https://schema.org/ImageObject">
+      <!-- Первый экран - главная картинка -->
+        <section class="guide">
+          <h2 itemprop="name" class="visually-hidden">Путеводитель по Байкалу</h2>
+          <img itemprop="contentUrl" src="img/guide-map.png" alt="Карта интересных мест Байкала" class="guide__bg-image">
+          <ul class="breadcrumbs-list breadcrumbs-list--guide" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <a itemprop='item' href="#"><span itemprop='name'>Главная</span></a>
+              <meta itemprop='position' content='1'>
+            </li>
+            <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+              <a itemprop='item' href="#"><span itemprop='name'>Путеводитель</span></a>
+              <meta itemprop='position' content='2'>
+            </li>
+          </ul>
+          <h1 itemprop="description" class="guide__text">
+            <span class="guide__dark">Путеводитель</span>
+            <span class="guide__dark guide__dark--baikal">по Байкалу</span>
+            <span class="guide__blue">Подробная информация</span>
+            <span class="guide__medium">по местам отдыха на Байкале</span>
+          </h1>
+        </section>
+      </div>
+      <div class="container container--no-padding">
+        <!-- Второй экран - Каталог туров -->
+        <section class="catalog catalog--guide row" itemscope itemtype='http://schema.org/ItemList'>
+          <h2 itemprop="name" class="visually-hidden">Каталог туров</h2>
+          <div itemprop="itemListElement" itemscope itemtype='http://schema.org/ListItem'
+            class="catalog__item catalog__item--guide col-xs-12 col-sm-6 col-lg-4">
+            <a itemprop="url" href="#1" class="catalog__link catalog__link--guide">
+              <svg class="catalog__item-icon catalog__item-icon--guide-irkutsk" width="55
+              " height="48">
+                <use xlink:href="#icon-guide-irkutsk"></use>
+              </svg>
+              <h3><span itemprop="name" class="catalog__link-header">Иркутск<br> и окресности</span></h3>
+              <span class="catalog__item-number"><b>230</b> туров</span>
+              <p itemprop="description">Если вы&nbsp;хотите присоединиться к сборной группе с известной программой и датами
+                заезда</p>
+              <span class="catalog__item-places">Олхинское плато, Тальцы, Байкальский тракт</span>
+            </a>
+            <meta itemprop='position' content='1'>
+          </div>
+          <div itemprop="itemListElement" itemscope itemtype='http://schema.org/ListItem'
+            class="catalog__item catalog__item--guide col-xs-12 col-sm-6 col-lg-4">
+            <a itemprop="url" href="#2" class="catalog__link catalog__link--guide">
+              <svg class="catalog__item-icon catalog__item-icon--lake-and-mountains" width="55
+              " height="48">
+                <use xlink:href="#icon-lake-and-mountains"></use>
+              </svg>
+              <h3><span itemprop="name" class="catalog__link-header">Малое море<br> и Ольхон</span></h3>
+              <span class="catalog__item-number"></span>
+              <p itemprop="description">Если вы привыкли к индивидуальному подходу и высокому уровню сервиса</p>
+              <span class="catalog__item-places">Малое Море, Ольхон, Тажеранская степь</span>
+            </a>
+            <meta itemprop='position' content='2'>
+          </div>
+          <div itemprop="itemListElement" itemscope itemtype='http://schema.org/ListItem'
+            class="catalog__item catalog__item--guide col-xs-12 col-sm-6 col-lg-4">
+            <a itemprop="url" href="#3" class="catalog__link catalog__link--guide">
+              <svg class="catalog__item-icon catalog__item-icon--sea-sun" width="55
+              " height="48">
+                <use xlink:href="#icon-sea-sun"></use>
+              </svg>
+              <h3><span itemprop="name" class="catalog__link-header">Южный <br> Байкал</span></h3>
+              <span class="catalog__item-number"><b>20</b> Круизов</span>
+              <p itemprop="description">Посмотрите все круизные предложения по озеру Байкал</p>
+              <span class="catalog__item-places">Листвянка, КБЖД, Слюдянка, Байкальска, гора Соболиная</span>
+            </a>
+            <meta itemprop='position' content='3'>
+          </div>
+          <div itemprop="itemListElement" itemscope itemtype='http://schema.org/ListItem'
+            class="catalog__item catalog__item--guide col-xs-12 col-sm-6 col-lg-4">
+            <a itemprop="url" href="#4" class="catalog__link catalog__link--guide">
+              <svg class="catalog__item-icon catalog__item-icon--mountain-snow" width="55
+              " height="48">
+                <use xlink:href="#icon-mountain-snow"></use>
+              </svg>
+              <h3><span itemprop="name" class="catalog__link-header">Улан-Удэ и Восточное побережье</span></h3>
+              <span class="catalog__item-number"><b>15</b> программ</span>
+              <p itemprop="description">Все варианты однодневных пеших, автомобильных и круизных экскурсий на Байкале</p>
+              <span class="catalog__item-places">Святой Нос, Чивыркуйский залив, Баргузинский залив</span>
+            </a>
+            <meta itemprop='position' content='4'>
+          </div>
+          <div itemprop="itemListElement" itemscope itemtype='http://schema.org/ListItem'
+            class="catalog__item catalog__item--guide col-xs-12 col-sm-6 col-lg-4">
+            <a itemprop="url" href="#5" class="catalog__link catalog__link--guide">
+              <svg class="catalog__item-icon catalog__item-icon--botanical" width="55
+              " height="48">
+                <use xlink:href="#icon-botanical"></use>
+              </svg>
+              <h3><span itemprop="name" class="catalog__link-header">Тункинская долина <br> и Аршан</span></h3>
+              <span class="catalog__item-number"><b>300</b> вариантов</span>
+              <p itemprop="description">Подберите подходящий для вас отель, гостиницу или базу отдыха, используя удобные фильтры
+                для поиска</p>
+              <span class="catalog__item-places">Аршан, Нилова пустынь, Жемчуг</span>
+            </a>
+            <meta itemprop='position' content='5'>
+          </div>
+          <div itemprop="itemListElement" itemscope itemtype='http://schema.org/ListItem'
+            class="catalog__item catalog__item--guide col-xs-12 col-sm-6 col-lg-4">
+            <a itemprop="url" href="#6" class="catalog__link catalog__link--guide">
+              <svg class="catalog__item-icon catalog__item-icon--mountain-moon" width="55
+              " height="48">
+                <use xlink:href="#icon-mountain-moon"></use>
+              </svg>
+              <h3><span itemprop="name" class="catalog__link-header">Северный <br>Байкал</span></h3>
+              <span class="catalog__item-number"><b>15</b> программ</span>
+              <p itemprop="description">Узнайте подробно о видах и местах отдыха и достопримечательностях на Байкале</p>
+              <span class="catalog__item-places">Хакусы, Северобайкальск, остров Ярки, бухта Аяя</span>
+            </a>
+            <meta itemprop='position' content='6'>
+          </div>
+        </section>
+
+        <!-- Третий экран - Карты маршрутов -->
+        <section class="route-maps row">
+          <img src="img/map-backpack.png" alt="Карты маршрутов" class="route-maps__bg-image cover">
+          <div class="col-lg-6 route-maps__text-block">
+            <h2 class="irkutsk-header route-maps__header">Карты маршрутов</h2>
+            <p class="route-maps__text-text">Подробные карты с маршрутами ко всем достопримечательностям Прибайкалья</p>
+            <a class="route-maps__text-link" href="#">Посмотреть</a>
+          </div>
+        </section>
+      </div>
+      <div class="container">
+        <!-- Четвертый экран - Самые популярные места на Байкале -->
+        //= templates/baikal-hits.html
+        <!-- Четвертый экран - Советы -->
+        //= templates/advice.html
+        <!-- Пятый экран - Подборка туров-->
+        //= templates/collection-tours.html
+        <!-- Шестой экран - Купить авиабилет -->
+        <section class=" irkutsk-tickets irkutsk-tickets--guide">
+          <h2 class="irkutsk-header irkutsk-tickets__header irkutsk-tickets__header--guide">Ещё не купили билеты на Байкал?</h2>
+          //= templates/tickets.html
+        </section>
+      </div>
+        <!-- Седьмой экран - instagram -->
+        //= templates/instagram.html
+        <!-- Восьмой экран - scroll-up -->
+        //= templates/scroll-up.html
+        </main>
+        //= templates/footer.html
+        //= templates/callback.html
+        //= templates/js.html
+</body>

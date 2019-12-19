@@ -1,0 +1,57 @@
+.range__label {
+  max-height: 23px;
+  margin-top: 6px;
+
+  label {
+    display: inline-block;
+  }
+}
+
+.range__background {
+  width: 225px;
+  height: 16px;
+  position: relative;
+}
+
+.range__output {
+  background-color: transparent;
+  border: none;
+  height: 30px;
+  -moz-appearance: textfield;
+  &::-webkit-inner-spin-button {
+      display: none;
+  }
+}
+
+.range__scale {
+  position: absolute;
+  width: 223px;
+  height: 2px;
+  background: $color-gray-line;
+  bottom: 8px;
+}
+
+.range__bar {
+  position: absolute;
+  height: 2px;
+  background-color: $color-orange;
+  bottom: 0px;
+}
+
+.range__lever {
+  position: absolute;
+  background-color: $color-orange;
+  border-radius: 50%;
+  cursor: pointer;
+
+  padding: 9px;
+  left: -9px;
+  bottom: -16px;
+  width: 34px;
+  height: 34px;
+  background-clip: content-box;
+}
+
+.range__lever:active {
+  cursor: pointer;
+}

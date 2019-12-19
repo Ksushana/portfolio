@@ -1,0 +1,115 @@
+.route-maps {
+  display: flex;
+  flex-direction: row;
+  padding-top: 43px;
+  padding-bottom: 7px;
+  margin-bottom: 34px;
+
+  @include tablet {
+    padding-top: 22px;
+    margin-bottom: 36px;
+  }
+
+  @include mobile-wide {
+    flex-direction: column;
+    padding-top: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.route-maps__text-block {
+  margin-left: auto;
+  padding-left: 15px;
+  margin-top: 67px;
+
+  @include tablet {
+    margin-top: 15px;
+    padding-left: 41px;
+  }
+
+  @include mobile-wide {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 340px;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+}
+
+.route-maps__text-text {
+  font-size: 20px;
+  line-height: 27px;
+  padding-top: 20px;
+  padding-bottom: 7px;
+  font-weight: 400;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 7px;
+    padding-bottom: 2px;
+  }
+
+  @include mobile-wide {
+    padding-top: 9px;
+  }
+}
+
+.route-maps__header {
+  @include tablet {
+    font-size: 32px;
+    line-height: 51px;
+  }
+}
+
+.route-maps__text-link {
+  display: block;
+  width: 223px;
+  min-height: 63px;
+  margin: 30px auto 30px 0;
+  padding: 19px 30px;
+  font-family: "Muller","Arial",sans-serif;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $color-orange;
+  background: linear-gradient(to right, #ffa819, #ff8619);
+  border-radius: 30px;
+  box-shadow: 0 5px 22.56px 1.44px rgba(255, 132, 25, 0.46);
+  border: none;
+  border-bottom: 2px solid #e16c09;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(to right, $color-orange, $color-orange);
+    box-shadow: 0 0 0 0 transparent;
+    border-bottom-color: transparent;
+    color: $color-white;
+  }
+
+  @include mobile-wide {
+    margin: 21px auto 9px 0;
+  }
+}
+
+.route-maps__bg-image {
+  margin-left: 30px;
+
+  @include tablet {
+    width: 270px;
+    height: 208px;
+    margin-left: 0;
+    margin-top: 21px;
+  }
+
+  @include mobile-wide {
+    width: 278px;
+    height: 208px;
+    margin: 0 auto;
+    transform: translateX(-15px);
+  }
+}

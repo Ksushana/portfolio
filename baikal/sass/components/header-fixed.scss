@@ -1,0 +1,190 @@
+.header-fixed {
+  font-family: $font-roboto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $color-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 150;
+  display: none;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  animation-duration: 0.5s;
+  transition: 0.5s;
+
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.header-fixed--sticky {
+  display: block;
+  opacity: 1;
+  animation-name: stickySlideDown;
+  transition: none;
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.header-fixed__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 23px;
+  align-items: center;
+}
+
+.header-fixed__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-fixed__central {
+  padding-top: 10px;
+}
+
+.header-fixed__text {
+  font-size: 14px;
+  width: 280px;
+
+  .header-fixed__p {
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 300;
+  }
+}
+
+.header-fixed__phone {
+  font-family: $font-muller;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-fixed__social-list {
+  width: 86px;
+
+  .social__item {
+    margin-right: 6px;
+  }
+}
+
+// Стили новой шапки
+
+.header-fixed__new {
+  font-family: $font-muller;
+
+  a {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.header-fixed__call-us {
+  min-width: 399px;
+  display: flex;
+  padding-left: 48px;
+  position: relative;
+  padding-top: 2px;
+  margin-right: 48px;
+
+  li:first-child {
+    padding-right: 28px;
+  }
+
+  a {
+    font-size: 17px;
+    font-weight: 700;
+    display: block;
+    line-height: 18px;
+  }
+
+  span {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #9e9e9e;
+  }
+}
+
+.header-fixed__call-us-svg {
+  position: absolute;
+  fill: $color-orange;
+  min-width: 30px;
+  left: 2px;
+  top: 7px;
+}
+
+.header-fixed__call-us-list {
+  display: flex;
+  padding-top: 5px;
+}
+
+.header-fixed__messager {
+  display: flex;
+  min-width: 400px;
+  padding-top: 4px;
+
+  p {
+    font-size: 16px;
+    line-height: 19px;
+    width: 32%;
+  }
+
+  a {
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 7px;
+  }
+}
+
+.header-fixed__messager-list {
+  display: flex;
+  min-width: 80px;
+  max-width: 80px;
+  margin-right: 8px;
+  padding-top: 2px;
+
+  li {
+    margin-right: 5px;
+    width: 22px;
+  }
+
+  a {
+    width: 22px;
+  }
+}
+
+.header-fixed-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-fixed__collback-new {
+  .callback__button {
+    width: 251px;
+  }
+}
+
+.header-fixed__messager-number {
+  height: 20px;
+}
+
+@keyframes stickySlideDown {
+  0% {
+    opacity: 0.7;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

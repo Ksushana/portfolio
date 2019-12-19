@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    //= templates/header-new.html
+    <main class="base">
+      <div class="container">
+        <ul class="breadcrumbs-list breadcrumbs-list--base" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <a itemprop='item' href="#"><span itemprop='name'>Главная</span></a>
+            <meta itemprop='position' content='1'>
+          </li>
+          <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <a itemprop='item' href="#"><span itemprop='name'>Путеводитель</span></a>
+            <meta itemprop='position' content='2'>
+          </li>
+          <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs-list__item">
+            <a><span itemprop='name'>База отдыха «Солнечная»</span></a>
+            <meta itemprop='position' content='3'>
+          </li>
+        </ul>
+
+        <h1 class="base__header">База отдыха «Солнечная»</h1>
+      </div>
+      <!-- Слайдер с фотографиями Базы-->
+      <div class="swiper-container base__slider">
+        <ul class="swiper-wrapper base__slider-list ">
+          <!--Микроразметка блока с изображением - первый слайд в цикле-Begin-->
+          <li class="swiper-slide base__slider-item" itemscope itemtype="https://schema.org/ImageObject">
+            <a itemprop="url" href="img/base-slider-large1.jpg" data-lightbox="gallery-base" data-title="Фото базы отдыха 1">
+              <img itemprop="image" src="img/base-slider1.jpg" alt="База отдыха" class="cover">
+              <meta itemprop="name" content="База отдыха">
+              <meta itemprop="description" content="Фото базы отдыха">
+            </a>
+          </li>
+          <!--End-->
+          <li class="swiper-slide base__slider-item">
+            <a href="img/base-slider-large2.jpg" data-lightbox="gallery-base" data-title="Фото базы отдыха 2">
+              <img src="img/base-slider2.jpg" alt="База отдыха" class="cover">
+            </a>
+          </li>
+          <li class="swiper-slide base__slider-item">
+            <a href="img/base-slider-large3.jpg" data-lightbox="gallery-base" data-title="Фото базы отдыха 3">
+              <img src="img/base-slider3.jpg" alt="База отдыха" class="cover">
+            </a>
+          </li>
+          <li class="swiper-slide base__slider-item">
+            <a href="img/base-slider-large4.jpg" data-lightbox="gallery-base" data-title="Фото базы отдыха 4">
+              <img src="img/base-slider4.jpg" alt="База отдыха" class="cover">
+            </a>
+          </li>
+          <li class="swiper-slide base__slider-item">
+            <a href="img/base-slider-large5.jpg" data-lightbox="gallery-base" data-title="Фото базы отдыха 5">
+              <img src="img/base-slider5.jpg" alt="База отдыха" class="cover">
+            </a>
+          </li>
+          <li class="swiper-slide base__slider-item">
+            <a href="img/base-slider-large6.jpg" data-lightbox="gallery-base" data-title="Фото базы отдыха 6">
+              <img src="img/base-slider6.jpg" alt="База отдыха" class="cover">
+            </a>
+          </li>
+        </ul>
+        <button class="base__slider-arrow base__slider-arrow--prev" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+          <svg width="25" height="25">
+            <use xlink:href="#icon-article-back"></use>
+          </svg>
+        </button>
+        <button class="base__slider-arrow base__slider-arrow--next" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+          <svg width="25" height="25">
+            <use xlink:href="#icon-article-back"></use>
+          </svg>
+        </button>
+      </div>
+
+    <div class="container">
+      <!-- Раздел с виджетами Отель на карте  -->
+      <section class="base__map">
+        <div class="base__map-left">
+          <div class="base__map-left-top-widget">
+            <script charset="utf-8" src="//www.travelpayouts.com/blissey/scripts.js?type=full&currency=rub&host=booking.fanatbaikala.ru&marker=214841.&ids=174154&limit=1&powered_by=true" async></script>
+          </div>
+          <div class="base__map-left-bottom-widget">
+            <script charset="utf-8" src="//www.travelpayouts.com/chansey/iframe.js?hotel_id=361687&locale=ru&host=booking.fanatbaikala.ru&marker=214841.&currency=rub&powered_by=true" async ></script>
+          </div>
+        </div>
+        <div class="base__map-right">
+          <h2>Отель на карте</h2>
+          <div class="base__map-map">
+            <ins class="bookingaff" data-aid="1787250" data-target_aid="1787250" data-prod="map" data-width="100%" data-height="100%" data-lang="ualng" data-dest_id="0" data-dest_type="landmark" data-latitude="53.193450" data-longitude="107.343646" data-landmark_name="" data-mwhsb="1">
+                <!-- Anything inside will go away once widget is loaded. -->
+                    <!--a href="//www.booking.com?aid=1787250">Booking.com</a-->
+            </ins>
+            <script type="text/javascript">
+                (function(d, sc, u) {
+                  var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0];
+                  s.type = 'text/javascript';
+                  s.async = true;
+                  s.src = u + '?v=' + (+new Date());
+                  p.parentNode.insertBefore(s,p);
+                  })(document, 'script', '//aff.bstatic.com/static/affiliate_base/js/flexiproduct.js');
+            </script>
+          </div>
+          <a href="#" class="base__near">Посмотреть отели рядом</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Раздел База отдыха Солнечная  -->
+    <section class="base__description" itemscope itemtype="https://schema.org/ImageObject">
+      <div class="container">
+        <h2 itemprop="description" class="visually-hidden">Описание базы отдыха «Солнечная» - условия отдыха</h2>
+        <p itemprop="name" class="base__header">База отдыха «Солнечная»</p>
+        <div class="row base__description-container">
+          <div class="base__description-left col-xs-12 col-sm-12 col-lg-8">
+            <p class="base__text base__text--blue"><span class="base__blue">К услугам наших гостей размещение в уютных номерах и домиках.</span> Все они выполнены из сибирской сосны, благодаря чему воздух в них имеет приятный хвойный аромат. Вы можете выбрать размещение в двух- и четырехместных отдельных домиках, уютных номерах на 2 или 3 человека, а также в номерах эконом-&nbsp;класса.</p>
+            <p class="base__text base__text--blue"><span class="base__blue">Вместимость базы 200 человек.</span> Отдых на Байкале 2014 невозможно представить без&nbsp;вкусного и сытного питания. Разнообразные блюда сибирской кухни, сделанные с&nbsp;душой нашими поварами не оставят вас равнодушными. В меню различные супы, мясные блюда, салаты, молочные продукты, свежая выпечка. Вам будут предложены блюда из байкальской рыбы: жареный и запеченный омуль и сиг, фирменный «загудай» и даже пельмени и чебуреки с рыбой. На нашей турбазе на Ольхоне повара действительно знают много уникальных рецептов и смогут вас удивить.</p>
+            <p class="base__text base__text--blue"><span class="base__blue">Столовая организована на территории базы</span> отдыха «Солнечная» и состоит из двух залов с различными видами на Байкал. На базе предусмотрено 3х разовое комплексное питание, которое уже включено в стоимость номера! На базе отдыха “Солнечная” есть большой зал, выполненный в форме бурятской юрты. Здесь вы можете провести семинар, тренинг, корпоративные занятия, тренировки по йоге и многое другое.</p>
+          </div>
+          <div class="base__description-right col-xs-12 col-sm-7 col-lg-4">
+            <img itemprop="contentUrl" class="cover" src="img/base.jpg" alt="База отдыха">
+          </div>
+          <ul class="base__features col-xs-12 col-sm-5 col-lg-12">
+            <li class="base__features-item base__features-item--cafe">Кафе/ресторан</li>
+            <li class="base__features-item base__features-item--credit-card">Расчет Visa/MasterCard</li>
+            <li class="base__features-item base__features-item--sauna">Баня/сауна</li>
+            <li class="base__features-item base__features-item--wi-fi">Интернет и WiFi</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row base__description-container article__content article__content--template base-table2">
+      <h2>Таблицы в котейнере base-table2</h2>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>НОМЕР</th>
+            <th>ОПИСАНИЕ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> ОДНОМЕСТНЫЙ</td>
+            <td> Площадь номера – 17 кв.м. Одноместная кровать, индивидуальный сейф, душ, мини-бар, телефон, ТВ. Расположение – основное здание, 2 этаж. Завтрак включен в стоимость. </td>
+          </tr>
+          <tr>
+            <td> ДВУХМЕСТНЫЙ</td>
+            <td> Площадь номера – 29 кв.м. Две одноместных кровати, индивидуальный сейф, душ, мини-бар, телефон, ТВ. Вид из окон: внутренний двор отеля. Расположение – основное здание, 2 этаж. Завтрак включен в стоимость.</td>
+          </tr>
+          <tr>
+            <td> ДВУХМЕСТНЫЙ С ВИДОМ</td>
+            <td> Площадь номера – 29 кв.м. Две одноместных кровати, индивидуальный сейф, душ, мини-бар, телефон, ТВ. Вид из окон: озеро Байкал. Расположение – основное здание, 2 этаж. </td>
+          </tr>
+          <tr>
+            <td> ДВУХМЕСТНЫЙ С ВИДОМ И БАЛКОНОМ</td>
+            <td> Площадь номера – 28,7 кв.м. Две одноместных кровати, индивидуальный сейф, душ, мини-бар, телефон, ТВ. Вид из окон: озера Байкал. Выход на балкон с видом на Байкал и реку Ангара Расположение – основное здание, 2 этаж. </td>
+          </tr>
+          <tr>
+            <td> СТУДИЯ</td>
+            <td> Площадь номера – 33,7 кв.м. Двухкомнатный номер. Гостиная с небольшим диваном, 2-спальная кровать, душ, мини-бар, телефон, ТВ. Расположение – блок с сауной, 2 этаж. Вид из окон: озеро Байкал, выход на балкон. Завтрак включен в стоимость. </td>
+          </tr>
+          <tr>
+            <td> ЛЮКС</td>
+            <td> Площадь номера – 42,3 кв.м. 2-комнатный номер. В спальне 2-спальная кровать. В гостиной диван. Индивидуальный сейф, душ, мини-бар, телефон, ТВ. Вид из окон: внутренний двор, фонтан, озеро Байкал. Выход на балкон из спальни. Расположение – основное здание, 1 этаж. Завтрак включен в стоимость. </td>
+          </tr>
+          <tr>
+            <td> ПРЕЗИДЕНТСКИЙ</td>
+            <td> Площадь номера – 122,06 кв.м. Двухэтажный 4-комнатный номер. На первом этаже большая прихожая, гостиная с обеденным столом и балконом, ванная комната с ванной и душем. На втором этаже – переговорная зона, спальня с 2-спальной кроватью, душ, индивидуальный сейф, мини-бар, телефон, ТВ. Вид из окон: озеро Байкал. Расположение – основное здание, 2 этаж. Завтрак включен в стоимость. </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table class="table table-bordered table-striped"><thead><tr><th>НАИМЕНОВАНИЕ</th><th>НАЛИЧИЕ</th></tr></thead><tbody><tr><td> Питание  </td><td> Завтраки, обеды и ужины за доп.плату</td></tr><tr><td> Кафе/ресторан  </td><td> Есть</td></tr><tr><td> Расчет Visa/MasterCard:  </td><td> Есть</td></tr><tr><td> Баня/сауна  </td><td> Есть</td></tr><tr><td> Интернет и WiFi  </td><td> Есть</td></tr><tr><td> Конференц-зал  </td><td> Есть</td></tr></tbody></table>
+      <br>
+      <table class="table table-bordered table-striped"><thead><tr><th>РАЗМЕЩЕНИЕ</th></tr></thead><tbody><tr><td>СТАНДАРТ УЛУЧШЕННЫЙ 2х-МЕСТНЫЙ<br> Номера в двухэтажном гостиничном корпусе. В номерах: одна большая семейная или две раздельные кровати, сан. узел с душевой кабиной, мини-холодильник, телевизор с кабельным телевидением, беспроводной интернет, комплект полотенец и средств личной гигиены. В стоимость проживания входит завтрак.<br> <p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Standart uluchshennyjj obshhijj kholl v dome-e1479821968565.jpg"><img class="alignnone size-full wp-image-17971" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Standart uluchshennyjj obshhijj kholl v dome-e1479821968565.jpg" alt="Отель Байкальские сезоны. Номер Стандарт улучшенный " width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-standart- -1-krovat-e1479822315416.jpg"><img class="alignnone size-full wp-image-17972" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-standart- -1-krovat-e1479822315416.jpg" alt="Отель Байкальские сезоны. Номер Стандарт улучшенный" width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-standart  uluchshennyjj san. uzel-e1479822599267.jpg"><img class="alignnone size-full wp-image-17973" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-standart  uluchshennyjj san. uzel-e1479822599267.jpg" alt="Отель Байкальские сезоны. Номер Стандарт улучшенный" width="600" height="400"></a></p> <p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Standart-uluchshennyjj 1 krovat-e1479822759931.jpg"><img class="alignnone size-full wp-image-17974" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Standart-uluchshennyjj 1 krovat-e1479822759931.jpg" alt="Отель Байкальские сезоны. Номер Стандарт улучшенный" width="600" height="397"></a></p></td></tr><tr> <td>ПОЛУЛЮКС 2х-МЕСТНЫЙ<br> Уютный двухместный номер на мансардном этаже в одном из гостиничных домов. Необычная планировка номера, а также мансардные потолки создают в этом номере особую атмосферу романтики и шика.<br> В номере: двуспальная кровать, отдельная зона отдыха с креслами и диваном, сан. узел оборудован душевой кабиной, кабельное телевидение, мини-холодильник, беспроводной интернет, комплект полотенец и средств личной гигиены, тапочки и халаты. В стоимость проживания входит завтрак.<br> <p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Polulyuks-e1479823031669.jpg"><img class="alignnone size-full wp-image-17976" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Polulyuks-e1479823031669.jpg" alt="Отель Байкальские сезоны. Номер Полулюкс" width="600" height="418"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Polulyuks kresla-e1479823086687.jpg"><img class="alignnone size-full wp-image-17977" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Polulyuks kresla-e1479823086687.jpg" alt="Отель Байкальские сезоны. Номер Полулюкс" width="600" height="417"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Polulyuks san. uzel-e1479823159487.jpg"><img class="alignnone size-full wp-image-17978" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Polulyuks san. uzel-e1479823159487.jpg" alt="Отель Байкальские сезоны. Номер Полулюкс" width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Polulyuks divan-e1479823251379.jpg"><img class="alignnone size-full wp-image-17979" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Polulyuks divan-e1479823251379.jpg" alt="Отель Байкальские сезоны. Номер Полулюкс" width="600" height="400"></a></p></td></tr><tr> <td>ЛЮКС 2х-МЕСТНЫЙ<br> Просторный двухкомнатный номер с застекленной верандой с зоной отдыха, расположен в одном из гостиничных домов. С веранды открывается прекрасный вид на территорию комплекса.<br> В номере: сан. узел с душевой кабиной, кабельное телевидение, мини-холодильник, беспроводной интернет, комплект полотенец и средств личной гигиены, тапочки и халаты. В стоимость проживания входит завтрак.<br> <p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Lyuks-spalnya-e1479823670693.jpg"><img class="alignnone size-full wp-image-17981" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Lyuks-spalnya-e1479823670693.jpg" alt="Отель Байкальские сезоны. Номер Люкс" width="598" height="397"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Lyuks-e1479823635813.jpg"><img class="alignnone size-full wp-image-17982" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Lyuks-e1479823635813.jpg" alt="Отель Байкальские сезоны. Номер Люкс" width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Lyuks-veranda divan-e1479823800561.jpg"><img class="alignnone size-full wp-image-17983" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-Lyuks-veranda divan-e1479823800561.jpg" alt="Отель Байкальские сезоны. Номер Люкс" width="600" height="400"></a></p></td></tr><tr> <td>ЗИМОВЬЕ<br> Отдельный двухместный дом в отдалении от основной территории, выполнен в стиле охотничьего зимовья. В доме есть французская печь и поленница с дровами. Дом полностью благоустроен, в сан. узле душевая кабина, кабельное телевидение, беспроводной интернет, мини-холодильник, комплект полотенец и средств личной гигиены, тапочки и халаты. В стоимость проживания входит завтрак.<br> <p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-VIP zimove-e1479824392228.jpg"><img class="alignnone size-full wp-image-17988" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-VIP zimove-e1479824392228.jpg" alt="Отель Байкальские сезоны. VIP-зимовье" width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-VIP zimove-san. uzel-e1479824409464.jpg"><img class="alignnone size-full wp-image-17987" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Bajjkalskie-sezony-VIP zimove-san. uzel-e1479824409464.jpg" alt="Отель Байкальские сезоны. VIP-зимовье" width="600" height="400"></a></p></td></tr><tr> <td>ОДНОЭТАЖНЫЙ КОТТЕДЖ 3х-МЕСТНЫЙ с двумя спальнями<br> Одноэтажный отдельный коттедж с собственной оборудованной кухней и гостиной. Имеет две спальни – одна спальня с большой семейной кроватью, вторая с односпальной кроватью. Возможно также размещение на дополнительном месте в гостиной. В доме сан. узел с душевой кабиной, кабельное телевидение, мини-холодильник, беспроводной интернет, комплект полотенец и средств личной гигиены. Идеальный вариант для семейного отдыха, а также для небольшой компании.<br> <p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Odnoehtazhnyjj kottedzh fasad-e1479824530475.jpg"><img class="alignnone wp-image-17992 size-full" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Odnoehtazhnyjj kottedzh fasad-e1479824530475.jpg" alt="Отель Байкальские сезоны. Одноэтажный коттедж" width="600" height="384"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Odnoehtazhnyjj kottedzh spalnya-e1479824543926.jpg"><img class="alignnone wp-image-17991 size-full" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Odnoehtazhnyjj kottedzh spalnya-e1479824543926.jpg" alt="Отель Байкальские сезоны. Одноэтажный коттедж" width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Odnoehtazhnyjj kottedzh gostinaya-e1479824557797.jpg"><img class="alignnone wp-image-17990 size-full" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Odnoehtazhnyjj kottedzh gostinaya-e1479824557797.jpg" alt="Отель Байкальские сезоны. Одноэтажный коттедж" width="600" height="400"></a></p></td></tr><tr> <td>ДВУХЭТАЖНЫЙ КОТТЕДЖ 8ми-МЕСТНЫЙ с четырьмя спальнями<br> Отдельный двухэтажный коттедж с собственной кухней и гостиной. Четыре спальни с большими кроватями, а также дополнительные спальные места в гостиной.<br> В доме сан. узел с душевой кабиной, кабельное телевидение, мини-холодильник, беспроводной интернет, комплект полотенец и средств личной гигиены. Прекрасный вариант для проведения дня рождения за городом в кругу друзей.<br> <p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh fasad-e1479824693614.jpg"><img class="alignnone size-full wp-image-17997" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh fasad-e1479824693614.jpg" alt="Отель Байкальские сезоны. Двухэтажный коттедж" width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh kukhnya-e1479824728659.jpg"><img class="alignnone size-full wp-image-17995" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh kukhnya-e1479824728659.jpg" alt="Отель Байкальские сезоны. Двухэтажный коттедж" width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh spalnya-e1479824711583.jpg"><img class="alignnone size-full wp-image-17996" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh spalnya-e1479824711583.jpg" alt="Отель Байкальские сезоны. Двухэтажный коттедж" width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh gostinaya-e1479824744469.jpg"><img class="alignnone size-full wp-image-17994" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh gostinaya-e1479824744469.jpg" alt="Отель Байкальские сезоны. Двухэтажный коттедж" width="600" height="400"></a></p><p class="span1"><a href="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh - spalnya vtorojj ehtazh-e1479824658827.jpg"><img class="alignnone size-full wp-image-17993" src="http://fanatbaikala.ru/wp-content/uploads/2015/05/Dvukhehtazhnyjj kottedzh - spalnya vtorojj ehtazh-e1479824658827.jpg" alt="Отель Байкальские сезоны. Двухэтажный коттедж" width="600" height="400"></a></p></td></tr></tbody>
+      </table>
+      </div>
+
+      <section class="base__similar-otels">
+        <h2 class="base__header">Похожие отели</h2>
+        <div class="base__simalar-otels-widget">
+          <script charset="utf-8" src="//www.travelpayouts.com/blissey/scripts.js?type=compact&currency=rub&width=920&host=booking.fanatbaikala.ru&marker=214841.&ids=528388%2C996712%2C716125%2C713896&limit=3&powered_by=true" async></script>
+        </div>
+      </section>
+
+      <!-- Раздел Другие отели в этой местности -->
+      <section class="base__another-otels">
+        <div class="base__another-otels-left">
+          <h2 class="base__header">Другие отели в&nbsp;этой&nbsp;местности</h2>
+          <script charset="utf-8" src="//www.travelpayouts.com/blissey/scripts.js?categories=5stars%2Csea_view%2Cluxury&id=30553&type=compact&currency=rub&host=booking.fanatbaikala.ru&marker=214841.&limit=2&powered_by=true" async></script>
+        </div>
+        <div class="base__another-otels-right">
+          <h2 class="base__header">Быстрый поиск</h2>
+          <div class="base__another-otels-right-bottom">
+            <div class="base__another-otels-widget">
+              <script charset="utf-8" src="//www.travelpayouts.com/widgets/d766ac494239147858b686e959e144a1.js?v=1744" async></script>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Раздел Экскурсии и туры с размещением в этом отеле -->
+        <section class="popular base__tours">
+          <h2 class="base__header">Экскурсии и туры <span class="base__header-small">с размещением в этом отеле</span></h2>
+          //= templates/popular.html
+        </section>
+
+        <!-- Покупка авиабилетов -->
+        //= templates/tickets.html
+      </div>
+      <!-- Инстаграм -->
+      //= templates/instagram.html
+      <div class="container">
+        <!-- Список гостиниц -->
+        <section class="hotels-list base__hotels row">
+          <h2 class="hotels-list__header">Гостиницы и базы отдыха Байкала в&nbsp;городах и&nbsp;поселках:</h2>
+          <ul class="hotels-list__main-list col-xs-12 col-sm-12 col-lg-12">
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Улан-Удэ</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Улан-Удэ</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Бурятия</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">санаторий Солнечный</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">отель Байкал Плаза</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Улан</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">отель Мэргэн Батор</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">отель Меньшиков</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">отель Сибирь</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Хуторок</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">хостел Clean</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">отель Сагаан-Морин</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">мини-отель Юрта</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Баргузин</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">отель Гэсэр</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Сухая</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Сухая</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Тэнгэри</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом 12 месяцев</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">туркомплекс Сагаан Морин</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Юрта кочевника</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Аметист</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Гремячинск</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Гремячинск</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Байкальская ривьера</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">тубаза У озера</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Адреналин</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Усадьба Петровны</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Утулик</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Утулик</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Байкал-Йети</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом ПятниЦЦа</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Вершина</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Матрешки</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Федоров Двор</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">база отдыха Утулик</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Байкальск</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Байкальск</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Орлиное гнездо</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">отель Sky Let</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">усадьба Красный ключ</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Эдельвейс</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Прибой</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">отель Мельница</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Куршавель</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">отель ГрандБайкал</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">парк-отель Белый Соболь</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Уют</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">хостел Байкал</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Соболиная</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">коттеджи Русь</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Турка</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Турка</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">юрт-кэмпинг Алан-Гоа</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Огонёк</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Тихий дворик</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Горячинск</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Горячинск</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Компас</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Семейный</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Дворик</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">санаторий Горячинск</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Горячий ключ</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Горхон</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Уютный дворик</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Апельсин</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Энхалук</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Энхалук</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Александр Хаус</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Байкальская солянка</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Королевская гавань</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Четыре сезона</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Подлеморье</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Сакура</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Посольский Сор</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Посольский Сор</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">база отдыха Култушная</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Березка</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Байкальский фарт</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Баркас</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Автомобилист</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Энергия</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Жарки</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Хамар-Дабан</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Хамар-Дабан</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Теплые озера</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Стрелка</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Соболиная</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза пик Черского</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Хамар Дабан</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">визит Центр</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Мишиха</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Максимиха</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Максимиха</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Святой нос</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">эко-турбаза Халюта</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Райский уголок</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Любимый</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостиница Кумуткан</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">оздоровительный центр Радуга</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Маяк</a>
+                </li>
+              </ul>
+            </li>
+            <li class="hotels-list__sub">
+              <h3 class="hotels-list__sub-title">Чивыркуй</h3>
+              <button class="hotels-list__button" type="button">
+                <span class="hotels-list__sub-title-mobile">Чивыркуй</span>
+                <svg width="15" height="15"><use xlink:href="#icon-arrow-point"></use></svg>
+              </button>
+              <ul class="hotels-list__sub-list">
+                <li class="hotels-list__hotel">
+                  <a href="#">плавающий отель Экотур</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Синдбад</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Баргузинский прибой</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">турбаза Бухта Безымянная</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом в Монахово</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">юрты в бухте Змеиная</a>
+                </li>
+                <li class="hotels-list__hotel">
+                  <a href="#">гостевой дом Катунь</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+      //= templates/scroll-up.html
+    </main>
+    //= templates/footer.html
+    //= templates/callback.html
+    //= templates/js.html
+  </body>
+</html>

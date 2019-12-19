@@ -1,0 +1,53 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Austin Cyr";
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("AustinCyr-Roman"),
+    url("../fonts/AustinCyr-Roman.woff2") format("woff2"),
+    url("../fonts/AustinCyr-Roman.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "Austin Cyr";
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("AustinCyr-Roman"),
+    url("../fonts/AustinCyr-Roman.woff2") format("woff2"),
+    url("../fonts/AustinCyr-Roman.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "AustinCyr";
+  font-style: italic;
+  font-display: swap;
+  src:
+    local("AustinCyr-Roman"),
+    url("../fonts/AustinCyr-Roman.woff2") format("woff2"),
+    url("../fonts/AustinCyr-Roman.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "AustinCyrItalic";
+  font-style: italic;
+  font-display: swap;
+  src:
+    url("../fonts/AustinCyr-Italic.woff2") format("woff2"),
+    url("../fonts/AustinCyr-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "TT Norms";
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("TTNorms-Regular"),
+    url("../fonts/TTNorms-Regular.woff2") format("woff2"),
+    url("../fonts/TTNorms-Regular.woff") format("woff");
+}

@@ -1,0 +1,37 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Правильное расположение';
+  - let isInner = true;
+  - let isLocationPage = true;
+  - let headerBackground = 'header__menu--fantastic';
+  - let logoNoScroll = true;
+
+block content
+  .container.location.blue-burger-container
+
+    h1.title.title--page.title--big  !{title}
+
+    .choice
+      .swiper-container.choice-container
+        .swiper-wrapper
+          .swiper-slide
+            button.switch-button-active( type="button" data-points="[{\"coordinates\":{\"lat\":55.768714,\"lng\":37.580759},\"content\":\"Lorem Ipsum 4\"},{\"coordinates\":{\"lat\":55.767809,\"lng\":37.577455},\"content\":\"Lorem Ipsum 2\"},{\"coordinates\":{\"lat\":55.769476,\"lng\":37.583430},\"content\":\"Lorem Ipsum 3\"},{\"coordinates\":{\"lat\":55.770687,\"lng\":37.575344},\"content\":\"Lorem Ipsum 4\"},{\"coordinates\":{\"lat\":55.768822,\"lng\":37.572791},\"content\":\"Lorem Ipsum 5\"}]" ) Культура
+          .swiper-slide
+            button( type="button" data-points="[{\"coordinates\":{\"lat\":55.767809,\"lng\":37.577455},\"image\":\"./../img/pin-round.svg\",\"content\":\"Lorem Ipsum 6\"}]" ) школы и детские сады
+          .swiper-slide
+            button( type="button" data-points="[{\"coordinates\":{\"lat\":55.767714,\"lng\":37.580759},\"content\":\"Lorem Ipsum 6\"},{\"coordinates\":{\"lat\":55.767809,\"lng\":37.577455},\"content\":\"Lorem Ipsum 2\"},{\"coordinates\":{\"lat\":55.769476,\"lng\":37.583430},\"content\":\"Lorem Ipsum 3\"},{\"coordinates\":{\"lat\":55.770687,\"lng\":37.575344},\"content\":\"Lorem Ipsum 4\"},{\"coordinates\":{\"lat\":55.768822,\"lng\":37.572791},\"content\":\"Lorem Ipsum 5\"}]" ) рестораны и кафе
+          .swiper-slide
+            button( type="button" data-points="[{\"coordinates\":{\"lat\":55.769714,\"lng\":37.580759},\"content\":\"Lorem Ipsum 6\"},{\"coordinates\":{\"lat\":55.767809,\"lng\":37.577455},\"content\":\"Lorem Ipsum 2\"},{\"coordinates\":{\"lat\":55.769476,\"lng\":37.583430},\"content\":\"Lorem Ipsum 3\"},{\"coordinates\":{\"lat\":55.770687,\"lng\":37.575344},\"content\":\"Lorem Ipsum 4\"},{\"coordinates\":{\"lat\":55.768822,\"lng\":37.572791},\"content\":\"Lorem Ipsum 5\"}]" ) фитнес и здоровье
+          .swiper-slide
+            button( type="button" data-points="[{\"coordinates\":{\"lat\":55.768714,\"lng\":37.580759},\"content\":\"Lorem Ipsum 6\"},{\"coordinates\":{\"lat\":55.767809,\"lng\":37.577455},\"content\":\"Lorem Ipsum 2\"},{\"coordinates\":{\"lat\":55.769476,\"lng\":37.583430},\"content\":\"Lorem Ipsum 3\"},{\"coordinates\":{\"lat\":55.770687,\"lng\":37.575344},\"content\":\"Lorem Ipsum 4\"},{\"coordinates\":{\"lat\":55.768822,\"lng\":37.572791},\"content\":\"Lorem Ipsum 5\"}]" ) супермаркеты
+
+    .location__map-wrap( id="mapBig" )
+    +zone1
+    +zone2
+    +zone3
+
+
+block bottom
+  script( src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_jY3_nW7rZP_WJt5el5FWKp8rBO9ufF8&callback=initLocationMap"
+    async defer )

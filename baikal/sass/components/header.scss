@@ -1,0 +1,184 @@
+.header {
+  padding-top: 23px;
+
+  @include laptop {
+    padding-top: 32px;
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &--new {
+      padding-top: 11px;
+    }
+  }
+
+  @include mobile-wide {
+    padding-top: 14px;
+    flex-direction: column;
+
+    .row {
+      position: relative;
+    }
+
+    .social {
+      position: static;
+    }
+  }
+}
+
+.header__logo {
+  width: 330px;
+  margin-top: 7px;
+
+  &--new {
+    width: 360px;
+    max-height: 70px;
+    margin-top: 7px;
+  }
+
+  @include laptop {
+    padding-top: 15px;
+
+    &--new {
+      margin-left: 11px;
+      margin-top: 3px;
+      padding-top: 15px;
+    }
+  }
+
+  @include tablet {
+    &--new {
+      margin-top: 6px;
+      padding-top: 0;
+    }
+  }
+
+  @include mobile-wide {
+    margin: 0 auto 22px;
+    padding: 0;
+
+  /*  &--new {
+      font-size: 13px;
+      margin-top: 3px;
+      margin-bottom: 0;
+    }*/
+  }
+
+  @include mobile {
+    width: 288px;
+    text-align: right;
+  /*  &--new {
+      margin-left: calc(50vw - 159px + 12px);
+    }*/
+  }
+}
+
+.header__logo-image {
+  &--new {
+    width: 355px;
+  }
+
+  @include mobile {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+    }
+
+    /*&--new {
+      width: 281px;
+    }*/
+  }
+}
+
+.header__logo--new a {
+  @include mobile-wide {
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
+
+.header__logo-text {
+  margin-left: 98px;
+  font-size: 13px;
+  line-height: 13px;
+  color: $color-gray;
+
+  &--new {
+    font-size: 13px;
+    line-height: 15px;
+    color: #828282;
+    white-space: nowrap;
+  }
+
+  @include laptop {
+    margin-left: 112px;
+
+    &--new {
+      margin-left: 63px;//134px;
+    }
+  }
+
+  @include mobile {
+    margin: 0;
+    //width: 288px;
+    &--new {
+      margin-left: 0;//56px;
+    }
+  }
+}
+
+.header__social {
+  margin-top: 22px;
+  padding-left: 12px;
+
+  &--new {
+    margin-top: 13px;
+    padding-left: 72px;
+  }
+
+  @include laptop {
+    margin-top: 52px;
+    padding: 0;
+    order: 1;
+
+    &--new {
+      order: 2;
+      margin-top: 31px;
+      padding-left: 75px;
+    }
+  }
+
+  @include mobile-wide {
+    margin: 0;
+    padding: 0;
+    width: 49.6%;
+
+    &--new {
+      order: 1;
+      margin-top: 0;
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    /*&--new {
+      order: 1;
+      margin-top: 29px;
+      padding-left: 0;
+    }*/
+  }
+
+  @media (min-width: $desktop-width) {
+    &--new {
+      margin-top: 6px;
+      padding-left: 8px;
+    }
+
+    .social__list {
+      display: none;
+    }
+  }
+}

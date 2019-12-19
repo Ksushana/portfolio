@@ -1,0 +1,49 @@
+.irkutsk-tours {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include mobile-wide {
+    margin-bottom: 21px;
+  }
+}
+
+.irkutsk-tours__button {
+  padding: 14px 33px 15px;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 auto;
+
+  @include mobile-wide {
+    margin-top: 18px;
+    padding: 15px 30px 15px;
+  }
+}
+
+.irkutsk-tours__header {
+  margin-top: 9px;
+
+  @include mobile-wide {
+    font-size: 32px;
+    line-height: 42px;
+    margin-right: 20px;
+    padding-left: 15px;
+  }
+
+  @include mobile {
+    padding-left: 0;
+  }
+}
+
+.irkutsk-tours .more-tours-popular {
+  margin-top: 34px;
+
+  @include tablet {
+    margin-top: 26px;
+  }
+
+  @include mobile-wide {
+    margin-top: 14px;
+  }
+}

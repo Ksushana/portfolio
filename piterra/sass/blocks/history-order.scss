@@ -1,0 +1,128 @@
+@media (max-width: $mobile-width) {
+  .history-order__info {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 36px;
+  }
+
+  .history-order__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #efefef;
+  }
+
+  .history-order__caption {
+    font-size: 15px;
+    color: #262626;
+  }
+
+  .history-order__sum {
+    font-family: $fontSerif;
+    font-size: 20px;
+    color: #c7b799;
+    text-transform: uppercase;
+  }
+
+  .history-order__date {
+    font-size: 15px;
+    color: #9b9b9b;
+  }
+
+  .history-order__tracking {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    img {
+      width: 12px;
+      height: auto;
+      margin-right: 12px;
+    }
+  }
+
+  .history-order__goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .history-order__good {
+    display: flex;
+    max-width: 300px;
+    margin-right: auto;
+    margin-bottom: 18px;
+    margin-left: auto;
+    padding: 9px;
+    padding-right: 17px;
+    background-color: $light-color;
+    border-radius: 6px;
+    box-shadow: 4px 5px 25px 0 rgba(75, 72, 73, 0.13);
+  }
+
+  .history-order__img {
+    width: 113px;
+    height: 120px;
+    margin-right: 8px;
+    border-radius: 6px;
+  }
+
+  .history-order__data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .history-order__brand {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #818181;
+    text-transform: uppercase;
+  }
+
+  .history-order__name {
+    font-size: 14px;
+    color: #1c1c1c;
+  }
+
+  .history-order__cost-wrap {
+    display: flex;
+    align-items: flex-end;
+    margin-top: auto;
+  }
+
+  .history-order__cost {
+    display: flex;
+    flex-direction: column;
+
+    span:first-child {
+      font-size: 10px;
+      font-weight: 300;
+      color: #727272;
+      text-transform: lowercase;
+    }
+
+    span:last-child {
+      font-family: $fontSerif;
+      font-size: 18px;
+      color: #c7b799;
+    }
+  }
+
+  .history-order__count {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    img {
+      margin-right: 9px;
+    }
+  }
+}

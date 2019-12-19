@@ -1,0 +1,646 @@
+.main-picture {
+  margin-top: 27px;
+  position: relative;
+  height: 437px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &--excursion {
+    font-family: $font-muller;
+    height: 450px;
+  }
+
+  &--trakt {
+    font-family: $font-muller;
+    height: 450px;
+  }
+
+  &--hotels {
+    margin-top: 15px;
+    height: 450px;
+  }
+
+  &--irkutsk {
+    // margin-top: 15px;
+    height: 366px;
+  }
+
+  @include tablet {
+    margin-top: 52px;
+    height: 350px;
+
+    &--excursion {
+      height: 281px;
+      margin-top: 22px;
+    }
+
+    &--hotels {
+      height: 281px;
+    }
+
+    &--trakt {
+      margin-top: 22px;
+      height: 280px;
+    }
+
+    &--irkutsk {
+      height: 366px;
+      margin-top: 32px;
+    }
+  }
+
+  @include mobile-wide {
+    &--excursion {
+      height: 281px;
+      margin-top: 25px;
+    }
+
+    &--trakt {
+      margin-top: 25px;
+      height: 280px;
+    }
+
+    &--irkutsk {
+      margin-top: 18px;
+    }
+  }
+
+  @include mobile {
+    margin-top: 36px;
+
+    &--excursion {
+      height: 350px;
+      margin-top: 25px;
+    }
+
+    &--trakt {
+      margin-top: 25px;
+    }
+
+    &--irkutsk {
+      margin-top: 18px;
+    }
+  }
+}
+
+.main-picture__text-block {
+  font-family: $font-muller;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6px;
+
+  &--irkutsk {
+    padding-top: 112px;
+  }
+
+  @include tablet {
+    &--exc {
+      padding-left: 101px;
+    }
+
+    &--irkutsk {
+      padding-top: 131px;
+    }
+  }
+
+  @include mobile-wide {
+    fint-size: 22px;
+    line-height: 22px;
+    min-width: 320px;
+    margin-left: -14px;
+
+    &--exc {
+      padding-left: 6px;
+    }
+
+    &--irkutsk {
+      padding-top: 99px;
+    }
+  }
+}
+
+.main-picture__header {
+  font-family: $font-muller;
+  font-size: 62px;
+  color: #ffffff;
+  line-height: 62px;
+  margin-bottom: 40px;
+  transform: translateY(0);
+  margin-left: 20px;
+  font-weight: 900;
+
+  &--tour {
+    max-width: 780px;//850px;
+  }
+
+  &--excursion {
+    font-size: 62px;
+    line-height: 62px;
+    transform: translateY(0);
+    margin-bottom: 0;
+    margin-left: 0;
+    max-width: 830px;
+  }
+
+  &--hotels {
+    transform: none;
+    width: 730px;
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 37px;
+    margin-left: 16px;
+    text-align: right;
+    font-weight: 900;
+  }
+
+  &--trakt {
+    font-size: 64px;
+    line-height: 64px;
+    transform: translateY(0);
+    padding-left: 127px;
+    padding-bottom: 7px;
+  }
+
+  &--irkutsk {
+    font-size: 54px;
+    line-height: 70px;
+    margin-bottom: 0;
+  }
+
+  @include desktop-full {
+    &--trakt {
+      padding-left: 209px;
+      margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    &--trakt {
+      margin-bottom: 0;
+      margin-right: 400px;
+      text-align: right;
+    }
+  }
+
+  @include laptop {
+    &--tour {
+      margin-bottom: 90px;
+      max-width: 850px;
+    }
+
+    &--excursion {
+      max-width: 900px;
+      transform: translateY(0);
+    }
+
+    &--trakt {
+      padding-left: 10px;
+      max-width: 500px;
+      text-align: right;
+    }
+
+    &--hotels {
+      width: 500px;
+      margin-left: 61px;
+    }
+  }
+
+  @include tablet {
+    font-size: 48px;
+    transform: translateY(0);
+    padding-left: 26px;
+
+    &--tour {
+      padding-left: 0;
+      margin-bottom: 102px;
+    }
+
+    &--excursion {
+      font-size: 48px;
+      line-height: 48px;
+      transform: translateY(0);
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
+    &--hotels {
+      font-size: 48px;
+      line-height: 48px;
+      transform: none;
+      width: 400px;
+      margin-left: 18px;
+      margin-bottom: 42px;
+      padding-left: 0;
+    }
+
+    &--trakt {
+      font-size: 48px;
+      line-height: 48px;
+      transform: translateY(10px);
+      width: 420px;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+
+    &--irkutsk {
+      font-size: 48px;
+      line-height: 48px;
+      padding-left: 0;
+      margin-left: 8px;
+      margin-bottom: 3px;
+    }
+  }
+
+  @include mobile-wide {
+    font-size: 32px;
+    line-height: 42px;
+    transform: translateY(0);
+    margin-left: 45px;
+
+    &--tour {
+      margin-bottom: 38px;
+      margin-right: 15px;
+      max-width: 320px;
+    }
+
+    &--excursion {
+      font-size: 22px;
+      line-height: 22px;
+      transform: translateY(0);
+      margin-left: 0;
+      padding-bottom: 5px;
+      padding-left: 30px;
+    }
+
+    &--trakt {
+      transform: translateY(0);
+      font-size: 22px;
+      line-height: 22px;
+      width: 500px;
+      margin-left: 15px;
+      padding-right: 13px;
+      padding-bottom: 0;
+      text-align: left;
+    }
+
+    &--hotels {
+      transform: translateY(0);
+      font-size: 22px;
+      line-height: 22px;
+      // width: 500px;
+      margin-left: 0;
+      padding-right: 13px;
+      padding-bottom: 15px;
+      padding-left: 26px;
+
+    }
+
+    &--irkutsk {
+      font-size: 32px;
+      line-height: 42px;
+      margin-left: 21px;
+      margin-bottom: 21px;
+    }
+  }
+
+  @include mobile {
+    &--trakt {
+      transform: translateY(0);
+      font-size: 22px;
+      line-height: 22px;
+      width: 320px;
+      margin-left: auto;
+      padding-right: 11px;
+      padding-bottom: 1px;
+      text-align: right;
+      margin-right: 6px;
+    }
+
+    &--hotels {
+      transform: translateY(0);
+      font-size: 22px;
+      line-height: 22px;
+      width: 320px;
+      margin-left: 0;
+      padding-right: 13px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.main-picture__note {
+  &--excursion {
+    font-size: 36px;
+    line-height: 36px;
+    color: $color-white;
+    padding-bottom: 58px;
+    max-width: 830px;
+  }
+
+  &--trakt {
+    font-size: 28px;
+    line-height: 28px;
+    color: $color-white;
+    padding-bottom: 40px;
+    padding-left: 112px;
+  }
+
+  &--irkutsk {
+    font-size: 31px;
+    line-height: 55px;
+    color: $color-white;
+    padding-bottom: 0;
+    font-weight: 300;
+    padding-left: 23px;
+  }
+
+  @include desktop-full {
+    &--trakt {
+      padding-left: 227px;
+    }
+  }
+
+  @include desktop {
+    &--trakt {
+      margin-right: 410px;
+      text-align: right;
+    }
+  }
+
+  @include laptop {
+    &--trakt {
+      padding-left: 10px;
+      max-width: 520px;
+      text-align: right;
+    }
+
+    &--excursion {
+      max-width: 900px;
+    }
+  }
+
+  @include tablet {
+    &--excursion {
+      font-size: 28px;
+      line-height: 28px;
+      padding-left: 26px;
+    }
+
+    &--trakt {
+      max-width: 420px;
+      padding-bottom: 20px;
+      margin-right: 323px;
+    }
+
+    &--irkutsk {
+      font-size: 26px;
+      line-height: 55px;
+      padding-left: 10px;
+    }
+  }
+
+  @include mobile-wide {
+
+    &--excursion {
+      font-size: 14px;
+      line-height: 14px;
+      // padding-bottom: 124px;
+      padding-left: 30px;
+    }
+
+    &--trakt {
+      font-size: 14px;
+      line-height: 14px;
+      padding-bottom: 90px;
+      padding-left: 41px;
+      max-width: 500px;
+      padding-right: 13px;
+      text-align: left;
+      margin-right: 0;
+    }
+
+    &--irkutsk {
+      font-size: 22px;
+      line-height: 30px;
+      padding-bottom: 0;
+      padding-left: 19px;
+    }
+  }
+
+  @include mobile {
+    &--trakt {
+      font-size: 14px;
+      line-height: 14px;
+      padding-bottom: 130px;
+      // padding-top: 4p;
+      padding-left: 50px;
+      max-width: 320px;
+      padding-right: 19px;
+      text-align: right;
+      margin-left: auto;
+    }
+  }
+}
+
+.main-picture__bg {
+  width: 100%;
+  // background-color: $color-blue-bg;
+
+  display: flex;
+  background-size: cover;
+  background-position: 20% center;
+  background-repeat: no-repeat;
+
+  &--tour {
+    height: 435px;
+    // background-image: url("./../img/bg-awakening-desktop@1x.jpg");
+
+    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //   background-image: url("./../img/bg-awakening-desktop@2x.jpg");
+    // }
+  }
+
+  &--hotels {
+    position: relative;
+    height: 450px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    // background-image: url("./../../img/main-picture--hotels__desktop@1x.jpg");
+  }
+
+  &--excursion {
+    height: 450px;
+    // background-image: url("./../img/bg-excursion-desktop@1x.jpg");
+
+    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //   background-image: url("./../img/bg-excursion-desktop@2x.jpg");
+    // }
+  }
+
+  &--trakt {
+    height: 450px;
+    // background-image: url("./../img/trakt-bg-desktop@1x.jpg");
+
+    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //   background-image: url("./../img/trakt-bg-desktop@2x.jpg");
+    // }
+  }
+
+  &--irkutsk {
+    height: 365px;
+    // background-image: url("./../img/bg-irkutsk@1x.jpg");
+
+    // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //   background-image: url("./../img/bg-irkutsk@2x.jpg");
+    // }
+  }
+
+
+  @include tablet {
+    &--tour {
+      min-width: 100%;
+      height: 350px;
+      // background-image: url("./../../img/bg-awakening-tablet@1x.jpg");
+
+      // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      //   background-image: url("./../img/bg-awakening-tablet@2x.jpg");
+      // }
+    }
+
+    &--excursion {
+      height: 281px;
+      // background-image: url("./../img/bg-excursion-tablet@1x.jpg");
+
+      // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      //   background-image: url("./../img/bg-excursion-tablet@2x.jpg");
+      // }
+    }
+
+    &--trakt {
+      height: 280px;
+      // background-image: url("./../img/trakt-bg-tablet@1x.jpg");
+
+      // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      //   background-image: url("./../img/trakt-bg-tablet@2x.jpg");
+      // }
+    }
+
+    &--hotels {
+      height: 281px;
+      // background-image: url("./../../img/main-picture--hotels__tablet@1x.jpg");
+
+      // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      //   background-image: url("./../../img/main-picture--hotels__tablet@2x.jpg");
+      // }
+    }
+
+    &--irkutsk {
+      height: 366px;
+    }
+  }
+
+  @include mobile {
+    min-width: 100%;
+    min-height: 350px;
+
+    // &--tour {
+    //   background-image: url("./../img/bg-awakening-mobile@1x.jpg");
+    //   background-position: top;
+
+    //   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //     background-image: url("./../img/bg-awakening-mobile@2x.jpg");
+    //   }
+    // }
+
+    // &--excursion {
+
+    //   background-image: url("./../img/bg-excursion-mobile@1x.jpg");
+
+    //   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //     background-image: url("./../img/bg-excursion-mobile@2x.jpg");
+    //   }
+    // }
+
+    // &--trakt {
+    //   height: 450px;
+    //   background-image: url("./../img/trakt-bg-mobile@1x.jpg");
+
+    //   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    //     background-image: url("./../img/trakt-bg-mobile@2x.jpg");
+    //   }
+    // }
+
+    &--hotels {
+      height: 281px;
+      min-height: 281px;
+      // background-image: url("./../../img/main-picture--hotels__mobile@1x.jpg");
+
+      // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      //   background-image: url("./../../img/main-picture--hotels__mobile@2x.jpg");
+      // }
+    }
+  }
+}
+
+.main-picture__bg-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+
+  &--tour {
+    height: 435px;
+  }
+
+  &--excursion {
+    height: 450px;
+  }
+
+  &--trakt {
+    height: 450px;
+  }
+
+  &--irkutsk {
+    height: 365px;
+  }
+
+  &--hotels {
+    height: 450px;
+  }
+
+
+  @include tablet {
+    &--tour {
+      min-width: 100%;
+      height: 350px;
+    }
+
+    &--excursion {
+      height: 281px;
+    }
+
+    &--trakt {
+      height: 280px;
+    }
+
+    &--hotels {
+      height: 281px;
+    }
+  }
+
+  @include mobile {
+    min-width: 100%;
+    min-height: 350px;
+
+    &--trakt {
+      height: 450px;
+    }
+
+    &--hotels {
+      height: 281px;
+      min-height: 281px;
+    }
+  }
+}

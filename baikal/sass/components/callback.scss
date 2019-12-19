@@ -1,0 +1,226 @@
+.callback {
+  @include mobile-wide {
+    margin-top: 37px;
+    order: 1;
+
+    &--new {
+      margin-top: 24px;
+    }
+  }
+}
+
+.callback__block {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 22px;
+
+  &--new {
+    padding-left: 72px;//73px;
+    padding-top: 5px;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+    }
+  }
+
+  @include laptop {
+    justify-content: flex-end;
+    padding: 0;
+    padding-top: 32px;
+  }
+
+  @include tablet {
+    padding-top: 20px;
+    &--new {
+      padding-left: 57px;
+      text-align: left;
+    }
+  }
+
+  @include mobile-wide {
+    display: block;
+    text-align: center;
+
+    &--new {
+      padding-left: 0;
+      width: 290px;
+      margin: 0 auto;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.callback__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-top: 12px;
+  padding-bottom: 23px;
+  padding-left: 48px;
+
+  font-family: $font-muller;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color-black;
+
+  @include laptop {
+    width: auto;
+    justify-content: flex-end;
+    padding-top: 0;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+
+  @include mobile-wide {
+    justify-content: flex-start;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+  }
+
+  &:first-child {
+    @include desktop-full {
+      padding-left: 42px;
+    }
+  }
+}
+
+.callback__info {
+  order: 1;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+
+  &--full {
+    display: block;
+  }
+
+  &--short {
+    display: none;
+  }
+
+  @include laptop {
+    order: 0;
+    width: auto;
+  }
+
+  @include tablet {
+    &--full {
+      display: none;
+    }
+
+    &--short {
+      display: block;
+    }
+  }
+
+  @include mobile-wide  {
+    font-size: 20px;
+    &--full {
+      display: none;
+    }
+
+    &--short {
+      display: block;
+    }
+  }
+}
+
+.callback__phone {
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 27px;
+  font-weight: 700;
+
+  &--new {
+    margin-bottom: 0;
+    padding-left: 4px;
+    padding-right: 3px;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+      font-size: 24px;
+    }
+  }
+
+  &:hover {
+    color: $color-orange;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  @include mobile-wide {
+    margin-bottom: 20px;
+    padding: 0;
+
+    &--new {
+      padding-left: 4px;
+      padding-right: 3px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.callback__button {
+  display: inline-block;
+  width: 262px;
+  padding: 14px 21px 13px;
+  font-family: $font-muller;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: $color-white;
+  text-align: right;
+  text-decoration: none;
+  background-color: $color-orange;
+  border: 1px solid $color-orange;
+  border-radius: 40px;
+  transition: color .3s ease, background-color .3s ease;
+
+  &:hover,
+  &:focus {
+    color: $color-orange;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  @include laptop {
+    &--new {
+      width: 262px;
+      text-align: center;
+      border-radius: 40px;
+      margin-left: 27px;
+    }
+  }
+
+  @include mobile-wide {
+    &--new {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+    // @include mobile-wide {
+    //   &--new {
+    //     width: 262px;
+    //     text-align: center;
+    //     border-radius: 40px;
+    //     margin-left: 27px;
+    //   }
+    // }
+
+  @media (min-width: $desktop-width) {
+    &--new {
+      position: absolute;
+      right: 0;
+      bottom: -45px;
+      width: 262px;
+      border-radius: 40px;
+    }
+  }
+}

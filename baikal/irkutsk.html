@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+<body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    //= templates/header-new.html
+    <main>
+      <section class="irkutsk-breadcrumbs container ">
+        <ul class="breadcrumbs-list breadcrumbs-list--irkutsk" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <a itemprop='item' href="#"><span itemprop='name'>Главная</span></a>
+            <meta itemprop='position' content='1'>
+          </li>
+          <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <a itemprop='item' href="#"><span itemprop='name'>Путеводитель</span></a>
+            <meta itemprop='position' content='2'>
+          </li>
+          <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs-list__item">
+            <a><span itemprop='name'>Иркутск</span></a>
+            <meta itemprop='position' content='3'>
+          </li>
+        </ul>
+      </section>
+    <!-- Первый экран - главная картинка -->
+    <section class="main-picture main-picture--irkutsk" itemscope itemtype="https://schema.org/ImageObject">
+      <div class="main-picture__bg main-picture__bg--irkutsk">
+        <div class="container container--new main-picture__text-block main-picture__text-block--irkutsk">
+          <h1 itemprop="name" class="main-picture__header main-picture__header--irkutsk">Иркутск и окресности</h1>
+          <p itemprop="description" class="main-picture__note main-picture__note--irkutsk">Путеводитель: места, маршруты, экскурсии, туры</p>
+        </div>
+      </div>
+      <img itemprop="contentUrl" src="img/bg-irkutsk.jpg" alt="Фоновое изображение"
+        class="cover main-picture__bg-image main-picture__bg-image--irkutsk">
+      <div class="bottom-shadow bottom-shadow--zindex"></div>
+    </section>
+    <!-- Второй экран - Самые популярные места на Байкале -->
+    <div class="container">
+      //= templates/baikal-hits.html
+    </div>
+    <!-- Третий экран - Туры из Иркутска -->
+    <section class="more-tours irkutsk-tours">
+      <div class="container container--no-padding">
+        <h2 class="irkutsk-header irkutsk-tours__header">Туры из Иркутска</h2>
+        //= templates/popular.html
+        <a href="#" class="irkutsk-button irkutsk-tours__button">Смотреть все доступные туры</a>
+      </div>
+    </section>
+    <!-- Четвертый экран - Поиск отелей -->
+    <section class="container irkutsk-find-hotels">
+      <h2 class="irkutsk-header">Поиск отелей</h2>
+      <div class="irkutsk-find-hotels__block">
+        <div class="find-hotels__widget find-hotels__widget--irkutsk finder-widget">
+          <script src="//www.travelpayouts.com/widgets/5b55a75d9c3c64f3af88095b089fdb08.js?v=1691" async></script>
+        </div>
+      </div>
+    </section>
+    <!-- Пятый экран - Поиск билетов -->
+    <section class="container irkutsk-tickets">
+      <h2 class="irkutsk-header irkutsk-tickets__header">Ещё не купили билеты на Байкал?</h2>
+      //= templates/tickets.html
+    </section>
+    <!-- Шестой экран - instagram -->
+    //= templates/instagram.html
+    <!-- Седьмой экран - scroll -->
+    //= templates/scroll-up.html
+    </main>
+    //= templates/footer.html
+    //= templates/callback.html
+    //= templates/js.html
+    </body>

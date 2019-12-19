@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    //= templates/header-new.html
+    <main>
+      <div class="container">
+        <section class="error col-xs-12 col-sm-12 col-lg-12">
+          <div class="error__top">
+            <img class="contain" src="img/404.png" alt="Ошибка">
+            <p>Страница не&nbsp;найдена</p>
+          </div>
+          <div class="error__down">
+            <p class="error__information">Информация уже зафиксирована и мы разберёмся...</p>
+            <p class="error__choice">А пока предлагаем вам выбрать то, что вам интересно:</p>
+          </div>
+        </section>
+        //= templates/catalog-404.html
+      </div>
+    </main>
+    //= templates/footer.html
+    //= templates/callback.html
+    //= templates/request-response.html
+    //= templates/js.html
+  </body>
+</html>

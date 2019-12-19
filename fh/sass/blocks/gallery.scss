@@ -1,0 +1,79 @@
+.container-gallery {
+
+  @include mobile {
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+  }
+
+  picture {
+    height: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .choice {
+    margin-top: size(130px);
+    margin-bottom: size(103px);
+
+    @include desktop {
+      margin-top: size(74px);
+      margin-bottom: size(41px);
+    }
+
+    @include tablet {
+      margin-top: size(41px);
+      margin-bottom: size(23px);
+    }
+
+    @include mobile {
+      margin-top: size(55px);
+      margin-bottom: size(10px);
+    }
+  }
+
+  .tab {
+    @include mobile {
+      margin-top: auto;
+      max-height: 80%;
+    }
+  }
+
+  .housing__slider .count-cursor {
+
+    // top: size(-70px);
+    // right: size(62px);
+
+    @include tablet {
+      top: size(-51px);
+      right: size(62px);
+    }
+
+    @include mobile {
+      top: size(-25px);
+      left: size(20px);
+    }
+  }
+
+  .housing__slider .housing__slider-container {
+    @include mobile {
+      height: size(400px);
+    }
+  }
+
+  .phone-icone {
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.footer-display {
+  @include tablet {
+    display: none;
+  }
+}
+
+.gallery {
+  background-color: $color-white;
+}

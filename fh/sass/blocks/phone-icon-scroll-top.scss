@@ -1,0 +1,92 @@
+.phone-icon-scroll-top {
+  position: fixed;
+  z-index: 50;
+  right: size(40px);
+  top: calc(100vh - 102px);
+  top: calc((var(--vh, 1vh) * 100) - #{102px});
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+  background: $color-blue;
+  border-radius: 50%;
+  border-color: transparent;
+  outline: none;
+
+  transition: 0.5s opacity ease-in-out,
+              1s top;
+
+  &:hover {
+    svg {
+      opacity: 0.5;
+      transition: 0.5s opacity ease-in-out;
+    }
+  }
+
+  @include desktop {
+    right: size(40px);
+    top: calc((var(--vh, 1vh) * 100) - 87px);
+  }
+
+  @include tablet {
+    right: size(40px);
+    top: calc((var(--vh, 1vh) * 100) - 87px);
+  }
+
+  @include mobile {
+    top: calc((var(--vh, 1vh) * 100) - #{size(175px)});
+
+    width: size(35px);
+    height: size(35px);
+    right: size(18px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+
+  &.js-scrool-stop {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+  }
+}
+
+.phone-icon-scroll-top__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+
+  border-radius: 50%;
+
+  &--mobile {
+    display: none;
+
+    @include mobile {
+      display: block;
+
+      transform: rotate(180deg);
+
+      svg {
+        width: 15px;
+        height: 20px;
+        transition: 0.5s opacity ease-in-out;
+        text-align: center;
+        flex-grow: 2;
+      }
+    }
+  }
+
+  &--desktop {
+    svg {
+      width: 34px;
+      height: 32px;
+      transition: 0.5s opacity ease-in-out;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

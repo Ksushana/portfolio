@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+  <body>
+      <div style="display:none">
+        <include src="build/img/sprite.svg"></include>
+      </div>
+      //= templates/header-new.html
+      <main class="trakt-main">
+        <!-- Первый экран - главная картинка -->
+        <section class="main-picture main-picture--trakt" itemscope itemtype="https://schema.org/ImageObject">
+          <div class="main-picture__bg main-picture__bg--trakt">
+            <div class="container container--new main-picture__text-block main-picture__text-block--trakt">
+              <ul class="breadcrumbs-list breadcrumbs-list--trakt" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                  <a itemprop='item' href="#"><span itemprop='name'>Туры на Байкал</a>
+                  <meta itemprop='position' content='1'>
+                </li>
+                <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                  <a itemprop='item' href="#"><span itemprop='name'>Зимние экскурсии</a>
+                  <meta itemprop='position' content='2'>
+                </li>
+                <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                  <a itemprop='item' href="#"><span itemprop='name'>Групповые экскурсии</a>
+                  <meta itemprop='position' content='3'>
+                </li>
+                <li class="breadcrumbs-list__item" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+                  <span itemprop='name'>На хивусе по Байкалу</span>
+                  <meta itemprop='position' content='4'>
+                </li>
+              </ul>
+              <h2 itemprop="name" class="main-picture__header main-picture__header--trakt">Байкальский тракт</h2>
+              <p itemprop="description" class="main-picture__note main-picture__note--trakt">Отели, гостиницы и достопримечательности</p>
+            </div>
+          </div>
+            <img itemprop=contentUrl src="img/trakt-bg.jpg" alt="Фоновое изображение"
+              class="cover main-picture__bg-image main-picture__bg-image--trakt">
+              <div class="bottom-shadow bottom-shadow--zindex"></div>
+        </section>
+        <!-- Второй экран - Лучшие предложения -->
+        <section class="best-offer container container--big">
+          <div class="best-offer__header trakt-header col-sm-7  col-lg-8">
+            <h2>Лучшие предложения</h2>
+            <p>по <span>размещению</span></p>
+          </div>
+          <div class="best-offer__widget-form col-sm-5 col-lg-4">
+            <div class="best-offer__widget-inner">
+              <script src="//www.travelpayouts.com/widgets/3bdda16fe42b660faccf2ea205d9a736.js?v=1739" async></script>
+            </div>
+          </div>
+          <div class="best-offer__widget col-sm-12 md-col-12 col-lg-12">
+            <script async
+              src="//www.travelpayouts.com/blissey/scripts.js?categories=price%2Cpool%2Chighprice&id=12122&type=compact&currency=rub&host=search.hotellook.com&marker=224797.&limit=2&powered_by=false"></script>
+          </div>
+          <div class="best-offer__button-outer col-sm-12  col-lg-12">
+            <a href="#" class="best-offer__button trakt-button">Перейти к удобному поиску по всем
+            отелям Байкальского тракта</a>
+          </div>
+        </section>
+        <!-- третий экран - Отели на карте -->
+        <section class="hotel-map container  container--big">
+          <div class="hotel-map__header trakt-header col-sm-10 col-lg-6">
+            <h2>Отели и турбазы</h2>
+            <p class="hotel-map__header--text">Байкальского тракта <span>на карте</span></p>
+            <p class="hotel-map__header--blue">Выбирай и бронируй!</p>
+          </div>
+          <a class="hotel-map__link col-sm-12 col-lg-6">
+            Полная карта отелей Байкальского тракта
+            <svg width="14" height="27" class="hotel-map__icon">
+              <use xlink:href="#icon-new-arrow"></use>
+            </svg>
+          </a>
+          <div class="hotel-map__widget col-md-12 col-lg-12">
+            <ins class="bookingaff" data-aid="1774999" data-target_aid="1774999" data-prod="map" data-width="100%"
+              data-height="590" data-lang="Default (your browser will decide)"
+              data-currency="Default (your browser will decide)" data-dest_id="0" data-dest_type="landmark"
+              data-latitude="51.8572899" data-longitude="104.8738465" data-mwhsb="1" data-checkin="2019-06-01">
+              <!-- Anything inside will go away once widget is loaded. -->
+              <!-- <a href="//www.booking.com?aid=1774999" style="display: none;">Booking.com</a> -->
+            </ins>
+            <script>
+              (function (d, sc, u) {
+                var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0];
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = u + '?v=' + (+new Date());
+                p.parentNode.insertBefore(s, p);
+              })(document, 'script', '//aff.bstatic.com/static/affiliate_base/js/flexiproduct.js');
+            </script>
+          </div>
+        </section>
+        <!-- Четвертый экран - подборка отелей -->
+        <section class="hotels-selection hotels-selection--trakt container--big">
+          <div class="container--big">
+            <h2 class="hotels-selection__title hotels-selection__title--trakt section-title">
+              Подборки отелей на <span>Байкальском тракте</span>
+            </h2>
+            <div class="hotels-selection__bar hotels-selection__bar--trakt"></div>
+          </div>
+          <div class="hotels-selection__widget-outer container container--no-padding">
+            <div class="hotels-selection__widget hotels-selection__widget--trakt selection-widget">
+              <script async
+                src="//www.travelpayouts.com/blissey/scripts.js?categories=price%2Cpool%2Chighprice&id=12122&type=compact&currency=rub&host=search.hotellook.com&marker=224797.&limit=2&powered_by=false"></script>
+              <a href="#" class="trakt-button hotels-selection__button hotels-selection__button--trakt">Посмотреть все
+              отели с лучшим рейтингом</a>
+            </div>
+          </div>
+        </section>
+        <!-- Пятый экран - Найдите свой отель на Байкале-->
+        <section class="find-hotels find-hotels--trakt relative">
+          <img src="img/find-hotels__bg--desktop@1x.png" alt="фон формы" class="cover find-hotels__bg-image">
+          <div class="container">
+            <h2 class="find-hotels__title find-hotels__title--trakt section-title">
+              Найдите <span>свой</span> отель на Байкале
+            </h2>
+          </div>
+          <div class="container container--fullwidth">
+            <div class="find-hotels__bar"></div>
+            <div class="find-hotels__widget finder-widget">
+              <script src="//www.travelpayouts.com/widgets/5b55a75d9c3c64f3af88095b089fdb08.js?v=1691" async></script>
+            </div>
+            <div class="find-hotels__bar find-hotels__bar--right"></div>
+          </div>
+        </section>
+        <!-- Шестой экран - отели байкальского тракта -->
+        <section class="trakt-hotels container container--big">
+          <div class="trakt-hotels__header trakt-header container container--big">
+            <h2>Отели <span>Байкальского Тракта</span></h2>
+            <div class="trakt-hotels__bar"></div>
+          </div>
+          <div class="trakt-hotels__block">
+            <ul class="trakt-hotels__list">
+              <li class="trakt-hotels__item col-lg-4">
+                <a href="#"><img src="img/trakt-hotel-desktop@1x.jpg"
+                  alt="Фотография отеля" class="trakt-hotels__photo cover"></a>
+                <a href="#"><h3 class="trakt-hotels_item-header trakt-header ">Гостевой дом Ангарские Хутора Гостевой дом Ангарские Хутора Ангарские Хутора Ангарские Хутора Ангарские </h3></a>
+                <p class="trakt-hotels__location">
+                  <svg width="12" height="16" class="trakt-hotels__pin">
+                    <use xlink:href="#icon-pin"></use>
+                  </svg>
+                  Байкальский тракт
+                </p>
+                <div class="trakt-hotels__info">
+                  <div class="trakt-hotels__included col-sm-9 col-md-7 col-lg-7">
+                    <ul>
+                      <li>
+                        <svg width="29" height="27" class="trakt-hotels__icon trakt-hotels__icon--calendar">
+                          <use xlink:href="#icon-calendar-new"></use>
+                        </svg>
+                        <p>Сезонность: Круглогодично</p>
+                      </li>
+                      <li>
+                        <svg width="27" height="27" class="trakt-hotels__icon trakt-hotels__icon--meal">
+                          <use xlink:href="#icon-meal"></use>
+                        </svg>
+                        <p>Питание: Нет, имеется кухня, Завтрак, Обед, Ужин, Полдник, Завтрак, Обед, Ужин, Полдник</p>
+                      </li>
+                      <li>
+                        <svg width="30" height="30" class="trakt-hotels__icon trakt-hotels__icon--comfort">
+                          <use xlink:href="#icon-tick-in-romb"></use>
+                        </svg>
+                        <p>Удобство: Эконом, комфорт, комфорт, Эконом, комфортЭконом, комфорт</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="trakt-hotels__price col-sm-3 col-md-5 col-lg-5">
+                    <svg width="45" height="42" class="trakt-hotels__wallet">
+                      <use xlink:href="#icon-wallet"></use>
+                    </svg>
+                    <b>от 1500 до 3000</b>
+                    <p>руб. / сутки</p>
+                  </div>
+                </div>
+                <a class="trakt-hotels__link" href="#">Подробнее</a>
+              </li>
+              <li class="trakt-hotels__item col-lg-4">
+                <a href="#"><img src="img/trakt-hotel-desktop@1x.jpg"
+                  alt="Фотография отеля" class="trakt-hotels__photo cover"></a>
+                <a href="#"><h3 class="trakt-hotels_item-header trakt-header ">Гостевой дом Ангарские Хутора</h3></a>
+                <p class="trakt-hotels__location">
+                  <svg width="12" height="16" class="trakt-hotels__pin">
+                    <use xlink:href="#icon-pin"></use>
+                  </svg>
+                  Байкальский тракт
+                </p>
+                <div class="trakt-hotels__info">
+                  <div class="trakt-hotels__included col-sm-9 col-md-7 col-lg-7">
+                    <ul>
+                      <li>
+                        <svg width="29" height="27" class="trakt-hotels__icon trakt-hotels__icon--calendar">
+                          <use xlink:href="#icon-calendar-new"></use>
+                        </svg>
+                        <p>Сезонность: Круглогодично</p>
+                      </li>
+                      <li>
+                        <svg width="27" height="27" class="trakt-hotels__icon trakt-hotels__icon--meal">
+                          <use xlink:href="#icon-meal"></use>
+                        </svg>
+                        <p>Питание: Завтрак</p>
+                      </li>
+                      <li>
+                        <svg width="30" height="30" class="trakt-hotels__icon trakt-hotels__icon--comfort">
+                          <use xlink:href="#icon-tick-in-romb"></use>
+                        </svg>
+                        <p>Удобство: Эконом, комфорт</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="trakt-hotels__price col-sm-3 col-md-5 col-lg-5">
+                    <svg width="45" height="42" class="trakt-hotels__wallet">
+                      <use xlink:href="#icon-wallet"></use>
+                    </svg>
+                    <b>от 1500 до 3000</b>
+                    <p>руб. / сутки</p>
+                  </div>
+                </div>
+                <a class="trakt-hotels__link" href="#">Подробнее</a>
+              </li>
+              <li class="trakt-hotels__item col-lg-4">
+                <a href="#"><img src="img/trakt-hotel-desktop@1x.jpg"
+                  alt="Фотография отеля" class="trakt-hotels__photo cover"></a>
+                <a href="#"><h3 class="trakt-hotels_item-header trakt-header ">Гостевой дом Ангарские Хутора</h3></a>
+                <p class="trakt-hotels__location">
+                  <svg width="12" height="16" class="trakt-hotels__pin">
+                    <use xlink:href="#icon-pin"></use>
+                  </svg>
+                  Байкальский тракт
+                </p>
+                <div class="trakt-hotels__info">
+                  <div class="trakt-hotels__included col-sm-9 col-md-7 col-lg-7">
+                    <ul>
+                      <li>
+                        <svg width="29" height="27" class="trakt-hotels__icon trakt-hotels__icon--calendar">
+                          <use xlink:href="#icon-calendar-new"></use>
+                        </svg>
+                        <p>Сезонность: Круглогодично</p>
+                      </li>
+                      <li>
+                        <svg width="27" height="27" class="trakt-hotels__icon trakt-hotels__icon--meal">
+                          <use xlink:href="#icon-meal"></use>
+                        </svg>
+                        <p>Питание: Завтрак</p>
+                      </li>
+                      <li>
+                        <svg width="30" height="30" class="trakt-hotels__icon trakt-hotels__icon--comfort">
+                          <use xlink:href="#icon-tick-in-romb"></use>
+                        </svg>
+                        <p>Удобство: Эконом, комфорт</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="trakt-hotels__price col-sm-3 col-md-5 col-lg-5">
+                    <svg width="45" height="42" class="trakt-hotels__wallet">
+                      <use xlink:href="#icon-wallet"></use>
+                    </svg>
+                    <b>от 1500 до 3000</b>
+                    <p>руб. / сутки</p>
+                  </div>
+                </div>
+                <a class="trakt-hotels__link" href="#">Подробнее</a>
+              </li>
+              <li class="trakt-hotels__item col-lg-4">
+                <a href="#"><img src="img/trakt-hotel-desktop@1x.jpg"
+                  alt="Фотография отеля" class="trakt-hotels__photo cover"></a>
+                <a href="#"><h3 class="trakt-hotels_item-header trakt-header ">Гостевой дом Ангарские Хутора</h3></a>
+                <p class="trakt-hotels__location">
+                  <svg width="12" height="16" class="trakt-hotels__pin">
+                    <use xlink:href="#icon-pin"></use>
+                  </svg>
+                  Байкальский тракт
+                </p>
+                <div class="trakt-hotels__info">
+                  <div class="trakt-hotels__included col-sm-9 col-md-7 col-lg-7">
+                    <ul>
+                      <li>
+                        <svg width="29" height="27" class="trakt-hotels__icon trakt-hotels__icon--calendar">
+                          <use xlink:href="#icon-calendar-new"></use>
+                        </svg>
+                        <p>Сезонность: Круглогодично</p>
+                      </li>
+                      <li>
+                        <svg width="27" height="27" class="trakt-hotels__icon trakt-hotels__icon--meal">
+                          <use xlink:href="#icon-meal"></use>
+                        </svg>
+                        <p>Питание: Завтрак</p>
+                      </li>
+                      <li>
+                        <svg width="30" height="30" class="trakt-hotels__icon trakt-hotels__icon--comfort">
+                          <use xlink:href="#icon-tick-in-romb"></use>
+                        </svg>
+                        <p>Удобство: Эконом, комфорт</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="trakt-hotels__price col-sm-3 col-md-5 col-lg-5">
+                    <svg width="45" height="42" class="trakt-hotels__wallet">
+                      <use xlink:href="#icon-wallet"></use>
+                    </svg>
+                    <b>от 1500 до 3000</b>
+                    <p>руб. / сутки</p>
+                  </div>
+                </div>
+                <a class="trakt-hotels__link" href="#">Подробнее</a>
+              </li>
+              <li class="trakt-hotels__item col-lg-4">
+                <a href="#"><img src="img/trakt-hotel-desktop@1x.jpg"
+                  alt="Фотография отеля" class="trakt-hotels__photo cover"></a>
+                <a href="#"><h3 class="trakt-hotels_item-header trakt-header ">Гостевой дом Ангарские Хутора</h3></a>
+                <p class="trakt-hotels__location">
+                  <svg width="12" height="16" class="trakt-hotels__pin">
+                    <use xlink:href="#icon-pin"></use>
+                  </svg>
+                  Байкальский тракт
+                </p>
+                <div class="trakt-hotels__info">
+                  <div class="trakt-hotels__included col-sm-9 col-md-7 col-lg-7">
+                    <ul>
+                      <li>
+                        <svg width="29" height="27" class="trakt-hotels__icon trakt-hotels__icon--calendar">
+                          <use xlink:href="#icon-calendar-new"></use>
+                        </svg>
+                        <p>Сезонность: Круглогодично</p>
+                      </li>
+                      <li>
+                        <svg width="27" height="27" class="trakt-hotels__icon trakt-hotels__icon--meal">
+                          <use xlink:href="#icon-meal"></use>
+                        </svg>
+                        <p>Питание: Завтрак</p>
+                      </li>
+                      <li>
+                        <svg width="30" height="30" class="trakt-hotels__icon trakt-hotels__icon--comfort">
+                          <use xlink:href="#icon-tick-in-romb"></use>
+                        </svg>
+                        <p>Удобство: Эконом, комфорт</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="trakt-hotels__price col-sm-3 col-md-5 col-lg-5">
+                    <svg width="45" height="42" class="trakt-hotels__wallet">
+                      <use xlink:href="#icon-wallet"></use>
+                    </svg>
+                    <b>от 1500 до 3000</b>
+                    <p>руб. / сутки</p>
+                  </div>
+                </div>
+                <a class="trakt-hotels__link" href="#">Подробнее</a>
+              </li>
+              <li class="trakt-hotels__item col-lg-4">
+                <a href="#"><img src="img/trakt-hotel-desktop@1x.jpg"
+                  alt="Фотография отеля" class="trakt-hotels__photo cover"></a>
+                <a href="#"><h3 class="trakt-hotels_item-header trakt-header ">Гостевой дом Ангарские Хутора</h3></a>
+                <p class="trakt-hotels__location">
+                  <svg width="12" height="16" class="trakt-hotels__pin">
+                    <use xlink:href="#icon-pin"></use>
+                  </svg>
+                  Байкальский тракт
+                </p>
+                <div class="trakt-hotels__info">
+                  <div class="trakt-hotels__included col-sm-9 col-md-7 col-lg-7">
+                    <ul>
+                      <li>
+                        <svg width="29" height="27" class="trakt-hotels__icon trakt-hotels__icon--calendar">
+                          <use xlink:href="#icon-calendar-new"></use>
+                        </svg>
+                        <p>Сезонность: Круглогодично</p>
+                      </li>
+                      <li>
+                        <svg width="27" height="27" class="trakt-hotels__icon trakt-hotels__icon--meal">
+                          <use xlink:href="#icon-meal"></use>
+                        </svg>
+                        <p>Питание: Завтрак</p>
+                      </li>
+                      <li>
+                        <svg width="30" height="30" class="trakt-hotels__icon trakt-hotels__icon--comfort">
+                          <use xlink:href="#icon-tick-in-romb"></use>
+                        </svg>
+                        <p>Удобство: Эконом, комфорт</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="trakt-hotels__price col-sm-3 col-md-5 col-lg-5">
+                    <svg width="45" height="42" class="trakt-hotels__wallet">
+                      <use xlink:href="#icon-wallet"></use>
+                    </svg>
+                    <b>от 1500 до 3000</b>
+                    <p>руб. / сутки</p>
+                  </div>
+                </div>
+                <a class="trakt-hotels__link" href="#">Подробнее</a>
+              </li>
+              <li class="trakt-hotels__item col-lg-4">
+                <a href="#"><img src="img/trakt-hotel-desktop@1x.jpg"
+                  alt="Фотография отеля" class="trakt-hotels__photo cover"></a>
+                <a href="#"><h3 class="trakt-hotels_item-header trakt-header ">Гостевой дом Ангарские Хутора</h3></a>
+                <p class="trakt-hotels__location">
+                  <svg width="12" height="16" class="trakt-hotels__pin">
+                    <use xlink:href="#icon-pin"></use>
+                  </svg>
+                  Байкальский тракт
+                </p>
+                <div class="trakt-hotels__info">
+                  <div class="trakt-hotels__included col-sm-9 col-md-7 col-lg-7">
+                    <ul>
+                      <li>
+                        <svg width="29" height="27" class="trakt-hotels__icon trakt-hotels__icon--calendar">
+                          <use xlink:href="#icon-calendar-new"></use>
+                        </svg>
+                        <p>Сезонность: Круглогодично</p>
+                      </li>
+                      <li>
+                        <svg width="27" height="27" class="trakt-hotels__icon trakt-hotels__icon--meal">
+                          <use xlink:href="#icon-meal"></use>
+                        </svg>
+                        <p>Питание: Завтрак</p>
+                      </li>
+                      <li>
+                        <svg width="30" height="30" class="trakt-hotels__icon trakt-hotels__icon--comfort">
+                          <use xlink:href="#icon-tick-in-romb"></use>
+                        </svg>
+                        <p>Удобство: Эконом, комфорт</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="trakt-hotels__price col-sm-3 col-md-5 col-lg-5">
+                    <svg width="45" height="42" class="trakt-hotels__wallet">
+                      <use xlink:href="#icon-wallet"></use>
+                    </svg>
+                    <b>от 1500 до 3000</b>
+                    <p>руб. / сутки</p>
+                  </div>
+                </div>
+                <a class="trakt-hotels__link" href="#">Подробнее</a>
+              </li>
+              <li class="trakt-hotels__item col-lg-4">
+                <a href="#"><img src="img/trakt-hotel-desktop@1x.jpg"
+                  alt="Фотография отеля" class="trakt-hotels__photo cover"></a>
+                <a href="#"><h3 class="trakt-hotels_item-header trakt-header ">Гостевой дом Ангарские Хутора</h3></a>
+                <p class="trakt-hotels__location">
+                  <svg width="12" height="16" class="trakt-hotels__pin">
+                    <use xlink:href="#icon-pin"></use>
+                  </svg>
+                  Байкальский тракт
+                </p>
+                <div class="trakt-hotels__info">
+                  <div class="trakt-hotels__included col-sm-9 col-md-7 col-lg-7">
+                    <ul>
+                      <li>
+                        <svg width="29" height="27" class="trakt-hotels__icon trakt-hotels__icon--calendar">
+                          <use xlink:href="#icon-calendar-new"></use>
+                        </svg>
+                        <p>Сезонность: Круглогодично</p>
+                      </li>
+                      <li>
+                        <svg width="27" height="27" class="trakt-hotels__icon trakt-hotels__icon--meal">
+                          <use xlink:href="#icon-meal"></use>
+                        </svg>
+                        <p>Питание: Завтрак</p>
+                      </li>
+                      <li>
+                        <svg width="30" height="30" class="trakt-hotels__icon trakt-hotels__icon--comfort">
+                          <use xlink:href="#icon-tick-in-romb"></use>
+                        </svg>
+                        <p>Удобство: Эконом, комфорт</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="trakt-hotels__price col-sm-3 col-md-5 col-lg-5">
+                    <svg width="45" height="42" class="trakt-hotels__wallet">
+                      <use xlink:href="#icon-wallet"></use>
+                    </svg>
+                    <b>от 1500 до 3000</b>
+                    <p>руб. / сутки</p>
+                  </div>
+                </div>
+                <a class="trakt-hotels__link" href="#">Подробнее</a>
+              </li>
+              <li class="trakt-hotels__item col-lg-4">
+                <a href="#"><img src="img/trakt-hotel-desktop@1x.jpg"
+                  alt="Фотография отеля" class="trakt-hotels__photo cover"></a>
+                <a href="#"><h3 class="trakt-hotels_item-header trakt-header ">Гостевой дом Ангарские Хутора</h3></a>
+                <p class="trakt-hotels__location">
+                  <svg width="12" height="16" class="trakt-hotels__pin">
+                    <use xlink:href="#icon-pin"></use>
+                  </svg>
+                  Байкальский тракт
+                </p>
+                <div class="trakt-hotels__info">
+                  <div class="trakt-hotels__included col-xs-9 col-md-7 col-lg-7">
+                    <ul>
+                      <li>
+                        <svg width="29" height="27" class="trakt-hotels__icon trakt-hotels__icon--calendar">
+                          <use xlink:href="#icon-calendar-new"></use>
+                        </svg>
+                        <p>Сезонность: Круглогодично</p>
+                      </li>
+                      <li>
+                        <svg width="27" height="27" class="trakt-hotels__icon trakt-hotels__icon--meal">
+                          <use xlink:href="#icon-meal"></use>
+                        </svg>
+                        <p>Питание: Завтрак</p>
+                      </li>
+                      <li>
+                        <svg width="30" height="30" class="trakt-hotels__icon trakt-hotels__icon--comfort">
+                          <use xlink:href="#icon-tick-in-romb"></use>
+                        </svg>
+                        <p>Удобство: Эконом, комфорт</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="trakt-hotels__price col-sm-3 col-md-5 col-lg-5">
+                    <svg width="45" height="42" class="trakt-hotels__wallet">
+                      <use xlink:href="#icon-wallet"></use>
+                    </svg>
+                    <b>от 1500 до 3000</b>
+                    <p>руб. / сутки</p>
+                  </div>
+                </div>
+                <a class="trakt-hotels__link" href="#">Подробнее</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- Седьмой экран - О Байкальском тракте-->
+        <section class="about-trakt container container--big" itemscope itemtype="http://schema.org/Article">
+          <div class="about-trakt__header trakt-header container container--big">
+            <h2>О Байкальском тракте</h2>
+            <div class="about-trakt__bar"></div>
+          </div>
+          <div class="about-trakt__inner">
+            <article class="about-trakt__article">
+              <img itemprop="image" src="img/trakt-article-desktop@1x.jpg"
+                alt="Байкальский тракт" class="cover">
+              <h3 itemprop="headline" class="about-trakt__article-header">Все достопримечательности Прибайкалья</h3>
+              <p itemprop="description" class="about-trakt__article-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis
+                natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                nec, pellentesque
+                eu, pretium quis, sem.
+              </p>
+              <a class="about-trakt__article-link trakt-button" href="#1">Читать статью</a>
+              <link itemprop="mainEntityOfPage" itemscope href="#1"/>
+            </article>
+            <!-- Дата публикации статьи -->
+            <meta itemprop="datePublished" content="2016-01-24">
+            <!-- Дата последнего изменения статьи -->
+            <meta itemprop="dateModified" content="2016-01-24">
+            <!--Автор статьи -->
+            <meta itemprop="author" content="Иван Иваныч Иванов">
+            <!-- Первая часть контента -->
+            <p itemprop="articleBody" class="about-trakt__text ">Байкальский тракт – самый популярный и короткий маршрут из Иркутска к озеру
+              Байкал. Это тупиковый маршрут протяженностью
+              60 км с конечным пунктом в поселке Литвянка, расположенном на самом берегу озера в легендарном месте, где из
+              Байкала
+              вытекает река Ангара. Исток этой реки считается самым большим в мире. Практически на всем своем протяжении
+              этот маршрут
+              идет вдоль русла реки Ангара, что делает его живописным в любое время года. Но Байкальский тракт славен не
+              только своей
+              природной красотой – вдоль него расположено огромное количество исторических и культурных
+              достопримечательностей, каждая
+              из которых заслуживает отдельного описания и посещения.
+            </p>
+            <p itemprop="articleBody" class="about-trakt__text">
+              К таким жемчужинам можно отнести этнографический музей народов Прибайкалья – Тальцы, где на открытой
+              территории
+              размещены целые бурятские улусы и сибирские деревни, воссоздающие быт и традиции коренных народов Сибири.
+            </p>
+            <p itemprop="articleBody" class="about-trakt__text">
+              Благодаря близости быстрого течения реки Ангара и нетронутых участков таежного леса, микроклимат мест вдоль
+              Байкальского
+              тракта знаменит тем, что воздух здесь всегда пахнет грозой, то есть, по научному выражаясь, имеет высокую
+              степень
+              ионизации а, значит чист и полезен чрезвычайно. Благодаря близости к Иркутску, гостиницы и отелях вдоль
+              Байкальского
+              тракта привлекают большое количество туристов, путешественников и приезжих бизнесменов, которые хотят
+              совместить дневные
+              бизнес-встречи и визиты в Иркутске с вечерним загородным отдыхом на берегу озера Байкал и легендарной реки
+              Ангара.
+            </p>
+          </div>
+        </section>
+        <!-- Восьмой экран - Как добраться-->
+        <section class="how-to-get" style="background-image: url(img/map-trakt.png); background-position: 100%;
+    background-size: 63% auto; background-repeat: no-repeat;">
+          <!-- <img src="img/map-trakt@1x.png" alt="" class="cover how-to-get__bg-image"> -->
+          <div class="container--big how-to-get__inner">
+            <div class="how-to-get__header trakt-header container container--big">
+              <h2>Как добраться?</h2>
+              <div class="how-to-get__bar"></div>
+            </div>
+            <ul class="how-to-get__list">
+              <li class="how-to-get__listitem">
+                <svg width="79" height="77" class="how-to-get__icon how-to-get__icon--first">
+                  <use xlink:href="#icon-auto"></use>
+                </svg>
+                <h3 class="trakt-header">На автомобиле</h3>
+                <p class="">Из Иркутска на выезд по асфальтированной дороге Байкальского тракта. <br>Время в пути – менее
+                  часа.
+                </p>
+                <a class="" href="#">
+                  Посмотреть маршрут
+                  <svg width="12" height="25" class="how-to-get__listitem-arrow">
+                    <use xlink:href="#icon-arrow-wing"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="how-to-get__listitem">
+                <svg width="71" height="73" class="how-to-get__icon">
+                  <use xlink:href="#icon-autobus2"></use>
+                </svg>
+                <h3 class="trakt-header">На автобусе</h3>
+                <p>Ежедневно от автовокзала из Иркутска в сторону Листвянки по Байкальскому тракту отправляется рейсовый
+                  автобус № 223.<br>
+                  Время отправления: 9:00, 14:30, 16:30, 19:00<br> Стоимость проезда — 100 рублей
+                </p>
+                <a href="#">
+                  Посмотреть маршрут
+                  <svg width="12" height="25" class="how-to-get__listitem-arrow">
+                    <use xlink:href="#icon-arrow-wing"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="how-to-get__listitem">
+                <svg width="75" height="75" class="how-to-get__icon">
+                  <use xlink:href="#icon-autobus1"></use>
+                </svg>
+                <h3 class="trakt-header">На маршрутке</h3>
+                <p>График движения: свободный, по мере заполнения маршрутки.<br> Стоимость проезда: 100 рублей<br> Время в
+                  пути – 1,5 часа
+                </p>
+                <a href="#">
+                  Посмотреть маршрут
+                  <svg width="12" height="25" class="how-to-get__listitem-arrow">
+                    <use xlink:href="#icon-arrow-wing"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <div class="how-to-get__info">
+              <svg width="43" height="43" class="how-to-get__question">
+                <use xlink:href="#icon-question"></use>
+              </svg>
+              <p class="how-to-get__note">Узнать более подробно расписание маршрутов можно по телефону справочной
+                автовокзала +7(3952) 209-411 или <a href="#">посмотреть
+                здесь</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Девятый экран - Туры с посещением Байкальского тракта-->
+        <section class="trakt-tours container container--big">
+          <div class="trakt-header">
+            <h2 class="trakt-tours__header">Туры с посещением <span>Байкальского тракта</span></h2>
+          </div>
+          <div class="trakt-tours__inner container">
+            //= templates/popular.html
+            <!-- <ul class="popular popular__list more-tours-popular">
+              <li class="popular__item popular__item--trakt col-xs-12 col-sm-4 col-lg-4">
+                <a href="#">
+                  <img src="img/choice-popular1.jpg"
+                    alt="Популярные туры" class="cover">
+                  <div class="popular__item-price">
+                    <h3>Байкальское приключение</h3>
+                    <p>от 44 000 руб</p>
+                  </div>
+                </a>
+              </li>
+              <li class="popular__item popular__item--trakt col-xs-12 col-sm-4 col-lg-4">
+                <a href="#">
+                  <img src="img/choice-popular2.jpg"
+                    alt="Популярные туры" class="cover">
+                  <div class="popular__item-price">
+                    <h3>Заплыв на каяках по&nbsp;Байкалу</h3>
+                    <p>от 44 000 руб</p>
+                  </div>
+                </a>
+              </li>
+              <li class="popular__item popular__item--trakt col-xs-12 col-sm-4 col-lg-4">
+                <a href="#">
+                  <img src="img/choice-popular3.jpg"
+                    alt="Популярные туры" class="cover">
+                  <div class="popular__item-price">
+                    <h3>Байкальское приключение</h3>
+                    <p>от 44 000 руб</p>
+                  </div>
+                </a>
+              </li>
+            </ul> -->
+          </div>
+          <a class="trakt-tours__button trakt-button">Смотреть все доступные туры</a>
+        </section>
+        <!-- Десятый экран - достопримечательности -->
+        <section class="trakt-sightseeing">
+          <div class="trakt-header">
+            <h2 class="trakt-sightseeing__header">Достопримечательности <span>Байкальского тракта</span></h2>
+          </div>
+          <div class="trakt-sightseeing__slider swiper-container">
+            <button class="trakt-sightseeing-arrow trakt-sightseeing-arrow--prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд</span>
+              <svg width="40" height="75">
+                <use xlink:href="#icon-new-arrow"></use>
+              </svg>
+            </button>
+            <button class="trakt-sightseeing-arrow trakt-sightseeing-arrow--next" type="button">
+              <span class="visually-hidden">Следующий слайд</span>
+              <svg width="40" height="75">
+                <use xlink:href="#icon-new-arrow"></use>
+              </svg>
+            </button>
+            <ul class="trakt-sightseeing__list swiper-wrapper">
+              <!--Микроразметка блока с изображением - первый слайд в цикле-Begin-->
+              <li class="swiper-slide trakt-sightseeing__item" itemscope itemtype="https://schema.org/ImageObject">
+                <a itemprop="url" href="img/tour-slider-large.jpg" data-lightbox="gallery-trakt" data-title="Листвянка">
+                  <img itemprop="image" src="img/hotels__slide1--desktop@1x.jpg" alt="Листвянка" class="trakt-sightseeing__photo cover">
+                  <div class="bottom-shadow"></div>
+                  <h3 itemprop="name" class="trakt-sightseeing__item-header">Листвянка</h3>
+                  <!-- <span itemprop="description" class="slider">87 отелей</span> -->
+                </a>
+              </li>
+              <!--End-->
+              <li class="swiper-slide trakt-sightseeing__item">
+                <a href="img/tour-slider-large.jpg" data-lightbox="gallery-trakt" data-title="Байкальский биосферный заповедник">
+                  <img src="img/hotels__slide1--desktop@1x.jpg" alt="Листвянка" class="trakt-sightseeing__photo cover">
+                  <div class="bottom-shadow"></div>
+                  <h3 class="trakt-sightseeing__item-header">Байкальский биосферный заповедник</h3>
+                  <!-- <span class="slider">87 отелей</span> -->
+                </a>
+              </li>
+              <li class="swiper-slide trakt-sightseeing__item">
+                <a href="img/tour-slider-large.jpg" data-lightbox="gallery-trakt" data-title="Листвянка">
+                  <img src="img/hotels__slide1--desktop@1x.jpg" alt="Листвянка" class="trakt-sightseeing__photo cover">
+                  <div class="bottom-shadow"></div>
+                  <h3 class="trakt-sightseeing__item-header">Листвянка</h3>
+                  <!-- <span class="slider">87 отелей</span> -->
+                </a>
+              </li>
+              <li class="swiper-slide trakt-sightseeing__item">
+                <a href="img/tour-slider-large.jpg" data-lightbox="gallery-trakt" data-title="Листвянка">
+                  <img src="img/hotels__slide1--desktop@1x.jpg" alt="Листвянка" class="trakt-sightseeing__photo cover">
+                  <div class="bottom-shadow"></div>
+                  <h3 class="trakt-sightseeing__item-header">Листвянка</h3>
+                  <!-- <span class="slider">87 отелей</span> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- 11 экран - instagram -->
+        //= templates/instagram.html
+        //= templates/scroll-up.html
+      </main>
+      //= templates/footer.html
+      //= templates/callback.html
+      //= templates/js.html
+  </body>

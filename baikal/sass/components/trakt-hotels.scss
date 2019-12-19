@@ -1,0 +1,473 @@
+.trakt-hotels {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop-full {
+    padding-left: 0;
+  }
+
+  @include desktop-wide {
+    padding-left: 42px;
+  }
+
+  @include tablet {
+    margin-top: 165px;
+    padding-left: 0;
+  }
+
+  @include mobile-wide {
+    margin-top: 42px;
+  }
+}
+
+.trakt-hotels__header {
+  display: flex;
+  align-items: center;
+
+  span {
+    color: #E2A13C;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobile-wide {
+    width: 320px;
+  }
+}
+
+.trakt-hotels__header h2 {
+  width: 700px;
+  text-align: right;
+  padding-right: 35px;
+  padding-left: 25px;
+  font-weight: inherit;
+
+  @include desktop-wide {
+    padding-left: 0;
+    width: 670px;
+  }
+
+  @include laptop {
+    padding-left: 0;
+    width: 710px;
+  }
+
+  @include tablet {
+    width: 768px;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 72px;
+  }
+
+  @include mobile-wide {
+    width: 320px;
+    text-align: right;
+    padding-right: 28px;
+    padding-left: 49px;
+  }
+}
+
+.trakt-hotels__bar {
+  height: 3px;
+  background: #4d88cc;
+  flex-grow: 1;
+
+  @include tablet {
+    width: 480px;
+    flex-grow: 0;
+    margin-right: 48px;
+    margin-top: 16px;
+  }
+
+  @include mobile-wide {
+    width: 167px;
+    margin-right: 27px;
+    align-self: flex-end;
+    margin-top: 7px;
+  }
+}
+
+.trakt-hotels__block {
+  @include desktop {
+    margin: 0 auto;
+    padding-left: 120px;
+  }
+
+  @include laptop {
+    padding-left: 0;
+  }
+}
+
+.trakt-hotels__list {
+  margin-top: 70px;
+  margin-left: 35px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include desktop {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 70px;
+  }
+
+  @include laptop {
+    max-width: 950px;
+    margin: 0 auto;
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include tablet {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 39px;
+  }
+
+  @include mobile-wide {
+    max-width: 320px;
+    margin-top: 30px;
+  }
+}
+
+.trakt-hotels__item {
+  width: 450px;
+  min-height: 550px;
+  box-shadow: 0 20px 22px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-left: 2.1%;
+  margin-right: 34px;
+  margin-bottom: 54px;
+  display: flex;
+  flex-direction: column;
+
+  .trakt-hotels__link {
+      margin-top: auto;
+    }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+    .trakt-hotels__link {
+      background-color: $color-orange;
+      color: $color-white;
+    }
+  }
+
+
+  @include desktop-full {
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @include laptop {
+    margin-left: 0;
+    margin-right: 35px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 39px;
+    margin-right: 0;
+
+    &:not(:nth-child(-n+3)) {
+    //  display: none;
+    }
+  }
+
+  @include mobile-wide {
+    width: 300px;
+    min-height: 411px;
+    margin-bottom: 17px;
+  }
+}
+
+.trakt-hotels_item-header {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 19px;
+  padding: 19px 15px 0;
+
+  @include mobile-wide {
+    max-height: none;
+    height: auto;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+    padding-left: 26px;
+  }
+}
+
+.trakt-hotels__photo {
+  width: 450px;
+  height: 259px;
+  object-fit: cover;
+
+  @include mobile-wide {
+    width: 300px;
+    height: 173px;
+  }
+}
+
+.trakt-hotels__pin {
+  fill: #4d88cc;
+  position: absolute;
+  left: 63px;
+  top: 3px;
+
+  @include mobile-wide {
+    width: 9px;
+    height: 9px;
+    left: 42px;
+    top: 4px;
+  }
+}
+
+.trakt-hotels__location {
+  font-size: 12px;
+  line-height: 12px;
+  padding-left: 83px;
+  position: relative;
+  padding-top: 5px;
+  padding-right: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 374px;
+    border-bottom: 1px solid #e4f1f3;
+    bottom: -15px;
+    left: 20px;
+  }
+
+  @include mobile-wide {
+    font-size: 9px;
+    line-height: 9px;
+    padding-left: 56px;
+
+    &::after {
+      width: 250px;
+      bottom: -9px;
+      left: 26px;
+    }
+  }
+}
+
+.trakt-hotels__info {
+  display: flex;
+  font-size: 14px;
+  line-height: 14px;
+
+  @include mobile-wide {
+    font-size: 9px;
+    line-height: 9px;
+  }
+}
+
+.trakt-hotels__included {
+  padding-top: 35px;
+  padding-left: 102px;
+  padding-right: 7px;
+
+  li {
+    position: relative;
+    padding-bottom: 24px;
+    // max-height: 52px;
+    // height: 52px;
+
+    @include tablet {
+      height: auto;
+      max-height: none;
+    }
+  }
+
+  li:last-child {
+    padding-bottom: 19px;
+  }
+
+  @include tablet {
+    max-width: 270px;
+  }
+
+  @include mobile-wide {
+    // max-width: 150px;
+    padding-top: 31px;
+    padding-left: 70px;
+    padding-right: 0;
+
+    li {
+      padding-bottom: 22px;
+    }
+
+    li:last-child {
+      padding-bottom: 31px;
+    }
+  }
+}
+
+.trakt-hotels__icon {
+  position: absolute;
+  left: -38px;
+
+  &--meal {
+    top: -10px;
+    fill: #F6464B;
+  }
+
+  @include mobile-wide {
+    width: 18px;
+    height: 18px;
+    left: -38px;
+
+    &--meal {
+      top: -6px;
+    }
+  }
+}
+
+.trakt-hotels__price {
+  text-align: center;
+  position: relative;
+  padding-top: 90px;
+  padding-right: 50px;
+  padding-left: 20px;
+
+  b {
+    font-family: $font-muller;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include tablet {
+    width: 212px;
+  }
+
+  @include mobile-wide {
+    width: 109px;
+    min-width: 109px;
+    padding-top: 75px;
+    padding-right: 20px;
+    padding-left: 20px;
+    b {
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+}
+
+.trakt-hotels__wallet {
+  position: absolute;
+  fill: #619D50;
+  top: 36px;
+  left: 55px;
+
+  @include laptop {
+    // left: 65px;
+  }
+
+  @include mobile-wide {
+    width: 29px;
+    height: 31px;
+    left: 42px;
+  }
+}
+
+.trakt-hotels__link {
+  font-family: $font-muller;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  width: 100%;
+  display: block;
+  min-height: 59px;
+  text-align: center;
+  //color: $color-white;
+  //background-color: #E2A13C;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  //transition: color, background-color, box-shadow 0.3s ease;
+
+  background-color: $color-gray-button-bg;
+  color: $color-gray-button-txt;
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  /*&:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 0px 2px rgba(247,162,46,1);
+    background-color: transparent;
+    color: rgba(247, 162, 46, 1);
+  }*/
+
+  @include mobile-wide {
+    min-height: 39px;
+    font-size: 14px;
+    line-height: 14px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+  }
+}
+
+.trakt-hotels__button-container {
+  width: 840px;
+  min-height: 63px;
+  border-radius: 30px;
+  margin: 7px auto 0;
+  background: -moz-linear-gradient(88deg, rgba(203,203,203,1) 0%, rgba(160,160,160,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(160,160,160,1)), color-stop(100%, rgba(203,203,203,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(88deg, rgba(203,203,203,1) 0%, rgba(160,160,160,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(88deg, rgba(203,203,203,1) 0%, rgba(160,160,160,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(88deg, rgba(203,203,203,1) 0%, rgba(160,160,160,1) 100%); /* ie10+ */
+  background: linear-gradient(2deg, rgba(203,203,203,1) 0%, rgba(160,160,160,1) 100%);
+
+  @include tablet {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  @include mobile-wide {
+    width: 300px;
+    min-height: 50px;
+  }
+}
+
+.trakt-hotels__button {
+  font-family: $font-muller;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  width: 836px;
+  color: #9F9F9F;
+  border-radius: 30px;
+  min-height: 59px;
+  padding-top: 7px;
+  text-transform: uppercase;
+  margin: 2px;
+  background-color: $color-white;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include tablet {
+    width: 446px;
+  }
+
+  @include mobile-wide {
+    font-size: 14px;
+    line-height: 14px;
+    width: 296px;
+    min-height: 46px;
+    padding-top: 4px;
+  }
+}

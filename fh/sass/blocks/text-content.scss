@@ -1,0 +1,80 @@
+.text-content {
+  background: $color-blue;
+  padding: size(138px) size(248px) size(132px) size(202px);
+
+  @include desktop {
+    padding: size(132px) size(141px);
+  }
+
+  @include tablet {
+    padding: size(95px) size(139px) size(75px) size(118px);
+  }
+
+  @include mobile {
+    padding: size(35px) size(33px);
+  }
+
+  &--small {
+    @include desktop {
+      padding: size(65px) size(148px) size(113px) size(142px);
+    }
+
+    @include tablet {
+      padding: size(65px) size(165px) size(75px) size(165px);
+    }
+
+    @include mobile {
+      padding: size(35px) size(33px);
+    }
+  }
+}
+
+.text-content__desc {
+  margin: 0 0 size(118px);
+
+  font-family: $font-austin;
+  font-size: size(135px);
+  line-height: 1;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: $color-white;
+
+  @include desktop {
+    margin: 0 0 size(110px);
+
+    font-size: size(120px);
+  }
+
+  @include tablet {
+    margin-bottom: size(75px);
+
+    font-size: size(90px);
+  }
+
+  @include mobile {
+    margin-bottom: size(65px);
+
+    font-size: size(45px);
+  }
+
+  &--right {
+    margin-bottom: 0;
+
+    text-align: right;
+  }
+}
+
+
+.housing .text-content--small p {
+  margin: 0;
+
+  font-size: size(35px);
+  line-height: size(35px);
+  letter-spacing: 0.025em;
+  color: $color-white;
+
+  @include mobile {
+    font-size: size(23px);
+    line-height: size(23px);
+  }
+}

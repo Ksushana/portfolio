@@ -1,0 +1,52 @@
+.location {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+
+  // @include tablet {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  // }
+
+  .choice {
+    padding-bottom: 60px;
+    @include tablet {
+      padding-bottom: 10px;
+      height: size(55px);
+    }
+  }
+
+  @include tablet {
+    // height: calc(100vh - #{size(350px)});
+  }
+
+  h1 {
+    padding-top: size(100px);
+    padding-bottom: size(50px);
+
+    @include desktop {
+      padding-top: size(40px);
+      padding-bottom: size(30px);
+    }
+
+    @include tablet {
+      padding-top: size(30px);
+      padding-bottom: size(10px);
+    }
+
+    @include mobile {
+      padding-top: size(25px);
+      padding-bottom: size(20px);
+      text-align: center;
+    }
+  }
+}
+
+.location__map-wrap {
+  overflow: hidden;
+  margin-top: auto;
+}

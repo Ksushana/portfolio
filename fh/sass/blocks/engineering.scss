@@ -1,0 +1,103 @@
+.container-engineering {
+  .choice {
+    max-width: size(930px);
+    margin: 0 auto;
+
+    @include desktop {
+      max-width: size(800px);
+    }
+
+    @include tablet {
+      max-width: size(700px);
+    }
+
+    @include mobile {
+      max-width: max-content;
+      width: 100%;
+    }
+  }
+
+  .swiper-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mobile {
+      flex-wrap: nowrap;
+      justify-content: start;
+    }
+  }
+
+  .swiper-slide {
+    margin-bottom: 4px;
+  }
+
+  .title {
+    margin-top: size(168px);
+    margin-bottom: size(71px);
+
+    @include desktop {
+      margin-top: size(113px);
+      margin-bottom: size(45px);
+    }
+
+    @include tablet {
+      margin-top: size(73px);
+      margin-bottom: size(33px);
+    }
+
+    @include mobile {
+      margin-top: size(30px);
+      margin-bottom: size(53px);
+    }
+  }
+}
+
+.engineering {
+  padding-top: size(58px);
+  padding-bottom: size(307px);
+  margin: 0 auto;
+
+  @include desktop {
+    padding-bottom: size(97px);
+  }
+
+  @include tablet {
+    padding-top: size(36px);
+    padding-bottom: size(123px);
+  }
+
+  @include mobile {
+    padding-top: size(42px);
+    padding-bottom: size(71px);
+  }
+
+  p {
+    max-width: size(814px);
+    margin: 0 auto;
+
+    font-size: size(35px);
+    line-height: size(35px);
+    letter-spacing: 0.025em;
+    text-align: center;
+
+    @include desktop {
+      max-width: size(730px);
+
+      font-size: size(30px);
+      line-height: size(30px);
+    }
+
+    @include tablet {
+      max-width: size(586px);
+
+      font-size: size(23px);
+      line-height: size(23px);
+    }
+
+    @include mobile {
+      max-width: size(245px);
+      line-height: size(24px);
+      text-align: left;
+    }
+  }
+}

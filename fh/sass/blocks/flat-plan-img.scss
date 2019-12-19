@@ -1,0 +1,42 @@
+.flat-plan-img {
+  position: relative;
+
+  width: 100%;
+  height: auto;
+}
+
+.flat-plan-img__text {
+  position: absolute;
+
+  font-family: $font-ttnorms;
+  font-size: size(13px);
+  line-height: size(15px);
+  color: #949494;
+  letter-spacing: 0.04em;
+
+  &--left {
+    left: size(-20px);
+    top: size(321px);
+
+    transform: rotate(-90deg);
+
+    @include desktop {
+      left: size(-46px);
+      top: size(253px);
+    }
+
+    @include tablet {
+      top: size(226px);
+    }
+  }
+
+  &--bottom {
+    bottom: size(-55px);
+    left: size(368px);
+
+    @include desktop {
+      bottom: size(-49px);
+      left: size(194px);
+    }
+  }
+}

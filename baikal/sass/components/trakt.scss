@@ -1,0 +1,93 @@
+.trakt-button {
+  background-image: linear-gradient(90deg, #ECAF32 0%, #E4842A 100%);
+  background-color: none;
+  border-radius: 4px;
+  color: $color-white;
+  transition: color, background-color, background-image, box-shadow, 0.3s ease;
+
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 0px 0px 2px rgba(247,162,46,1);
+    background: transparent;
+    color: rgba(247,162,46,1);
+    background-image: none;
+  }
+}
+
+.trakt-header {
+  color: $color-blue-header;
+  font-family: $font-muller;
+  font-weight: 900;
+}
+
+.trakt-header h2 {
+  font-family: $font-muller;
+  font-size: 64px;
+  line-height: 64px;
+
+  @include desktop {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @include mobile-wide {
+    font-size: 4.5vw;
+    line-height: 28px;
+  }
+
+  @include mobile {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.trakt-header p {
+  font-size: 48px;
+  line-height: 48px;
+
+  span {
+    color: #E2A13C;
+  }
+
+  @include desktop {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @include mobile-wide {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.trakt__bar {
+  height: 5px;
+  background: #4d88cc;
+  flex-grow: 1;
+}
+
+.trakt-main {
+  .instagram__heading,
+  .instagram__link {
+    &--new {
+      @include desktop {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    @include tablet {
+      font-size: 36px;
+    }
+}}
+}

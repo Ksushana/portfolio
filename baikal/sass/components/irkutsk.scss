@@ -1,0 +1,29 @@
+.irkutsk-button {
+  font-family: $font-muller;
+  background-image: linear-gradient(90deg, #ECAF32 0%, #E4842A 100%);
+  background-color: none;
+  border-radius: 22px;
+  color: $color-white;
+  transition: color, background-color, background-image, box-shadow, 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px rgba(247, 162, 46, 1);
+    background: transparent;
+    color: rgba(247, 162, 46, 1);
+    background-image: none;
+  }
+}
+
+.irkutsk-header {
+  color: $color-blue-header;
+  font-family: $font-muller;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 62px;
+
+  @include mobile-wide {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}

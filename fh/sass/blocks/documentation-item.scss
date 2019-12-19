@@ -1,0 +1,243 @@
+.documentation-item {
+  position: relative;
+}
+
+.documentation-item__wrapper {
+  display: flex;
+  align-items: flex-start;
+
+  &--margin {
+    margin-bottom: size(45px);
+
+    @include desktop {
+      margin-bottom: size(50px);
+    }
+
+    @include tablet {
+      margin-bottom: size(29px);
+    }
+
+    @include mobile {
+      margin-bottom: size(52px);
+    }
+  }
+}
+
+.documentation-item__content {
+  display: none;
+
+  &.acco-content--show {
+    display: block;
+  }
+}
+
+.documentation-item__title {
+  box-sizing: border-box;
+  width: size(923px);
+  padding-right: size(30px);
+
+  font-size: size(35px);
+  line-height: size(35px);
+  letter-spacing: 0.025em;
+
+  @include desktop {
+    width: size(608px);
+    padding-right: size(200px);
+
+    font-size: size(30px);
+  }
+
+  @include tablet {
+    width: size(468px);
+    padding-right: size(132px);
+
+    font-size: size(25px);
+    line-height: size(25px);
+  }
+
+  @include mobile {
+    width: size(215px);
+    padding: 0;
+  }
+}
+
+.acco-content .documentation-item__title {
+  color: rgba($color-white, 0.6);
+}
+
+.documentation-item__date {
+  margin-bottom: size(8px);
+
+  font-family: $font-ttnorms;
+  font-size: size(12px);
+  line-height: size(22px);
+  color: rgba($color-white, 0.6);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include tablet {
+    margin-bottom: size(11px);
+
+    font-size: size(11px);
+    line-height: size(11px);
+  }
+
+  @include mobile {
+    margin-bottom: size(16px);
+  }
+}
+
+.documentation-item__pdf {
+  margin-right: size(39px);
+
+
+  @include tablet {
+    margin-right: size(25px);
+    margin-top: 4px;
+  }
+
+  @include mobile {
+    margin-top: 0;
+  }
+
+  a {
+    position: relative;
+
+    font-family: $font-ttnorms;
+    font-size: size(15px);
+    line-height: size(22px);
+    text-transform: uppercase;
+    // text-decoration: underline solid rgba(255,255,255,1);
+    letter-spacing: 0.04em;
+    // transition: text-decoration 1s;
+    border-bottom: 1px solid rgba(255,255,255,1);
+    transition: border-bottom 1s;
+    display: block;
+
+    @include tablet {
+      font-size: size(12px);
+      line-height: size(12px);
+    }
+
+    &:hover {
+      border-bottom: 1px solid  rgba(255,255,255,0);
+    }
+
+    svg {
+      position: absolute;
+      right: size(-16px);
+      bottom: -1px;
+
+      width: size(12px);
+      height: size(12px);
+
+      @include tablet {
+        right: size(-13px);
+        bottom: -1px;
+      }
+
+      @include mobile {
+        bottom: -1px;
+      }
+    }
+  }
+}
+
+
+.acco-btn,
+.acco-close-btn {
+  position: absolute;
+  top: size(30px);
+  left: size(995px);
+
+  font-family: $font-ttnorms;
+  font-size: size(12px);
+  line-height: size(22px);
+  text-transform: uppercase;
+  // text-decoration: underline;
+  // text-decoration-color: rgba(255,255,255,1);
+  transition: text-decoration-color 1s;
+  letter-spacing: 0.04em;
+
+  @include desktop {
+    top: size(30.5px);
+    left: size(678px);
+  }
+
+  @include tablet {
+    top: size(24.5px);
+    left: size(519px);
+
+    font-size: size(12px);
+    line-height: size(12px);
+  }
+
+  @include mobile {
+    left: 0;
+    top: auto;
+    bottom: size(-34px);
+
+    font-size: size(11px);
+    line-height: size(22px);
+  }
+
+  &:hover {
+    text-decoration-color: rgba(255,255,255,0);
+  }
+}
+
+.acco-btn {
+  border-bottom: 1px solid rgba(255,255,255,1);
+  transition: border-bottom 1s;
+
+  &:hover {
+    border-bottom: 1px solid  rgba(255,255,255,0);
+  }
+}
+
+.acco-close-btn {
+  display: none;
+
+  border-bottom: 1px solid rgba(255,255,255,1);
+  transition: border-bottom 1s;
+
+  &:hover {
+    border-bottom: 1px solid  rgba(255,255,255,0);
+  }
+}
+
+.documentation-item__text {
+  width: size(763px);
+  padding-top: size(48px);
+  padding-bottom: size(42px);
+
+  @include desktop {
+    width: size(822px);
+    padding-top: size(45px);
+  }
+
+  @include tablet {
+    width: size(371px);
+    padding-top: size(29px);
+    padding-bottom: size(14px);
+  }
+
+  @include mobile {
+    width: size(277px);
+    padding-top: size(32px);
+    padding-bottom: size(5px);
+  }
+
+  p {
+    margin: 0;
+    font-family: $font-ttnorms;
+    font-size: size(13px);
+    line-height: size(15px);
+    color: rgba($color-white, 0.6);
+    letter-spacing: 0.04em;
+
+    @include mobile {
+      font-size: size(12px);
+    }
+  }
+}

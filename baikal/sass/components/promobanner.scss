@@ -1,0 +1,148 @@
+/* Рекламные баннеры на странице article.html */
+.promobanner {
+  width: 850px;
+  display: flex;
+  font-family: $font-muller;
+  border-radius: 5px;
+  background-color: $color-ice-blue;
+
+  @include laptop {
+    width: 100%;
+  }
+
+  @include tablet {
+    width: 720px;
+  }
+
+  @include mobile-wide {
+    width: calc(100% + 30px);
+    flex-direction: column;
+    margin-left: -15px;
+    padding-top: 30px;
+    padding-bottom: 38px;
+  }
+
+
+  &__picture {
+    width: 300px;
+    min-height: 340px;
+    border-radius: 5px;
+
+    @include mobile-wide {
+      width: calc(100% - 30px);
+      min-height: 330px;
+      margin-left: 15px;
+    }
+  }
+
+  &__picture--small {
+    min-height: 290px;
+  }
+
+  &__description {
+    padding: 30px 45px 25px 44px;
+    width: 550px;
+
+    @include tablet {
+      width: 420px;
+      padding: 33px 20px 50px 44px;
+    }
+
+    @include mobile-wide {
+      width: calc(100% - 30px);
+      padding: 0;
+      margin-left: 18px;
+      padding-top: 26px;
+
+      &--no-price {
+        padding-top: 20px;
+        margin-left: 14px;
+      }
+    }
+
+    h3 {
+      padding-top: 5px;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 12px;
+      color: $color-blue-dark;
+
+      @include tablet {
+        padding-top: 0;
+        line-height: 42px;
+        margin-bottom: 17px;
+      }
+      @include mobile-wide {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+
+  &__cost {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 36px;
+    color: $color-blue-dark;
+    margin-bottom: 12px;
+
+    @include mobile-wide {
+      margin-left: 5px;
+    }
+  }
+
+  &__text {
+    font-family: $font-roboto;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    margin-bottom: 17px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include mobile-wide {
+      padding-right: 15px;
+      margin-bottom: 32px;
+      margin-left: 2px;
+    }
+  }
+
+  &__text--low {
+    margin-top: 16px;
+    @include mobile-wide {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__button {
+    @include mobile-wide {
+      margin-left: 2px;
+    }
+  }
+
+  &__button-single {
+    display: inline-block;
+    margin-top: 9px;
+    font-family: $font-roboto;
+    @include underline;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: $color-orange;
+    }
+
+    @include tablet {
+      margin-top: 4px;
+    }
+  }
+}

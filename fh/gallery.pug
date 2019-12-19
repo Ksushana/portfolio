@@ -1,0 +1,163 @@
+extends pug/layout.pug
+
+block variables
+  - let title = 'Галерея';
+  - let isInner = true;
+  - let isGalleryPage = true;
+  - let headerBackground = 'header__menu--gallery';
+  - let tabletNoLogo = true;
+  - let tabletNofooter = true;
+
+block content
+  .container.container-gallery.slider-page
+    include pug/phone-icon.pug
+    .choice
+      .swiper-container.choice-container
+        .swiper-wrapper.tabs-links
+          .swiper-slide
+            button.switch-button.switch-button-active( type="button") Архитектура
+          .swiper-slide
+            button.switch-button( type="button") Сад
+          .swiper-slide
+            button.switch-button( type="button") Лобби
+          .swiper-slide
+            button.switch-button( type="button") Интерьеры
+    .tab.is-active
+      section.gallery
+        .housing__slider
+          .housing__slider-container
+            .housing__slides
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+
+          .count-cursor.count.visually-hidden
+              span.back.visually-hidden
+                svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                  path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+                  path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+              span.current 1
+              span  /
+              span.total
+              span.next
+                svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                  path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+                  path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+    .tab
+      section.gallery
+        .housing__slider
+          .housing__slider-container.img-content
+            .housing__slides
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+
+          .count-cursor.count.visually-hidden
+              span.back.visually-hidden
+                svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                  path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+                  path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+              span.current 1
+              span  /
+              span.total
+              span.next
+                svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                  path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+                  path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+    .tab
+      section.gallery
+        .housing__slider
+          .housing__slider-container.img-content
+            .housing__slides
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+
+          .count-cursor.count.visually-hidden
+              span.back.visually-hidden
+                svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                  path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+                  path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+              span.current 1
+              span  /
+              span.total
+              span.next
+                svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                  path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+                  path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+    .tab
+      section.gallery
+        .housing__slider
+          .housing__slider-container.img-content
+            .housing__slides
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+              .housing__slider-slide
+                picture
+                  source(media="(max-width: 767px)", srcset="img/gallery-house-mobile@1x.jpg 1x, img/gallery-house-mobile@2x.jpg 2x")
+                  img(src="img/main-building-full-1@1x.jpg" alt="Невероятные квартиры" srcset="img/main-building-full-1@2x.jpg 2x")
+
+          .count-cursor.count.visually-hidden
+              span.back.visually-hidden
+                svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                  path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+                  path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+              span.current 1
+              span  /
+              span.total
+              span.next
+                svg( width="13" height="35" viewBox="0 0 20 37" fill="none" xmlns="http://www.w3.org/2000/svg" )
+                  path( d="M9.8999 1.90002V35.8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+                  path( d="M18.1001 27.7L9.9001 35.9L1.6001 27.7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" )
+block footer
+  .footer-inner.footer-display
+    a.footer-inner__link.button(href="#") Выбрать супер-квартиру

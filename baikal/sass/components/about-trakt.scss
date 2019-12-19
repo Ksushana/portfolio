@@ -1,0 +1,215 @@
+.about-trakt {
+  margin-top: 140px;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  @include tablet {
+    margin-top: 97px;
+    padding: 0 45px;
+  }
+
+  @include mobile-wide {
+    margin-top: 42px;
+    padding: 0 10px;
+
+    .container {
+      align-items: flex-start;
+    }
+  }
+}
+
+.about-trakt__inner {
+  margin-left: 74px;
+
+  @include tablet {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about-trakt__header {
+  margin-bottom: 71px;
+  display: flex;
+  flex-direction: row;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: normal;
+    padding-left: 52px;
+    margin-bottom: 47px;
+  }
+
+  @include mobile-wide {
+    padding-left: 0;
+    margin-bottom: 12px;
+  }
+}
+
+.about-trakt__header h2 {
+  width: 715px;
+  padding-left: 45px;
+  font-weight: inherit;
+
+  @include desktop {
+    min-width: 600px;
+    padding-left: 45px;
+  }
+
+  @include desktop-wide {
+    padding-left: 0;
+  }
+
+  @include mobile-wide {
+    min-width: 304px;
+    width: 304px;
+    padding-left: 0;
+  }
+}
+
+.about-trakt__bar {
+  height: 5px;
+  background: #4d88cc;
+  flex-grow: 1;
+  width: 984px;
+
+  @include laptop {
+    width: 584px;
+  }
+
+  @include tablet {
+    width: 518px;
+    margin-right: 108px;
+    margin-top: 24px;
+  }
+
+  @include mobile-wide {
+    width: 180px;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
+
+.about-trakt__article {
+  width: 555px;
+  min-height: 575px;
+  box-shadow: 0 20px 22px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 78px;
+  margin-bottom: 68px;
+  float: left;
+
+  @include desktop {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  @include tablet {
+    order: 1;
+    align-self: center;
+    margin-top: 14px;
+    margin-right: 18px;
+
+    @include mobile-wide {
+      margin-top: 11px;
+      width: 300px;
+      margin-right: 0;
+      min-height: 475px;
+    }
+  }
+}
+
+.about-trakt__article-header {
+  font-size: 28px;
+  line-height: 28px;
+  color: $color-blue-header;
+  font-family: $font-muller;
+  font-weight: 700;
+  padding-left: 25px;
+  padding-right: 32px;
+  padding-top: 25px;
+  padding-bottom: 13px;
+
+  @include mobile-wide {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 15px 32px 10px 16px;
+  }
+}
+
+.about-trakt__article img {
+  width: 555px;
+  height: 255px;
+  object-fit: cover;
+
+  @include mobile-wide {
+    width: 300px;
+    height: 255px;
+  }
+}
+
+.about-trakt__article-text {
+  font-size: 18px;
+  line-height: 18px;
+  padding-left: 25px;
+  padding-right: 32px;
+  //font-style: italic;
+
+  @include mobile-wide {
+    font-size: 12px;
+    line-height: 12px;
+    padding-left: 25px;
+    padding-right: 29px;
+  }
+}
+
+.about-trakt__article-link {
+  width: 255px;
+  margin: 0 auto;
+  padding: 15px 40px;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: $font-muller;
+  font-weight: 700;
+  margin-top: 50px;
+
+  @include mobile-wide {
+    width: 230px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 66px;
+    margin: 19px auto 0;
+  }
+}
+
+.about-trakt__text {
+  font-size: 28px;
+  line-height: 36px;
+  //font-style: italic;
+  margin-bottom: 33px;
+  padding-right: 30px;
+
+  @include desktop {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+
+  @include mobile-wide {
+    font-size: 9px;
+    line-height: 12px;
+    margin-top: 10px;
+    padding-right: 0;
+    margin-bottom: 21px;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+//= templates/head.html
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    //= templates/header-new.html
+    <main class="fanat">
+      <div class="container container--main">
+        <!-- Первый экран - Влюбляйся в Байкал-->
+        <section class="heart">
+          <!--h2 class="visually-hidden">Вступление</h2-->
+          <h1 class="heart__text">
+            <span class="heart__dark">Влюбляйся в</span>
+            <span class="heart__dark heart__dark--baikal">Байкал</span>
+            <span class="heart__blue">Самый полный каталог</span>
+            <span class="heart__medium">возможностей отдыха</span>
+            на Байкале
+          </h1>
+          <img class="contain" src="img/bg-heart.png" alt="Байкал">
+        </section>
+        <!-- Второй экран - Я хочу - Каталог туров главный-->
+        //= templates/catalog-main.html
+        <!-- Третий экран - Советы -->
+        //= templates/advice.html
+        <!-- Четвертый экран - Подборки туров -->
+        //= templates/collection-tours.html
+      </div>
+      <!-- Пятый экран - Заявка на отдых -->
+      <section class="order" style="background-image: url(img/bg-order.png); background-position: top left 65%;
+    background-size: 1445px 991px; background-repeat: no-repeat;">
+        <div class="container">
+          <div class="row">
+            <div class="order__form col-xs-12 col-sm-12 col-lg-5">
+              <h2 class="order__header">Заявка на отдых<br><span>на байкале</span></h2>
+              <form class="form" action="#" method="post">
+                <p class="form__field">
+                  <label class="visually-hidden" for="name">Ваше имя</label>
+                  <input class="form__name" id="name" name="name" type="text" placeholder="Ваше имя">
+                </p>
+                <p class="form__field form__field--required">
+                  <label class="visually-hidden" for="phone">Номер телефона</label>
+                  <input class="form__phone" id="phone" name="phone" type="text" placeholder="Номер телефона" required >
+                </p>
+                <p class="form__field form__field--required">
+                  <label class="visually-hidden" for="email">E-mail</label>
+                  <input class="form__email" id="email" name="email" type="email" placeholder="E-mail" required>
+                </p>
+                <label class="visually-hidden" for="comment">Комментарий</label>
+                <textarea class="form__comment" id="comment" name="comment" placeholder="Комментарий"></textarea>
+                <button class="form__submit" type="submit">Отправить заявку</button>
+                <p class="form__notice">Нажимая на&nbsp;кнопку выше вы&nbsp;соглашаетесь с&nbsp;<a href="#" target="_blank">политикой конфиденциальности</a></p>
+              </form>
+            </div>
+            //= templates/manager-img.html
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <!-- Шестой экран - Отзывы -->
+        //= templates/feedback.html
+        <!-- Седьмой экран - Покупка авиабилетов -->
+        //= templates/tickets.html
+      </div>
+      <!-- Восьмой экран - Инстаграм -->
+      //= templates/instagram.html
+      //= templates/scroll-up.html
+    </main>
+    //= templates/footer.html
+    //= templates/callback.html
+    //= templates/request-response.html
+    //= templates/js.html
+  </body>
+</html>

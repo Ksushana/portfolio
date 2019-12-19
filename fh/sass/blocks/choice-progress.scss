@@ -1,0 +1,164 @@
+.choice-progress {
+  padding: size(47px) 0 size(22px);
+  overflow: hidden;
+
+  @include tablet {
+    padding: size(20px) 0 size(17px);
+  }
+
+  @include touch {
+    padding: size(20px) 0 size(17px) size(70px);
+  }
+
+  @include mobile {
+    padding: size(18px) 0 size(41px);
+  }
+
+  .swiper-container {
+    display: flex;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto;
+
+    margin: 0 auto;
+
+    @include tablet {
+      margin-left: size(60px);
+    }
+
+    @include mobile {
+      margin-left: size(10px);
+    }
+
+    .swiper-slide {
+
+      width: auto;
+
+      button {
+        position: relative;
+        height: size(28px);
+        padding: size(12px) size(14px) 0;
+
+        font-family: $font-ttnorms;
+        color: $color-white;
+        font-size: size(13px);
+        line-height: size(13px);
+        text-align: center;
+        letter-spacing: 0.025em;
+        border: none;
+        outline: 0;
+
+        background-color: $color-blue;
+        transition: opacity 0.5s;
+
+        &:after {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: size(13px);
+          bottom: size(3px);
+          right: 0;
+          background-color: $color-white;
+        }
+
+        span {
+          transition: opacity 0.5s;
+        }
+
+        &:hover {
+          span {
+            opacity: 0.5;
+          }
+        }
+
+        &.switch-button--active {
+          font-weight: 900;
+
+          &:hover {
+            span {
+              opacity: 1;
+            }
+          }
+        }
+
+        &.switch-button--inactive {
+          opacity: 0.3;
+
+          &:hover {
+            opacity: 0.3;;
+          }
+        }
+
+        @include tablet {
+          font-size: size(11px);
+          line-height: size(11px);
+
+          padding: 0 size(11.6px) 0;
+
+          &:after {
+            bottom: size(7px);
+            height: size(10px);
+          }
+        }
+      }
+
+      p {
+        position: relative;
+        padding: size(14px);
+
+        margin: 0;
+
+        font-family: $font-ttnorms;
+        color: $color-white;
+        font-size: size(13px);
+        line-height: size(13px);
+        text-align: center;
+        letter-spacing: 0.025em;
+        border: none;
+        outline: 0;
+        opacity: 0.3;
+
+        background-color: $color-blue;
+        transition: opacity 0.5s;
+
+        &:after {
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: size(13px);
+          bottom: size(15px);
+          right: 0;
+          background-color: $color-white;
+        }
+
+        &.visually-hidden {
+          display: none;
+        }
+
+        @include tablet {
+          font-size: size(11px);
+          line-height: size(11px);
+          height: size(28px);
+
+          padding: size(9.5px) size(11.6px) 0;
+
+          &:after {
+            bottom: size(16px);
+            height: size(10px);
+          }
+        }
+      }
+
+      &:last-child {
+        button {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

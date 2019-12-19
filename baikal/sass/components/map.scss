@@ -1,0 +1,45 @@
+.map__block {
+  margin-top: 50px;
+
+  @include mobile-wide {
+    margin-top: 47px;
+  }
+}
+
+.map__heading {
+  padding-left: 40px;
+  margin-top: 46px;
+
+  @include mobile-wide {
+    padding-left: 60px;
+  }
+}
+
+.route-pin {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  left: 2px;
+  top: -5px;
+  fill: $color-red;
+
+  @include mobile-wide {
+    left: 20px;
+  }
+}
+
+
+.map__photo {
+  min-height: 400px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.map__iframe {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  width: 100%;
+  border: none;
+  height: 400px;
+}

@@ -1,0 +1,57 @@
+.container-documentation {
+  h1 {
+    margin-top: size(159px);
+    margin-bottom: size(107px);
+
+    @include desktop {
+      margin-top: size(113px);
+      margin-bottom: size(98px);
+    }
+
+    @include tablet {
+      margin-top: size(72px);
+      margin-bottom: size(50px);
+    }
+
+    @include mobile {
+      margin-top: size(38px);
+      margin-bottom: size(61px);
+    }
+  }
+}
+
+.documentation {
+  padding: 0 size(347px) size(53px);
+
+  @include desktop {
+    padding: 0 size(141px) size(53px);
+  }
+
+  @include tablet {
+    padding: 0 size(117px) size(53px);
+  }
+
+  @include mobile {
+    padding: 0 size(48px) size(53px);
+  }
+}
+
+.documentation__list {
+  @include list-reset;
+}
+
+.documentation__item {
+  margin-bottom: size(45px);
+
+  @include desktop {
+    margin-bottom: size(50px);
+  }
+
+  @include tablet {
+    margin-bottom: size(29px);
+  }
+
+  @include mobile {
+    margin-bottom: size(84px);
+  }
+}

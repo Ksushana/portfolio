@@ -1,0 +1,80 @@
+.scroll-up {
+  display: flex;
+  align-items: center;
+  margin-bottom: 75px;
+
+  span {
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+}
+
+.scroll-up__button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $color-black;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-orange;
+  }
+}
+
+.scroll-up__button--orange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  margin-left: 6px;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid $color-orange;
+  border-radius: 50%;
+  transition: background-color .3s ease;
+  outline: none;
+
+  svg {
+    transform: rotate(-90deg);
+    fill: $color-orange;
+    transition: fill .3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-orange;
+
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  @include tablet {
+    margin-left: 0;
+  }
+}
+
+.scroll-up__button--tour-orange {
+  margin-left: 0;
+}
+
+.scroll-up__button--tour {
+  padding-top: 10px;
+  padding-left: 0;
+}
+
+.landing {
+  .scroll-up {
+
+    @include tablet {
+      margin-bottom: 18px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+}
+

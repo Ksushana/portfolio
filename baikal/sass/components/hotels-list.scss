@@ -1,0 +1,158 @@
+.hotels-list {
+  font-family: $font-roboto;
+}
+
+.hotels-list__header {
+  font-family: $font-muller;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 34px;
+  color: $color-blue-dark;
+  padding-right: 700px;
+
+  @include laptop {
+    padding-right: 525px;
+  }
+
+  @include tablet {
+    padding-right: 260px;
+  }
+
+  @include mobile-wide {
+    font-size: 20px;
+    line-height: 27px;
+    padding-right: 0;
+  }
+}
+.hotels-list__sub {}
+.hotels-list__hotel {}
+
+.hotels-list__button {
+  display: none;
+  @include mobile-wide {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #dff1f3;
+    border: none;
+    display: block;
+    position: relative;
+    padding: 12px 18px 7px 23px;
+    text-align: left;
+    transition: color 0.3s ease;
+
+    svg {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      transform: rotate(90deg);
+      fill: $color-blue-sorting;
+      top: 15px;
+      right: 19px;
+      transition: fill 0.3s ease;
+    }
+
+    &:hover, &:focus {
+      color: $color-orange;
+      svg {
+        fill: $color-orange;
+      }
+    }
+
+    &--open {
+      background-color: $color-blue-gray-mobile;
+      svg {
+        transform: none;
+      }
+    }
+  }
+}
+
+.hotels-list__sub-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 20px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 19px;
+    height: 19px;
+    background-image: url("../img/base-hotels-pin.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @include mobile-wide {
+    display: none;
+  }
+}
+
+.hotels-list__main-list {
+  column-count: 4;
+  column-width: 265px;
+  column-gap: 26px;
+
+  @include laptop {
+    column-width: 224px;
+    column-gap: 10px;
+  }
+
+  @include tablet {
+    column-cout: 3;
+    column-gap: 24px;
+  }
+  @include mobile-wide {
+    column-count: 1;
+  }
+}
+
+.hotels-list__sub {
+  display: inline-block;
+  margin-bottom: 30px;
+  @include mobile-wide {
+    display: block;
+    margin-bottom: 4px;
+  }
+}
+.hotels-list__sub-list {
+  display: block;
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 400;
+  min-width: 265px;
+  padding-left: 20px;
+  padding-top: 8px;
+
+  @include laptop {
+    font-size: 13px;
+    min-width: 224px;
+  }
+
+  @include mobile-wide {
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 24px;
+    display: none;
+    &--show {
+      display: block;
+    }
+  }
+}
+.hotels-list__hotel {
+  a {
+    @include underline;
+    transition: color .3s ease, box-shadow .3s ease;
+
+    &:hover, &:focus {
+      color: $color-orange;
+    }
+  }
+}
